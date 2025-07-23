@@ -15,7 +15,7 @@ app.use(express.static('.'));
 app.get('/api/closing-ranks', (req, res) => {
     try {
         console.log('📋 Getting closing ranks data...');
-        const dataPath = path.join(__dirname, 'data', 'closing-ranks.json');
+        const dataPath = path.join(__dirname, 'data', 'closing-ranks-2025-phase1.json');
 
         if (!fs.existsSync(dataPath)) {
             console.log('❌ Closing ranks data file not found:', dataPath);

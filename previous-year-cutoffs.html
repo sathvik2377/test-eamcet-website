@@ -114,21 +114,35 @@
 
         /* Input Fields */
         .input-field {
-            background: var(--midnight-black);
-            border: 1px solid var(--stardust-silver);
-            border-radius: 8px;
+            background: rgba(11, 11, 20, 0.9);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            border-radius: 12px;
             color: var(--star-white);
             transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
         }
 
         .input-field:focus {
             border-color: var(--golden-yellow);
-            box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.1);
-            background: rgba(10, 26, 10, 0.3);
+            box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.2), 0 0 20px rgba(255, 215, 0, 0.1);
+            background: rgba(11, 11, 20, 0.95);
+            outline: none;
+            transform: translateY(-1px);
+        }
+
+        .input-field:hover {
+            border-color: rgba(255, 215, 0, 0.5);
+            background: rgba(11, 11, 20, 0.95);
         }
 
         .input-field::placeholder {
             color: var(--lunar-grey);
+        }
+
+        .input-field option {
+            background: rgba(11, 11, 20, 0.95);
+            color: var(--star-white);
+            padding: 8px;
         }
 
         /* Tables */
@@ -342,7 +356,7 @@
             left: 0;
             z-index: 10;
             background: rgba(26, 27, 58, 0.95);
-            border-right: 2px solid rgba(255, 140, 0, 0.3);
+            border-right: none;
             min-width: 200px;
             max-width: 200px;
         }
@@ -354,7 +368,7 @@
             left: 200px;
             z-index: 10;
             background: rgba(26, 27, 58, 0.95);
-            border-right: 2px solid rgba(255, 140, 0, 0.3);
+            border-right: none;
             min-width: 150px;
             max-width: 150px;
         }
@@ -419,7 +433,7 @@
                             <div class="text-xs text-gray-400 mt-1">Predicted cutoffs</div>
                         </div>
                     </a>
-                    <a href="previous-year-cutoffs.html" class="nav-btn-active flex flex-col items-center space-y-4 p-10 rounded-3xl transition-all duration-300 min-h-[140px]">
+                    <a href="previous-year-cutoffs.html" class="nav-btn flex flex-col items-center space-y-4 p-10 rounded-3xl transition-all duration-300 min-h-[140px]">
                         <div class="text-4xl">📚</div>
                         <div class="text-center">
                             <div class="font-semibold text-base">Previous Year Cutoffs</div>
@@ -451,7 +465,7 @@
         </div>
 
         <!-- Phase Selection and Filters -->
-        <div class="card p-8 mb-8 max-w-6xl mx-auto">
+        <div class="card p-8 mb-8 max-w-7xl mx-auto">
             <div class="text-center mb-8">
                 <h2 class="text-2xl font-semibold mb-3 gradient-text">Select Phase and Apply Filters</h2>
                 <p class="text-gray-400 mb-6">Choose the counseling phase and customize your search criteria</p>
@@ -533,7 +547,7 @@
         <!-- Results Section -->
         <div id="resultsSection" class="hidden">
             <!-- Results Header -->
-            <div class="card p-6 mb-6 max-w-6xl mx-auto">
+            <div class="card p-6 mb-6 max-w-7xl mx-auto">
                 <div class="flex flex-col md:flex-row md:items-center md:justify-between">
                     <div>
                         <h3 class="text-2xl font-semibold mb-2 gradient-text">Search Results</h3>
@@ -566,58 +580,58 @@
                                     <th class="px-4 py-3 text-left text-sm sortable-header" data-sort="branch_name">
                                         Branch <span class="sort-indicator">↕️</span>
                                     </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="oc_boys">
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="oc_boys">
                                         OC Boys <span class="sort-indicator">↕️</span>
                                     </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="oc_girls">
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="oc_girls">
                                         OC Girls <span class="sort-indicator">↕️</span>
                                     </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="sc_boys">
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="sc_boys">
                                         SC Boys <span class="sort-indicator">↕️</span>
                                     </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="sc_girls">
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="sc_girls">
                                         SC Girls <span class="sort-indicator">↕️</span>
                                     </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="st_boys">
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="st_boys">
                                         ST Boys <span class="sort-indicator">↕️</span>
                                     </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="st_girls">
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="st_girls">
                                         ST Girls <span class="sort-indicator">↕️</span>
                                     </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="bc_a_boys">
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="bc_a_boys">
                                         BC-A Boys <span class="sort-indicator">↕️</span>
                                     </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="bc_a_girls">
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="bc_a_girls">
                                         BC-A Girls <span class="sort-indicator">↕️</span>
                                     </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="bc_b_boys">
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="bc_b_boys">
                                         BC-B Boys <span class="sort-indicator">↕️</span>
                                     </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="bc_b_girls">
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="bc_b_girls">
                                         BC-B Girls <span class="sort-indicator">↕️</span>
                                     </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="bc_c_boys">
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="bc_c_boys">
                                         BC-C Boys <span class="sort-indicator">↕️</span>
                                     </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="bc_c_girls">
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="bc_c_girls">
                                         BC-C Girls <span class="sort-indicator">↕️</span>
                                     </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="bc_d_boys">
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="bc_d_boys">
                                         BC-D Boys <span class="sort-indicator">↕️</span>
                                     </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="bc_d_girls">
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="bc_d_girls">
                                         BC-D Girls <span class="sort-indicator">↕️</span>
                                     </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="bc_e_boys">
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="bc_e_boys">
                                         BC-E Boys <span class="sort-indicator">↕️</span>
                                     </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="bc_e_girls">
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="bc_e_girls">
                                         BC-E Girls <span class="sort-indicator">↕️</span>
                                     </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="ews_boys">
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="ews_boys">
                                         EWS Boys <span class="sort-indicator">↕️</span>
                                     </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="ews_girls">
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="ews_girls">
                                         EWS Girls <span class="sort-indicator">↕️</span>
                                     </th>
                                 </tr>
@@ -655,7 +669,7 @@
         </div>
 
         <!-- Disclaimer Section -->
-        <div class="w-full max-w-6xl mx-auto mt-8 mb-8">
+        <div class="w-full max-w-7xl mx-auto mt-8 mb-8">
             <div class="bg-gradient-to-r from-red-900/20 to-orange-900/20 border border-red-500/30 rounded-xl p-6">
                 <h3 class="text-xl font-bold text-red-400 mb-4 flex items-center">
                     ⚠️ Important Disclaimer
@@ -1281,5 +1295,8 @@
             setupDualScrollBars();
         });
     </script>
+
+    <!-- Navigation Active State Manager -->
+    <script src="navigation-active-state.js"></script>
 </body>
 </html>
