@@ -1,0 +1,2050 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TS EAMCET 2025 Phase 1 Cutoffs - Student Results Finder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 3s ease-in-out infinite',
+                        'shimmer': 'shimmer 2s linear infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' }
+                        },
+                        shimmer: {
+                            '0%': { backgroundPosition: '-200% 0' },
+                            '100%': { backgroundPosition: '200% 0' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Cosmic Gateway Theme - Welcoming and expansive */
+        .modern-bg {
+            background: linear-gradient(135deg, #0A1128 0%, #080810 25%, #0A1128 50%, #080810 75%, #0A1128 100%);
+            position: relative;
+            min-height: 100vh;
+        }
+
+        .modern-bg::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(circle at 20% 80%, rgba(0, 201, 167, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(136, 77, 255, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(0, 201, 167, 0.05) 0%, transparent 50%);
+            opacity: 0.6;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* Card styles with Cosmic Gateway theme */
+        .card {
+            background: rgba(10, 17, 40, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid #303040;
+            border-radius: 25px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-dark {
+            background: rgba(8, 8, 16, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid #303040;
+            border-radius: 25px;
+        }
+
+        /* Cosmic Gateway gradient text */
+        .gradient-text {
+            background: linear-gradient(135deg, #00C9A7 0%, #884DFF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .gradient-text-accent {
+            background: linear-gradient(135deg, #884DFF 0%, #00C9A7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Custom scrollbar */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Modern button styles */
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            border-radius: 12px;
+            color: white;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        /* Search input modern style */
+        .search-input {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            transition: all 0.3s ease;
+            color: white;
+        }
+
+        .search-input:focus {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: rgba(102, 126, 234, 0.5);
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        /* Fix select dropdown colors */
+        .search-input option {
+            background: #1a1a2e !important;
+            color: white !important;
+            border: none;
+        }
+
+        .search-input select {
+            color: white !important;
+        }
+
+        /* Ensure select elements have proper styling */
+        select.search-input {
+            color: white !important;
+            background-color: rgba(255, 255, 255, 0.08) !important;
+        }
+
+        select.search-input option {
+            background-color: #1a1a2e !important;
+            color: white !important;
+        }
+
+        /* Suggestion item animations */
+        .suggestion-item {
+            transition: all 0.2s ease;
+            border-radius: 8px;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin: 2px 4px;
+        }
+
+        .suggestion-item:hover {
+            background: rgba(102, 126, 234, 0.2);
+            border-color: rgba(102, 126, 234, 0.3);
+            transform: translateX(2px);
+        }
+
+        .suggestion-item.selected {
+            background: rgba(102, 126, 234, 0.3);
+            border-color: rgba(102, 126, 234, 0.5);
+        }
+
+        /* Stats cards */
+        .stat-card {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 12px 16px;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Loading spinner */
+        .spinner {
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-left: 2px solid #667eea;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Performance optimizations */
+        .will-change-transform {
+            will-change: transform;
+        }
+
+        .gpu-accelerated {
+            transform: translateZ(0);
+        }
+
+        /* Student details popup */
+        .popup-overlay {
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+        }
+
+        .popup-content {
+            background: rgba(15, 15, 25, 0.95);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            max-width: 90vw;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .info-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 16px;
+            margin: 8px 0;
+        }
+
+        .info-label {
+            color: #9ca3af;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+
+        .info-value {
+            color: #ffffff;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        /* Enhanced suggestion dropdown */
+        .suggestions-container {
+            background: rgba(10, 10, 15, 0.95);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(20px);
+        }
+
+        .view-details-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            border-radius: 8px;
+            padding: 6px 12px;
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .view-details-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+
+        /* Student result cards */
+        .student-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .student-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(102, 126, 234, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Compact list view */
+        .student-list-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 12px 16px;
+            margin-bottom: 6px;
+            transition: all 0.2s ease;
+            max-width: 100%;
+        }
+
+        .student-list-item:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(102, 126, 234, 0.2);
+            transform: translateX(2px);
+        }
+
+        /* View toggle buttons */
+        .view-toggle {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 4px;
+            display: flex;
+            gap: 4px;
+        }
+
+        .view-toggle-btn {
+            padding: 8px 16px;
+            border-radius: 8px;
+            background: transparent;
+            color: #9ca3af;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .view-toggle-btn.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .view-toggle-btn:hover:not(.active) {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+
+        /* Pagination styles */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            margin-top: 24px;
+            flex-wrap: wrap;
+        }
+
+        .pagination-btn {
+            padding: 8px 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.05);
+            color: #9ca3af;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 0.875rem;
+            min-width: 40px;
+            text-align: center;
+        }
+
+        .pagination-btn:hover:not(.disabled) {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-color: rgba(102, 126, 234, 0.3);
+        }
+
+        .pagination-btn.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-color: rgba(102, 126, 234, 0.5);
+        }
+
+        .pagination-btn.disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .pagination-info {
+            color: #9ca3af;
+            font-size: 0.875rem;
+            margin: 0 16px;
+        }
+
+        .rank-badge {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .hall-ticket {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 4px 8px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+
+
+        /* Ensure body can scroll */
+        body {
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        /* Navigation buttons */
+        .nav-btn, .nav-btn-active, .nav-btn-cutoff {
+            padding: 0.75rem 1.25rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-btn {
+            background: rgba(255, 255, 255, 0.05);
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .nav-btn:hover {
+            background: rgba(0, 201, 167, 0.2);
+            color: white;
+            transform: translateY(-2px);
+            border-color: rgba(0, 201, 167, 0.3);
+            box-shadow: 0 8px 25px rgba(0, 201, 167, 0.2);
+            text-shadow: 0 0 10px rgba(0, 201, 167, 0.5);
+        }
+
+        .nav-btn-active {
+            background: linear-gradient(135deg, #00C9A7 0%, #884DFF 100%);
+            color: white;
+            border-color: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 25px rgba(0, 201, 167, 0.3);
+        }
+
+        .nav-btn-cutoff {
+            background: linear-gradient(135deg, #884DFF 0%, #00C9A7 100%);
+            color: white;
+            border-color: rgba(255, 255, 255, 0.3);
+            font-size: 1rem;
+            padding: 1rem 1.5rem;
+            box-shadow: 0 8px 25px rgba(136, 77, 255, 0.3);
+        }
+
+        .nav-btn-cutoff:hover {
+            background: linear-gradient(135deg, #9F7AEA 0%, #38B2AC 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(136, 77, 255, 0.4);
+        }
+
+        /* Feature cards */
+        .feature-card {
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Mobile layout reordering */
+        @media (max-width: 768px) {
+            .features-section {
+                order: 2;
+            }
+
+            .search-section {
+                order: 1;
+            }
+
+            .main-container {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body class="modern-bg text-white">
+    <!-- Header -->
+    <header class="card-dark border-b border-white/5 sticky top-0 z-50 backdrop-blur-xl">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-center">
+                <div class="flex items-center space-x-4">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-teal-500 via-purple-500 to-teal-600 flex items-center justify-center shadow-lg">
+                        <span class="text-xl font-bold text-white">TS</span>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold gradient-text">
+                            TS EAMCET 2025
+                        </h1>
+                        <p class="text-sm text-gray-400">Results & Cutoffs Platform</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Hero Section -->
+    <section class="py-12 bg-gradient-to-b from-transparent to-black/10">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold mb-4 gradient-text">Navigate Your EAMCET Journey</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Choose from our comprehensive tools to find your results, explore cutoffs, and predict your college admissions</p>
+            </div>
+
+            <!-- Navigation Grid - All 5 buttons in single row -->
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+                    <a href="index.html" class="nav-btn-active flex flex-col items-center space-y-4 p-6 rounded-3xl transition-all duration-300 min-h-[120px]">
+                        <div class="text-3xl">🔍</div>
+                        <div class="text-center">
+                            <div class="font-semibold text-sm">Search Results</div>
+                            <div class="text-xs text-gray-400 mt-1">Find student results</div>
+                        </div>
+                    </a>
+                    <a href="closing-ranks.html" class="nav-btn flex flex-col items-center space-y-4 p-6 rounded-3xl transition-all duration-300 min-h-[120px]">
+                        <div class="text-3xl">📊</div>
+                        <div class="text-center">
+                            <div class="font-semibold text-sm">Phase 1 Cutoffs</div>
+                            <div class="text-xs text-gray-400 mt-1">Official closing ranks</div>
+                        </div>
+                    </a>
+                    <a href="phase2-cutoffs.html" class="nav-btn flex flex-col items-center space-y-4 p-6 rounded-3xl transition-all duration-300 relative min-h-[120px]">
+                        <div class="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full font-bold">PREDICTED</div>
+                        <div class="text-3xl">🎯</div>
+                        <div class="text-center">
+                            <div class="font-semibold text-sm">Phase 2 Predictions</div>
+                            <div class="text-xs text-gray-400 mt-1">Predicted cutoffs</div>
+                        </div>
+                    </a>
+                    <a href="previous-year-cutoffs.html" class="nav-btn flex flex-col items-center space-y-4 p-6 rounded-3xl transition-all duration-300 min-h-[120px]">
+                        <div class="text-3xl">📚</div>
+                        <div class="text-center">
+                            <div class="font-semibold text-sm">Previous Year Cutoffs</div>
+                            <div class="text-xs text-gray-400 mt-1">Historical data</div>
+                        </div>
+                    </a>
+                    <a href="college-predictor.html" class="nav-btn flex flex-col items-center space-y-4 p-6 rounded-3xl transition-all duration-300 min-h-[120px] relative">
+                        <div class="absolute -top-2 -right-2 bg-blue-500 text-white text-xs px-2 py-1 rounded-full font-bold">AI</div>
+                        <div class="text-3xl">🔮</div>
+                        <div class="text-center">
+                            <div class="font-semibold text-sm">College Predictor</div>
+                            <div class="text-xs text-gray-400 mt-1">Admission predictions</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Stats Section -->
+            <div class="flex justify-center items-center space-x-8 mt-8">
+                <div id="totalRecords" class="stat-card text-sm">
+                    <div class="spinner inline-block mr-2"></div>
+                    Loading...
+                </div>
+                <div id="totalColleges" class="stat-card text-sm">
+                    <div class="spinner inline-block mr-2"></div>
+                    Loading...
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="w-full px-4 py-12">
+        <!-- Search Hero Section -->
+        <div class="text-center mb-8">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                Find Your <span class="gradient-text-accent">Results</span>
+            </h1>
+            <p class="text-lg text-gray-300 mb-6 max-w-2xl mx-auto">
+                Search TS EAMCET 2025 results with <span class="gradient-text">intelligent filtering</span> and instant results.
+            </p>
+        </div>
+
+        <div class="main-container">
+        <!-- Search and Filters Section -->
+        <div class="card p-8 mb-8 max-w-4xl mx-auto search-section">
+            <div class="text-center mb-8">
+                <h2 class="text-2xl font-semibold mb-3 gradient-text">Search Student Results</h2>
+                <p class="text-gray-400 mb-4">Enter student name, hall ticket number, or college name</p>
+
+                <!-- Quick Examples -->
+                <div class="flex flex-wrap justify-center gap-2 mb-6">
+                    <span class="text-sm text-gray-500 mr-2">Try:</span>
+                    <button onclick="quickSearch('ram')" class="px-3 py-1 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg text-xs transition-all duration-300 hover:scale-105">
+                        "ram"
+                    </button>
+                    <button onclick="quickSearch('krishna')" class="px-3 py-1 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg text-xs transition-all duration-300 hover:scale-105">
+                        "krishna"
+                    </button>
+                    <button onclick="quickSearch('priya')" class="px-3 py-1 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg text-xs transition-all duration-300 hover:scale-105">
+                        "priya"
+                    </button>
+                    <button onclick="quickSearch('2521')" class="px-3 py-1 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg text-xs transition-all duration-300 hover:scale-105">
+                        "2521"
+                    </button>
+                    <button onclick="quickSearch('cbit')" class="px-3 py-1 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg text-xs transition-all duration-300 hover:scale-105">
+                        "cbit"
+                    </button>
+                </div>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="max-w-3xl mx-auto mb-8">
+                <div class="relative">
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search by name, hall ticket, or college... (e.g., 'ram', 'krishna', '2521')"
+                        class="w-full px-6 py-4 text-lg search-input rounded-2xl text-white placeholder-gray-400 focus:outline-none transition-all duration-300 pr-16"
+                        autocomplete="off"
+                    >
+                    <button id="searchButton" class="absolute right-2 top-1/2 transform -translate-y-1/2 btn-primary px-4 py-2 rounded-xl transition-all duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Search Status -->
+                <div id="searchStatus" class="mt-3 text-sm text-gray-400 text-center hidden">
+                    <span id="searchStatusText">Ready to search...</span>
+                </div>
+            </div>
+
+            <!-- Filters -->
+            <div class="text-center mb-6">
+                <h3 class="text-lg font-semibold mb-3 text-gray-300">Filter Options</h3>
+                <p class="text-gray-400 mb-4">Narrow down your search with these filters</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <select id="collegeFilter" class="px-4 py-3 search-input rounded-xl focus:outline-none transition-all duration-300">
+                    <option value="">All Colleges</option>
+                </select>
+                <select id="branchFilter" class="px-4 py-3 search-input rounded-xl focus:outline-none transition-all duration-300">
+                    <option value="">All Branches</option>
+                </select>
+                <select id="categoryFilter" class="px-4 py-3 search-input rounded-xl focus:outline-none transition-all duration-300">
+                    <option value="">All Categories</option>
+                </select>
+                <select id="genderFilter" class="px-4 py-3 search-input rounded-xl focus:outline-none transition-all duration-300">
+                    <option value="">All Genders</option>
+                    <option value="M">Male</option>
+                    <option value="F">Female</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Search Results Area -->
+        <div id="searchResultsArea" class="mb-20">
+            <!-- Loading Indicator -->
+            <div id="loadingIndicator" class="text-center py-16">
+                <div class="card p-8 max-w-md mx-auto">
+                    <div class="spinner mx-auto mb-4" style="width: 48px; height: 48px;"></div>
+                    <h3 class="text-xl font-semibold mb-2 gradient-text">Loading Results Database</h3>
+                    <p class="text-gray-400">Preparing 176 colleges data...</p>
+                </div>
+            </div>
+
+            <!-- Search Results List -->
+            <div id="searchResultsList" class="hidden">
+                <div class="card p-6 mb-6 w-full">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                        <div>
+                            <h3 class="text-2xl font-semibold mb-2 gradient-text">Search Results</h3>
+                            <p id="resultsCount" class="text-gray-400">Found 0 results</p>
+                        </div>
+                        <div class="mt-4 md:mt-0 flex gap-3 items-center">
+                            <div class="flex items-center gap-2">
+                                <label class="text-sm text-gray-400">Sort by:</label>
+                                <select id="sortDropdown" class="bg-gray-800 border border-gray-600 text-white px-3 py-2 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                    <option value="relevance">Relevance</option>
+                                    <option value="name_asc">Name (A-Z)</option>
+                                    <option value="name_desc">Name (Z-A)</option>
+                                    <option value="college_asc">College (A-Z)</option>
+                                    <option value="college_desc">College (Z-A)</option>
+                                    <option value="rank_asc">Rank (Low to High)</option>
+                                    <option value="rank_desc">Rank (High to Low)</option>
+                                </select>
+                            </div>
+                            <!-- View Toggle -->
+                            <div class="flex items-center gap-2 bg-gray-800 rounded-lg p-1">
+                                <button id="cardViewBtn" class="px-3 py-2 text-sm rounded-md transition-all duration-200 bg-blue-600 text-white">
+                                    📋 Card
+                                </button>
+                                <button id="compactViewBtn" class="px-3 py-2 text-sm rounded-md transition-all duration-200 text-gray-400 hover:text-white">
+                                    📄 Compact
+                                </button>
+                            </div>
+                            <button id="exportBtn" class="btn-primary px-6 py-3 rounded-xl font-medium transition-all duration-300">
+                                📥 Export Results
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Results List -->
+                <div class="w-full">
+                    <div id="resultsList" class="space-y-3">
+                        <!-- Results will be populated here -->
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div id="paginationContainer" class="w-full hidden">
+                    <div class="pagination">
+                        <button id="prevPage" class="pagination-btn">
+                            ← Previous
+                        </button>
+                        <div id="pageNumbers" class="flex gap-2">
+                            <!-- Page numbers will be populated here -->
+                        </div>
+                        <button id="nextPage" class="pagination-btn">
+                            Next →
+                        </button>
+                    </div>
+                    <div class="text-center mt-4">
+                        <span id="paginationInfo" class="pagination-info">
+                            <!-- Pagination info will be populated here -->
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- No Results -->
+            <div id="noResults" class="hidden text-center py-16">
+                <div class="card p-12 max-w-lg mx-auto">
+                    <div class="text-8xl mb-6 opacity-50">🔍</div>
+                    <h3 class="text-2xl font-semibold mb-3 gradient-text">No Results Found</h3>
+                    <p class="text-gray-400 mb-6">Try adjusting your search criteria or use different keywords</p>
+                    <div class="text-sm text-gray-500">
+                        <p>💡 Tips:</p>
+                        <p>• Try partial names like "ram" instead of full names</p>
+                        <p>• Check spelling of hall ticket numbers</p>
+                        <p>• Use college abbreviations like "cbit"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div> <!-- End main-container -->
+
+
+
+
+    </main>
+
+    <!-- Student Details Popup -->
+    <div id="studentPopup" class="fixed inset-0 popup-overlay flex items-center justify-center p-4 hidden z-50">
+        <div class="popup-content w-full max-w-2xl">
+            <div class="p-6">
+                <!-- Header -->
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="text-2xl font-bold gradient-text">Student Details</h2>
+                    <button id="closePopup" class="text-gray-400 hover:text-white transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Student Info -->
+                <div id="studentInfo" class="space-y-4">
+                    <!-- Content will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="card-dark border-t border-white/5 mt-20">
+        <div class="container mx-auto px-6 py-8">
+            <div class="text-center">
+                <div class="flex items-center justify-center mb-4">
+                    <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center mr-3">
+                        <span class="text-sm font-bold text-white">TS</span>
+                    </div>
+                    <span class="text-lg font-semibold gradient-text">TS EAMCET 2025</span>
+                </div>
+                <p class="text-gray-400 mb-2">&copy; 2025 TS EAMCET Results Finder. Data sourced from official TS EAMCET 2025 Phase 1 cutoffs.</p>
+                <p class="text-sm text-gray-500">Built with modern web technologies • Optimized for performance • Mobile-friendly design</p>
+
+                <!-- Official Footer -->
+                <div class="mt-6 pt-4 border-t border-gray-700">
+                    <div class="bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-lg p-4">
+                        <div class="flex items-center justify-center mb-2">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-bold mr-2">TS</span>
+                            <span class="text-sm font-semibold text-blue-300">TS EAMCET 2025</span>
+                        </div>
+                        <p class="text-xs text-gray-300 text-center leading-relaxed">
+                            © 2025 TS EAMCET Results Finder. Data sourced from official TS EAMCET 2025 Phase 1 cutoffs.<br>
+                            Built with modern web technologies • Optimized for performance • Mobile-friendly design
+                        </p>
+                        <p class="text-xs text-gray-400 text-center mt-2">
+                            <strong>Data Source Disclaimer:</strong> All data rights belong to the official TS EAMCET website (tseamcet.nic.in).
+                            This website uses data sourced from their official publications. Some data may be missing or incomplete.
+                            For official and complete information, please refer to the official TS EAMCET website.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Global variables
+        let allData = [];
+        let filteredData = [];
+        let colleges = new Set();
+        let branches = new Set();
+        let categories = new Set();
+        let studentNames = new Set();
+        let hallTickets = new Set();
+        let currentSuggestionIndex = -1;
+        let searchHistory = JSON.parse(localStorage.getItem('eamcetSearchHistory') || '[]');
+
+        let currentPage = 1;
+        let itemsPerPage = 150;
+
+        // DOM elements
+        const searchInput = document.getElementById('searchInput');
+        const searchButton = document.getElementById('searchButton');
+        const searchStatus = document.getElementById('searchStatus');
+        const searchStatusText = document.getElementById('searchStatusText');
+        const collegeFilter = document.getElementById('collegeFilter');
+        const branchFilter = document.getElementById('branchFilter');
+        const categoryFilter = document.getElementById('categoryFilter');
+        const genderFilter = document.getElementById('genderFilter');
+        const loadingIndicator = document.getElementById('loadingIndicator');
+        const searchResultsList = document.getElementById('searchResultsList');
+        const resultsList = document.getElementById('resultsList');
+        const noResults = document.getElementById('noResults');
+        const resultsCount = document.getElementById('resultsCount');
+        const totalRecords = document.getElementById('totalRecords');
+        const totalColleges = document.getElementById('totalColleges');
+        const exportBtn = document.getElementById('exportBtn');
+        const sortDropdown = document.getElementById('sortDropdown');
+        const cardViewBtn = document.getElementById('cardViewBtn');
+        const compactViewBtn = document.getElementById('compactViewBtn');
+
+        // View mode state
+        let currentViewMode = 'card';
+        const studentPopup = document.getElementById('studentPopup');
+        const studentInfo = document.getElementById('studentInfo');
+        const closePopup = document.getElementById('closePopup');
+        const paginationContainer = document.getElementById('paginationContainer');
+        const prevPage = document.getElementById('prevPage');
+        const nextPage = document.getElementById('nextPage');
+        const pageNumbers = document.getElementById('pageNumbers');
+        const paginationInfo = document.getElementById('paginationInfo');
+
+
+
+        // Initialize the application
+        async function init() {
+            try {
+                await loadAllData();
+                setupEventListeners();
+                populateFilters();
+                updateStats();
+                hideLoading();
+            } catch (error) {
+                console.error('Error initializing application:', error);
+                showError('Failed to load data. Please refresh the page.');
+            }
+        }
+
+        // Load all CSV data (works for both server and static hosting)
+        async function loadAllData() {
+            try {
+                let response;
+
+                // Try server API first (for Vercel/Node.js hosting)
+                try {
+                    response = await fetch('/api/all-data');
+                    if (!response.ok) throw new Error('Server API not available');
+                    console.log('✅ Loading data from server API');
+                } catch (serverError) {
+                    // Fallback to static JSON file (for GitHub Pages)
+                    console.log('🔄 Server API not available, trying static file...');
+                    response = await fetch('./data/all-data.json');
+                    if (!response.ok) {
+                        throw new Error(`Static file not found! status: ${response.status}`);
+                    }
+                    console.log('✅ Loading data from static file');
+                }
+
+                allData = await response.json();
+
+                // Extract unique values for filters and autocomplete
+                allData.forEach(record => {
+                    colleges.add(record.college);
+                    branches.add(record.branch);
+                    categories.add(record.seatcategory);
+                    studentNames.add(record.name.toLowerCase());
+                    hallTickets.add(record.hallticketno.toLowerCase());
+                });
+
+                filteredData = [...allData];
+                console.log(`📊 Loaded ${allData.length} records from ${colleges.size} colleges`);
+            } catch (error) {
+                console.error('❌ Error loading data:', error);
+                throw error;
+            }
+        }
+
+        // Get college directories from server
+        async function getCollegeDirectories() {
+            try {
+                const response = await fetch('/api/colleges');
+                if (!response.ok) throw new Error('Failed to fetch colleges');
+                return await response.json();
+            } catch (error) {
+                console.error('Error fetching colleges:', error);
+                return [];
+            }
+        }
+
+        // Get CSV files for a specific college
+        async function getCSVFiles(collegeDir) {
+            try {
+                const response = await fetch(`/api/colleges/${encodeURIComponent(collegeDir)}/branches`);
+                if (!response.ok) throw new Error('Failed to fetch branches');
+                return await response.json();
+            } catch (error) {
+                console.error('Error fetching branches for', collegeDir, ':', error);
+                return [];
+            }
+        }
+
+        // Load CSV file
+        async function loadCSV(filePath) {
+            try {
+                const response = await fetch(filePath);
+                if (!response.ok) return [];
+                
+                const text = await response.text();
+                return parseCSV(text);
+            } catch (error) {
+                console.warn(`Could not load ${filePath}:`, error);
+                return [];
+            }
+        }
+
+        // Parse CSV text to objects
+        function parseCSV(text) {
+            const lines = text.trim().split('\n');
+            if (lines.length < 2) return [];
+            
+            const headers = lines[0].split(',').map(h => h.replace(/"/g, '').trim());
+            const data = [];
+            
+            for (let i = 1; i < lines.length; i++) {
+                const values = parseCSVLine(lines[i]);
+                if (values.length === headers.length) {
+                    const record = {};
+                    headers.forEach((header, index) => {
+                        record[header] = values[index];
+                    });
+                    data.push(record);
+                }
+            }
+            
+            return data;
+        }
+
+        // Parse a single CSV line handling quoted values
+        function parseCSVLine(line) {
+            const result = [];
+            let current = '';
+            let inQuotes = false;
+            
+            for (let i = 0; i < line.length; i++) {
+                const char = line[i];
+                
+                if (char === '"') {
+                    inQuotes = !inQuotes;
+                } else if (char === ',' && !inQuotes) {
+                    result.push(current.trim());
+                    current = '';
+                } else {
+                    current += char;
+                }
+            }
+            
+            result.push(current.trim());
+            return result;
+        }
+
+        // Setup event listeners with new layout
+        function setupEventListeners() {
+            // Search input and button
+            searchInput.addEventListener('input', debounce(handleSearchInput, 200));
+            searchInput.addEventListener('keydown', handleSearchKeydown);
+            searchButton.addEventListener('click', () => {
+                performSearch();
+                setTimeout(() => {
+                    scrollToResults();
+                }, 300);
+            });
+
+            // Filter listeners
+            collegeFilter.addEventListener('change', performSearch, { passive: true });
+            branchFilter.addEventListener('change', performSearch, { passive: true });
+            categoryFilter.addEventListener('change', performSearch, { passive: true });
+            genderFilter.addEventListener('change', performSearch, { passive: true });
+            sortDropdown.addEventListener('change', applySorting);
+            cardViewBtn.addEventListener('click', () => switchViewMode('card'));
+            compactViewBtn.addEventListener('click', () => switchViewMode('compact'));
+            exportBtn.addEventListener('click', exportResults, { passive: true });
+
+
+
+            // Pagination listeners
+            prevPage.addEventListener('click', () => goToPage(currentPage - 1));
+            nextPage.addEventListener('click', () => goToPage(currentPage + 1));
+
+            // Popup event listeners
+            closePopup.addEventListener('click', hideStudentPopup);
+            studentPopup.addEventListener('click', (e) => {
+                if (e.target === studentPopup) {
+                    hideStudentPopup();
+                }
+            });
+
+            // Escape key to close popup
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    hideStudentPopup();
+                }
+            });
+        }
+
+        // Debounce function to limit search frequency
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        // Handle search input (simplified for new layout)
+        function handleSearchInput() {
+            const query = searchInput.value.trim();
+
+            if (query.length >= 2) {
+                updateSearchStatus(`Searching for "${query}"...`);
+                performSearch();
+                // Auto-scroll to results after a short delay
+                setTimeout(() => {
+                    scrollToResults();
+                }, 300);
+            } else if (query.length === 0) {
+                clearResults();
+                hideSearchStatus();
+            }
+        }
+
+        // Handle search keydown events
+        function handleSearchKeydown(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                performSearch();
+                // Auto-scroll to results after search
+                setTimeout(() => {
+                    scrollToResults();
+                }, 300);
+            }
+        }
+
+        // Update search status
+        function updateSearchStatus(text) {
+            searchStatusText.textContent = text;
+            searchStatus.classList.remove('hidden');
+        }
+
+        // Hide search status
+        function hideSearchStatus() {
+            searchStatus.classList.add('hidden');
+        }
+
+        // Clear search results
+        function clearResults() {
+            searchResultsList.classList.add('hidden');
+            noResults.classList.add('hidden');
+            loadingIndicator.classList.add('hidden');
+            paginationContainer.classList.add('hidden');
+            currentPage = 1;
+        }
+
+        // Auto-scroll to results
+        function scrollToResults() {
+            const resultsElement = document.getElementById('searchResultsArea');
+            if (resultsElement) {
+                resultsElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+
+
+
+
+
+
+
+        // Quick search function for example buttons
+        function quickSearch(term) {
+            searchInput.value = term;
+            searchInput.focus();
+            handleSearchInput();
+        }
+
+        // Show student details popup
+        function showStudentDetails(studentName) {
+            console.log('showStudentDetails called with:', studentName); // Debug log
+            const student = allData.find(record => record.name === studentName);
+            if (!student) return;
+
+            hideSuggestions(); // Close suggestions dropdown
+
+            const studentInfoHTML = `
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Personal Information -->
+                    <div class="info-card">
+                        <h3 class="text-lg font-semibold gradient-text mb-4">Personal Information</h3>
+                        <div class="space-y-3">
+                            <div>
+                                <div class="info-label">Full Name</div>
+                                <div class="info-value">${student.name}</div>
+                            </div>
+                            <div>
+                                <div class="info-label">Gender</div>
+                                <div class="info-value">${student.sex === 'M' ? 'Male' : 'Female'}</div>
+                            </div>
+                            <div>
+                                <div class="info-label">Caste Category</div>
+                                <div class="info-value">${student.caste}</div>
+                            </div>
+                            <div>
+                                <div class="info-label">Region</div>
+                                <div class="info-value">${student.region}</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Academic Information -->
+                    <div class="info-card">
+                        <h3 class="text-lg font-semibold gradient-text mb-4">Academic Information</h3>
+                        <div class="space-y-3">
+                            <div>
+                                <div class="info-label">Hall Ticket Number</div>
+                                <div class="info-value font-mono">${student.hallticketno}</div>
+                            </div>
+                            <div>
+                                <div class="info-label">EAMCET Rank</div>
+                                <div class="info-value text-2xl font-bold text-purple-400">${student.rank}</div>
+                            </div>
+                            <div>
+                                <div class="info-label">Seat Category</div>
+                                <div class="info-value text-sm">${student.seatcategory}</div>
+                            </div>
+                            <div>
+                                <div class="info-label">Serial Number</div>
+                                <div class="info-value">${student.sno}</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- College Information -->
+                    <div class="info-card md:col-span-2">
+                        <h3 class="text-lg font-semibold gradient-text mb-4">Allotted College & Branch</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <div class="info-label">College Name</div>
+                                <div class="info-value text-sm leading-relaxed">${student.college}</div>
+                            </div>
+                            <div>
+                                <div class="info-label">Branch/Department</div>
+                                <div class="info-value text-sm leading-relaxed">${student.branch}</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Actions -->
+                    <div class="md:col-span-2 flex flex-wrap gap-3 mt-4">
+                        <button data-rank="${student.rank}" data-popup-action="similar-ranks" class="btn-primary px-4 py-2 rounded-lg text-sm">
+                            🔍 Similar Ranks
+                        </button>
+                        <button data-college="${student.college}" data-branch="${student.branch}" data-popup-action="same-college" class="btn-primary px-4 py-2 rounded-lg text-sm">
+                            🏫 Same College & Branch
+                        </button>
+                        <button data-student-name="${student.name}" data-popup-action="export" class="btn-primary px-4 py-2 rounded-lg text-sm">
+                            📥 Export Data
+                        </button>
+                    </div>
+                </div>
+            `;
+
+            studentInfo.innerHTML = studentInfoHTML;
+            studentPopup.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+
+            // Add event listeners to popup buttons
+            addPopupButtonListeners();
+        }
+
+        // Hide student details popup
+        function hideStudentPopup() {
+            studentPopup.classList.add('hidden');
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        }
+
+        // Search for students with similar ranks
+        function searchSimilarRanks(rank) {
+            const rankNum = parseInt(rank);
+            const rangeStart = Math.max(1, rankNum - 50);
+            const rangeEnd = rankNum + 50;
+
+            hideStudentPopup();
+            searchInput.value = '';
+
+            // Filter by rank range
+            filteredData = allData.filter(record => {
+                const recordRank = parseInt(record.rank);
+                return recordRank >= rangeStart && recordRank <= rangeEnd;
+            });
+
+            displayResults();
+            showResults();
+
+            // Auto-scroll to results
+            setTimeout(() => {
+                scrollToResults();
+            }, 300);
+        }
+
+        // Search for students in same college and branch
+        function searchSameCollege(college, branch) {
+            hideStudentPopup();
+            searchInput.value = '';
+            collegeFilter.value = college;
+            branchFilter.value = branch;
+            performSearch();
+        }
+
+        // Export individual student data
+        function exportStudentData(studentName) {
+            const student = allData.find(record => record.name === studentName);
+            if (!student) return;
+
+            const csvContent = [
+                'Field,Value',
+                `Name,"${student.name}"`,
+                `Hall Ticket,${student.hallticketno}`,
+                `Rank,${student.rank}`,
+                `Gender,${student.sex}`,
+                `Caste,${student.caste}`,
+                `Region,${student.region}`,
+                `Seat Category,"${student.seatcategory}"`,
+                `College,"${student.college}"`,
+                `Branch,"${student.branch}"`,
+                `Serial Number,${student.sno}`
+            ].join('\n');
+
+            const blob = new Blob([csvContent], { type: 'text/csv' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `${student.name.replace(/[^a-zA-Z0-9]/g, '_')}_details.csv`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+        }
+
+        // Populate filter dropdowns
+        function populateFilters() {
+            populateSelect(collegeFilter, Array.from(colleges).sort());
+            populateSelect(branchFilter, Array.from(branches).sort());
+
+            // Custom sorting for categories - general categories first, special ones last
+            const sortedCategories = sortCategories(Array.from(categories));
+            populateSelect(categoryFilter, sortedCategories);
+        }
+
+        // Custom category sorting function
+        function sortCategories(categories) {
+            // Define exact priority order as specified
+            const priorityOrder = [
+                // Main categories with _Inc suffix
+                'OC BOYS_Inc', 'OC GIRLS_Inc',
+                'BC_A BOYS_Inc', 'BC_A GIRLS_Inc',
+                'BC_B BOYS_Inc', 'BC_B GIRLS_Inc',
+                'BC_C BOYS_Inc', 'BC_C GIRLS_Inc',
+                'BC_D BOYS_Inc', 'BC_D GIRLS_Inc',
+                'BC_E BOYS_Inc', 'BC_E GIRLS_Inc',
+                'SC BOYS_Inc', 'SC GIRLS_Inc',
+                'ST BOYS_Inc', 'ST GIRLS_Inc',
+                'EWS GEN OU_Inc', 'EWS GIRLS_Inc',
+
+                // Alternative formats without _Inc
+                'OC BOYS', 'OC GIRLS', 'OC',
+                'BC_A BOYS', 'BC_A GIRLS', 'BC_A',
+                'BC_B BOYS', 'BC_B GIRLS', 'BC_B',
+                'BC_C BOYS', 'BC_C GIRLS', 'BC_C',
+                'BC_D BOYS', 'BC_D GIRLS', 'BC_D',
+                'BC_E BOYS', 'BC_E GIRLS', 'BC_E',
+                'SC BOYS', 'SC GIRLS', 'SC',
+                'ST BOYS', 'ST GIRLS', 'ST',
+                'EWS GEN OU', 'EWS GIRLS', 'EWS'
+            ];
+
+            // SC sub-castes patterns
+            const scSubcastePatterns = ['MALA', 'MADIGA', 'YADAVA', 'RELLIMUGGULA', 'DANDASI'];
+
+            // ST sub-castes patterns
+            const stSubcastePatterns = ['GOND', 'KOYA', 'PRADHAN', 'BAGATA', 'CHENCHU', 'LAMBADA'];
+
+            // Categories to move to the very end (PHA, PHV, PHH, PHO, CAP, PHM)
+            const endCategories = ['PHA', 'PHV', 'PHH', 'PHO', 'CAP', 'PHM'];
+
+            // Other special categories (NCC, SPORTS, etc.) - these go before the end categories
+            const specialKeywords = ['NCC', 'SPORTS', 'MINORITY', 'DEFENCE', 'EWS', 'WIDOW'];
+
+            const priorityCats = [];
+            const scSubcastes = [];
+            const stSubcastes = [];
+            const specialCats = [];
+            const otherCats = [];
+            const endCats = []; // Categories to move to the very end
+
+            categories.forEach(cat => {
+                const upperCat = cat.toUpperCase();
+
+                // Check if it should go to the very end (PHA, PHV, PHH, PHO, CAP, PHM)
+                if (endCategories.some(keyword => upperCat.includes(keyword))) {
+                    endCats.push(cat);
+                }
+                // Check if it's in priority order
+                else {
+                    const priorityIndex = priorityOrder.findIndex(priority =>
+                        upperCat === priority.toUpperCase() ||
+                        upperCat.includes(priority.toUpperCase())
+                    );
+
+                    if (priorityIndex !== -1) {
+                        priorityCats.push({ cat, index: priorityIndex });
+                    }
+                    // Check for SC sub-castes
+                    else if (scSubcastePatterns.some(pattern => upperCat.includes(pattern))) {
+                        scSubcastes.push(cat);
+                    }
+                    // Check for ST sub-castes
+                    else if (stSubcastePatterns.some(pattern => upperCat.includes(pattern))) {
+                        stSubcastes.push(cat);
+                    }
+                    // Check if it's a special category
+                    else if (specialKeywords.some(keyword => upperCat.includes(keyword))) {
+                        specialCats.push(cat);
+                    }
+                    // Everything else
+                    else {
+                        otherCats.push(cat);
+                    }
+                }
+            });
+
+            // Sort priority categories by their defined order
+            priorityCats.sort((a, b) => a.index - b.index);
+            const sortedPriorityCats = priorityCats.map(item => item.cat);
+
+            // Sort sub-castes and special categories alphabetically
+            scSubcastes.sort();
+            stSubcastes.sort();
+            specialCats.sort();
+            otherCats.sort();
+            endCats.sort(); // Sort the end categories alphabetically
+
+            // Combine in the specified order:
+            // 1. Priority categories (OC, BC, SC, ST, EWS)
+            // 2. SC sub-castes
+            // 3. ST sub-castes
+            // 4. Other categories
+            // 5. Special categories (NCC, SPORTS, etc.)
+            // 6. End categories (PHA, PHV, PHH, PHO, CAP, PHM) at the very bottom
+            return [...sortedPriorityCats, ...scSubcastes, ...stSubcastes, ...otherCats, ...specialCats, ...endCats];
+        }
+
+        function populateSelect(selectElement, options) {
+            options.forEach(option => {
+                const optionElement = document.createElement('option');
+                optionElement.value = option;
+                optionElement.textContent = option;
+                selectElement.appendChild(optionElement);
+            });
+        }
+
+        // Perform search and filtering with enhanced matching
+        function performSearch() {
+            const searchTerm = searchInput.value.toLowerCase().trim();
+            const selectedCollege = collegeFilter.value;
+            const selectedBranch = branchFilter.value;
+            const selectedCategory = categoryFilter.value;
+            const selectedGender = genderFilter.value;
+
+            filteredData = allData.filter(record => {
+                let matchesSearch = true;
+
+                if (searchTerm) {
+                    // Precise search logic - only exact substring matches
+                    const nameMatch = record.name.toLowerCase().includes(searchTerm);
+                    const hallTicketMatch = record.hallticketno.toLowerCase().includes(searchTerm);
+
+                    // College match only for full names or 4-digit codes
+                    let collegeMatch = false;
+                    if (searchTerm.length >= 4) {
+                        // Check if it's a 4-digit code (all digits)
+                        const is4DigitCode = /^\d{4}$/.test(searchTerm);
+
+                        if (is4DigitCode) {
+                            // Match 4-digit codes in college names
+                            collegeMatch = record.college.toLowerCase().includes(searchTerm);
+                        } else {
+                            // For longer terms, check if it matches full college words
+                            const collegeWords = record.college.toLowerCase().split(/\s+/);
+                            collegeMatch = collegeWords.some(word =>
+                                word === searchTerm ||
+                                (word.length >= 4 && word.startsWith(searchTerm) && searchTerm.length >= word.length * 0.8)
+                            );
+                        }
+                    }
+
+                    // For multi-word searches (like "guda sathvik"), ensure ALL words are present
+                    const searchWords = searchTerm.split(/\s+/).filter(word => word.length > 0);
+                    let multiWordMatch = false;
+
+                    if (searchWords.length > 1) {
+                        // All search words must be present in the name
+                        multiWordMatch = searchWords.every(word =>
+                            record.name.toLowerCase().includes(word)
+                        );
+                        // If it's a multi-word search, only use this match type
+                        matchesSearch = multiWordMatch || hallTicketMatch;
+                    } else {
+                        // Single word search - use name or hall ticket match only
+                        matchesSearch = nameMatch || hallTicketMatch || collegeMatch;
+                    }
+                }
+
+                const matchesCollege = !selectedCollege || record.college === selectedCollege;
+                const matchesBranch = !selectedBranch || record.branch === selectedBranch;
+                const matchesCategory = !selectedCategory || record.seatcategory === selectedCategory;
+
+                // Gender filtering (M for Male, F for Female)
+                const matchesGender = !selectedGender || record.gender === selectedGender;
+
+                return matchesSearch && matchesCollege && matchesBranch && matchesCategory && matchesGender;
+            });
+
+            // Sort results by relevance and rank
+            if (searchTerm) {
+                filteredData.sort((a, b) => {
+                    const aScore = calculateRelevanceScore(a, searchTerm);
+                    const bScore = calculateRelevanceScore(b, searchTerm);
+
+                    // If relevance scores are very close, prioritize better rank
+                    if (Math.abs(aScore - bScore) < 0.1) {
+                        const aRank = parseInt(a.rank) || 999999;
+                        const bRank = parseInt(b.rank) || 999999;
+                        return aRank - bRank; // Better rank first
+                    }
+
+                    return bScore - aScore; // Higher relevance score first
+                });
+            } else {
+                // Sort by rank when no search term (better ranks first)
+                filteredData.sort((a, b) => {
+                    const aRank = parseInt(a.rank) || 999999;
+                    const bRank = parseInt(b.rank) || 999999;
+                    return aRank - bRank;
+                });
+            }
+
+            displayResults();
+
+            // Add successful searches to history
+            if (searchTerm && filteredData.length > 0) {
+                addToSearchHistory(searchTerm);
+            }
+        }
+
+        // Add search term to history
+        function addToSearchHistory(query) {
+            if (!query || query.length < 2) return;
+
+            // Remove existing entry if present
+            searchHistory = searchHistory.filter(item => item.query !== query);
+
+            // Add to beginning of array
+            searchHistory.unshift({
+                query: query,
+                timestamp: Date.now(),
+                results: filteredData.length
+            });
+
+            // Keep only last 10 searches
+            searchHistory = searchHistory.slice(0, 10);
+
+            // Save to localStorage
+            localStorage.setItem('eamcetSearchHistory', JSON.stringify(searchHistory));
+        }
+
+        // Calculate similarity between two strings (simple Levenshtein-based)
+        function calculateSimilarity(str1, str2) {
+            const longer = str1.length > str2.length ? str1 : str2;
+            const shorter = str1.length > str2.length ? str2 : str1;
+
+            if (longer.length === 0) return 1.0;
+
+            const distance = levenshteinDistance(longer, shorter);
+            return (longer.length - distance) / longer.length;
+        }
+
+        // Simple Levenshtein distance calculation
+        function levenshteinDistance(str1, str2) {
+            const matrix = [];
+
+            for (let i = 0; i <= str2.length; i++) {
+                matrix[i] = [i];
+            }
+
+            for (let j = 0; j <= str1.length; j++) {
+                matrix[0][j] = j;
+            }
+
+            for (let i = 1; i <= str2.length; i++) {
+                for (let j = 1; j <= str1.length; j++) {
+                    if (str2.charAt(i - 1) === str1.charAt(j - 1)) {
+                        matrix[i][j] = matrix[i - 1][j - 1];
+                    } else {
+                        matrix[i][j] = Math.min(
+                            matrix[i - 1][j - 1] + 1,
+                            matrix[i][j - 1] + 1,
+                            matrix[i - 1][j] + 1
+                        );
+                    }
+                }
+            }
+
+            return matrix[str2.length][str1.length];
+        }
+
+        // Calculate relevance score for sorting
+        function calculateRelevanceScore(record, searchTerm) {
+            let score = 0;
+            const name = record.name.toLowerCase();
+            const hallTicket = record.hallticketno.toLowerCase();
+
+            // Exact name match gets highest score
+            if (name === searchTerm) score += 100;
+
+            // Name starts with search term
+            if (name.startsWith(searchTerm)) score += 80;
+
+            // Any word in name starts with search term
+            const nameWords = name.split(' ');
+            if (nameWords.some(word => word.startsWith(searchTerm))) score += 60;
+
+            // Name contains search term
+            if (name.includes(searchTerm)) score += 40;
+
+            // Hall ticket match
+            if (hallTicket.includes(searchTerm)) score += 50;
+
+            // Shorter names get slight preference for partial matches
+            if (name.includes(searchTerm)) {
+                score += Math.max(0, 20 - name.length);
+            }
+
+            // Add rank-based bonus (better ranks get higher scores)
+            const rank = parseInt(record.rank) || 999999;
+            if (rank <= 1000) score += 10;      // Top 1000 ranks
+            else if (rank <= 5000) score += 8;  // Top 5000 ranks
+            else if (rank <= 10000) score += 5; // Top 10000 ranks
+            else if (rank <= 25000) score += 3; // Top 25000 ranks
+            else if (rank <= 50000) score += 1; // Top 50000 ranks
+
+            return score;
+        }
+
+        // Switch view mode
+        function switchViewMode(mode) {
+            currentViewMode = mode;
+
+            // Update button states
+            if (mode === 'card') {
+                cardViewBtn.classList.add('bg-blue-600', 'text-white');
+                cardViewBtn.classList.remove('text-gray-400');
+                compactViewBtn.classList.remove('bg-blue-600', 'text-white');
+                compactViewBtn.classList.add('text-gray-400');
+            } else {
+                compactViewBtn.classList.add('bg-blue-600', 'text-white');
+                compactViewBtn.classList.remove('text-gray-400');
+                cardViewBtn.classList.remove('bg-blue-600', 'text-white');
+                cardViewBtn.classList.add('text-gray-400');
+            }
+
+            // Re-render results with new view mode
+            if (filteredData.length > 0) {
+                displayResults();
+            }
+        }
+
+        // Apply sorting to filtered data
+        function applySorting() {
+            const sortValue = sortDropdown.value;
+            console.log('Sorting by:', sortValue, 'Data length:', filteredData.length);
+
+            filteredData.sort((a, b) => {
+                switch (sortValue) {
+                    case 'name_asc':
+                        return (a.name || '').localeCompare(b.name || '');
+                    case 'name_desc':
+                        return (b.name || '').localeCompare(a.name || '');
+                    case 'college_asc':
+                        return (a.college || '').localeCompare(b.college || '');
+                    case 'college_desc':
+                        return (b.college || '').localeCompare(a.college || '');
+                    case 'rank_asc':
+                        return parseInt(a.rank || 999999) - parseInt(b.rank || 999999);
+                    case 'rank_desc':
+                        return parseInt(b.rank || 0) - parseInt(a.rank || 0);
+                    case 'relevance':
+                    default:
+                        // Sort by relevance score (already calculated during search)
+                        return (b.relevanceScore || 0) - (a.relevanceScore || 0);
+                }
+            });
+
+            displayResults();
+        }
+
+        // Display search results in linear compact format
+        function displayResults() {
+            if (filteredData.length === 0) {
+                showNoResults();
+                return;
+            }
+
+            showResults();
+            resultsCount.textContent = `Found ${filteredData.length.toLocaleString()} result${filteredData.length !== 1 ? 's' : ''}`;
+
+            // Reset to page 1 when new search results come in
+            currentPage = 1;
+
+            // Display in linear compact format
+            displayLinearResults();
+
+            // Show pagination if needed
+            updatePagination();
+        }
+
+        // Display results in linear compact format with all details
+        function displayLinearResults() {
+            // Calculate pagination
+            const startIndex = (currentPage - 1) * itemsPerPage;
+            const endIndex = startIndex + itemsPerPage;
+            const displayData = filteredData.slice(startIndex, endIndex);
+
+            if (currentViewMode === 'compact') {
+                displayCompactResults(displayData);
+            } else {
+                displayCardResults(displayData);
+            }
+        }
+
+        // Display results in card format
+        function displayCardResults(displayData) {
+            // Use DocumentFragment for better performance
+            const fragment = document.createDocumentFragment();
+
+            displayData.forEach(record => {
+                const listItem = document.createElement('div');
+                listItem.className = 'student-list-item';
+                listItem.innerHTML = `
+                    <div class="w-full">
+                        <div class="flex items-start justify-between mb-2">
+                            <div class="flex-1">
+                                <h3 class="text-base font-semibold text-white mb-1">${record.name}</h3>
+                                <div class="text-xs text-gray-400 mb-1">Hall Ticket: <span class="text-blue-300 font-mono">${record.hallticketno}</span></div>
+                            </div>
+                            <div class="rank-badge text-sm">#${record.rank}</div>
+                        </div>
+
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-2 text-xs">
+                            <div>
+                                <span class="text-gray-400">Gender:</span>
+                                <span class="text-white ml-1">${record.sex === 'M' ? 'Male' : 'Female'}</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-400">Caste:</span>
+                                <span class="text-white ml-1">${record.caste}</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-400">Region:</span>
+                                <span class="text-white ml-1">${record.region}</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-400">Category:</span>
+                                <span class="text-white ml-1">${record.seatcategory}</span>
+                            </div>
+                        </div>
+
+                        <div class="border-t border-white/10 pt-2 mb-2">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs">
+                                <div>
+                                    <div class="text-gray-400 mb-1">College:</div>
+                                    <div class="text-white font-medium text-sm leading-tight">${record.college}</div>
+                                </div>
+                                <div>
+                                    <div class="text-gray-400 mb-1">Branch:</div>
+                                    <div class="text-white text-sm leading-tight">${record.branch}</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-2 pt-1">
+                            <button onclick="searchSimilarRanks(${record.rank})"
+                                    class="btn-primary px-3 py-1.5 rounded-lg text-xs">
+                                🔍 Similar Ranks
+                            </button>
+                            <button onclick="searchSameCollege('${record.college.replace(/'/g, "\\'")}', '${record.branch.replace(/'/g, "\\'")}'))"
+                                    class="bg-white/10 hover:bg-white/20 px-3 py-1.5 rounded-lg text-xs transition-colors">
+                                🏫 Same College & Branch
+                            </button>
+                        </div>
+                    </div>
+                `;
+                fragment.appendChild(listItem);
+            });
+
+            resultsList.innerHTML = '';
+            resultsList.appendChild(fragment);
+        }
+
+        // Display results in compact table format
+        function displayCompactResults(displayData) {
+            const table = document.createElement('div');
+            table.className = 'overflow-x-auto';
+
+            let tableHTML = `
+                <table class="w-full text-sm">
+                    <thead>
+                        <tr class="border-b border-gray-700">
+                            <th class="text-left py-3 px-4 text-gray-300">Name</th>
+                            <th class="text-left py-3 px-4 text-gray-300">Hall Ticket</th>
+                            <th class="text-right py-3 px-4 text-gray-300">Rank</th>
+                            <th class="text-left py-3 px-4 text-gray-300">College</th>
+                            <th class="text-left py-3 px-4 text-gray-300">Branch</th>
+                            <th class="text-center py-3 px-4 text-gray-300">Gender</th>
+                            <th class="text-center py-3 px-4 text-gray-300">Category</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            `;
+
+            displayData.forEach(record => {
+                tableHTML += `
+                    <tr class="border-b border-gray-800 hover:bg-gray-800/50">
+                        <td class="py-3 px-4">
+                            <div class="font-medium text-white">${record.name}</div>
+                        </td>
+                        <td class="py-3 px-4 text-blue-300 font-mono text-xs">${record.hallticketno}</td>
+                        <td class="py-3 px-4 text-right">
+                            <span class="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-2 py-1 rounded-full text-xs font-bold">
+                                #${record.rank}
+                            </span>
+                        </td>
+                        <td class="py-3 px-4 text-gray-300 max-w-xs truncate">${record.college}</td>
+                        <td class="py-3 px-4 text-gray-300 max-w-xs truncate">${record.branch}</td>
+                        <td class="py-3 px-4 text-center text-gray-300">${record.sex === 'M' ? 'M' : 'F'}</td>
+                        <td class="py-3 px-4 text-center text-gray-300">${record.seatcategory}</td>
+                    </tr>
+                `;
+            });
+
+            tableHTML += `
+                    </tbody>
+                </table>
+            `;
+
+            table.innerHTML = tableHTML;
+            resultsList.innerHTML = '';
+            resultsList.appendChild(table);
+        }
+
+
+
+
+
+        // Add event listeners to popup buttons
+        function addPopupButtonListeners() {
+            const popupButtons = studentPopup.querySelectorAll('button[data-popup-action]');
+
+            popupButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const action = button.dataset.popupAction;
+
+                    if (action === 'similar-ranks') {
+                        const rank = button.dataset.rank;
+                        if (rank) {
+                            searchSimilarRanks(parseInt(rank));
+                        }
+                    } else if (action === 'same-college') {
+                        const college = button.dataset.college;
+                        const branch = button.dataset.branch;
+                        if (college && branch) {
+                            searchSameCollege(college, branch);
+                        }
+                    } else if (action === 'export') {
+                        const studentName = button.dataset.studentName;
+                        if (studentName) {
+                            exportStudentData(studentName);
+                        }
+                    }
+                });
+            });
+        }
+
+        // Update pagination controls
+        function updatePagination() {
+            const totalPages = Math.ceil(filteredData.length / itemsPerPage);
+
+            if (totalPages <= 1) {
+                paginationContainer.classList.add('hidden');
+                return;
+            }
+
+            paginationContainer.classList.remove('hidden');
+
+            // Update prev/next buttons
+            prevPage.classList.toggle('disabled', currentPage === 1);
+            nextPage.classList.toggle('disabled', currentPage === totalPages);
+
+            // Generate page numbers
+            generatePageNumbers(totalPages);
+
+            // Update pagination info
+            const startItem = (currentPage - 1) * itemsPerPage + 1;
+            const endItem = Math.min(currentPage * itemsPerPage, filteredData.length);
+            paginationInfo.textContent = `Showing ${startItem}-${endItem} of ${filteredData.length.toLocaleString()} results`;
+        }
+
+        // Generate page number buttons
+        function generatePageNumbers(totalPages) {
+            pageNumbers.innerHTML = '';
+
+            // Always show first page
+            if (totalPages > 0) {
+                addPageButton(1, totalPages);
+            }
+
+            // Add ellipsis if needed
+            if (currentPage > 4) {
+                addEllipsis();
+            }
+
+            // Add pages around current page
+            const start = Math.max(2, currentPage - 2);
+            const end = Math.min(totalPages - 1, currentPage + 2);
+
+            for (let i = start; i <= end; i++) {
+                if (i !== 1 && i !== totalPages) {
+                    addPageButton(i, totalPages);
+                }
+            }
+
+            // Add ellipsis if needed
+            if (currentPage < totalPages - 3) {
+                addEllipsis();
+            }
+
+            // Always show last page
+            if (totalPages > 1) {
+                addPageButton(totalPages, totalPages);
+            }
+        }
+
+        // Add page button
+        function addPageButton(pageNum, totalPages) {
+            const button = document.createElement('button');
+            button.className = `pagination-btn ${pageNum === currentPage ? 'active' : ''}`;
+            button.textContent = pageNum;
+            button.addEventListener('click', () => goToPage(pageNum));
+            pageNumbers.appendChild(button);
+        }
+
+        // Add ellipsis
+        function addEllipsis() {
+            const ellipsis = document.createElement('span');
+            ellipsis.className = 'pagination-btn disabled';
+            ellipsis.textContent = '...';
+            pageNumbers.appendChild(ellipsis);
+        }
+
+        // Go to specific page
+        function goToPage(page) {
+            const totalPages = Math.ceil(filteredData.length / itemsPerPage);
+
+            if (page < 1 || page > totalPages) return;
+
+            currentPage = page;
+
+            // Re-display results
+            displayLinearResults();
+
+            // Update pagination
+            updatePagination();
+
+            // Scroll to top of results
+            setTimeout(() => {
+                scrollToResults();
+            }, 100);
+        }
+
+        // Show/hide sections
+        function showResults() {
+            loadingIndicator.classList.add('hidden');
+            searchResultsList.classList.remove('hidden');
+            noResults.classList.add('hidden');
+            updateSearchStatus(`Found ${filteredData.length} results`);
+        }
+
+        function showNoResults() {
+            loadingIndicator.classList.add('hidden');
+            searchResultsList.classList.add('hidden');
+            noResults.classList.remove('hidden');
+            paginationContainer.classList.add('hidden');
+            updateSearchStatus('No results found');
+        }
+
+        function hideLoading() {
+            loadingIndicator.classList.add('hidden');
+        }
+
+        function showError(message) {
+            loadingIndicator.innerHTML = `
+                <div class="card p-8 max-w-md mx-auto">
+                    <div class="text-red-400 text-center">
+                        <div class="text-4xl mb-4">⚠️</div>
+                        <p>${message}</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Update statistics with modern styling
+        async function updateStats() {
+            try {
+                const response = await fetch('/api/stats');
+                if (response.ok) {
+                    const stats = await response.json();
+                    totalRecords.innerHTML = `
+                        <span class="text-green-400">●</span>
+                        <span class="ml-1">${stats.records.toLocaleString()} Records</span>
+                    `;
+                    totalColleges.innerHTML = `
+                        <span class="text-blue-400">●</span>
+                        <span class="ml-1">${stats.colleges} Colleges</span>
+                    `;
+                } else {
+                    // Fallback to client-side calculation
+                    totalRecords.innerHTML = `
+                        <span class="text-green-400">●</span>
+                        <span class="ml-1">${allData.length.toLocaleString()} Records</span>
+                    `;
+                    totalColleges.innerHTML = `
+                        <span class="text-blue-400">●</span>
+                        <span class="ml-1">${colleges.size} Colleges</span>
+                    `;
+                }
+            } catch (error) {
+                console.error('Error fetching stats:', error);
+                // Fallback to client-side calculation
+                totalRecords.innerHTML = `
+                    <span class="text-green-400">●</span>
+                    <span class="ml-1">${allData.length.toLocaleString()} Records</span>
+                `;
+                totalColleges.innerHTML = `
+                    <span class="text-blue-400">●</span>
+                    <span class="ml-1">${colleges.size} Colleges</span>
+                `;
+            }
+        }
+
+        // Export results to CSV
+        function exportResults() {
+            if (filteredData.length === 0) return;
+
+            const headers = ['S.No', 'Hall Ticket', 'Rank', 'Name', 'Gender', 'Caste', 'Region', 'Category', 'College', 'Branch'];
+            const csvContent = [
+                headers.join(','),
+                ...filteredData.map(record => [
+                    record.sno,
+                    record.hallticketno,
+                    record.rank,
+                    `"${record.name}"`,
+                    record.sex,
+                    record.caste,
+                    record.region,
+                    `"${record.seatcategory}"`,
+                    `"${record.college}"`,
+                    `"${record.branch}"`
+                ].join(','))
+            ].join('\n');
+
+            const blob = new Blob([csvContent], { type: 'text/csv' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `ts_eamcet_2025_results_${new Date().toISOString().split('T')[0]}.csv`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+        }
+
+        // Make functions globally accessible for onclick handlers
+        window.showStudentDetails = showStudentDetails;
+        window.searchSimilarRanks = searchSimilarRanks;
+        window.quickSearch = quickSearch;
+
+        // Initialize the application when the page loads
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>

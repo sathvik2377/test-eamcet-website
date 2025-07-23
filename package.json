@@ -1,0 +1,27 @@
+{
+  "name": "ts-eamcet-2025-results",
+  "version": "1.0.0",
+  "description": "TS EAMCET 2025 Phase 1 Cutoffs Search Website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "xlsx": "^0.18.5"
+  },
+  "keywords": [
+    "eamcet",
+    "results",
+    "cutoffs",
+    "telangana",
+    "engineering"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}

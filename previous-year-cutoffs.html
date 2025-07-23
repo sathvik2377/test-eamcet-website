@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TS EAMCET 2024 Previous Year Cutoffs - Archival Nebula</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Archival Nebula Theme - Historical and insightful */
+        :root {
+            --midnight-black: #080810;
+            --deep-space-blue: #0A1128;
+            --deep-forest-green-black: #0A1A0A;
+            --star-white: #F0F8FF;
+            --lunar-grey: #A0A0B0;
+            --golden-yellow: #FFD700;
+            --muted-orange: #FFA500;
+            --stardust-silver: #303040;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--deep-forest-green-black) 0%, var(--midnight-black) 25%, var(--deep-space-blue) 50%, var(--midnight-black) 75%, var(--deep-forest-green-black) 100%);
+            background-attachment: fixed;
+            color: var(--star-white);
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(circle at 20% 80%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 165, 0, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(255, 215, 0, 0.05) 0%, transparent 50%);
+            opacity: 0.6;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Navigation Bar */
+        .nav-container {
+            background: rgba(8, 8, 16, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--stardust-silver);
+            border-radius: 0 0 25px 25px;
+        }
+
+        .nav-btn {
+            padding: 0.75rem 1.25rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.05);
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .nav-btn:hover {
+            background: rgba(255, 215, 0, 0.2);
+            color: white;
+            transform: translateY(-2px);
+            border-color: rgba(255, 215, 0, 0.3);
+            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.2);
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        }
+
+        .nav-btn-active {
+            background: linear-gradient(135deg, var(--golden-yellow) 0%, var(--muted-orange) 100%);
+            color: var(--midnight-black);
+            border-color: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.3);
+            font-weight: 700;
+        }
+
+        /* Cards and Containers */
+        .card {
+            background: rgba(10, 26, 10, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--stardust-silver);
+            border-radius: 25px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Buttons and Interactive Elements */
+        .btn-primary {
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            border: none;
+            border-radius: 12px;
+            color: #0B0B14;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+        }
+
+        /* Input Fields */
+        .input-field {
+            background: var(--midnight-black);
+            border: 1px solid var(--stardust-silver);
+            border-radius: 8px;
+            color: var(--star-white);
+            transition: all 0.3s ease;
+        }
+
+        .input-field:focus {
+            border-color: var(--golden-yellow);
+            box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.1);
+            background: rgba(10, 26, 10, 0.3);
+        }
+
+        .input-field::placeholder {
+            color: var(--lunar-grey);
+        }
+
+        /* Tables */
+        .table-container {
+            background: rgba(10, 26, 10, 0.6);
+            border-radius: 20px;
+            border: 1px solid var(--stardust-silver);
+            overflow-y: auto;
+            overflow-x: auto;
+            max-height: 70vh;
+        }
+
+        /* Ensure all columns are visible */
+        .table-container th,
+        .table-container td {
+            min-width: 80px;
+            white-space: nowrap;
+            padding: 8px 12px;
+        }
+
+        .table-container th:first-child,
+        .table-container td:first-child {
+            min-width: 150px; /* College */
+        }
+
+        .table-container th:nth-child(2),
+        .table-container td:nth-child(2) {
+            min-width: 180px; /* Branch */
+        }
+
+        .table-container::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        .table-container::-webkit-scrollbar-track {
+            background: rgba(10, 26, 10, 0.3);
+            border-radius: 4px;
+        }
+
+        .table-container::-webkit-scrollbar-thumb {
+            background: rgba(255, 215, 0, 0.5);
+            border-radius: 4px;
+        }
+
+        .table-container::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 215, 0, 0.7);
+        }
+
+        .college-name {
+            max-width: 200px;
+            line-height: 1.3;
+            font-size: 0.875rem;
+            word-wrap: break-word;
+            hyphens: auto;
+        }
+
+        .table-header {
+            background: var(--midnight-black);
+            color: var(--golden-yellow);
+            font-weight: 600;
+        }
+
+        .table-row:nth-child(even) {
+            background: rgba(10, 26, 10, 0.3);
+        }
+
+        .table-row:nth-child(odd) {
+            background: rgba(8, 8, 16, 0.3);
+        }
+
+        .table-row:hover {
+            background: rgba(255, 215, 0, 0.1);
+        }
+
+        /* Gradient Text Effects */
+        .gradient-text {
+            background: linear-gradient(135deg, var(--golden-yellow) 0%, var(--muted-orange) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .glow-text {
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+
+        /* Loading Spinner */
+        .spinner {
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-left: 2px solid var(--golden-yellow);
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Scrollbar Customization */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--midnight-black);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--muted-orange);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--golden-yellow);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-btn {
+                padding: 0.5rem 1rem;
+                font-size: 0.875rem;
+            }
+            
+            .card {
+                border-radius: 15px;
+                margin: 1rem;
+            }
+        }
+
+        /* Sortable headers */
+        .sortable-header {
+            cursor: pointer;
+            user-select: none;
+            transition: all 0.2s ease;
+            position: relative;
+        }
+
+        .sortable-header:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .sort-indicator {
+            font-size: 0.8em;
+            opacity: 0.6;
+            margin-left: 4px;
+        }
+
+        .sortable-header.sort-asc .sort-indicator {
+            opacity: 1;
+        }
+
+        .sortable-header.sort-desc .sort-indicator {
+            opacity: 1;
+        }
+
+        .sortable-header.sort-asc .sort-indicator::after {
+            content: ' ↑';
+        }
+
+        .sortable-header.sort-desc .sort-indicator::after {
+            content: ' ↓';
+        }
+
+        /* Top scroll bar */
+        .top-scroll-container {
+            background: rgba(26, 27, 58, 0.6);
+            border-radius: 20px 20px 0 0;
+            border: 1px solid rgba(42, 45, 71, 0.5);
+            border-bottom: none;
+            overflow-x: auto;
+            overflow-y: hidden;
+            height: 20px;
+        }
+
+        .top-scroll-content {
+            height: 1px;
+            /* Width will be set by JavaScript to match table width */
+        }
+
+        .top-scroll-container::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .top-scroll-container::-webkit-scrollbar-track {
+            background: rgba(11, 11, 20, 0.3);
+            border-radius: 4px;
+        }
+
+        .top-scroll-container::-webkit-scrollbar-thumb {
+            background: rgba(255, 140, 0, 0.5);
+            border-radius: 4px;
+        }
+
+        .top-scroll-container::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 140, 0, 0.7);
+        }
+
+        /* Sticky columns */
+        .table-container table {
+            position: relative;
+        }
+
+        /* First column - College */
+        .table-container th:nth-child(1),
+        .table-container td:nth-child(1) {
+            position: sticky;
+            left: 0;
+            z-index: 10;
+            background: rgba(26, 27, 58, 0.95);
+            border-right: 2px solid rgba(255, 140, 0, 0.3);
+            min-width: 200px;
+            max-width: 200px;
+        }
+
+        /* Second column - Branch */
+        .table-container th:nth-child(2),
+        .table-container td:nth-child(2) {
+            position: sticky;
+            left: 200px;
+            z-index: 10;
+            background: rgba(26, 27, 58, 0.95);
+            border-right: 2px solid rgba(255, 140, 0, 0.3);
+            min-width: 150px;
+            max-width: 150px;
+        }
+
+        /* Header cells need higher z-index */
+        .table-container thead th:nth-child(1),
+        .table-container thead th:nth-child(2) {
+            z-index: 11;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="nav-container sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-center">
+                <div class="flex items-center space-x-4">
+                    <div class="w-12 h-12 rounded-xl flex items-center justify-center shadow-lg" style="background: linear-gradient(135deg, #FF8C00 0%, #DAA520 50%, #B8860B 100%);">
+                        <span class="text-xl font-bold text-black">TS</span>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold gradient-text glow-text">
+                            TS EAMCET 2024
+                        </h1>
+                        <p class="text-sm text-gray-400">Previous Year Cutoffs Archive</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Hero Section -->
+    <section class="py-12 bg-gradient-to-b from-transparent to-black/10">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold mb-4 gradient-text glow-text">Navigate Your EAMCET Journey</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Choose from our comprehensive tools to find your results, explore cutoffs, and predict your college admissions</p>
+            </div>
+
+            <!-- Navigation Grid - All 5 buttons in single row -->
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+                    <a href="index.html" class="nav-btn flex flex-col items-center space-y-4 p-10 rounded-3xl transition-all duration-300 min-h-[140px]">
+                        <div class="text-4xl">🔍</div>
+                        <div class="text-center">
+                            <div class="font-semibold text-base">Search Results</div>
+                            <div class="text-xs text-gray-400 mt-1">Find student results</div>
+                        </div>
+                    </a>
+                    <a href="closing-ranks.html" class="nav-btn flex flex-col items-center space-y-4 p-10 rounded-3xl transition-all duration-300 min-h-[140px]">
+                        <div class="text-4xl">📊</div>
+                        <div class="text-center">
+                            <div class="font-semibold text-base">Phase 1 Cutoffs</div>
+                            <div class="text-xs text-gray-400 mt-1">Official closing ranks</div>
+                        </div>
+                    </a>
+                    <a href="phase2-cutoffs.html" class="nav-btn flex flex-col items-center space-y-4 p-10 rounded-3xl transition-all duration-300 relative min-h-[140px]">
+                        <div class="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full font-bold">PREDICTED</div>
+                        <div class="text-4xl">🎯</div>
+                        <div class="text-center">
+                            <div class="font-semibold text-base">Phase 2 Predictions</div>
+                            <div class="text-xs text-gray-400 mt-1">Predicted cutoffs</div>
+                        </div>
+                    </a>
+                    <a href="previous-year-cutoffs.html" class="nav-btn-active flex flex-col items-center space-y-4 p-10 rounded-3xl transition-all duration-300 min-h-[140px]">
+                        <div class="text-4xl">📚</div>
+                        <div class="text-center">
+                            <div class="font-semibold text-base">Previous Year Cutoffs</div>
+                            <div class="text-xs text-gray-400 mt-1">Historical data</div>
+                        </div>
+                    </a>
+                    <a href="college-predictor.html" class="nav-btn flex flex-col items-center space-y-4 p-10 rounded-3xl transition-all duration-300 min-h-[140px] relative">
+                        <div class="absolute -top-2 -right-2 bg-blue-500 text-white text-xs px-2 py-1 rounded-full font-bold">AI</div>
+                        <div class="text-4xl">🔮</div>
+                        <div class="text-center">
+                            <div class="font-semibold text-base">College Predictor</div>
+                            <div class="text-xs text-gray-400 mt-1">Admission predictions</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+        <!-- Hero Section -->
+        <div class="text-center mb-8">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 glow-text">
+                Previous Year <span class="gradient-text">Cutoffs Archive</span>
+            </h1>
+            <p class="text-lg text-gray-300 mb-6 max-w-3xl mx-auto">
+                Explore historical cutoff data from TS EAMCET 2024 across all three phases with <span class="gradient-text">advanced filtering</span>.
+            </p>
+        </div>
+
+        <!-- Phase Selection and Filters -->
+        <div class="card p-8 mb-8 max-w-6xl mx-auto">
+            <div class="text-center mb-8">
+                <h2 class="text-2xl font-semibold mb-3 gradient-text">Select Phase and Apply Filters</h2>
+                <p class="text-gray-400 mb-6">Choose the counseling phase and customize your search criteria</p>
+            </div>
+
+            <!-- Phase Selection -->
+            <div class="mb-8">
+                <label class="block text-lg font-semibold mb-4 gradient-text">Select Counseling Phase:</label>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <button id="phase1Btn" class="phase-btn px-8 py-3 rounded-xl font-medium transition-all duration-300 bg-gray-700 text-white hover:bg-gray-600">
+                        📊 Phase 1 (2024)
+                    </button>
+                    <button id="phase2Btn" class="phase-btn px-8 py-3 rounded-xl font-medium transition-all duration-300 bg-gray-700 text-white hover:bg-gray-600">
+                        📈 Phase 2 (2024)
+                    </button>
+                    <button id="phase3Btn" class="phase-btn btn-primary px-8 py-3 rounded-xl font-medium transition-all duration-300 active">
+                        📉 Phase 3 (2024)
+                    </button>
+                </div>
+            </div>
+
+            <!-- Filters -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+                <div class="relative">
+                    <label class="block text-sm font-medium mb-2 text-gray-300">College</label>
+                    <select id="collegeFilter" class="w-full px-4 py-3 input-field appearance-none">
+                        <option value="">All Colleges</option>
+                    </select>
+                    <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none mt-8">
+                        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="relative">
+                    <label class="block text-sm font-medium mb-2 text-gray-300">Branch</label>
+                    <select id="branchFilter" class="w-full px-4 py-3 input-field appearance-none">
+                        <option value="">All Branches</option>
+                    </select>
+                    <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none mt-8">
+                        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2 text-gray-300">Category</label>
+                    <select id="categoryFilter" class="w-full px-4 py-3 input-field">
+                        <option value="">All Categories</option>
+                        <option value="oc">OC</option>
+                        <option value="bc_a">BC-A</option>
+                        <option value="bc_b">BC-B</option>
+                        <option value="bc_c">BC-C</option>
+                        <option value="bc_d">BC-D</option>
+                        <option value="bc_e">BC-E</option>
+                        <option value="sc">SC</option>
+                        <option value="st">ST</option>
+                        <option value="ews">EWS</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2 text-gray-300">Gender</label>
+                    <select id="genderFilter" class="w-full px-4 py-3 input-field">
+                        <option value="">All Genders</option>
+                        <option value="boys">Boys</option>
+                        <option value="girls">Girls</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Search Button -->
+            <div class="text-center">
+                <button id="searchBtn" class="btn-primary px-8 py-3 rounded-xl font-medium transition-all duration-300">
+                    🔍 Search Cutoffs
+                </button>
+            </div>
+        </div>
+
+        <!-- Results Section -->
+        <div id="resultsSection" class="hidden">
+            <!-- Results Header -->
+            <div class="card p-6 mb-6 max-w-6xl mx-auto">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-2 gradient-text">Search Results</h3>
+                        <p id="resultsCount" class="text-gray-400">Found 0 results</p>
+                        <div class="mt-2 text-sm text-yellow-400">
+                            📱 <strong>Note:</strong> Scroll sideways to see all BC cutoffs • Check disclaimer at bottom
+                        </div>
+                    </div>
+                    <div class="mt-4 md:mt-0">
+                        <button id="exportBtn" class="btn-primary px-6 py-3 rounded-xl font-medium transition-all duration-300">
+                            📥 Export Results
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results Table -->
+            <div class="w-full max-w-none mx-auto">
+                <!-- Top Scroll Bar -->
+                <div class="top-scroll-container mb-2" style="margin-left: 350px;">
+                    <div class="top-scroll-content"></div>
+                </div>
+                <div class="table-container" id="mainTableContainer">
+                    <table class="w-full min-w-max">
+                            <thead class="table-header">
+                                <tr>
+                                    <th class="px-4 py-3 text-left text-sm sortable-header" data-sort="college_name">
+                                        College <span class="sort-indicator">↕️</span>
+                                    </th>
+                                    <th class="px-4 py-3 text-left text-sm sortable-header" data-sort="branch_name">
+                                        Branch <span class="sort-indicator">↕️</span>
+                                    </th>
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="oc_boys">
+                                        OC Boys <span class="sort-indicator">↕️</span>
+                                    </th>
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="oc_girls">
+                                        OC Girls <span class="sort-indicator">↕️</span>
+                                    </th>
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="sc_boys">
+                                        SC Boys <span class="sort-indicator">↕️</span>
+                                    </th>
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="sc_girls">
+                                        SC Girls <span class="sort-indicator">↕️</span>
+                                    </th>
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="st_boys">
+                                        ST Boys <span class="sort-indicator">↕️</span>
+                                    </th>
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="st_girls">
+                                        ST Girls <span class="sort-indicator">↕️</span>
+                                    </th>
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="bc_a_boys">
+                                        BC-A Boys <span class="sort-indicator">↕️</span>
+                                    </th>
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="bc_a_girls">
+                                        BC-A Girls <span class="sort-indicator">↕️</span>
+                                    </th>
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="bc_b_boys">
+                                        BC-B Boys <span class="sort-indicator">↕️</span>
+                                    </th>
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="bc_b_girls">
+                                        BC-B Girls <span class="sort-indicator">↕️</span>
+                                    </th>
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="bc_c_boys">
+                                        BC-C Boys <span class="sort-indicator">↕️</span>
+                                    </th>
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="bc_c_girls">
+                                        BC-C Girls <span class="sort-indicator">↕️</span>
+                                    </th>
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="bc_d_boys">
+                                        BC-D Boys <span class="sort-indicator">↕️</span>
+                                    </th>
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="bc_d_girls">
+                                        BC-D Girls <span class="sort-indicator">↕️</span>
+                                    </th>
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="bc_e_boys">
+                                        BC-E Boys <span class="sort-indicator">↕️</span>
+                                    </th>
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="bc_e_girls">
+                                        BC-E Girls <span class="sort-indicator">↕️</span>
+                                    </th>
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="ews_boys">
+                                        EWS Boys <span class="sort-indicator">↕️</span>
+                                    </th>
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="ews_girls">
+                                        EWS Girls <span class="sort-indicator">↕️</span>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody id="resultsTableBody">
+                                <!-- Results will be populated here -->
+                            </tbody>
+                        </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Loading Indicator -->
+        <div id="loadingIndicator" class="text-center py-16 hidden">
+            <div class="card p-8 max-w-md mx-auto">
+                <div class="spinner mx-auto mb-4" style="width: 48px; height: 48px;"></div>
+                <h3 class="text-xl font-semibold mb-2 gradient-text">Loading Cutoff Data</h3>
+                <p class="text-gray-400">Preparing historical data...</p>
+            </div>
+        </div>
+
+        <!-- No Results -->
+        <div id="noResults" class="hidden text-center py-16">
+            <div class="card p-12 max-w-lg mx-auto">
+                <div class="text-8xl mb-6 opacity-50">📚</div>
+                <h3 class="text-2xl font-semibold mb-3 gradient-text">No Results Found</h3>
+                <p class="text-gray-400 mb-6">Try adjusting your search criteria or select a different phase</p>
+                <div class="text-sm text-gray-500">
+                    <p>💡 Tips:</p>
+                    <p>• Try different phase selections</p>
+                    <p>• Check college name spelling</p>
+                    <p>• Use broader filter criteria</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Disclaimer Section -->
+        <div class="w-full max-w-6xl mx-auto mt-8 mb-8">
+            <div class="bg-gradient-to-r from-red-900/20 to-orange-900/20 border border-red-500/30 rounded-xl p-6">
+                <h3 class="text-xl font-bold text-red-400 mb-4 flex items-center">
+                    ⚠️ Important Disclaimer
+                </h3>
+                <div class="text-sm text-gray-300 space-y-2">
+                    <p><strong>1.</strong> Last rank statement does not reflect the candidates admitted in special reservation categories like PH, NCC, Sports and Games, Children of Armed Personnel (CAP) seats, State wide colleges & Minority colleges.</p>
+                    <p><strong>2.</strong> Every care has been taken to present accurate information. The Ranks shown are at the end of Web Counseling process and does not indicate the dropouts or spot admissions.</p>
+                    <p><strong>3.</strong> The statement shall be used only for information to assess the mode of opting by candidates and shall in no way reflect the rank upto which seat can be allotted in the present academic year.</p>
+                    <p><strong>4.</strong> The ranks indicated inclusive of the ranks allotted in respect of Consequential Vacancies arose at the final round of Allotment.</p>
+                    <p><strong>5.</strong> The TGCHE/DTE is not responsible for Print Errors.</p>
+                    <p><strong>6.</strong> Girls are also eligible for Boys seats.</p>
+                    <p><strong>7.</strong> In terms of G.O.Ms.No. 42 Higher Education Dept.dated:18-05-2009,15% unreserved seats are filled first with combined merit list of candidates followed by 85% seats with local candidates only.</p>
+                    <p><strong>8.</strong> NA means Not Applicable.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="card-dark border-t border-white/5 mt-20">
+        <div class="container mx-auto px-6 py-8">
+            <div class="text-center">
+                <div class="flex items-center justify-center mb-4">
+                    <div class="w-8 h-8 rounded-lg flex items-center justify-center mr-3" style="background: linear-gradient(135deg, #FF8C00 0%, #DAA520 50%, #B8860B 100%);">
+                        <span class="text-sm font-bold text-black">TS</span>
+                    </div>
+                    <span class="text-lg font-semibold gradient-text">TS EAMCET Previous Year Cutoffs</span>
+                </div>
+                <p class="text-gray-400 mb-2">&copy; 2025 TS EAMCET Results Platform. Historical data from official TS EAMCET 2024 cutoffs.</p>
+                <p class="text-sm text-gray-500">Archival Nebula Theme • Historical Analysis • Trend Insights</p>
+
+                <!-- Official Footer -->
+                <div class="mt-6 pt-4 border-t border-gray-700">
+                    <div class="bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-lg p-4">
+                        <div class="flex items-center justify-center mb-2">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-bold mr-2">TS</span>
+                            <span class="text-sm font-semibold text-blue-300">TS EAMCET 2025</span>
+                        </div>
+                        <p class="text-xs text-gray-300 text-center leading-relaxed">
+                            © 2025 TS EAMCET Results Finder. Data sourced from official TS EAMCET 2025 Phase 1 cutoffs.<br>
+                            Built with modern web technologies • Optimized for performance • Mobile-friendly design
+                        </p>
+                        <p class="text-xs text-gray-400 text-center mt-2">
+                            <strong>Data Source Disclaimer:</strong> All data rights belong to the official TS EAMCET website (tseamcet.nic.in).
+                            This website uses data sourced from their official publications. Some data may be missing or incomplete.
+                            For official and complete information, please refer to the official TS EAMCET website.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Global variables
+        let allData = {};
+        let currentPhase = 'Phase 3';
+        let filteredData = [];
+        let currentSortField = null;
+        let currentSortDirection = 'asc';
+
+        // DOM elements
+        const phase1Btn = document.getElementById('phase1Btn');
+        const phase2Btn = document.getElementById('phase2Btn');
+        const phase3Btn = document.getElementById('phase3Btn');
+        const collegeFilter = document.getElementById('collegeFilter');
+        const branchFilter = document.getElementById('branchFilter');
+        const categoryFilter = document.getElementById('categoryFilter');
+        const genderFilter = document.getElementById('genderFilter');
+        const searchBtn = document.getElementById('searchBtn');
+        const resultsSection = document.getElementById('resultsSection');
+        const loadingIndicator = document.getElementById('loadingIndicator');
+        const noResults = document.getElementById('noResults');
+        const resultsCount = document.getElementById('resultsCount');
+        const resultsTableBody = document.getElementById('resultsTableBody');
+        const exportBtn = document.getElementById('exportBtn');
+
+        // Initialize the application
+        async function init() {
+            try {
+                await loadData();
+                setupEventListeners();
+                populateFilters();
+            } catch (error) {
+                console.error('Error initializing application:', error);
+                showError('Failed to load data. Please refresh the page.');
+            }
+        }
+
+        // Load data from JSON files (dual mode: API first, then static)
+        async function loadData() {
+            try {
+                showLoading();
+                let response;
+
+                // Try server API first (for Vercel/Node.js hosting)
+                try {
+                    response = await fetch('/api/previous-year-cutoffs');
+                    if (!response.ok) throw new Error('Server API not available');
+                    console.log('✅ Loading previous year cutoffs from server API');
+                } catch (serverError) {
+                    // Fallback to static JSON file (for GitHub Pages)
+                    console.log('🔄 Server API not available, trying static file...');
+                    response = await fetch('./data/previous-year-cutoffs.json');
+                    if (!response.ok) {
+                        throw new Error(`Static file not found! status: ${response.status}`);
+                    }
+                    console.log('✅ Loading previous year cutoffs from static file');
+                }
+
+                allData = await response.json();
+                console.log('✅ Loaded previous year cutoffs data:', Object.keys(allData));
+                hideLoading();
+            } catch (error) {
+                console.error('❌ Error loading data:', error);
+                hideLoading();
+                throw error;
+            }
+        }
+
+        // Setup event listeners
+        function setupEventListeners() {
+            // Phase selection buttons
+            phase1Btn.addEventListener('click', () => selectPhase('Phase 1', phase1Btn));
+            phase2Btn.addEventListener('click', () => selectPhase('Phase 2', phase2Btn));
+            phase3Btn.addEventListener('click', () => selectPhase('Phase 3', phase3Btn));
+
+            // Search button
+            searchBtn.addEventListener('click', performSearch);
+
+            // Filter inputs
+            collegeFilter.addEventListener('change', performSearch);
+            branchFilter.addEventListener('change', performSearch);
+            categoryFilter.addEventListener('change', performSearch);
+            genderFilter.addEventListener('change', performSearch);
+
+            // Export button
+            exportBtn.addEventListener('click', exportResults);
+
+            // Sortable headers
+            document.querySelectorAll('.sortable-header').forEach(header => {
+                header.addEventListener('click', () => {
+                    const sortField = header.dataset.sort;
+                    sortTable(sortField);
+                });
+            });
+        }
+
+        // Select phase
+        function selectPhase(phase, button) {
+            currentPhase = phase;
+            
+            // Update button styles
+            document.querySelectorAll('.phase-btn').forEach(btn => {
+                btn.classList.remove('btn-primary', 'active');
+                btn.classList.add('bg-gray-700', 'text-white');
+            });
+            
+            button.classList.remove('bg-gray-700', 'text-white');
+            button.classList.add('btn-primary', 'active');
+            
+            // Update filters and perform search
+            populateFilters();
+            performSearch();
+        }
+
+        // Populate filter dropdowns
+        function populateFilters() {
+            const phaseData = allData[currentPhase] || [];
+
+            // Get unique colleges and branches, filtering out disclaimer text
+            const colleges = [...new Set(phaseData.map(item => item.college_name)
+                .filter(Boolean)
+                .filter(college => {
+                    // Filter out disclaimer text and invalid entries
+                    const disclaimerKeywords = [
+                        'Last rank statement', 'does not reflect', 'candidates admitted',
+                        'special reservation', 'CAP seats', 'State wide colleges',
+                        'Era has been taken', 'present accurate information',
+                        'statement shall be used', 'Information to assess',
+                        'mode of opting', 'candidates and shall',
+                        'reflect the rank', 'seat can be allotted',
+                        'present academic year', 'Ranks indicated',
+                        'inclusive of the ranks', 'Consequential Vacancies',
+                        'final round', 'Allotment', 'TGCHE/DTE',
+                        'responsible for Print Errors', 'Girls are also eligible',
+                        'Boys seats', 'terms of G.O.Ms', 'Higher Education',
+                        'unreserved seats', 'filled first', 'combined merit',
+                        'local candidates', 'NA means Not Applicable'
+                    ];
+
+                    return !disclaimerKeywords.some(keyword =>
+                        college.toLowerCase().includes(keyword.toLowerCase())
+                    );
+                })
+            )].sort();
+
+            const branches = [...new Set(phaseData.map(item => item.branch_name)
+                .filter(Boolean)
+                .filter(branch => {
+                    // Filter out disclaimer text from branches too
+                    const disclaimerKeywords = [
+                        'Last rank statement', 'does not reflect', 'candidates admitted',
+                        'special reservation', 'CAP seats', 'State wide colleges'
+                    ];
+
+                    return !disclaimerKeywords.some(keyword =>
+                        branch.toLowerCase().includes(keyword.toLowerCase())
+                    );
+                })
+            )].sort();
+
+            // Populate college filter
+            collegeFilter.innerHTML = '<option value="">All Colleges</option>';
+            colleges.forEach(college => {
+                const option = document.createElement('option');
+                option.value = college;
+                option.textContent = college;
+                collegeFilter.appendChild(option);
+            });
+
+            // Populate branch filter
+            branchFilter.innerHTML = '<option value="">All Branches</option>';
+            branches.forEach(branch => {
+                const option = document.createElement('option');
+                option.value = branch;
+                option.textContent = branch;
+                branchFilter.appendChild(option);
+            });
+        }
+
+        // Sort table by field
+        function sortTable(field) {
+            // Toggle sort direction if same field
+            if (currentSortField === field) {
+                currentSortDirection = currentSortDirection === 'asc' ? 'desc' : 'asc';
+            } else {
+                currentSortField = field;
+                currentSortDirection = 'asc';
+            }
+
+            // Update header indicators
+            document.querySelectorAll('.sortable-header').forEach(header => {
+                header.classList.remove('sort-asc', 'sort-desc');
+                const indicator = header.querySelector('.sort-indicator');
+                indicator.textContent = '↕️';
+            });
+
+            const activeHeader = document.querySelector(`[data-sort="${field}"]`);
+            activeHeader.classList.add(`sort-${currentSortDirection}`);
+            const activeIndicator = activeHeader.querySelector('.sort-indicator');
+            activeIndicator.textContent = currentSortDirection === 'asc' ? '↑' : '↓';
+
+            // Sort the filtered data
+            filteredData.sort((a, b) => {
+                let aVal = a[field];
+                let bVal = b[field];
+
+                // Handle numeric values (ranks)
+                if (field !== 'college_name' && field !== 'branch_name') {
+                    aVal = parseInt(aVal) || 999999;
+                    bVal = parseInt(bVal) || 999999;
+
+                    if (currentSortDirection === 'asc') {
+                        return aVal - bVal;
+                    } else {
+                        return bVal - aVal;
+                    }
+                }
+
+                // Handle text values
+                aVal = (aVal || '').toString().toLowerCase();
+                bVal = (bVal || '').toString().toLowerCase();
+
+                if (currentSortDirection === 'asc') {
+                    return aVal.localeCompare(bVal);
+                } else {
+                    return bVal.localeCompare(aVal);
+                }
+            });
+
+            // Re-display the sorted results
+            displayResults();
+        }
+
+        // Perform search with debouncing to prevent getting stuck
+        let searchTimeout;
+        function performSearch() {
+            // Clear any existing timeout
+            clearTimeout(searchTimeout);
+
+            // Debounce the search to prevent rapid consecutive calls
+            searchTimeout = setTimeout(() => {
+                try {
+                    const phaseData = allData[currentPhase] || [];
+                    const collegeQuery = collegeFilter.value;
+                    const branchQuery = branchFilter.value;
+                    const categoryQuery = categoryFilter.value;
+                    const genderQuery = genderFilter.value;
+
+                    // Show loading state
+                    showLoading();
+
+                    // Filter data with error handling
+                    filteredData = phaseData.filter(item => {
+                        try {
+                            // College filter
+                            if (collegeQuery && item.college_name !== collegeQuery) {
+                                return false;
+                            }
+
+                            // Branch filter
+                            if (branchQuery && item.branch_name !== branchQuery) {
+                                return false;
+                            }
+
+                            return true;
+                        } catch (error) {
+                            console.error('Error filtering item:', error, item);
+                            return false;
+                        }
+                    });
+
+                    // Use requestAnimationFrame for smooth UI updates
+                    requestAnimationFrame(() => {
+                        displayResults();
+                        hideLoading();
+                    });
+                } catch (error) {
+                    console.error('Error in performSearch:', error);
+                    showError('An error occurred while searching. Please try again.');
+                    hideLoading();
+                }
+            }, 100); // 100ms debounce
+        }
+
+        // Display search results
+        function displayResults() {
+            if (filteredData.length === 0) {
+                showNoResults();
+                return;
+            }
+
+            showResults();
+            resultsCount.textContent = `Found ${filteredData.length} results for ${currentPhase}`;
+            
+            // Clear existing results
+            resultsTableBody.innerHTML = '';
+            
+            // Add results to table
+            filteredData.forEach(item => {
+                const row = document.createElement('tr');
+                row.className = 'table-row border-b border-gray-700';
+                
+                row.innerHTML = `
+                    <td class="px-4 py-3">
+                        <div class="college-name font-semibold text-white text-sm">${formatCollegeName(item.college_name || 'N/A')}</div>
+                        <div class="text-xs text-gray-400">${item.college_code || ''}</div>
+                    </td>
+                    <td class="px-4 py-3">
+                        <div class="college-name text-sm text-white font-medium">${formatBranchName(item.branch_name || 'N/A')}</div>
+                    </td>
+                    <td class="px-3 py-3 text-center">
+                        <span class="text-yellow-300 font-bold text-sm">${formatRank(item.oc_boys)}</span>
+                    </td>
+                    <td class="px-3 py-3 text-center">
+                        <span class="text-yellow-300 font-bold text-sm">${formatRank(item.oc_girls)}</span>
+                    </td>
+                    <td class="px-3 py-3 text-center">
+                        <span class="text-green-300 font-bold text-sm">${formatRank(item.sc_boys)}</span>
+                    </td>
+                    <td class="px-3 py-3 text-center">
+                        <span class="text-green-300 font-bold text-sm">${formatRank(item.sc_girls)}</span>
+                    </td>
+                    <td class="px-3 py-3 text-center">
+                        <span class="text-purple-300 font-bold text-sm">${formatRank(item.st_boys)}</span>
+                    </td>
+                    <td class="px-3 py-3 text-center">
+                        <span class="text-purple-300 font-bold text-sm">${formatRank(item.st_girls)}</span>
+                    </td>
+                    <td class="px-3 py-3 text-center">
+                        <span class="text-orange-300 font-bold text-sm">${formatRank(item.bc_a_boys)}</span>
+                    </td>
+                    <td class="px-3 py-3 text-center">
+                        <span class="text-orange-300 font-bold text-sm">${formatRank(item.bc_a_girls)}</span>
+                    </td>
+                    <td class="px-3 py-3 text-center">
+                        <span class="text-orange-400 font-bold text-sm">${formatRank(item.bc_b_boys)}</span>
+                    </td>
+                    <td class="px-3 py-3 text-center">
+                        <span class="text-orange-400 font-bold text-sm">${formatRank(item.bc_b_girls)}</span>
+                    </td>
+                    <td class="px-3 py-3 text-center">
+                        <span class="text-orange-500 font-bold text-sm">${formatRank(item.bc_c_boys)}</span>
+                    </td>
+                    <td class="px-3 py-3 text-center">
+                        <span class="text-orange-500 font-bold text-sm">${formatRank(item.bc_c_girls)}</span>
+                    </td>
+                    <td class="px-3 py-3 text-center">
+                        <span class="text-orange-600 font-bold text-sm">${formatRank(item.bc_d_boys)}</span>
+                    </td>
+                    <td class="px-3 py-3 text-center">
+                        <span class="text-orange-600 font-bold text-sm">${formatRank(item.bc_d_girls)}</span>
+                    </td>
+                    <td class="px-3 py-3 text-center">
+                        <span class="text-orange-700 font-bold text-sm">${formatRank(item.bc_e_boys)}</span>
+                    </td>
+                    <td class="px-3 py-3 text-center">
+                        <span class="text-orange-700 font-bold text-sm">${formatRank(item.bc_e_girls)}</span>
+                    </td>
+                    <td class="px-3 py-3 text-center">
+                        <span class="text-blue-300 font-bold text-sm">${formatRank(item.ews_boys)}</span>
+                    </td>
+                    <td class="px-3 py-3 text-center">
+                        <span class="text-blue-300 font-bold text-sm">${formatRank(item.ews_girls)}</span>
+                    </td>
+                `;
+                
+                resultsTableBody.appendChild(row);
+            });
+        }
+
+        // Format rank display
+        function formatRank(rank) {
+            if (rank === null || rank === undefined || rank === '') {
+                return 'N/A';
+            }
+            return typeof rank === 'number' ? rank.toLocaleString() : rank;
+        }
+
+        // Export results to CSV
+        function exportResults() {
+            if (filteredData.length === 0) {
+                alert('No data to export');
+                return;
+            }
+
+            const headers = [
+                'College Code', 'College Name', 'Branch Name', 'Phase',
+                'OC Boys', 'OC Girls', 'BC-A Boys', 'BC-A Girls', 'BC-B Boys', 'BC-B Girls',
+                'BC-C Boys', 'BC-C Girls', 'BC-D Boys', 'BC-D Girls', 'BC-E Boys', 'BC-E Girls',
+                'SC Boys', 'SC Girls', 'ST Boys', 'ST Girls', 'EWS Boys', 'EWS Girls'
+            ];
+
+            const csvContent = [
+                headers.join(','),
+                ...filteredData.map(item => [
+                    `"${item.college_code || ''}"`,
+                    `"${item.college_name || ''}"`,
+                    `"${item.branch_name || ''}"`,
+                    `"${item.phase || ''}"`,
+                    item.oc_boys || '',
+                    item.oc_girls || '',
+                    item.bc_a_boys || '',
+                    item.bc_a_girls || '',
+                    item.bc_b_boys || '',
+                    item.bc_b_girls || '',
+                    item.bc_c_boys || '',
+                    item.bc_c_girls || '',
+                    item.bc_d_boys || '',
+                    item.bc_d_girls || '',
+                    item.bc_e_boys || '',
+                    item.bc_e_girls || '',
+                    item.sc_boys || '',
+                    item.sc_girls || '',
+                    item.st_boys || '',
+                    item.st_girls || '',
+                    item.ews_boys || '',
+                    item.ews_girls || ''
+                ].join(','))
+            ].join('\n');
+
+            const blob = new Blob([csvContent], { type: 'text/csv' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `EAMCET_2024_${currentPhase.replace(' ', '_')}_Cutoffs.csv`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+        }
+
+        // Utility functions
+        function showLoading() {
+            loadingIndicator.classList.remove('hidden');
+            resultsSection.classList.add('hidden');
+            noResults.classList.add('hidden');
+        }
+
+        function hideLoading() {
+            loadingIndicator.classList.add('hidden');
+        }
+
+        function showResults() {
+            resultsSection.classList.remove('hidden');
+            noResults.classList.add('hidden');
+        }
+
+        function showNoResults() {
+            resultsSection.classList.add('hidden');
+            noResults.classList.remove('hidden');
+        }
+
+        function showLoading() {
+            const loadingIndicator = document.getElementById('loadingIndicator');
+            if (loadingIndicator) {
+                loadingIndicator.classList.remove('hidden');
+            }
+        }
+
+        function hideLoading() {
+            const loadingIndicator = document.getElementById('loadingIndicator');
+            if (loadingIndicator) {
+                loadingIndicator.classList.add('hidden');
+            }
+        }
+
+        function showError(message) {
+            console.error(message);
+            // Use a more user-friendly error display instead of alert
+            const errorDiv = document.createElement('div');
+            errorDiv.className = 'fixed top-4 right-4 bg-red-600 text-white p-4 rounded-lg shadow-lg z-50';
+            errorDiv.textContent = message;
+            document.body.appendChild(errorDiv);
+
+            // Auto-remove after 5 seconds
+            setTimeout(() => {
+                if (errorDiv.parentNode) {
+                    errorDiv.parentNode.removeChild(errorDiv);
+                }
+            }, 5000);
+        }
+
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        function formatCollegeName(name) {
+            if (!name) return '';
+
+            // Split long college names into multiple lines for better display
+            const words = name.split(' ');
+            if (words.length <= 3) return name;
+
+            // Group words into lines of 2-3 words each
+            const lines = [];
+            for (let i = 0; i < words.length; i += 3) {
+                lines.push(words.slice(i, i + 3).join(' '));
+            }
+
+            return lines.join('<br>');
+        }
+
+        function formatBranchName(name) {
+            if (!name) return '';
+
+            // Split long branch names into multiple lines
+            const words = name.split(' ');
+            if (words.length <= 2) return name;
+
+            // Group words into lines of 2 words each for branches
+            const lines = [];
+            for (let i = 0; i < words.length; i += 2) {
+                lines.push(words.slice(i, i + 2).join(' '));
+            }
+
+            return lines.join('<br>');
+        }
+
+        // Setup dual scroll bars for sticky columns
+        function setupDualScrollBars() {
+            const topScrollContainer = document.querySelector('.top-scroll-container');
+            const topScrollContent = document.querySelector('.top-scroll-content');
+            const mainTableContainer = document.getElementById('mainTableContainer');
+            const table = mainTableContainer.querySelector('table');
+
+            if (!topScrollContainer || !mainTableContainer || !table) return;
+
+            // Set the width of top scroll content to match scrollable area width
+            function updateTopScrollWidth() {
+                const tableWidth = table.scrollWidth;
+                const stickyColumnsWidth = 350; // 200 + 150 = width of sticky columns
+                const scrollableWidth = Math.max(0, tableWidth - stickyColumnsWidth);
+                topScrollContent.style.width = scrollableWidth + 'px';
+            }
+
+            // Sync scroll positions
+            function syncScrollLeft(source, target) {
+                if (source.scrollLeft !== target.scrollLeft) {
+                    target.scrollLeft = source.scrollLeft;
+                }
+            }
+
+            // Event listeners for scroll synchronization
+            topScrollContainer.addEventListener('scroll', () => {
+                syncScrollLeft(topScrollContainer, mainTableContainer);
+            });
+
+            mainTableContainer.addEventListener('scroll', () => {
+                syncScrollLeft(mainTableContainer, topScrollContainer);
+            });
+
+            // Update scroll width when data changes
+            const observer = new MutationObserver(updateTopScrollWidth);
+            observer.observe(mainTableContainer, { childList: true, subtree: true });
+
+            // Initial setup
+            updateTopScrollWidth();
+        }
+
+        // Initialize the application when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            init();
+            setupDualScrollBars();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TS EAMCET 2025 College Predictor - Cosmic Trajectory</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Cosmic Trajectory Theme - Interactive and outcome-focused */
+        :root {
+            --midnight-black: #080810;
+            --deep-space-blue: #0A1128;
+            --dark-cosmic-grey: #1A1A2E;
+            --star-white: #F0F8FF;
+            --lunar-grey: #A0A0B0;
+            --vibrant-orange: #FF5733;
+            --sky-blue: #87CEEB;
+            --stardust-silver: #303040;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--dark-cosmic-grey) 0%, var(--midnight-black) 25%, var(--deep-space-blue) 50%, var(--midnight-black) 75%, var(--dark-cosmic-grey) 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            color: var(--star-white);
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(circle at 20% 80%, rgba(255, 87, 51, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(135, 206, 235, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(255, 87, 51, 0.05) 0%, transparent 50%);
+            opacity: 0.6;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Navigation Bar */
+        .nav-container {
+            background: rgba(8, 8, 16, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--stardust-silver);
+            border-radius: 0 0 25px 25px;
+        }
+
+        .nav-btn {
+            padding: 0.75rem 1.25rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.05);
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .nav-btn:hover {
+            background: rgba(255, 87, 51, 0.2);
+            color: white;
+            transform: translateY(-2px);
+            border-color: rgba(255, 87, 51, 0.3);
+            box-shadow: 0 8px 25px rgba(255, 87, 51, 0.2);
+            text-shadow: 0 0 10px rgba(255, 87, 51, 0.5);
+        }
+
+        .nav-btn-active {
+            background: linear-gradient(135deg, var(--vibrant-orange) 0%, var(--sky-blue) 100%);
+            color: var(--midnight-black);
+            border-color: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 25px rgba(255, 87, 51, 0.3);
+            font-weight: 700;
+        }
+
+        /* Cards and Containers */
+        .card {
+            background: rgba(26, 26, 46, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--stardust-silver);
+            border-radius: 25px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Buttons and Interactive Elements */
+        .btn-primary {
+            background: linear-gradient(135deg, #FF6347 0%, #00BFFF 100%);
+            border: none;
+            border-radius: 12px;
+            color: #0B0B14;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 15px rgba(255, 99, 71, 0.3);
+        }
+
+        /* Input Fields */
+        .input-field {
+            background: rgba(11, 11, 20, 0.9);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            border-radius: 12px;
+            color: #E8F4FD;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .input-field:focus {
+            border-color: #00D4FF;
+            box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.2), 0 0 20px rgba(0, 212, 255, 0.1);
+            background: rgba(11, 11, 20, 0.95);
+            outline: none;
+            transform: translateY(-1px);
+        }
+
+        .input-field:hover {
+            border-color: rgba(0, 212, 255, 0.5);
+            background: rgba(11, 11, 20, 0.95);
+        }
+
+        .input-field::placeholder {
+            color: #B8C5D1;
+        }
+
+        .input-field option {
+            background: rgba(11, 11, 20, 0.95);
+            color: #E8F4FD;
+            padding: 8px;
+        }
+
+        /* Results Cards */
+        .result-card {
+            background: rgba(26, 26, 46, 0.6);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            border-radius: 15px;
+        }
+
+        .result-card:hover {
+            border-color: #00D4FF;
+        }
+
+        /* Gradient Text Effects */
+        .gradient-text {
+            background: linear-gradient(135deg, var(--vibrant-orange) 0%, var(--sky-blue) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .glow-text {
+            text-shadow: 0 0 20px rgba(255, 87, 51, 0.5);
+        }
+
+        /* Loading Spinner */
+        .spinner {
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-left: 2px solid var(--vibrant-orange);
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Prediction Progress Bar */
+        .progress-bar {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            background: linear-gradient(90deg, var(--vibrant-orange) 0%, var(--sky-blue) 100%);
+            height: 8px;
+            border-radius: 10px;
+            transition: width 0.5s ease;
+        }
+
+        /* Scrollbar Customization */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--midnight-black);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--vibrant-orange);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--sky-blue);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-btn {
+                padding: 0.5rem 1rem;
+                font-size: 0.875rem;
+            }
+            
+            .card {
+                border-radius: 15px;
+                margin: 1rem;
+            }
+        }
+
+        /* Prediction Confidence Indicator */
+        .confidence-high {
+            background: linear-gradient(135deg, #10B981 0%, #34D399 100%);
+        }
+
+        .confidence-medium {
+            background: linear-gradient(135deg, #F59E0B 0%, #FBBF24 100%);
+        }
+
+        .confidence-low {
+            background: linear-gradient(135deg, #EF4444 0%, #F87171 100%);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="nav-container sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-center">
+                <div class="flex items-center space-x-4">
+                    <div class="w-12 h-12 rounded-xl flex items-center justify-center shadow-lg" style="background: linear-gradient(135deg, #FF6347 0%, #00BFFF 50%, #FF4500 100%);">
+                        <span class="text-xl font-bold text-black">TS</span>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold gradient-text glow-text">
+                            TS EAMCET 2025
+                        </h1>
+                        <p class="text-sm text-gray-400">College Predictor</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Hero Section -->
+    <section class="py-12 bg-gradient-to-b from-transparent to-black/10">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold mb-4 gradient-text glow-text">Navigate Your EAMCET Journey</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Choose from our comprehensive tools to find your results, explore cutoffs, and predict your college admissions</p>
+            </div>
+
+            <!-- Navigation Grid - All 5 buttons in single row -->
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+                    <a href="index.html" class="nav-btn flex flex-col items-center space-y-3 p-8 rounded-3xl transition-all duration-300">
+                        <div class="text-3xl">🔍</div>
+                        <div class="text-center">
+                            <div class="font-semibold">Search Results</div>
+                            <div class="text-xs text-gray-400 mt-1">Find student results</div>
+                        </div>
+                    </a>
+                    <a href="closing-ranks.html" class="nav-btn flex flex-col items-center space-y-3 p-8 rounded-3xl transition-all duration-300">
+                        <div class="text-3xl">📊</div>
+                        <div class="text-center">
+                            <div class="font-semibold">Phase 1 Cutoffs</div>
+                            <div class="text-xs text-gray-400 mt-1">Official closing ranks</div>
+                        </div>
+                    </a>
+                    <a href="phase2-cutoffs.html" class="nav-btn flex flex-col items-center space-y-3 p-8 rounded-3xl transition-all duration-300 relative">
+                        <div class="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full font-bold">PREDICTED</div>
+                        <div class="text-3xl">🎯</div>
+                        <div class="text-center">
+                            <div class="font-semibold">Phase 2 Predictions</div>
+                            <div class="text-xs text-gray-400 mt-1">Predicted cutoffs</div>
+                        </div>
+                    </a>
+                    <a href="previous-year-cutoffs.html" class="nav-btn flex flex-col items-center space-y-3 p-8 rounded-3xl transition-all duration-300">
+                        <div class="text-3xl">📚</div>
+                        <div class="text-center">
+                            <div class="font-semibold">Previous Year Cutoffs</div>
+                            <div class="text-xs text-gray-400 mt-1">Historical data</div>
+                        </div>
+                    </a>
+                    <a href="college-predictor.html" class="nav-btn-active flex flex-col items-center space-y-3 p-8 rounded-3xl transition-all duration-300 relative">
+                        <div class="absolute -top-2 -right-2 bg-blue-500 text-white text-xs px-2 py-1 rounded-full font-bold">AI</div>
+                        <div class="text-3xl">🔮</div>
+                        <div class="text-center">
+                            <div class="font-semibold">College Predictor</div>
+                            <div class="text-xs text-gray-400 mt-1">Admission predictions</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+        <!-- Hero Section -->
+        <div class="text-center mb-8">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 glow-text">
+                College <span class="gradient-text">Predictor</span>
+            </h1>
+            <p class="text-lg text-gray-300 mb-6 max-w-3xl mx-auto">
+                Discover your admission possibilities with our <span class="gradient-text">AI-powered prediction algorithm</span>.
+            </p>
+        </div>
+
+        <!-- Prediction Form -->
+        <div class="card p-8 mb-8 max-w-4xl mx-auto">
+            <div class="text-center mb-8">
+                <h2 class="text-2xl font-semibold mb-3 gradient-text">Enter Your Details</h2>
+                <p class="text-gray-400 mb-6">Provide your EAMCET rank and category for accurate predictions</p>
+            </div>
+
+            <form id="predictionForm" class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Rank Input -->
+                    <div>
+                        <label class="block text-lg font-semibold mb-3 gradient-text">Your EAMCET Rank</label>
+                        <input type="number" id="rankInput" placeholder="Enter your rank (e.g., 15000)" 
+                               class="w-full px-4 py-4 input-field text-lg" min="1" max="200000" required>
+                        <p class="text-sm text-gray-400 mt-2">Enter your TS EAMCET 2025 rank</p>
+                    </div>
+
+                    <!-- Category Selection -->
+                    <div>
+                        <label class="block text-lg font-semibold mb-3 gradient-text">Category</label>
+                        <select id="categoryInput" class="w-full px-4 py-4 input-field text-lg" required>
+                            <option value="">Select Category</option>
+                            <option value="oc">OC (Open Category)</option>
+                            <option value="bc_a">BC-A</option>
+                            <option value="bc_b">BC-B</option>
+                            <option value="bc_c">BC-C</option>
+                            <option value="bc_d">BC-D</option>
+                            <option value="bc_e">BC-E</option>
+                            <option value="sc">SC (Scheduled Caste)</option>
+                            <option value="st">ST (Scheduled Tribe)</option>
+                            <option value="ews">EWS (Economically Weaker Section)</option>
+                        </select>
+                        <p class="text-sm text-gray-400 mt-2">Select your reservation category</p>
+                    </div>
+
+                    <!-- Gender Selection -->
+                    <div>
+                        <label class="block text-lg font-semibold mb-3 gradient-text">Gender</label>
+                        <select id="genderInput" class="w-full px-4 py-4 input-field text-lg" required>
+                            <option value="">Select Gender</option>
+                            <option value="boys">Male</option>
+                            <option value="girls">Female</option>
+                        </select>
+                        <p class="text-sm text-gray-400 mt-2">Select your gender</p>
+                    </div>
+                </div>
+
+                <!-- Predict Button -->
+                <div class="text-center pt-6">
+                    <button type="submit" id="predictBtn" class="btn-primary px-6 py-3 rounded-xl">
+                        🔮 Predict My Colleges
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Prediction Progress -->
+        <div id="predictionProgress" class="hidden card p-8 mb-8 max-w-4xl mx-auto">
+            <div class="text-center">
+                <div class="spinner mx-auto mb-4" style="width: 48px; height: 48px;"></div>
+                <h3 class="text-xl font-semibold mb-2 gradient-text">Analyzing Your Possibilities</h3>
+                <p class="text-gray-400 mb-4">Processing prediction algorithm...</p>
+                <div class="progress-bar mb-4">
+                    <div id="progressFill" class="progress-fill" style="width: 0%"></div>
+                </div>
+                <p id="progressText" class="text-sm text-gray-500">Initializing...</p>
+            </div>
+        </div>
+
+        <!-- Results Section -->
+        <div id="resultsSection" class="hidden">
+            <!-- Results Header -->
+            <div class="card p-6 mb-6 max-w-6xl mx-auto">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-2 gradient-text">Your College Predictions</h3>
+                        <p id="resultsCount" class="text-gray-400">Found 0 matching colleges</p>
+                        <div id="userDetails" class="text-sm text-gray-500 mt-2"></div>
+                        <div class="mt-2 text-sm text-yellow-400">
+                            📱 <strong>Note:</strong> Scroll sideways to see all details • Check disclaimer at bottom
+                        </div>
+                    </div>
+                    <div class="mt-4 md:mt-0 flex gap-3 items-center">
+                        <!-- View Toggle -->
+                        <div class="flex items-center gap-2 bg-gray-800 rounded-lg p-1">
+                            <button id="cardViewBtn" class="px-3 py-2 text-sm rounded-md transition-all duration-200 bg-blue-600 text-white">
+                                📋 Card
+                            </button>
+                            <button id="compactViewBtn" class="px-3 py-2 text-sm rounded-md transition-all duration-200 text-gray-400 hover:text-white">
+                                📄 Compact
+                            </button>
+                        </div>
+                        <button id="exportPredictionsBtn" class="btn-primary px-6 py-3 rounded-xl font-medium transition-all duration-300">
+                            📥 Export Predictions
+                        </button>
+                        <button id="shareBtn" class="px-6 py-3 rounded-xl font-medium transition-all duration-300 bg-gray-700 text-white hover:bg-gray-600">
+                            📤 Share Results
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Advanced Filters -->
+            <div class="card p-6 mb-6 max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+                    <div class="relative">
+                        <label class="block text-sm font-medium text-gray-300 mb-2">🎓 Branch Type</label>
+                        <select id="branchTypeFilter" class="input-field w-full px-4 py-2 appearance-none">
+                            <option value="">All Branch Types</option>
+                            <option value="cs">💻 Computer Science & IT</option>
+                            <option value="electrical">⚡ Electrical & Electronics</option>
+                            <option value="mechanical">⚙️ Mechanical & Production</option>
+                            <option value="civil">🏗️ Civil & Architecture</option>
+                            <option value="chemical">🧪 Chemical & Materials</option>
+                            <option value="bio">🧬 Bio & Life Sciences</option>
+                            <option value="core">🔧 Core Engineering</option>
+                            <option value="other">📋 Other Branches</option>
+                        </select>
+                        <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none mt-6">
+                            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <label class="block text-sm font-medium text-gray-300 mb-2">📍 District</label>
+                        <select id="districtFilter" class="input-field w-full px-4 py-2 appearance-none">
+                            <option value="">All Districts</option>
+                        </select>
+                        <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none mt-6">
+                            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <label class="block text-sm font-medium text-gray-300 mb-2">🏛️ College Type</label>
+                        <select id="collegeTypeFilter" class="input-field w-full px-4 py-2 appearance-none">
+                            <option value="">All Types</option>
+                            <option value="government">🏛️ Government</option>
+                            <option value="private">🏢 Private</option>
+                            <option value="autonomous">🎓 Autonomous</option>
+                            <option value="university">🏫 University</option>
+                        </select>
+                        <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none mt-6">
+                            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <label class="block text-sm font-medium text-gray-300 mb-2">🎯 Confidence</label>
+                        <select id="confidenceFilter" class="input-field w-full px-4 py-2 appearance-none">
+                            <option value="">All Confidence Levels</option>
+                            <option value="high">🟢 High Confidence</option>
+                            <option value="medium">🟡 Medium Confidence</option>
+                            <option value="low">🔴 Low Confidence</option>
+                        </select>
+                        <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none mt-6">
+                            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="flex items-end">
+                        <button onclick="clearPredictionFilters()" class="btn-primary px-6 py-2 w-full">
+                            🔄 Clear Filters
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Prediction Summary -->
+            <div id="predictionSummary" class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 max-w-6xl mx-auto">
+                <!-- Summary cards will be populated here -->
+            </div>
+
+            <!-- Results Grid -->
+            <div id="resultsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                <!-- Results will be populated here -->
+            </div>
+        </div>
+
+        <!-- No Results -->
+        <div id="noResults" class="hidden text-center py-16">
+            <div class="card p-12 max-w-lg mx-auto">
+                <div class="text-8xl mb-6 opacity-50">🔮</div>
+                <h3 class="text-2xl font-semibold mb-3 gradient-text">No Predictions Available</h3>
+                <p class="text-gray-400 mb-6">We couldn't find any colleges matching your criteria. This might be because:</p>
+                <div class="text-sm text-gray-500 text-left max-w-md mx-auto">
+                    <p class="mb-2">💡 <strong>Possible reasons:</strong></p>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>Your rank might be higher than available cutoffs</li>
+                        <li>Limited data for your specific category</li>
+                        <li>Try checking different categories or genders</li>
+                    </ul>
+                </div>
+                <div class="mt-6">
+                    <button onclick="document.getElementById('rankInput').focus()" class="btn-primary px-6 py-3 rounded-xl font-medium">
+                        🔄 Try Different Criteria
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tips Section -->
+        <div class="card p-8 mt-12 max-w-4xl mx-auto">
+            <h3 class="text-xl font-semibold mb-4 gradient-text text-center">💡 Prediction Tips</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-gray-400">
+                <div>
+                    <h4 class="font-semibold text-white mb-2">Understanding Predictions</h4>
+                    <ul class="space-y-1">
+                        <li>• Predictions are based on 2024 cutoff trends</li>
+                        <li>• Higher confidence = better admission chances</li>
+                        <li>• Consider multiple options for safety</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-2">Next Steps</h4>
+                    <ul class="space-y-1">
+                        <li>• Research college facilities and placements</li>
+                        <li>• Check fee structure and location</li>
+                        <li>• Prepare backup options</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Disclaimer Section -->
+        <div class="w-full max-w-6xl mx-auto mt-8 mb-8">
+            <div class="bg-gradient-to-r from-red-900/20 to-orange-900/20 border border-red-500/30 rounded-xl p-6">
+                <h3 class="text-xl font-bold text-red-400 mb-4 flex items-center">
+                    ⚠️ Important Disclaimer
+                </h3>
+                <div class="text-sm text-gray-300 space-y-2">
+                    <p><strong>1.</strong> Last rank statement does not reflect the candidates admitted in special reservation categories like PH, NCC, Sports and Games, Children of Armed Personnel (CAP) seats, State wide colleges & Minority colleges.</p>
+                    <p><strong>2.</strong> Every care has been taken to present accurate information. The Ranks shown are at the end of Web Counseling process and does not indicate the dropouts or spot admissions.</p>
+                    <p><strong>3.</strong> The statement shall be used only for information to assess the mode of opting by candidates and shall in no way reflect the rank upto which seat can be allotted in the present academic year.</p>
+                    <p><strong>4.</strong> The ranks indicated inclusive of the ranks allotted in respect of Consequential Vacancies arose at the final round of Allotment.</p>
+                    <p><strong>5.</strong> The TGCHE/DTE is not responsible for Print Errors.</p>
+                    <p><strong>6.</strong> Girls are also eligible for Boys seats.</p>
+                    <p><strong>7.</strong> In terms of G.O.Ms.No. 42 Higher Education Dept.dated:18-05-2009,15% unreserved seats are filled first with combined merit list of candidates followed by 85% seats with local candidates only.</p>
+                    <p><strong>8.</strong> NA means Not Applicable.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="card-dark border-t border-white/5 mt-20">
+        <div class="container mx-auto px-6 py-8">
+            <div class="text-center">
+                <div class="flex items-center justify-center mb-4">
+                    <div class="w-8 h-8 rounded-lg flex items-center justify-center mr-3" style="background: linear-gradient(135deg, #FF6347 0%, #00BFFF 50%, #FF4500 100%);">
+                        <span class="text-sm font-bold text-black">TS</span>
+                    </div>
+                    <span class="text-lg font-semibold gradient-text">TS EAMCET College Predictor</span>
+                </div>
+                <p class="text-gray-400 mb-2">&copy; 2025 TS EAMCET Results Platform. Predictions based on historical data and trends.</p>
+                <p class="text-sm text-gray-500">Cosmic Trajectory Theme • AI-Powered • Confidence Scoring</p>
+
+                <!-- Official Footer -->
+                <div class="mt-6 pt-4 border-t border-gray-700">
+                    <div class="bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-lg p-4">
+                        <div class="flex items-center justify-center mb-2">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-bold mr-2">TS</span>
+                            <span class="text-sm font-semibold text-blue-300">TS EAMCET 2025</span>
+                        </div>
+                        <p class="text-xs text-gray-300 text-center leading-relaxed">
+                            © 2025 TS EAMCET Results Finder. Data sourced from official TS EAMCET 2025 Phase 1 cutoffs.<br>
+                            Built with modern web technologies • Optimized for performance • Mobile-friendly design
+                        </p>
+                        <p class="text-xs text-gray-400 text-center mt-2">
+                            <strong>Data Source Disclaimer:</strong> All data rights belong to the official TS EAMCET website (tseamcet.nic.in).
+                            This website uses data sourced from their official publications. Some data may be missing or incomplete.
+                            For official and complete information, please refer to the official TS EAMCET website.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Global variables
+        let predictedCutoffsData = [];
+        let currentPredictions = [];
+
+        // DOM elements
+        const predictionForm = document.getElementById('predictionForm');
+        const rankInput = document.getElementById('rankInput');
+        const categoryInput = document.getElementById('categoryInput');
+        const genderInput = document.getElementById('genderInput');
+        const predictBtn = document.getElementById('predictBtn');
+        const predictionProgress = document.getElementById('predictionProgress');
+        const progressFill = document.getElementById('progressFill');
+        const progressText = document.getElementById('progressText');
+        const resultsSection = document.getElementById('resultsSection');
+        const noResults = document.getElementById('noResults');
+        const resultsCount = document.getElementById('resultsCount');
+        const userDetails = document.getElementById('userDetails');
+        const predictionSummary = document.getElementById('predictionSummary');
+        const resultsGrid = document.getElementById('resultsGrid');
+        const exportPredictionsBtn = document.getElementById('exportPredictionsBtn');
+        const shareBtn = document.getElementById('shareBtn');
+        const cardViewBtn = document.getElementById('cardViewBtn');
+        const compactViewBtn = document.getElementById('compactViewBtn');
+
+        // View mode state
+        let currentViewMode = 'card';
+
+        // Initialize the application
+        async function init() {
+            try {
+                await loadPredictedCutoffs();
+                setupEventListeners();
+            } catch (error) {
+                console.error('Error initializing application:', error);
+                showError('Failed to load prediction data. Please refresh the page.');
+            }
+        }
+
+        // Load predicted cutoffs data (dual mode: API first, then static)
+        async function loadPredictedCutoffs() {
+            try {
+                let response;
+
+                // Try server API first (for Vercel/Node.js hosting)
+                try {
+                    response = await fetch('/api/phase2-cutoffs');
+                    if (!response.ok) throw new Error('Server API not available');
+                    console.log('✅ Loading predicted cutoffs from server API');
+                } catch (serverError) {
+                    // Fallback to static JSON file (for GitHub Pages)
+                    console.log('🔄 Server API not available, trying static file...');
+                    response = await fetch('./data/2025-phase2-predicted-cutoffs.json');
+                    if (!response.ok) {
+                        throw new Error(`Static file not found! status: ${response.status}`);
+                    }
+                    console.log('✅ Loading predicted cutoffs from static file');
+                }
+
+                predictedCutoffsData = await response.json();
+                console.log('✅ Loaded predicted cutoffs data:', predictedCutoffsData.length, 'records');
+            } catch (error) {
+                console.error('❌ Error loading predicted cutoffs data:', error);
+                throw error;
+            }
+        }
+
+        // Setup event listeners
+        function setupEventListeners() {
+            predictionForm.addEventListener('submit', handlePrediction);
+
+            // Filter event listeners
+            document.getElementById('branchTypeFilter').addEventListener('change', applyPredictionFilters);
+            document.getElementById('districtFilter').addEventListener('change', applyPredictionFilters);
+            document.getElementById('collegeTypeFilter').addEventListener('change', applyPredictionFilters);
+            document.getElementById('confidenceFilter').addEventListener('change', applyPredictionFilters);
+            exportPredictionsBtn.addEventListener('click', exportPredictions);
+            shareBtn.addEventListener('click', shareResults);
+            cardViewBtn.addEventListener('click', () => switchViewMode('card'));
+            compactViewBtn.addEventListener('click', () => switchViewMode('compact'));
+        }
+
+        // Switch view mode
+        function switchViewMode(mode) {
+            currentViewMode = mode;
+
+            // Update button states
+            if (mode === 'card') {
+                cardViewBtn.classList.add('bg-blue-600', 'text-white');
+                cardViewBtn.classList.remove('text-gray-400');
+                compactViewBtn.classList.remove('bg-blue-600', 'text-white');
+                compactViewBtn.classList.add('text-gray-400');
+            } else {
+                compactViewBtn.classList.add('bg-blue-600', 'text-white');
+                compactViewBtn.classList.remove('text-gray-400');
+                cardViewBtn.classList.remove('bg-blue-600', 'text-white');
+                cardViewBtn.classList.add('text-gray-400');
+            }
+
+            // Re-render results with new view mode
+            if (currentPredictions.length > 0) {
+                displayResultsGrid();
+            }
+        }
+
+        // Handle prediction form submission
+        async function handlePrediction(e) {
+            e.preventDefault();
+            
+            const rank = parseInt(rankInput.value);
+            const category = categoryInput.value;
+            const gender = genderInput.value;
+
+            if (!rank || !category || !gender) {
+                showError('Please fill in all required fields');
+                return;
+            }
+
+            if (rank < 1 || rank > 200000) {
+                showError('Please enter a valid rank between 1 and 200000');
+                return;
+            }
+
+            await performPrediction(rank, category, gender);
+        }
+
+        // Perform college prediction
+        async function performPrediction(rank, category, gender) {
+            showProgress();
+            
+            try {
+                // Simulate prediction progress
+                await updateProgress(20, 'Loading cutoff data...');
+                await new Promise(resolve => setTimeout(resolve, 500));
+                
+                await updateProgress(40, 'Analyzing your rank...');
+                await new Promise(resolve => setTimeout(resolve, 500));
+                
+                await updateProgress(60, 'Matching colleges...');
+                
+                // Find matching colleges
+                const predictions = [];
+
+                // Map user inputs to data field names
+                const categoryGenderMap = {
+                    'oc_boys': 'OC BOYS',
+                    'oc_girls': 'OC GIRLS',
+                    'ews_boys': 'EWS BOYS',
+                    'ews_girls': 'EWS GIRLS',
+                    'sc_boys': 'SC BOYS',
+                    'sc_girls': 'SC GIRLS',
+                    'st_boys': 'ST BOYS',
+                    'st_girls': 'ST GIRLS',
+                    'bc_a_boys': 'BC_A BOYS',
+                    'bc_a_girls': 'BC_A GIRLS',
+                    'bc_b_boys': 'BC_B BOYS',
+                    'bc_b_girls': 'BC_B GIRLS',
+                    'bc_c_boys': 'BC_C BOYS',
+                    'bc_c_girls': 'BC_C GIRLS',
+                    'bc_d_boys': 'BC_D BOYS',
+                    'bc_d_girls': 'BC_D GIRLS',
+                    'bc_e_boys': 'BC_E BOYS',
+                    'bc_e_girls': 'BC_E GIRLS'
+                };
+
+                const fieldKey = `${category.toLowerCase()}_${gender}`;
+                const dataField = categoryGenderMap[fieldKey];
+
+                if (!dataField) {
+                    console.error('Invalid category/gender combination:', category, gender);
+                    return;
+                }
+
+                predictedCutoffsData.forEach(record => {
+                    const cutoffRank = parseInt(record[dataField]);
+
+                    if (cutoffRank && cutoffRank !== "NA" && !isNaN(cutoffRank) && rank <= cutoffRank) {
+                        const confidence = calculateConfidence(rank, cutoffRank);
+                        predictions.push({
+                            college_code: record["College_Code"],
+                            college_name: record["College_Name"],
+                            branch_name: record["Branch_Name"],
+                            cutoffRank,
+                            confidence,
+                            rankDifference: cutoffRank - rank
+                        });
+                    }
+                });
+                
+                await updateProgress(80, 'Calculating confidence scores...');
+                await new Promise(resolve => setTimeout(resolve, 500));
+                
+                // Sort by closing rank (lower rank first, e.g., 500 before 600)
+                predictions.sort((a, b) => {
+                    // Primary sort: by closing rank (lower rank = better college)
+                    if (a.cutoffRank !== b.cutoffRank) {
+                        return a.cutoffRank - b.cutoffRank;
+                    }
+                    // Secondary sort: by confidence level (high > medium > low)
+                    const confidenceOrder = { 'high': 3, 'medium': 2, 'low': 1 };
+                    if (confidenceOrder[b.confidence] !== confidenceOrder[a.confidence]) {
+                        return confidenceOrder[b.confidence] - confidenceOrder[a.confidence];
+                    }
+                    // Tertiary sort: by rank difference (higher difference = safer choice)
+                    return b.rankDifference - a.rankDifference;
+                });
+                
+                await updateProgress(100, 'Finalizing predictions...');
+                await new Promise(resolve => setTimeout(resolve, 500));
+                
+                currentPredictions = predictions;
+                displayPredictions(rank, category, gender);
+                
+            } catch (error) {
+                console.error('Error performing prediction:', error);
+                showError('An error occurred while predicting colleges. Please try again.');
+                hideProgress();
+            }
+        }
+
+        // Calculate confidence score based on rank proximity to cutoff
+        function calculateConfidence(userRank, cutoffRank) {
+            const difference = userRank - cutoffRank;
+
+            // If user rank is better (lower) than cutoff, always high confidence
+            if (userRank <= cutoffRank) {
+                return 'high';
+            }
+
+            // Calculate range based on cutoff rank
+            // For cutoff 2500: 2400-2550 = low, 2550-2700 = medium, 2700+ = high
+            const lowRange = cutoffRank * 0.06;  // 6% range for low confidence
+            const mediumRange = cutoffRank * 0.08; // 8% range for medium confidence
+
+            if (difference <= lowRange) {
+                return 'low';    // Very close to cutoff - risky
+            } else if (difference <= mediumRange) {
+                return 'medium'; // Moderate distance - medium chance
+            } else {
+                return 'high';   // Far from cutoff - safe choice
+            }
+        }
+
+        // Display prediction results
+        function displayPredictions(rank, category, gender) {
+            hideProgress();
+
+            if (currentPredictions.length === 0) {
+                showNoResults();
+                return;
+            }
+
+            showResults();
+
+            // Update results count and user details
+            resultsCount.textContent = `Found ${currentPredictions.length} matching colleges`;
+            userDetails.innerHTML = `
+                <span class="text-blue-400">Rank:</span> <strong class="text-white">${rank.toLocaleString()}</strong> |
+                <span class="text-green-400">Category:</span> <strong class="text-white">${category.toUpperCase()}</strong> |
+                <span class="text-purple-400">Gender:</span> <strong class="text-white">${gender === 'boys' ? 'Male' : 'Female'}</strong>
+            `;
+
+            // Display summary
+            displayPredictionSummary();
+
+            // Display results
+            displayResultsGrid();
+
+            // Populate district dropdown
+            populateDistrictDropdown();
+        }
+
+        // Display prediction summary
+        function displayPredictionSummary() {
+            const highConfidence = currentPredictions.filter(p => p.confidence === 'high').length;
+            const mediumConfidence = currentPredictions.filter(p => p.confidence === 'medium').length;
+            const lowConfidence = currentPredictions.filter(p => p.confidence === 'low').length;
+            
+            predictionSummary.innerHTML = `
+                <div class="card p-6 text-center">
+                    <div class="w-12 h-12 confidence-high rounded-full mx-auto mb-3 flex items-center justify-center">
+                        <span class="text-white font-bold text-xl">${highConfidence}</span>
+                    </div>
+                    <h4 class="font-semibold text-white mb-1">High Confidence</h4>
+                    <p class="text-sm text-gray-400">Strong admission chances</p>
+                </div>
+                <div class="card p-6 text-center">
+                    <div class="w-12 h-12 confidence-medium rounded-full mx-auto mb-3 flex items-center justify-center">
+                        <span class="text-white font-bold text-xl">${mediumConfidence}</span>
+                    </div>
+                    <h4 class="font-semibold text-white mb-1">Medium Confidence</h4>
+                    <p class="text-sm text-gray-400">Moderate admission chances</p>
+                </div>
+                <div class="card p-6 text-center">
+                    <div class="w-12 h-12 confidence-low rounded-full mx-auto mb-3 flex items-center justify-center">
+                        <span class="text-white font-bold text-xl">${lowConfidence}</span>
+                    </div>
+                    <h4 class="font-semibold text-white mb-1">Low Confidence</h4>
+                    <p class="text-sm text-gray-400">Lower admission chances</p>
+                </div>
+            `;
+        }
+
+        // Display results grid
+        function displayResultsGrid(predictions = currentPredictions) {
+            resultsGrid.innerHTML = '';
+
+            if (currentViewMode === 'compact') {
+                displayCompactResults(predictions);
+            } else {
+                displayCardResults(predictions);
+            }
+        }
+
+        // Display results in card format
+        function displayCardResults(predictions = currentPredictions) {
+            predictions.slice(0, 50).forEach(prediction => {
+                const card = document.createElement('div');
+                card.className = 'result-card p-6';
+
+                const confidenceClass = `confidence-${prediction.confidence}`;
+                const confidenceText = prediction.confidence.charAt(0).toUpperCase() + prediction.confidence.slice(1);
+
+                card.innerHTML = `
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="flex-1">
+                            <h4 class="font-semibold text-white mb-1 text-sm leading-tight">${prediction.college_name}</h4>
+                            <p class="text-xs text-gray-400">${prediction.college_code}</p>
+                        </div>
+                        <div class="w-3 h-3 ${confidenceClass} rounded-full ml-2 mt-1"></div>
+                    </div>
+
+                    <div class="mb-4">
+                        <p class="text-sm text-gray-300 mb-2">${prediction.branch_name}</p>
+                        <div class="flex justify-between items-center text-xs">
+                            <span class="text-gray-400">Cutoff Rank:</span>
+                            <span class="text-orange-400 font-semibold">${prediction.cutoffRank.toLocaleString()}</span>
+                        </div>
+                        <div class="flex justify-between items-center text-xs">
+                            <span class="text-gray-400">Your Advantage:</span>
+                            <span class="text-sky-400 font-semibold">+${prediction.rankDifference.toLocaleString()}</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs px-2 py-1 rounded-full ${confidenceClass} text-white font-medium">
+                            ${confidenceText} Confidence
+                        </span>
+                        <button onclick="showCollegeDetails('${prediction.college_code}')"
+                                class="text-xs text-sky-400 hover:text-sky-300 font-medium">
+                            View Details →
+                        </button>
+                    </div>
+                `;
+
+                resultsGrid.appendChild(card);
+            });
+        }
+
+        // Display results in compact format
+        function displayCompactResults(predictions = currentPredictions) {
+            const table = document.createElement('div');
+            table.className = 'overflow-x-auto';
+
+            let tableHTML = `
+                <table class="w-full text-sm">
+                    <thead>
+                        <tr class="border-b border-gray-700">
+                            <th class="text-left py-3 px-4 text-gray-300">College</th>
+                            <th class="text-left py-3 px-4 text-gray-300">Branch</th>
+                            <th class="text-right py-3 px-4 text-gray-300">Cutoff</th>
+                            <th class="text-right py-3 px-4 text-gray-300">Advantage</th>
+                            <th class="text-center py-3 px-4 text-gray-300">Confidence</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            `;
+
+            predictions.slice(0, 50).forEach(prediction => {
+                const confidenceClass = `confidence-${prediction.confidence}`;
+                const confidenceText = prediction.confidence.charAt(0).toUpperCase() + prediction.confidence.slice(1);
+
+                tableHTML += `
+                    <tr class="border-b border-gray-800 hover:bg-gray-800/50">
+                        <td class="py-3 px-4">
+                            <div class="font-medium text-white text-sm">${prediction.college_name}</div>
+                            <div class="text-xs text-gray-400">${prediction.college_code}</div>
+                        </td>
+                        <td class="py-3 px-4 text-gray-300">${prediction.branch_name}</td>
+                        <td class="py-3 px-4 text-right text-orange-400 font-semibold">${prediction.cutoffRank.toLocaleString()}</td>
+                        <td class="py-3 px-4 text-right text-sky-400 font-semibold">+${prediction.rankDifference.toLocaleString()}</td>
+                        <td class="py-3 px-4 text-center">
+                            <span class="text-xs px-2 py-1 rounded-full ${confidenceClass} text-white font-medium">
+                                ${confidenceText}
+                            </span>
+                        </td>
+                    </tr>
+                `;
+            });
+
+            tableHTML += `
+                    </tbody>
+                </table>
+            `;
+
+            table.innerHTML = tableHTML;
+            resultsGrid.appendChild(table);
+        }
+
+        // Show college details (placeholder function)
+        function showCollegeDetails(collegeCode) {
+            alert(`College details for ${collegeCode} will be implemented in the next version.`);
+        }
+
+        // Export predictions to CSV
+        function exportPredictions() {
+            if (currentPredictions.length === 0) {
+                alert('No predictions to export');
+                return;
+            }
+
+            const headers = [
+                'College Code', 'College Name', 'Branch Name', 'Cutoff Rank', 
+                'Your Rank Advantage', 'Confidence Level'
+            ];
+
+            const csvContent = [
+                headers.join(','),
+                ...currentPredictions.map(pred => [
+                    `"${pred.college_code || ''}"`,
+                    `"${pred.college_name || ''}"`,
+                    `"${pred.branch_name || ''}"`,
+                    pred.cutoffRank || '',
+                    pred.rankDifference || '',
+                    pred.confidence || ''
+                ].join(','))
+            ].join('\n');
+
+            const blob = new Blob([csvContent], { type: 'text/csv' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `EAMCET_2025_College_Predictions.csv`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+        }
+
+        // Share results
+        function shareResults() {
+            if (navigator.share && currentPredictions.length > 0) {
+                navigator.share({
+                    title: 'My TS EAMCET College Predictions',
+                    text: `I found ${currentPredictions.length} matching colleges using the TS EAMCET College Predictor!`,
+                    url: window.location.href
+                });
+            } else {
+                // Fallback: copy to clipboard
+                const text = `I found ${currentPredictions.length} matching colleges using the TS EAMCET College Predictor! Check it out: ${window.location.href}`;
+                navigator.clipboard.writeText(text).then(() => {
+                    alert('Results link copied to clipboard!');
+                });
+            }
+        }
+
+        // Progress and UI utility functions
+        async function updateProgress(percentage, text) {
+            progressFill.style.width = `${percentage}%`;
+            progressText.textContent = text;
+        }
+
+        function showProgress() {
+            predictionProgress.classList.remove('hidden');
+            resultsSection.classList.add('hidden');
+            noResults.classList.add('hidden');
+            progressFill.style.width = '0%';
+        }
+
+        function hideProgress() {
+            predictionProgress.classList.add('hidden');
+        }
+
+        function showResults() {
+            resultsSection.classList.remove('hidden');
+            noResults.classList.add('hidden');
+        }
+
+        function showNoResults() {
+            resultsSection.classList.add('hidden');
+            noResults.classList.remove('hidden');
+        }
+
+        function showError(message) {
+            alert(message);
+        }
+
+        // Helper function to categorize branches by type
+        function getBranchType(branchName) {
+            if (!branchName) return 'other';
+
+            const branch = branchName.toLowerCase();
+
+            // Computer Science & IT
+            if (branch.includes('computer') || branch.includes('information') ||
+                branch.includes('software') || branch.includes('data') ||
+                branch.includes('artificial intelligence') || branch.includes('machine learning') ||
+                branch.includes('cyber') || branch.includes('it ')) {
+                return 'cs';
+            }
+
+            // Electrical & Electronics
+            if (branch.includes('electrical') || branch.includes('electronics') ||
+                branch.includes('communication') || branch.includes('instrumentation') ||
+                branch.includes('power') || branch.includes('control')) {
+                return 'electrical';
+            }
+
+            // Mechanical & Production
+            if (branch.includes('mechanical') || branch.includes('production') ||
+                branch.includes('manufacturing') || branch.includes('automobile') ||
+                branch.includes('thermal') || branch.includes('design')) {
+                return 'mechanical';
+            }
+
+            // Civil & Architecture
+            if (branch.includes('civil') || branch.includes('architecture') ||
+                branch.includes('structural') || branch.includes('transportation') ||
+                branch.includes('environmental') || branch.includes('construction')) {
+                return 'civil';
+            }
+
+            // Chemical & Materials
+            if (branch.includes('chemical') || branch.includes('materials') ||
+                branch.includes('metallurgy') || branch.includes('polymer') ||
+                branch.includes('petroleum') || branch.includes('process')) {
+                return 'chemical';
+            }
+
+            // Bio & Life Sciences
+            if (branch.includes('bio') || branch.includes('biotechnology') ||
+                branch.includes('pharmaceutical') || branch.includes('food') ||
+                branch.includes('agriculture') || branch.includes('genetic')) {
+                return 'bio';
+            }
+
+            // Core Engineering
+            if (branch.includes('aeronautical') || branch.includes('aerospace') ||
+                branch.includes('marine') || branch.includes('mining') ||
+                branch.includes('textile') || branch.includes('industrial')) {
+                return 'core';
+            }
+
+            return 'other';
+        }
+
+        // Helper function to extract district from college name
+        function extractDistrict(collegeName) {
+            if (!collegeName) return null;
+
+            const name = collegeName.toLowerCase();
+
+            // Common Telangana districts
+            const districts = [
+                'hyderabad', 'secunderabad', 'warangal', 'nizamabad', 'karimnagar',
+                'khammam', 'nalgonda', 'mahbubnagar', 'rangareddy', 'medak',
+                'adilabad', 'sangareddy', 'siddipet', 'kamareddy', 'rajanna sircilla',
+                'jayashankar bhupalpally', 'mancherial', 'peddapalli', 'jagitial',
+                'vikarabad', 'medchal malkajgiri', 'bhadradri kothagudem',
+                'mahabubabad', 'suryapet', 'nagarkurnool', 'wanaparthy',
+                'narayanpet', 'jogulamba gadwal', 'yadadri bhuvanagiri',
+                'asifabad', 'mulugu', 'hanamkonda', 'jangaon'
+            ];
+
+            for (const district of districts) {
+                if (name.includes(district)) {
+                    return district.charAt(0).toUpperCase() + district.slice(1);
+                }
+            }
+
+            return null;
+        }
+
+        // Helper function to determine college type
+        function getCollegeType(collegeName) {
+            if (!collegeName) return 'other';
+
+            const name = collegeName.toLowerCase();
+
+            if (name.includes('government') || name.includes('govt') ||
+                name.includes('state') || name.includes('public')) {
+                return 'government';
+            }
+
+            if (name.includes('university') || name.includes('varsity')) {
+                return 'university';
+            }
+
+            if (name.includes('autonomous') || name.includes('auto')) {
+                return 'autonomous';
+            }
+
+            return 'private';
+        }
+
+        // Apply prediction filters
+        function applyPredictionFilters() {
+            if (!currentPredictions.length) return;
+
+            const branchTypeFilter = document.getElementById('branchTypeFilter').value;
+            const districtFilter = document.getElementById('districtFilter').value;
+            const collegeTypeFilter = document.getElementById('collegeTypeFilter').value;
+            const confidenceFilter = document.getElementById('confidenceFilter').value;
+
+            let filteredPredictions = currentPredictions.filter(prediction => {
+                const matchesBranchType = !branchTypeFilter || getBranchType(prediction.branch) === branchTypeFilter;
+                const matchesDistrict = !districtFilter || extractDistrict(prediction.college_name) === districtFilter;
+                const matchesCollegeType = !collegeTypeFilter || getCollegeType(prediction.college_name) === collegeTypeFilter;
+                const matchesConfidence = !confidenceFilter || prediction.confidence === confidenceFilter;
+
+                return matchesBranchType && matchesDistrict && matchesCollegeType && matchesConfidence;
+            });
+
+            displayResultsGrid(filteredPredictions);
+            updateResultsCount(filteredPredictions.length);
+        }
+
+        // Populate district dropdown from predictions
+        function populateDistrictDropdown() {
+            const districts = new Set();
+
+            currentPredictions.forEach(prediction => {
+                const district = extractDistrict(prediction.college_name);
+                if (district) districts.add(district);
+            });
+
+            const districtFilter = document.getElementById('districtFilter');
+            districtFilter.innerHTML = '<option value="">All Districts</option>';
+            Array.from(districts).sort().forEach(district => {
+                const option = document.createElement('option');
+                option.value = district;
+                option.textContent = district;
+                districtFilter.appendChild(option);
+            });
+        }
+
+        // Update results count
+        function updateResultsCount(count) {
+            resultsCount.textContent = `Found ${count} matching colleges`;
+        }
+
+        // Clear prediction filters function
+        function clearPredictionFilters() {
+            document.getElementById('branchTypeFilter').value = '';
+            document.getElementById('districtFilter').value = '';
+            document.getElementById('collegeTypeFilter').value = '';
+            document.getElementById('confidenceFilter').value = '';
+
+            applyPredictionFilters();
+        }
+
+        // Initialize the application when DOM is loaded
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>
