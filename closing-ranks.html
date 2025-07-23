@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TS EAMCET 2025 Phase 1 Cutoffs - Binary Grid</title>
+    <title>TS EAMCET 2025 - Closing Ranks</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -33,8 +33,7 @@
                         📈 Phase 2 Cutoffs
                     </a>
                     <a href="previous-year-cutoffs.html" class="nav-btn-compact">📚 Previous Year Cutoffs</a>
-                    <a href="college-predictor.html" class="nav-btn-compact nav-btn-special relative">
-                        <span class="absolute -top-1 -right-1 bg-blue-500 text-white text-xs px-1 py-0.5 rounded-full font-bold text-[10px]">AI</span>
+                    <a href="college-predictor.html" class="nav-btn-compact nav-btn-special">
                         🎯 College Predictor
                     </a>
                 </div>
@@ -100,7 +99,7 @@
                     </select>
                 </div>
                 <div class="flex items-end">
-                    <button onclick="exportToCSV()" class="btn-primary px-6 py-2 w-full">
+                    <button onclick="exportToCSV()" class="btn-primary px-6 py-3 w-full min-h-[40px] flex items-center justify-center">
                         Export CSV
                     </button>
                 </div>
@@ -132,6 +131,9 @@
                             </th>
                             <th class="sortable px-3 py-3 text-left text-sm cursor-pointer hover:bg-blue-900/30" data-column="College Name">
                                 College Name <span class="sort-indicator">↕️</span>
+                            </th>
+                            <th class="sortable px-3 py-3 text-left text-sm cursor-pointer hover:bg-blue-900/30" data-column="Branch Code">
+                                Branch Code <span class="sort-indicator">↕️</span>
                             </th>
                             <th class="sortable px-3 py-3 text-left text-sm cursor-pointer hover:bg-blue-900/30" data-column="Branch Name">
                                 Branch Name <span class="sort-indicator">↕️</span>
@@ -201,11 +203,11 @@
 
         <!-- Pagination Controls -->
         <div id="paginationControls" class="flex justify-center items-center space-x-4 mt-6 hidden">
-            <button id="prevPage" class="btn-primary px-4 py-2 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed">
+            <button id="prevPage" class="btn-primary px-6 py-3 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed min-h-[40px] flex items-center justify-center">
                 ← Previous
             </button>
             <span id="pageInfo" class="text-gray-300 text-sm"></span>
-            <button id="nextPage" class="btn-primary px-4 py-2 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed">
+            <button id="nextPage" class="btn-primary px-6 py-3 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed min-h-[40px] flex items-center justify-center">
                 Next →
             </button>
         </div>
@@ -259,9 +261,9 @@
                         Built with modern web technologies • Optimized for performance • Mobile-friendly design
                     </p>
                     <p class="text-xs text-gray-400 text-center mt-2">
-                        <strong>Data Source Disclaimer:</strong> All data rights belong to the official TS EAMCET website (tseamcet.nic.in).
+                        <strong>Data Source Disclaimer:</strong> All data rights belong to the <a href="https://tgeapcet.nic.in/" target="_blank" class="text-blue-400 hover:text-blue-300 underline">official TS EAMCET website</a>.
                         This website uses data sourced from their official publications. Some data may be missing or incomplete.
-                        For official and complete information, please refer to the official TS EAMCET website.
+                        For official and complete information, please refer to the <a href="https://tgeapcet.nic.in/" target="_blank" class="text-blue-400 hover:text-blue-300 underline">official TS EAMCET website</a>.
                     </p>
                 </div>
             </div>
@@ -279,7 +281,7 @@
         }
 
         .nav-btn-compact {
-            padding: 0.5rem 1rem;
+            padding: 0.75rem 1.25rem;
             border-radius: 20px;
             text-decoration: none;
             font-size: 0.875rem;
@@ -289,6 +291,10 @@
             background: rgba(232, 244, 253, 0.05);
             color: rgba(232, 244, 253, 0.8);
             white-space: nowrap;
+            min-height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .nav-btn-compact:hover {
@@ -325,8 +331,9 @@
 
         @media (max-width: 768px) {
             .nav-btn-compact {
-                padding: 0.4rem 0.8rem;
+                padding: 0.6rem 1rem;
                 font-size: 0.75rem;
+                min-height: 36px;
             }
         }
 
@@ -522,7 +529,7 @@
             max-width: 200px;
         }
 
-        /* Third column - Branch Name */
+        /* Third column - Branch Code */
         .table-container th:nth-child(3),
         .table-container td:nth-child(3) {
             position: sticky;
@@ -530,8 +537,20 @@
             z-index: 10;
             background: rgba(26, 27, 58, 0.95);
             border-right: 2px solid rgba(0, 212, 255, 0.3);
-            min-width: 150px;
-            max-width: 150px;
+            min-width: 80px;
+            max-width: 80px;
+        }
+
+        /* Fourth column - Branch Name */
+        .table-container th:nth-child(4),
+        .table-container td:nth-child(4) {
+            position: sticky;
+            left: 370px;
+            z-index: 10;
+            background: rgba(26, 27, 58, 0.95);
+            border-right: 2px solid rgba(0, 212, 255, 0.3);
+            min-width: 200px;
+            max-width: 200px;
         }
 
         /* Header cells need higher z-index */
@@ -763,6 +782,7 @@
                     <td class="px-3 py-3 text-sm text-gray-300">
                         <div class="college-name">${formatCollegeName(row["College Name"] || '')}</div>
                     </td>
+                    <td class="px-3 py-3 text-sm font-medium text-white">${getBranchCode(row["Branch Name"] || '')}</td>
                     <td class="px-3 py-3 text-sm text-gray-300">
                         <div class="college-name">${formatBranchName(row["Branch Name"] || '')}</div>
                     </td>
@@ -845,7 +865,7 @@
             }
 
             const headers = [
-                'College Code', 'College Name', 'Branch Name',
+                'College Code', 'College Name', 'Branch Code', 'Branch Name',
                 'OC Boys', 'OC Girls', 'BC-A Boys', 'BC-A Girls', 'BC-B Boys', 'BC-B Girls',
                 'BC-C Boys', 'BC-C Girls', 'BC-D Boys', 'BC-D Girls', 'BC-E Boys', 'BC-E Girls',
                 'SC Boys', 'SC Girls', 'ST Boys', 'ST Girls', 'EWS Boys', 'EWS Girls'
@@ -856,6 +876,7 @@
                 ...filteredData.map(row => [
                     `"${row["College Code"] || ''}"`,
                     `"${row["College Name"] || ''}"`,
+                    `"${getBranchCode(row["Branch Name"] || '')}"`,
                     `"${row["Branch Name"] || ''}"`,
                     row["OC BOYS"] || '',
                     row["OC GIRLS"] || '',
@@ -967,15 +988,60 @@
 
             // Split long branch names into multiple lines
             const words = name.split(' ');
-            if (words.length <= 2) return name;
+            if (words.length <= 3) return name;
 
-            // Group words into lines of 2 words each for branches
+            // Group words into lines of 3 words each for branches
             const lines = [];
-            for (let i = 0; i < words.length; i += 2) {
-                lines.push(words.slice(i, i + 2).join(' '));
+            for (let i = 0; i < words.length; i += 3) {
+                lines.push(words.slice(i, i + 3).join(' '));
             }
 
             return lines.join('<br>');
+        }
+
+        function getBranchCode(branchName) {
+            if (!branchName) return '';
+
+            const branchCodes = {
+                'CIVIL ENGINEERING': 'CE',
+                'MECHANICAL ENGINEERING': 'ME',
+                'ELECTRICAL AND ELECTRONICS ENGINEERING': 'EEE',
+                'ELECTRONICS AND COMMUNICATION ENGINEERING': 'ECE',
+                'COMPUTER SCIENCE AND ENGINEERING': 'CSE',
+                'INFORMATION TECHNOLOGY': 'IT',
+                'CHEMICAL ENGINEERING': 'CHE',
+                'BIOTECHNOLOGY': 'BT',
+                'AERONAUTICAL ENGINEERING': 'AE',
+                'AUTOMOBILE ENGINEERING': 'AUTO',
+                'BIOMEDICAL ENGINEERING': 'BME',
+                'METALLURGY AND MATERIAL ENGINEERING': 'MME',
+                'MINING ENGINEERING': 'MIN',
+                'PETROLEUM ENGINEERING': 'PE',
+                'TEXTILE ENGINEERING': 'TE',
+                'AGRICULTURAL ENGINEERING': 'AGE',
+                'FOOD TECHNOLOGY': 'FT',
+                'PHARMACEUTICAL ENGINEERING': 'PHAR',
+                'DAIRYING': 'DAIRY',
+                'COMPUTER SCIENCE AND ENGINEERING ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING': 'CSE-AIML',
+                'COMPUTER SCIENCE AND ENGINEERING DATA SCIENCE': 'CSE-DS',
+                'COMPUTER SCIENCE AND ENGINEERING CYBER SECURITY': 'CSE-CS',
+                'ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING': 'AIML',
+                'ARTIFICIAL INTELLIGENCE AND DATA SCIENCE': 'AIDS',
+                'COMPUTER SCIENCE AND BUSINESS SYSTEM': 'CSBS',
+                'COMPUTER SCIENCE AND ENGINEERING IOT': 'CSE-IOT',
+                'ELECTRONICS AND INSTRUMENTATION ENGINEERING': 'EIE',
+                'ELECTRONICS ENGINEERING VLSI DESIGN AND TECHNOLOGY': 'ECE-VLSI',
+                'MECHANICAL MECHTRONICS ENGINEERING': 'ME-MECH',
+                'COMPUTER ENGINEERING': 'CE',
+                'COMPUTER ENGINEERINGSOFTWARE ENGINEERING': 'CSE-SE',
+                'COMPUTER SCIENCE DESIGN': 'CSD',
+                'COMPUTER SCIENCE AND ENGG ARTIFICIAL INTELLIGENCE': 'CSE-AI',
+                'CSE_IoT_AND_CYBER_SECURITY_INCLUDING_BLOCK_CHAIN_TECHNOLOGY': 'CSE-IoT-CS',
+                'ELECTRONICS AND TELECOMMUNICATION ENGG': 'ETE',
+                'COMPUTER SCIENCE AND INFORMATION TECHNOLOGY': 'CSIT'
+            };
+
+            return branchCodes[branchName.toUpperCase()] || branchName.substring(0, 4).toUpperCase();
         }
 
         // Setup dual scroll bars for sticky columns
