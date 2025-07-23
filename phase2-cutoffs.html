@@ -101,8 +101,8 @@
             <div class="flex justify-between items-center text-sm text-gray-400">
                 <div>
                     <span id="recordCount">Loading records...</span>
-                    <div class="mt-1 text-sm text-yellow-400">
-                        📱 <strong>Note:</strong> Scroll sideways to see all BC cutoffs • Check disclaimer at bottom
+                    <div class="mt-1 text-base text-yellow-400">
+                        📱 <strong>Note:</strong> Click on headers to sort • Scroll sideways to see all BC cutoffs • Check disclaimer at bottom
                     </div>
                 </div>
                 <span id="loadingSpinner" class="spinner"></span>
@@ -592,6 +592,17 @@
             color: #8A2BE2;
         }
 
+        .table-header th {
+            position: relative;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            padding: 12px 8px !important;
+            font-size: 0.75rem !important;
+            line-height: 1.2 !important;
+            vertical-align: middle !important;
+        }
+
         .table-row {
             background: rgba(30, 27, 60, 0.4);
         }
@@ -1072,7 +1083,7 @@
             // Set the width of top scroll content to match scrollable area width
             function updateTopScrollWidth() {
                 const tableWidth = table.scrollWidth;
-                const stickyColumnsWidth = 520; // 90 + 200 + 80 + 150 = width of sticky columns
+                const stickyColumnsWidth = 440; // 90 + 200 + 150 = width of sticky columns
                 const scrollableWidth = Math.max(0, tableWidth - stickyColumnsWidth);
                 topScrollContent.style.width = scrollableWidth + 'px';
             }

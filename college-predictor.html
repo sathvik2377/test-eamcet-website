@@ -240,6 +240,18 @@
         .confidence-low {
             background: linear-gradient(135deg, #EF4444 0%, #F87171 100%);
         }
+
+        /* Prevent header overlapping during horizontal scroll */
+        table th {
+            position: relative;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            padding: 12px 8px !important;
+            font-size: 0.75rem !important;
+            line-height: 1.2 !important;
+            vertical-align: middle !important;
+        }
     </style>
 </head>
 <body>
@@ -404,8 +416,8 @@
                         <h3 class="text-2xl font-semibold mb-2 gradient-text">Your College Predictions</h3>
                         <p id="resultsCount" class="text-gray-400">Found 0 matching colleges</p>
                         <div id="userDetails" class="text-sm text-gray-500 mt-2"></div>
-                        <div class="mt-2 text-sm text-yellow-400">
-                            📱 <strong>Note:</strong> Scroll sideways to see all details • Check disclaimer at bottom
+                        <div class="mt-2 text-base text-yellow-400">
+                            📱 <strong>Note:</strong> Click on headers to sort • Scroll sideways to see all details • Check disclaimer at bottom
                         </div>
                     </div>
                     <div class="mt-4 md:mt-0 flex gap-3 items-center">

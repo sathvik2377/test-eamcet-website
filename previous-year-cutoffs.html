@@ -200,10 +200,57 @@
             hyphens: auto;
         }
 
+        .table-fixed {
+            table-layout: fixed !important;
+            width: 100% !important;
+        }
+
+        .table-fixed th,
+        .table-fixed td {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
         .table-header {
-            background: var(--midnight-black);
-            color: var(--golden-yellow);
+            background: rgba(11, 11, 20, 0.95) !important;
+            backdrop-filter: blur(20px);
+            color: white !important;
             font-weight: 600;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .table-header th {
+            background: none !important;
+            background-image: none !important;
+            background-color: transparent !important;
+            color: white !important;
+            padding: 12px 8px !important;
+            font-size: 0.75rem !important;
+            line-height: 1.2 !important;
+            vertical-align: middle !important;
+            position: relative;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        /* Specific column widths */
+        .table-fixed th:nth-child(1),
+        .table-fixed td:nth-child(1) { width: 300px; } /* College Name */
+
+        .table-fixed th:nth-child(2),
+        .table-fixed td:nth-child(2) { width: 250px; } /* Branch Name */
+
+        .table-fixed th:nth-child(n+3),
+        .table-fixed td:nth-child(n+3) { width: 80px; } /* All rank columns */
+
+        /* Prevent any gradient backgrounds on table elements */
+        table th,
+        table td,
+        .table-header,
+        .table-header th {
+            background-image: none !important;
         }
 
         .table-row:nth-child(even) {
@@ -545,15 +592,15 @@
         </div>
 
         <!-- Results Section -->
-        <div id="resultsSection" class="hidden">
+        <div id="resultsSection" class="">
             <!-- Results Header -->
             <div class="card p-6 mb-6 max-w-7xl mx-auto">
                 <div class="flex flex-col md:flex-row md:items-center md:justify-between">
                     <div>
                         <h3 class="text-2xl font-semibold mb-2 gradient-text">Search Results</h3>
                         <p id="resultsCount" class="text-gray-400">Found 0 results</p>
-                        <div class="mt-2 text-sm text-yellow-400">
-                            📱 <strong>Note:</strong> Scroll sideways to see all BC cutoffs • Check disclaimer at bottom
+                        <div class="mt-2 text-base text-yellow-400">
+                            📱 <strong>Note:</strong> Click on headers to sort • Scroll sideways to see all BC cutoffs • Check disclaimer at bottom
                         </div>
                     </div>
                     <div class="mt-4 md:mt-0">
@@ -567,11 +614,11 @@
             <!-- Results Table -->
             <div class="w-full max-w-none mx-auto">
                 <!-- Top Scroll Bar -->
-                <div class="top-scroll-container mb-2" style="margin-left: 350px;">
+                <div class="top-scroll-container mb-2" style="margin-left: 550px;">
                     <div class="top-scroll-content"></div>
                 </div>
                 <div class="table-container" id="mainTableContainer">
-                    <table class="w-full min-w-max">
+                    <table class="w-full min-w-max table-fixed">
                             <thead class="table-header">
                                 <tr>
                                     <th class="px-4 py-3 text-left text-sm sortable-header" data-sort="college_name">
@@ -580,58 +627,58 @@
                                     <th class="px-4 py-3 text-left text-sm sortable-header" data-sort="branch_name">
                                         Branch <span class="sort-indicator">↕️</span>
                                     </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="oc_boys">
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="oc_boys">
                                         OC Boys <span class="sort-indicator">↕️</span>
                                     </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="oc_girls">
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="oc_girls">
                                         OC Girls <span class="sort-indicator">↕️</span>
                                     </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="sc_boys">
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="sc_boys">
                                         SC Boys <span class="sort-indicator">↕️</span>
                                     </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="sc_girls">
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="sc_girls">
                                         SC Girls <span class="sort-indicator">↕️</span>
                                     </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="st_boys">
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="st_boys">
                                         ST Boys <span class="sort-indicator">↕️</span>
                                     </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="st_girls">
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="st_girls">
                                         ST Girls <span class="sort-indicator">↕️</span>
                                     </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="bc_a_boys">
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="bc_a_boys">
                                         BC-A Boys <span class="sort-indicator">↕️</span>
                                     </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="bc_a_girls">
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="bc_a_girls">
                                         BC-A Girls <span class="sort-indicator">↕️</span>
                                     </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="bc_b_boys">
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="bc_b_boys">
                                         BC-B Boys <span class="sort-indicator">↕️</span>
                                     </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="bc_b_girls">
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="bc_b_girls">
                                         BC-B Girls <span class="sort-indicator">↕️</span>
                                     </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="bc_c_boys">
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="bc_c_boys">
                                         BC-C Boys <span class="sort-indicator">↕️</span>
                                     </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="bc_c_girls">
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="bc_c_girls">
                                         BC-C Girls <span class="sort-indicator">↕️</span>
                                     </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="bc_d_boys">
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="bc_d_boys">
                                         BC-D Boys <span class="sort-indicator">↕️</span>
                                     </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="bc_d_girls">
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="bc_d_girls">
                                         BC-D Girls <span class="sort-indicator">↕️</span>
                                     </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="bc_e_boys">
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="bc_e_boys">
                                         BC-E Boys <span class="sort-indicator">↕️</span>
                                     </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="bc_e_girls">
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="bc_e_girls">
                                         BC-E Girls <span class="sort-indicator">↕️</span>
                                     </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="ews_boys">
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="ews_boys">
                                         EWS Boys <span class="sort-indicator">↕️</span>
                                     </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="ews_girls">
+                                    <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="ews_girls">
                                         EWS Girls <span class="sort-indicator">↕️</span>
                                     </th>
                                 </tr>
@@ -753,6 +800,27 @@
                 await loadData();
                 setupEventListeners();
                 populateFilters();
+
+                // Automatically display Phase 3 data on page load
+                const phaseData = allData[currentPhase] || [];
+                if (phaseData.length > 0) {
+                    filteredData = phaseData.filter(item => {
+                        // Filter out disclaimer text
+                        const disclaimerKeywords = [
+                            'Last rank statement', 'does not reflect', 'candidates admitted',
+                            'special reservation', 'CAP seats', 'State wide colleges',
+                            'Disclaimer:'
+                        ];
+
+                        const collegeName = item.college_name || '';
+                        return !disclaimerKeywords.some(keyword =>
+                            collegeName.toLowerCase().includes(keyword.toLowerCase())
+                        );
+                    });
+
+                    displayResults();
+                    hideLoading();
+                }
             } catch (error) {
                 console.error('Error initializing application:', error);
                 showError('Failed to load data. Please refresh the page.');
@@ -1174,19 +1242,7 @@
             noResults.classList.remove('hidden');
         }
 
-        function showLoading() {
-            const loadingIndicator = document.getElementById('loadingIndicator');
-            if (loadingIndicator) {
-                loadingIndicator.classList.remove('hidden');
-            }
-        }
 
-        function hideLoading() {
-            const loadingIndicator = document.getElementById('loadingIndicator');
-            if (loadingIndicator) {
-                loadingIndicator.classList.add('hidden');
-            }
-        }
 
         function showError(message) {
             console.error(message);
@@ -1260,7 +1316,7 @@
             // Set the width of top scroll content to match scrollable area width
             function updateTopScrollWidth() {
                 const tableWidth = table.scrollWidth;
-                const stickyColumnsWidth = 350; // 200 + 150 = width of sticky columns
+                const stickyColumnsWidth = 550; // 300 + 250 = width of sticky columns
                 const scrollableWidth = Math.max(0, tableWidth - stickyColumnsWidth);
                 topScrollContent.style.width = scrollableWidth + 'px';
             }

@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body style="background: linear-gradient(135deg, #0B0B14 0%, #1A1B3A 25%, #0B0B14 50%, #1A1B3A 75%, #0B0B14 100%); background-attachment: fixed; color: #E8F4FD; overflow-x: hidden;">
+<body style="background: linear-gradient(135deg, #0B0B14 0%, #1A1B3A 25%, #0B0B14 50%, #1A1B3A 75%, #0B0B14 100%); background-attachment: fixed; color: #E8F4FD; overflow-x: auto;">
     <!-- Background Effects -->
     <div class="fixed inset-0 pointer-events-none" style="background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(0, 255, 199, 0.05) 25%, rgba(0, 153, 204, 0.08) 50%, rgba(184, 197, 209, 0.03) 75%, rgba(0, 212, 255, 0.06) 100%);"></div>
     <div class="fixed inset-0 pointer-events-none" style="background: radial-gradient(circle at 20% 80%, rgba(0, 212, 255, 0.12) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(0, 255, 199, 0.08) 0%, transparent 50%), radial-gradient(circle at 40% 40%, rgba(0, 153, 204, 0.06) 0%, transparent 50%);"></div>
@@ -108,8 +108,8 @@
             <div class="flex justify-between items-center text-sm text-gray-400">
                 <div>
                     <span id="recordCount">Loading records...</span>
-                    <div class="mt-1 text-sm text-yellow-400">
-                        📱 <strong>Note:</strong> Scroll sideways to see all BC cutoffs • Check disclaimer at bottom
+                    <div class="mt-1 text-base text-yellow-400">
+                        📱 <strong>Note:</strong> Click on headers to sort • Scroll sideways to see all BC cutoffs • Check disclaimer at bottom
                     </div>
                 </div>
                 <span id="loadingSpinner" class="spinner"></span>
@@ -119,11 +119,35 @@
         <!-- Results Table -->
         <div class="w-full max-w-7xl mx-auto">
             <!-- Top Scroll Bar -->
-            <div class="top-scroll-container mb-2" style="margin-left: 440px;">
+            <div class="top-scroll-container mb-2" style="margin-left: 620px;">
                 <div class="top-scroll-content"></div>
             </div>
             <div class="table-container" id="mainTableContainer">
-                <table class="w-full min-w-max">
+                <table class="w-full min-w-max table-fixed">
+                    <colgroup>
+                        <col style="width: 100px;">  <!-- College Code -->
+                        <col style="width: 250px;">  <!-- College Name -->
+                        <col style="width: 80px;">   <!-- Branch Code -->
+                        <col style="width: 200px;">  <!-- Branch Name -->
+                        <col style="width: 80px;">   <!-- OC Boys -->
+                        <col style="width: 80px;">   <!-- OC Girls -->
+                        <col style="width: 80px;">   <!-- EWS Boys -->
+                        <col style="width: 80px;">   <!-- EWS Girls -->
+                        <col style="width: 80px;">   <!-- SC Boys -->
+                        <col style="width: 80px;">   <!-- SC Girls -->
+                        <col style="width: 80px;">   <!-- ST Boys -->
+                        <col style="width: 80px;">   <!-- ST Girls -->
+                        <col style="width: 80px;">   <!-- BC-A Boys -->
+                        <col style="width: 80px;">   <!-- BC-A Girls -->
+                        <col style="width: 80px;">   <!-- BC-B Boys -->
+                        <col style="width: 80px;">   <!-- BC-B Girls -->
+                        <col style="width: 80px;">   <!-- BC-C Boys -->
+                        <col style="width: 80px;">   <!-- BC-C Girls -->
+                        <col style="width: 80px;">   <!-- BC-D Boys -->
+                        <col style="width: 80px;">   <!-- BC-D Girls -->
+                        <col style="width: 80px;">   <!-- BC-E Boys -->
+                        <col style="width: 80px;">   <!-- BC-E Girls -->
+                    </colgroup>
                     <thead class="table-header sticky top-0 z-10">
                         <tr>
                             <th class="sortable px-3 py-3 text-left text-sm cursor-pointer hover:bg-blue-900/30" data-column="College Code">
@@ -207,6 +231,17 @@
                 ← Previous
             </button>
             <span id="pageInfo" class="text-gray-300 text-sm"></span>
+            <div class="flex items-center space-x-2">
+                <span class="text-gray-300 text-sm">Go to page:</span>
+                <input
+                    type="number"
+                    id="pageInput"
+                    min="1"
+                    class="w-16 px-2 py-1 bg-gray-800 border border-gray-600 rounded text-white text-center text-sm focus:outline-none focus:border-blue-500"
+                    placeholder="1"
+                >
+                <button id="goToPage" class="btn-primary px-3 py-1 rounded text-sm">Go</button>
+            </div>
             <button id="nextPage" class="btn-primary px-6 py-3 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed min-h-[40px] flex items-center justify-center">
                 Next →
             </button>
@@ -271,6 +306,14 @@
     </footer>
 
     <style>
+        /* Ensure proper scrolling */
+        html, body {
+            overflow-y: auto !important;
+            overflow-x: auto !important;
+            height: auto !important;
+            min-height: 100vh;
+        }
+
         /* Binary Grid Theme Styles - Unique Nebula Colors */
 
         /* Compact Navigation Styles */
@@ -560,19 +603,84 @@
             z-index: 11;
         }
 
+        .table-fixed {
+            table-layout: fixed !important;
+            width: 100% !important;
+        }
+
+        .table-fixed th,
+        .table-fixed td {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
         .college-name {
-            max-width: 200px;
+            max-width: 240px;
             line-height: 1.3;
             font-size: 0.875rem;
             word-wrap: break-word;
             hyphens: auto;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: normal;
+        }
+
+        .branch-name {
+            max-width: 190px;
+            line-height: 1.3;
+            font-size: 0.875rem;
+            word-wrap: break-word;
+            hyphens: auto;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: normal;
         }
 
         .table-header {
-            background: rgba(11, 11, 20, 0.95);
+            background: rgba(11, 11, 20, 0.95) !important;
             backdrop-filter: blur(20px);
-            color: #00D4FF;
-            border-bottom: 2px solid rgba(0, 212, 255, 0.3);
+            color: white !important;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .table-header th {
+            background: none !important;
+            background-image: none !important;
+            background-color: transparent !important;
+            color: white !important;
+            padding: 12px 8px !important;
+            font-size: 0.75rem !important;
+            line-height: 1.2 !important;
+            vertical-align: middle !important;
+            position: relative;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        /* Specific column widths */
+        .table-fixed th:nth-child(1),
+        .table-fixed td:nth-child(1) { width: 80px; } /* College Code */
+
+        .table-fixed th:nth-child(2),
+        .table-fixed td:nth-child(2) { width: 260px; } /* College Name */
+
+        .table-fixed th:nth-child(3),
+        .table-fixed td:nth-child(3) { width: 80px; } /* Branch Code */
+
+        .table-fixed th:nth-child(4),
+        .table-fixed td:nth-child(4) { width: 200px; } /* Branch Name */
+
+        .table-fixed th:nth-child(n+5),
+        .table-fixed td:nth-child(n+5) { width: 70px; } /* All rank columns */
+
+        /* Prevent any gradient backgrounds on table elements */
+        table th,
+        table td,
+        .table-header,
+        .table-header th {
+            background-image: none !important;
         }
 
         .table-row {
@@ -769,7 +877,7 @@
             tableBody.innerHTML = displayRows.map(row => {
                 const getRank = (field) => {
                     const rank = row[field];
-                    return (rank && rank !== "NA") ? `<span class="font-medium gradient-text">${rank}</span>` : '<span class="text-gray-500">-</span>';
+                    return (rank && rank !== "NA") ? `<span class="font-medium text-white">${rank}</span>` : '<span class="text-gray-500">-</span>';
                 };
 
                 return `
@@ -780,7 +888,7 @@
                     </td>
                     <td class="px-3 py-3 text-sm font-medium text-white">${getBranchCode(row["Branch Name"] || '')}</td>
                     <td class="px-3 py-3 text-sm text-gray-300">
-                        <div class="college-name">${formatBranchName(row["Branch Name"] || '')}</div>
+                        <div class="branch-name">${formatBranchName(row["Branch Name"] || '')}</div>
                     </td>
                     <td class="px-3 py-3 text-center text-sm text-white font-medium">${getRank('OC Boys')}</td>
                     <td class="px-3 py-3 text-center text-sm text-white font-medium">${getRank('OC Girls')}</td>
@@ -820,6 +928,7 @@
             const pageInfo = document.getElementById('pageInfo');
             const prevBtn = document.getElementById('prevPage');
             const nextBtn = document.getElementById('nextPage');
+            const pageInput = document.getElementById('pageInput');
 
             if (totalPages <= 1) {
                 paginationControls.classList.add('hidden');
@@ -831,6 +940,10 @@
 
             prevBtn.disabled = currentPage === 1;
             nextBtn.disabled = currentPage === totalPages;
+
+            // Update page input max value
+            pageInput.max = totalPages;
+            pageInput.placeholder = currentPage.toString();
         }
 
         function setupPagination() {
@@ -846,6 +959,28 @@
                 if (currentPage < totalPages) {
                     currentPage++;
                     displayData();
+                }
+            });
+
+            // Go to page functionality
+            document.getElementById('goToPage').addEventListener('click', () => {
+                const pageInput = document.getElementById('pageInput');
+                const targetPage = parseInt(pageInput.value);
+                const totalPages = Math.ceil(filteredData.length / itemsPerPage);
+
+                if (targetPage >= 1 && targetPage <= totalPages) {
+                    currentPage = targetPage;
+                    displayData();
+                    pageInput.value = '';
+                } else {
+                    alert(`Please enter a page number between 1 and ${totalPages}`);
+                }
+            });
+
+            // Allow Enter key to trigger go to page
+            document.getElementById('pageInput').addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    document.getElementById('goToPage').click();
                 }
             });
         }
@@ -1052,7 +1187,7 @@
             // Set the width of top scroll content to match scrollable area width
             function updateTopScrollWidth() {
                 const tableWidth = table.scrollWidth;
-                const stickyColumnsWidth = 440; // 90 + 200 + 150 = width of sticky columns
+                const stickyColumnsWidth = 620; // 80 + 260 + 80 + 200 = width of sticky columns
                 const scrollableWidth = Math.max(0, tableWidth - stickyColumnsWidth);
                 topScrollContent.style.width = scrollableWidth + 'px';
             }
