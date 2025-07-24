@@ -1,23 +1,76 @@
-# TS EAMCET 2025 Phase 1 Cutoffs - Student Results Finder
+# TS EAMCET 2025 Cutoffs & College Predictor
 
-A modern, responsive web application for searching and exploring TS EAMCET 2025 Phase 1 cutoff results. Features a clean, glassy UI with space-themed background and comprehensive search functionality.
+A comprehensive web application for TS EAMCET (Telangana State Engineering, Agriculture & Medical Common Entrance Test) cutoff analysis and college prediction. Features multiple themed pages, advanced analytics, and comprehensive search functionality.
 
-## Features
+## 🎯 Features
 
-- 🔍 **Advanced Search**: Search by student name, hall ticket number, or college name
-- 🏫 **Filter by College**: Browse results from specific engineering colleges
-- 📚 **Filter by Branch**: Filter results by engineering branches/departments
-- 🎯 **Filter by Category**: Filter by seat category (OC, BC, SC, ST, etc.)
-- 📊 **Real-time Statistics**: View total records, colleges, and branches
-- 📱 **Responsive Design**: Works perfectly on mobile, tablet, and desktop
-- ✨ **Modern UI**: Glass morphism design with space-themed background
-- 📥 **Export Results**: Export filtered results to CSV format
-- ⚡ **Fast Performance**: Optimized data loading and search algorithms
+### 📊 Cutoff Analysis
 
-## Technology Stack
+- **Phase 1 Closing Ranks**: Real-time 2025 Phase 1 cutoff data with official branch codes
+- **Phase 2 Predictions**: AI-powered Phase 2 cutoff predictions
+- **Previous Year Data**: Historical cutoffs for trend analysis (2024 data)
+- **Advanced Filtering**: Filter by college, branch, category, and rank ranges
+- **Smart Sorting**: Proper numerical rank sorting with NA values handled correctly
 
-- **Frontend**: HTML5, Tailwind CSS, Vanilla JavaScript
-- **Backend**: Node.js, Express.js
+### 🔍 Search & Navigation
+
+- **Smart Search**: Find colleges and branches quickly with autocomplete
+- **Category Filters**: Filter by caste categories (OC, SC, ST, BC-A/B/C/D/E, EWS)
+- **Responsive Design**: Optimized for mobile and desktop with consistent layouts
+- **Export Functionality**: Download filtered results as CSV
+- **Fixed Scrolling**: Resolved scrolling issues across all pages
+
+### 🎯 College Predictor
+
+- **Rank-based Prediction**: Enter your rank to get college suggestions
+- **Category-wise Results**: Personalized results based on your category
+- **Probability Analysis**: Get admission probability for each college
+
+### 📈 Analytics & Tracking
+
+- **Google Analytics 4**: Comprehensive user behavior tracking
+- **Real-time Monitoring**: Track page views, user flow, and popular searches
+- **Performance Insights**: Monitor site performance and user engagement
+
+## 🛠️ Technology Stack
+
+- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
+- **Styling**: Tailwind CSS with custom themes
+- **Backend**: Node.js with Express
+- **Data**: JSON-based data storage with data cleaning scripts
+- **Analytics**: Google Analytics 4 (GA4) - ID: G-BEX3M5R4MZ
+
+## 🎨 Themes & Design
+
+The website features multiple themed pages with unique visual identities:
+
+- **Main Page**: Student Results Finder theme with blue gradients
+- **Phase 1**: Closing Ranks theme with cosmic blue effects
+- **Phase 2**: Deep Space Anomaly theme with purple gradients
+- **Previous Year**: Archival Nebula theme with green/gold accents
+- **Predictor**: Cosmic Trajectory theme with interactive elements
+
+## 📊 Recent Updates (Latest Version)
+
+### ✅ Data Quality Improvements
+
+- **Cleaned Data**: Removed 400k+ invalid rank values, replaced with "-"
+- **Quality Filter**: Removed colleges with insufficient data (less than 10/18 valid columns)
+- **Official Branch Codes**: Updated to match TS EAMCET 2024 standards (CSE→CSE, AI/ML→CSM, etc.)
+- **Consistent Display**: Standardized "-" for all missing/invalid data
+
+### ✅ User Experience Enhancements
+
+- **Fixed Scrolling**: Resolved persistent scrolling issues in previous year page
+- **Consistent Layouts**: Standardized table layouts between Phase 1 and Phase 2
+- **Improved Sorting**: Proper numerical rank sorting with NA values at bottom
+- **Mobile Optimization**: Enhanced responsive design across all pages
+
+### ✅ Analytics & Tracking
+
+- **Google Analytics 4**: Full implementation across all 5 pages
+- **Real-time Tracking**: Monitor user behavior and popular content
+- **Performance Monitoring**: Track page load times and user engagement
 - **Data**: CSV files organized by college and branch
 - **Styling**: Glass morphism effects, space-themed animations
 
@@ -35,6 +88,7 @@ npm install
 ```
 
 This will install:
+
 - Express.js (web server)
 - CORS (cross-origin resource sharing)
 - Puppeteer (for data scraping, if needed)
@@ -75,6 +129,7 @@ The server will start on `http://localhost:3000`
 1. **Open your browser** and navigate to `http://localhost:3000`
 
 2. **Search for results** using any of these methods:
+
    - Enter a student name in the search box
    - Enter a hall ticket number
    - Enter a college name
@@ -87,6 +142,7 @@ The server will start on `http://localhost:3000`
 ## Data Structure
 
 Each CSV file contains student records with the following columns:
+
 - `sno`: Serial number
 - `hallticketno`: Student's hall ticket number
 - `rank`: EAMCET rank
@@ -119,11 +175,13 @@ This will run the `scraper.js` file to fetch the latest cutoff data.
 ## Customization
 
 ### Styling
+
 - Modify the Tailwind CSS classes in `index.html`
 - Adjust the space background and glass morphism effects in the `<style>` section
 - Colors and animations can be customized in the Tailwind config
 
 ### Functionality
+
 - Add new search filters by modifying the JavaScript functions
 - Extend the API endpoints in `server.js` for additional features
 - Customize the CSV parsing logic for different data formats
@@ -158,6 +216,7 @@ MIT License - feel free to use this project for educational or commercial purpos
 ## Support
 
 For issues or questions:
+
 1. Check the console for error messages
 2. Ensure the data directory structure is correct
 3. Verify all dependencies are installed

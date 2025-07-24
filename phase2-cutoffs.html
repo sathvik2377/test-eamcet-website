@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TS EAMCET 2025 Phase 2 Predictions - Deep Space Anomaly</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BEX3M5R4MZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-BEX3M5R4MZ');
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -42,7 +53,7 @@
     </header>
 
     <!-- Main Content -->
-    <div class="max-w-7xl mx-auto px-6 py-8">
+    <div class="max-w-full mx-auto px-6 py-8">
         <!-- Page Header -->
         <div class="text-center mb-8">
             <h1 class="text-4xl md:text-5xl font-bold mb-4" style="font-family: 'Poppins', sans-serif; color: #F1F0FF; text-shadow: 0 0 20px rgba(138, 43, 226, 0.5);">
@@ -53,7 +64,7 @@
             </p>
 
             <!-- Warning Banner -->
-            <div class="rounded-2xl p-4 mb-6 max-w-4xl mx-auto" style="background: linear-gradient(135deg, rgba(255, 140, 0, 0.15) 0%, rgba(255, 69, 0, 0.15) 100%); border: 1px solid rgba(255, 140, 0, 0.3);">
+            <div class="rounded-2xl p-4 mb-6 max-w-2xl mx-auto" style="background: linear-gradient(135deg, rgba(255, 140, 0, 0.15) 0%, rgba(255, 69, 0, 0.15) 100%); border: 1px solid rgba(255, 140, 0, 0.3);">
                 <div class="flex items-center justify-center gap-2" style="color: #FFB347;">
                     <span class="text-xl">⚠️</span>
                     <span class="font-semibold">These are predicted cutoffs based on Phase 1 data and trends. Actual Phase 2 cutoffs may vary.</span>
@@ -110,13 +121,37 @@
         </div>
 
         <!-- Results Table -->
-        <div class="w-full max-w-7xl mx-auto">
+        <div class="w-full max-w-full mx-auto">
             <!-- Top Scroll Bar -->
-            <div class="top-scroll-container mb-2" style="margin-left: 440px;">
+            <div class="top-scroll-container mb-2" style="margin-left: 620px;">
                 <div class="top-scroll-content"></div>
             </div>
             <div class="table-container" id="mainTableContainer">
-                <table class="w-full min-w-max">
+                <table class="w-full min-w-max table-fixed">
+                    <colgroup>
+                        <col style="width: 100px;">  <!-- College Code -->
+                        <col style="width: 250px;">  <!-- College Name -->
+                        <col style="width: 80px;">   <!-- Branch Code -->
+                        <col style="width: 200px;">  <!-- Branch Name -->
+                        <col style="width: 80px;">   <!-- OC Boys -->
+                        <col style="width: 80px;">   <!-- OC Girls -->
+                        <col style="width: 80px;">   <!-- EWS Boys -->
+                        <col style="width: 80px;">   <!-- EWS Girls -->
+                        <col style="width: 80px;">   <!-- SC Boys -->
+                        <col style="width: 80px;">   <!-- SC Girls -->
+                        <col style="width: 80px;">   <!-- ST Boys -->
+                        <col style="width: 80px;">   <!-- ST Girls -->
+                        <col style="width: 80px;">   <!-- BC-A Boys -->
+                        <col style="width: 80px;">   <!-- BC-A Girls -->
+                        <col style="width: 80px;">   <!-- BC-B Boys -->
+                        <col style="width: 80px;">   <!-- BC-B Girls -->
+                        <col style="width: 80px;">   <!-- BC-C Boys -->
+                        <col style="width: 80px;">   <!-- BC-C Girls -->
+                        <col style="width: 80px;">   <!-- BC-D Boys -->
+                        <col style="width: 80px;">   <!-- BC-D Girls -->
+                        <col style="width: 80px;">   <!-- BC-E Boys -->
+                        <col style="width: 80px;">   <!-- BC-E Girls -->
+                    </colgroup>
                     <thead class="table-header sticky top-0 z-10">
                         <tr>
                             <th class="sortable px-3 py-3 text-left text-sm cursor-pointer hover:bg-purple-900/30" data-column="College_Code">
@@ -213,7 +248,7 @@
         </div>
 
         <!-- Disclaimer Section -->
-        <div class="w-full max-w-7xl mx-auto mt-8 mb-8">
+        <div class="w-full max-w-full mx-auto mt-8 mb-8">
             <div class="bg-gradient-to-r from-red-900/20 to-orange-900/20 border border-red-500/30 rounded-xl p-6">
                 <h3 class="text-xl font-bold text-red-400 mb-4 flex items-center">
                     ⚠️ Important Disclaimer
@@ -316,6 +351,19 @@
 
         .glow-text {
             text-shadow: 0 0 10px rgba(138, 43, 226, 0.3);
+        }
+
+        /* Table Layout */
+        .table-fixed {
+            table-layout: fixed;
+            width: 100% !important;
+        }
+
+        .table-fixed th,
+        .table-fixed td {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
 
         @media (max-width: 768px) {
@@ -800,7 +848,7 @@
             tableBody.innerHTML = displayRows.map(row => {
                 const getRank = (field) => {
                     const rank = row[field];
-                    return (rank && rank !== "NA") ? `<span class="font-medium gradient-text">${rank}</span>` : '<span class="text-gray-500">-</span>';
+                    return (rank && rank !== "NA" && rank !== "-" && rank !== "") ? `<span class="font-medium text-white">${rank}</span>` : '<span class="text-gray-500">-</span>';
                 };
 
                 return `
@@ -809,7 +857,7 @@
                     <td class="px-3 py-3 text-sm text-gray-300">
                         <div class="college-name">${formatCollegeName(row["College_Name"] || '')}</div>
                     </td>
-                    <td class="px-3 py-3 text-sm font-medium text-white">${getBranchCode(row["Branch_Name"] || '')}</td>
+                    <td class="px-3 py-3 text-sm font-medium text-white">${row["Branch_Code"] || ''}</td>
                     <td class="px-3 py-3 text-sm text-gray-300">
                         <div class="college-name">${formatBranchName(row["Branch_Name"] || '')}</div>
                     </td>
@@ -955,23 +1003,45 @@
                 currentSort.direction = 'asc';
             }
 
+            // Define rank columns (all columns except College_Code, College_Name, Branch_Code, Branch_Name)
+            const rankColumns = [
+                'OC_Boys', 'OC_Girls', 'EWS_Boys', 'EWS_Girls',
+                'SC_Boys', 'SC_Girls', 'ST_Boys', 'ST_Girls',
+                'BC_A_Boys', 'BC_A_Girls', 'BC_B_Boys', 'BC_B_Girls',
+                'BC_C_Boys', 'BC_C_Girls', 'BC_D_Boys', 'BC_D_Girls',
+                'BC_E_Boys', 'BC_E_Girls'
+            ];
+
             filteredData.sort((a, b) => {
                 let aVal = a[column];
                 let bVal = b[column];
 
-                // Handle numeric values
-                if (typeof aVal === 'number' && typeof bVal === 'number') {
-                    return currentSort.direction === 'asc' ? aVal - bVal : bVal - aVal;
+                // Check if this is a rank column
+                if (rankColumns.includes(column)) {
+                    // Handle NA values - push them to the end
+                    const aIsNA = aVal === null || aVal === undefined || aVal === 'NA' || aVal === '';
+                    const bIsNA = bVal === null || bVal === undefined || bVal === 'NA' || bVal === '';
+
+                    if (aIsNA && bIsNA) return 0;
+                    if (aIsNA) return 1; // a goes to end
+                    if (bIsNA) return -1; // b goes to end
+
+                    // Convert to numbers for rank comparison
+                    const aNum = parseInt(aVal) || 0;
+                    const bNum = parseInt(bVal) || 0;
+
+                    // For ranks: ascending = lower ranks first (better ranks), descending = higher ranks first
+                    return currentSort.direction === 'asc' ? aNum - bNum : bNum - aNum;
                 }
 
-                // Handle string values
+                // Handle text columns (College_Code, College_Name, Branch_Code, Branch_Name)
                 if (typeof aVal === 'string' && typeof bVal === 'string') {
                     return currentSort.direction === 'asc'
                         ? aVal.localeCompare(bVal)
                         : bVal.localeCompare(aVal);
                 }
 
-                // Handle mixed or null values
+                // Handle mixed or null values for text columns
                 if (aVal === null || aVal === undefined || aVal === 'NA') aVal = '';
                 if (bVal === null || bVal === undefined || bVal === 'NA') bVal = '';
 

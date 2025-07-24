@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TS EAMCET 2024 Previous Year Cutoffs - Archival Nebula</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BEX3M5R4MZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-BEX3M5R4MZ');
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -25,7 +36,11 @@
             background-attachment: fixed;
             color: var(--star-white);
             position: relative;
-            overflow-x: hidden;
+            overflow-x: auto;
+            overflow-y: auto;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
         }
 
         body::before {
@@ -150,9 +165,9 @@
             background: rgba(10, 26, 10, 0.6);
             border-radius: 20px;
             border: 1px solid var(--stardust-silver);
-            overflow-y: auto;
-            overflow-x: auto;
-            max-height: 70vh;
+            overflow: auto;
+            max-height: 80vh;
+            width: 100%;
         }
 
         /* Ensure all columns are visible */
@@ -357,39 +372,7 @@
             content: ' ↓';
         }
 
-        /* Top scroll bar */
-        .top-scroll-container {
-            background: rgba(26, 27, 58, 0.6);
-            border-radius: 20px 20px 0 0;
-            border: 1px solid rgba(42, 45, 71, 0.5);
-            border-bottom: none;
-            overflow-x: auto;
-            overflow-y: hidden;
-            height: 20px;
-        }
-
-        .top-scroll-content {
-            height: 1px;
-            /* Width will be set by JavaScript to match table width */
-        }
-
-        .top-scroll-container::-webkit-scrollbar {
-            height: 8px;
-        }
-
-        .top-scroll-container::-webkit-scrollbar-track {
-            background: rgba(11, 11, 20, 0.3);
-            border-radius: 4px;
-        }
-
-        .top-scroll-container::-webkit-scrollbar-thumb {
-            background: rgba(255, 140, 0, 0.5);
-            border-radius: 4px;
-        }
-
-        .top-scroll-container::-webkit-scrollbar-thumb:hover {
-            background: rgba(255, 140, 0, 0.7);
-        }
+        /* Simplified table scrolling */
 
         /* Sticky columns */
         .table-container table {
@@ -456,7 +439,7 @@
             </div>
 
             <!-- Navigation Grid - All 5 buttons in single row -->
-            <div class="max-w-7xl mx-auto">
+            <div class="max-w-full mx-auto">
                 <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
                     <a href="index.html" class="nav-btn flex flex-col items-center space-y-4 p-10 rounded-3xl transition-all duration-300 min-h-[140px]">
                         <div class="text-4xl">🔍</div>
@@ -512,7 +495,7 @@
         </div>
 
         <!-- Phase Selection and Filters -->
-        <div class="card p-8 mb-8 max-w-7xl mx-auto">
+        <div class="card p-8 mb-8 max-w-full mx-auto">
             <div class="text-center mb-8">
                 <h2 class="text-2xl font-semibold mb-3 gradient-text">Select Phase and Apply Filters</h2>
                 <p class="text-gray-400 mb-6">Choose the counseling phase and customize your search criteria</p>
@@ -594,7 +577,7 @@
         <!-- Results Section -->
         <div id="resultsSection" class="">
             <!-- Results Header -->
-            <div class="card p-6 mb-6 max-w-7xl mx-auto">
+            <div class="card p-6 mb-6 max-w-full mx-auto">
                 <div class="flex flex-col md:flex-row md:items-center md:justify-between">
                     <div>
                         <h3 class="text-2xl font-semibold mb-2 gradient-text">Search Results</h3>
@@ -612,11 +595,7 @@
             </div>
 
             <!-- Results Table -->
-            <div class="w-full max-w-none mx-auto">
-                <!-- Top Scroll Bar -->
-                <div class="top-scroll-container mb-2" style="margin-left: 550px;">
-                    <div class="top-scroll-content"></div>
-                </div>
+            <div class="w-full max-w-full mx-auto">
                 <div class="table-container" id="mainTableContainer">
                     <table class="w-full min-w-max table-fixed">
                             <thead class="table-header">
@@ -716,7 +695,7 @@
         </div>
 
         <!-- Disclaimer Section -->
-        <div class="w-full max-w-7xl mx-auto mt-8 mb-8">
+        <div class="w-full max-w-full mx-auto mt-8 mb-8">
             <div class="bg-gradient-to-r from-red-900/20 to-orange-900/20 border border-red-500/30 rounded-xl p-6">
                 <h3 class="text-xl font-bold text-red-400 mb-4 flex items-center">
                     ⚠️ Important Disclaimer
@@ -797,12 +776,22 @@
         // Initialize the application
         async function init() {
             try {
+                console.log('🔄 Starting initialization...');
+                showLoading();
+
                 await loadData();
+                console.log('✅ Data loaded successfully');
+
                 setupEventListeners();
+                console.log('✅ Event listeners setup');
+
                 populateFilters();
+                console.log('✅ Filters populated');
 
                 // Automatically display Phase 3 data on page load
                 const phaseData = allData[currentPhase] || [];
+                console.log(`📊 Phase ${currentPhase} data: ${phaseData.length} records`);
+
                 if (phaseData.length > 0) {
                     filteredData = phaseData.filter(item => {
                         // Filter out disclaimer text
@@ -819,10 +808,16 @@
                     });
 
                     displayResults();
+                    console.log('✅ Results displayed');
+                    hideLoading();
+                    console.log('✅ Initialization completed');
+                } else {
+                    console.log('⚠️ No data found for current phase');
                     hideLoading();
                 }
             } catch (error) {
-                console.error('Error initializing application:', error);
+                console.error('❌ Error initializing application:', error);
+                hideLoading();
                 showError('Failed to load data. Please refresh the page.');
             }
         }
@@ -996,19 +991,37 @@
                 let aVal = a[field];
                 let bVal = b[field];
 
-                // Handle numeric values (ranks)
-                if (field !== 'college_name' && field !== 'branch_name') {
-                    aVal = parseInt(aVal) || 999999;
-                    bVal = parseInt(bVal) || 999999;
+                // Define rank columns (all columns except college_name and branch_name)
+                const rankColumns = [
+                    'oc_boys', 'oc_girls', 'sc_boys', 'sc_girls', 'st_boys', 'st_girls',
+                    'bc_a_boys', 'bc_a_girls', 'bc_b_boys', 'bc_b_girls',
+                    'bc_c_boys', 'bc_c_girls', 'bc_d_boys', 'bc_d_girls',
+                    'bc_e_boys', 'bc_e_girls', 'ews_boys', 'ews_girls'
+                ];
 
+                // Handle numeric values (ranks)
+                if (rankColumns.includes(field)) {
+                    // Handle NA values - push them to the end
+                    const aIsNA = aVal === null || aVal === undefined || aVal === 'NA' || aVal === '' || isNaN(parseInt(aVal));
+                    const bIsNA = bVal === null || bVal === undefined || bVal === 'NA' || bVal === '' || isNaN(parseInt(bVal));
+
+                    if (aIsNA && bIsNA) return 0;
+                    if (aIsNA) return 1; // a goes to end
+                    if (bIsNA) return -1; // b goes to end
+
+                    // Convert to numbers for rank comparison
+                    const aNum = parseInt(aVal) || 0;
+                    const bNum = parseInt(bVal) || 0;
+
+                    // For ranks: ascending = lower ranks first (better ranks), descending = higher ranks first
                     if (currentSortDirection === 'asc') {
-                        return aVal - bVal;
+                        return aNum - bNum;
                     } else {
-                        return bVal - aVal;
+                        return bNum - aNum;
                     }
                 }
 
-                // Handle text values
+                // Handle text values (college_name, branch_name)
                 aVal = (aVal || '').toString().toLowerCase();
                 bVal = (bVal || '').toString().toLowerCase();
 
@@ -1304,51 +1317,21 @@
             return lines.join('<br>');
         }
 
-        // Setup dual scroll bars for sticky columns
-        function setupDualScrollBars() {
-            const topScrollContainer = document.querySelector('.top-scroll-container');
-            const topScrollContent = document.querySelector('.top-scroll-content');
+        // Simple scroll setup for table
+        function setupTableScroll() {
             const mainTableContainer = document.getElementById('mainTableContainer');
-            const table = mainTableContainer.querySelector('table');
-
-            if (!topScrollContainer || !mainTableContainer || !table) return;
-
-            // Set the width of top scroll content to match scrollable area width
-            function updateTopScrollWidth() {
-                const tableWidth = table.scrollWidth;
-                const stickyColumnsWidth = 550; // 300 + 250 = width of sticky columns
-                const scrollableWidth = Math.max(0, tableWidth - stickyColumnsWidth);
-                topScrollContent.style.width = scrollableWidth + 'px';
+            if (mainTableContainer) {
+                // Ensure smooth scrolling
+                mainTableContainer.style.scrollBehavior = 'smooth';
+                console.log('✅ Table scroll setup completed');
             }
-
-            // Sync scroll positions
-            function syncScrollLeft(source, target) {
-                if (source.scrollLeft !== target.scrollLeft) {
-                    target.scrollLeft = source.scrollLeft;
-                }
-            }
-
-            // Event listeners for scroll synchronization
-            topScrollContainer.addEventListener('scroll', () => {
-                syncScrollLeft(topScrollContainer, mainTableContainer);
-            });
-
-            mainTableContainer.addEventListener('scroll', () => {
-                syncScrollLeft(mainTableContainer, topScrollContainer);
-            });
-
-            // Update scroll width when data changes
-            const observer = new MutationObserver(updateTopScrollWidth);
-            observer.observe(mainTableContainer, { childList: true, subtree: true });
-
-            // Initial setup
-            updateTopScrollWidth();
         }
 
         // Initialize the application when DOM is loaded
         document.addEventListener('DOMContentLoaded', () => {
+            console.log('🚀 DOM loaded, initializing previous year cutoffs page...');
             init();
-            setupDualScrollBars();
+            setupTableScroll();
         });
     </script>
 
