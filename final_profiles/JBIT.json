@@ -1,0 +1,136 @@
+{
+  "collegeCode": "JBIT",
+  "name": "J B INSTITUTE OF ENGINEERING AND TECHNOLOGY",
+  "location": "YENKAPALLY",
+  "district": "RANGAREDDY",
+  "districtCode": "RR",
+  "type": "Autonomous",
+  "affiliation": "N/A",
+  "established": "1998",
+  "autonomousStatus": "Autonomous from 2014",
+  "nirfRank": "",
+  "naacGrade": "A",
+  "nbaAccredited": "Yes",
+  "fees": "₹110,000",
+  "about": "J B INSTITUTE OF ENGINEERING AND TECHNOLOGY, established in 1998, is a Autonomous institution located in YENKAPALLY, RANGAREDDY. The college is affiliated to JNTUH. It has been autonomous since 2014. The college holds NAAC A grade, NBA accreditation, demonstrating its commitment to quality education. Admissions are conducted through TG EAPCET/EAMCET and TG ECET.",
+  "phone": "08413-235755",
+  "website": "www.jbiet.edu.in",
+  "eapcetAvailable": "Yes",
+  "ecetAvailable": "Yes",
+  "found": true,
+  "collegeName": "N/A",
+  "address": "YENKAPALLY",
+  "region": "OU",
+  "collegeType": "PVT",
+  "principal": "N/A",
+  "contact": "N/A",
+  "email": "principal[at]jbiet.edu.in",
+  "establishedYear": "N/A",
+  "courses": [
+    {
+      "branchCode": "1",
+      "branchName": "AID",
+      "courseName": "ARTIFICIAL INTELLIGENCE AND DATA SCIENCE",
+      "intake": "46",
+      "fee": "110000"
+    },
+    {
+      "branchCode": "2",
+      "branchName": "AIM",
+      "courseName": "ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING",
+      "intake": "93",
+      "fee": "110000"
+    },
+    {
+      "branchCode": "3",
+      "branchName": "CIV",
+      "courseName": "CIVIL ENGINEERING",
+      "intake": "23",
+      "fee": "110000"
+    },
+    {
+      "branchCode": "4",
+      "branchName": "CSD",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (DATA SCIENCE)",
+      "intake": "47",
+      "fee": "110000"
+    },
+    {
+      "branchCode": "5",
+      "branchName": "CSE",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING",
+      "intake": "231",
+      "fee": "110000"
+    },
+    {
+      "branchCode": "6",
+      "branchName": "CSM",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING)",
+      "intake": "69",
+      "fee": "110000"
+    },
+    {
+      "branchCode": "7",
+      "branchName": "ECE",
+      "courseName": "ELECTRONICS AND COMMUNICATION ENGINEERING",
+      "intake": "92",
+      "fee": "110000"
+    },
+    {
+      "branchCode": "8",
+      "branchName": "ECM",
+      "courseName": "ELECTRONICS AND COMPUTER ENGINEERING",
+      "intake": "46",
+      "fee": "110000"
+    },
+    {
+      "branchCode": "9",
+      "branchName": "EEE",
+      "courseName": "ELECTRICAL AND ELECTRONICS ENGINEERING",
+      "intake": "24",
+      "fee": "110000"
+    },
+    {
+      "branchCode": "10",
+      "branchName": "INF",
+      "courseName": "INFORMATION TECHNOLOGY",
+      "intake": "138",
+      "fee": "110000"
+    },
+    {
+      "branchCode": "11",
+      "branchName": "MEC",
+      "courseName": "MECHANICAL ENGINEERING",
+      "intake": "23",
+      "fee": "110000"
+    }
+  ],
+  "_mergeInfo": {
+    "source": "merged",
+    "primary": "2025_institute_profiles",
+    "secondary": "eduvale_profiles",
+    "mergedAt": "2025-07-23T17:34:14.894Z"
+  },
+  "campusPhotos": [],
+  "totalImages": 1,
+  "logo": "🏛️",
+  "_finalData": {
+    "hasLogo": false,
+    "campusPhotoCount": 0,
+    "totalImages": 0,
+    "processedAt": "2025-07-23T18:53:41.154Z",
+    "method": "fast_final_scraping"
+  },
+  "_quickGrab": {
+    "hasLogo": false,
+    "photoCount": 0,
+    "totalImages": 0,
+    "grabbedAt": "2025-07-23T19:05:06.115Z"
+  },
+  "_cleanup": {
+    "genericLogoAdded": false,
+    "campusPhotosRemoved": false,
+    "cleanedAt": "2025-07-23T19:18:47.617Z",
+    "method": "generic_logo_cleanup"
+  }
+}

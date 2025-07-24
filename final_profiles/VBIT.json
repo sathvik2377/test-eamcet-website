@@ -1,0 +1,129 @@
+{
+  "collegeCode": "VBIT",
+  "name": "VIGNAN BHARATI INSTITUTE OF TECHNOLOGY",
+  "location": "GHATKESAR",
+  "district": "MEDCHAL",
+  "districtCode": "MDL",
+  "type": "Autonomous",
+  "affiliation": "N/A",
+  "established": "2004",
+  "autonomousStatus": "Autonomous from 2019",
+  "nirfRank": "",
+  "naacGrade": "A",
+  "nbaAccredited": "Yes",
+  "fees": "₹85,000",
+  "about": "VIGNAN BHARATI INSTITUTE OF TECHNOLOGY, established in 2004, is a Autonomous institution located in GHATKESAR, MEDCHAL. The college is affiliated to JNTUH. It has been autonomous since 2019. The college holds NAAC A grade, NBA accreditation, demonstrating its commitment to quality education. Admissions are conducted through TG EAPCET/EAMCET and TG ECET.",
+  "phone": "08415200419",
+  "website": "www.vbithyd.ac.in",
+  "eapcetAvailable": "Yes",
+  "ecetAvailable": "Yes",
+  "found": true,
+  "collegeName": "N/A",
+  "address": "AUSHAPUR V",
+  "region": "OU",
+  "collegeType": "PVT",
+  "principal": "N/A",
+  "contact": "N/A",
+  "email": "principal[at]vbithyd.ac.in",
+  "establishedYear": "N/A",
+  "courses": [
+    {
+      "branchCode": "1",
+      "branchName": "CIV",
+      "courseName": "CIVIL ENGINEERING",
+      "intake": "23",
+      "fee": "85000"
+    },
+    {
+      "branchCode": "2",
+      "branchName": "CSB",
+      "courseName": "COMPUTER SCIENCE AND BUSINESS SYSTEM",
+      "intake": "46",
+      "fee": "85000"
+    },
+    {
+      "branchCode": "3",
+      "branchName": "CSC",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (CYBER SECURITY)",
+      "intake": "92",
+      "fee": "85000"
+    },
+    {
+      "branchCode": "4",
+      "branchName": "CSD",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (DATA SCIENCE)",
+      "intake": "139",
+      "fee": "85000"
+    },
+    {
+      "branchCode": "5",
+      "branchName": "CSE",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING",
+      "intake": "277",
+      "fee": "85000"
+    },
+    {
+      "branchCode": "6",
+      "branchName": "CSM",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING)",
+      "intake": "138",
+      "fee": "85000"
+    },
+    {
+      "branchCode": "7",
+      "branchName": "ECE",
+      "courseName": "ELECTRONICS AND COMMUNICATION ENGINEERING",
+      "intake": "139",
+      "fee": "85000"
+    },
+    {
+      "branchCode": "8",
+      "branchName": "EEE",
+      "courseName": "ELECTRICAL AND ELECTRONICS ENGINEERING",
+      "intake": "46",
+      "fee": "85000"
+    },
+    {
+      "branchCode": "9",
+      "branchName": "INF",
+      "courseName": "INFORMATION TECHNOLOGY",
+      "intake": "93",
+      "fee": "85000"
+    },
+    {
+      "branchCode": "10",
+      "branchName": "MEC",
+      "courseName": "MECHANICAL ENGINEERING",
+      "intake": "23",
+      "fee": "85000"
+    }
+  ],
+  "_mergeInfo": {
+    "source": "merged",
+    "primary": "2025_institute_profiles",
+    "secondary": "eduvale_profiles",
+    "mergedAt": "2025-07-23T17:34:15.142Z"
+  },
+  "campusPhotos": [],
+  "totalImages": 1,
+  "logo": "📐",
+  "_finalData": {
+    "hasLogo": false,
+    "campusPhotoCount": 0,
+    "totalImages": 0,
+    "processedAt": "2025-07-23T18:53:06.110Z",
+    "method": "fast_final_scraping"
+  },
+  "_quickGrab": {
+    "hasLogo": false,
+    "photoCount": 0,
+    "totalImages": 0,
+    "grabbedAt": "2025-07-23T19:04:38.421Z"
+  },
+  "_cleanup": {
+    "genericLogoAdded": false,
+    "campusPhotosRemoved": false,
+    "cleanedAt": "2025-07-23T19:18:47.719Z",
+    "method": "generic_logo_cleanup"
+  }
+}

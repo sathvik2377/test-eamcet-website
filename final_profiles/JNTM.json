@@ -1,0 +1,96 @@
+{
+  "collegeCode": "JNTM",
+  "name": "JNTUH UNIVERSITY COLLEGE OF ENGINEERING MANTHANI",
+  "location": "MANTHANI",
+  "district": "PEDDAPALLI",
+  "districtCode": "PDL",
+  "type": "Government",
+  "affiliation": "N/A",
+  "established": "2010",
+  "autonomousStatus": "",
+  "nirfRank": "",
+  "naacGrade": "",
+  "nbaAccredited": "",
+  "fees": "₹50,000",
+  "about": "JNTUH UNIVERSITY COLLEGE OF ENGINEERING MANTHANI, established in 2010, is a Government institution located in MANTHANI, PEDDAPALLI. The college is affiliated to JNTUH. Admissions are conducted through TG EAPCET/EAMCET and TG ECET.",
+  "phone": "08728-242457",
+  "website": "www.jntuhcem.ac.in",
+  "eapcetAvailable": "Yes",
+  "ecetAvailable": "Yes",
+  "found": true,
+  "collegeName": "N/A",
+  "address": "CENTENARY COLONY",
+  "region": "OU",
+  "collegeType": "UNIV",
+  "principal": "N/A",
+  "contact": "N/A",
+  "email": "cem[at]jntuh.ac.in",
+  "establishedYear": "N/A",
+  "courses": [
+    {
+      "branchCode": "1",
+      "branchName": "CIV",
+      "courseName": "CIVIL ENGINEERING",
+      "intake": "66",
+      "fee": "50000"
+    },
+    {
+      "branchCode": "2",
+      "branchName": "CSE",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING",
+      "intake": "66",
+      "fee": "50000"
+    },
+    {
+      "branchCode": "3",
+      "branchName": "CSM",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING) (Self Finance)",
+      "intake": "66",
+      "fee": "100000"
+    },
+    {
+      "branchCode": "4",
+      "branchName": "EEE",
+      "courseName": "ELECTRICAL AND ELECTRONICS ENGINEERING",
+      "intake": "66",
+      "fee": "50000"
+    },
+    {
+      "branchCode": "5",
+      "branchName": "MEC",
+      "courseName": "MECHANICAL ENGINEERING",
+      "intake": "66",
+      "fee": "50000"
+    },
+    {
+      "branchCode": "6",
+      "branchName": "MIN",
+      "courseName": "MINING ENGINEERING",
+      "intake": "66",
+      "fee": "50000"
+    }
+  ],
+  "_mergeInfo": {
+    "source": "merged",
+    "primary": "2025_institute_profiles",
+    "secondary": "eduvale_profiles",
+    "mergedAt": "2025-07-23T17:34:14.910Z"
+  },
+  "campusPhotos": [],
+  "totalImages": 1,
+  "logo": "https://jntuhcem.ac.in/images_new/jntuhlogo1.png",
+  "_finalData": {
+    "hasLogo": true,
+    "campusPhotoCount": 0,
+    "totalImages": 1,
+    "deepResearchedAt": "2025-07-23T19:02:26.826Z",
+    "method": "deep_research_scraping",
+    "sources": {
+      "logo": "official_website",
+      "campusPhotos": {
+        "googleMaps": 0,
+        "googleImages": 0
+      }
+    }
+  }
+}

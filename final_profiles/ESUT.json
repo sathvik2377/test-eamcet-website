@@ -1,0 +1,80 @@
+{
+  "collegeCode": "ESUT",
+  "name": "EARTH SCIENCES UNIVERSITY OF TELANGANA (FORMERLY K U COLLEGE OF ENGG KOTHAGUDEM)",
+  "location": "KOTHAGUDEM",
+  "district": "BHADRADRI KOTHAGUDEM",
+  "districtCode": "KGM",
+  "type": "University",
+  "affiliation": "N/A",
+  "established": "1994",
+  "autonomousStatus": "",
+  "nirfRank": "",
+  "naacGrade": "",
+  "nbaAccredited": "",
+  "fees": "₹35,000",
+  "about": "EARTH SCIENCES UNIVERSITY OF TELANGANA (FORMERLY K U COLLEGE OF ENGG KOTHAGUDEM), established in 1994, is a University institution located in KOTHAGUDEM, BHADRADRI KOTHAGUDEM. The college is affiliated to ESUNIVTG. Admissions are conducted through TG EAPCET/EAMCET and TG ECET.",
+  "phone": "8500378531",
+  "website": "www.kuce.ac.in",
+  "eapcetAvailable": "Yes",
+  "ecetAvailable": "Yes",
+  "found": true,
+  "collegeName": "N/A",
+  "address": "N/A",
+  "region": "OU",
+  "collegeType": "UNIV",
+  "principal": "N/A",
+  "contact": "N/A",
+  "email": "principal_ku[at]yahoo.com",
+  "establishedYear": "N/A",
+  "courses": [
+    {
+      "branchCode": "1",
+      "branchName": "CSE",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING",
+      "intake": "44",
+      "fee": "35000"
+    },
+    {
+      "branchCode": "2",
+      "branchName": "EEE",
+      "courseName": "ELECTRICAL AND ELECTRONICS ENGINEERING",
+      "intake": "44",
+      "fee": "35000"
+    },
+    {
+      "branchCode": "3",
+      "branchName": "MIN",
+      "courseName": "MINING ENGINEERING",
+      "intake": "28",
+      "fee": "35000"
+    }
+  ],
+  "_mergeInfo": {
+    "source": "merged",
+    "primary": "2025_institute_profiles",
+    "secondary": "eduvale_profiles",
+    "mergedAt": "2025-07-23T17:34:14.864Z"
+  },
+  "campusPhotos": [],
+  "totalImages": 1,
+  "logo": "📐",
+  "_finalData": {
+    "hasLogo": false,
+    "campusPhotoCount": 0,
+    "totalImages": 0,
+    "processedAt": "2025-07-23T18:54:14.826Z",
+    "method": "fast_final_scraping"
+  },
+  "_quickGrab": {
+    "hasLogo": false,
+    "photoCount": 0,
+    "totalImages": 0,
+    "grabbedAt": "2025-07-23T19:05:06.934Z"
+  },
+  "_cleanup": {
+    "genericLogoAdded": false,
+    "campusPhotosRemoved": false,
+    "cleanedAt": "2025-07-23T19:18:47.604Z",
+    "method": "generic_logo_cleanup"
+  }
+}

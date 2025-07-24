@@ -1,0 +1,88 @@
+{
+  "collegeCode": "ANUG",
+  "name": "ANURAG ENGINEERING COLLEGE",
+  "collegeName": "N/A",
+  "address": "VENKATAPUR",
+  "district": "MEDCHAL",
+  "region": "OU",
+  "collegeType": "PVT",
+  "principal": "N/A",
+  "contact": "N/A",
+  "email": "info[at]anurag.edu.in",
+  "website": "www.anurag.edu.in",
+  "affiliation": "N/A",
+  "establishedYear": "N/A",
+  "courses": [
+    {
+      "branchCode": "1",
+      "branchName": "AI",
+      "courseName": "ARTIFICIAL INTELLIGENCE",
+      "intake": "46",
+      "fee": "135000"
+    },
+    {
+      "branchCode": "2",
+      "branchName": "CIV",
+      "courseName": "CIVIL ENGINEERING",
+      "intake": "93",
+      "fee": "135000"
+    },
+    {
+      "branchCode": "3",
+      "branchName": "CSE",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING",
+      "intake": "184",
+      "fee": "135000"
+    },
+    {
+      "branchCode": "4",
+      "branchName": "ECE",
+      "courseName": "ELECTRONICS AND COMMUNICATION ENGINEERING",
+      "intake": "186",
+      "fee": "135000"
+    },
+    {
+      "branchCode": "5",
+      "branchName": "EEE",
+      "courseName": "ELECTRICAL AND ELECTRONICS ENGINEERING",
+      "intake": "92",
+      "fee": "135000"
+    },
+    {
+      "branchCode": "6",
+      "branchName": "INF",
+      "courseName": "INFORMATION TECHNOLOGY",
+      "intake": "139",
+      "fee": "135000"
+    },
+    {
+      "branchCode": "7",
+      "branchName": "MEC",
+      "courseName": "MECHANICAL ENGINEERING",
+      "intake": "92",
+      "fee": "135000"
+    }
+  ],
+  "campusPhotos": [],
+  "totalImages": 1,
+  "logo": "⚡",
+  "_finalData": {
+    "hasLogo": false,
+    "campusPhotoCount": 0,
+    "totalImages": 0,
+    "processedAt": "2025-07-23T18:53:19.532Z",
+    "method": "fast_final_scraping"
+  },
+  "_quickGrab": {
+    "hasLogo": false,
+    "photoCount": 0,
+    "totalImages": 0,
+    "grabbedAt": "2025-07-23T19:04:35.888Z"
+  },
+  "_cleanup": {
+    "genericLogoAdded": false,
+    "campusPhotosRemoved": false,
+    "cleanedAt": "2025-07-23T19:18:47.551Z",
+    "method": "generic_logo_cleanup"
+  }
+}

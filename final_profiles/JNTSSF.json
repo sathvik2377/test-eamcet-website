@@ -1,0 +1,46 @@
+{
+  "collegeCode": "JNTSSF",
+  "name": "JNTUH COLLEGE OF ENGINEERING SULTANPUR (SF)",
+  "collegeName": "N/A",
+  "address": "PULKAL MANDAL",
+  "district": "SANGAREDDY",
+  "region": "OU",
+  "collegeType": "UNIV",
+  "principal": "N/A",
+  "contact": "N/A",
+  "email": "principaljntuhces[at]gmail.com",
+  "website": "N/A",
+  "affiliation": "N/A",
+  "establishedYear": "N/A",
+  "courses": [
+    {
+      "branchCode": "1",
+      "branchName": "CSE",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (Self Finance)",
+      "intake": "66",
+      "fee": "100000"
+    }
+  ],
+  "campusPhotos": [],
+  "totalImages": 1,
+  "logo": "🔧",
+  "_finalData": {
+    "hasLogo": false,
+    "campusPhotoCount": 0,
+    "totalImages": 0,
+    "processedAt": "2025-07-23T18:53:06.552Z",
+    "method": "fast_final_scraping"
+  },
+  "_quickGrab": {
+    "hasLogo": false,
+    "photoCount": 0,
+    "totalImages": 0,
+    "grabbedAt": "2025-07-23T19:04:34.913Z"
+  },
+  "_cleanup": {
+    "genericLogoAdded": false,
+    "campusPhotosRemoved": false,
+    "cleanedAt": "2025-07-23T19:18:47.636Z",
+    "method": "generic_logo_cleanup"
+  }
+}

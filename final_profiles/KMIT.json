@@ -1,0 +1,73 @@
+{
+  "collegeCode": "KMIT",
+  "name": "KESHAV MEMORIAL INSTITUTE OF TECHNOLOGY",
+  "location": "NARAYANAGUDA",
+  "district": "HYDERABAD",
+  "districtCode": "HYD",
+  "type": "Autonomous",
+  "affiliation": "N/A",
+  "established": "2007",
+  "autonomousStatus": "Autonomous from 2020",
+  "nirfRank": "",
+  "naacGrade": "A",
+  "nbaAccredited": "Yes",
+  "fees": "₹103,000",
+  "about": "KESHAV MEMORIAL INSTITUTE OF TECHNOLOGY, established in 2007, is a Autonomous institution located in NARAYANAGUDA, HYDERABAD. The college is affiliated to JNTUH. It has been autonomous since 2020. The college holds NAAC A grade, NBA accreditation, demonstrating its commitment to quality education. Admissions are conducted through TG EAPCET/EAMCET and TG ECET.",
+  "phone": "040-23261407",
+  "website": "www.kmit.in",
+  "eapcetAvailable": "Yes",
+  "ecetAvailable": "Yes",
+  "found": true,
+  "collegeName": "N/A",
+  "address": "NARAYANGUDA",
+  "region": "OU",
+  "collegeType": "PVT",
+  "principal": "N/A",
+  "contact": "N/A",
+  "email": "principal[at]kmit.in",
+  "establishedYear": "N/A",
+  "courses": [
+    {
+      "branchCode": "1",
+      "branchName": "CSE",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING",
+      "intake": "415",
+      "fee": "103000"
+    },
+    {
+      "branchCode": "2",
+      "branchName": "CSM",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING)",
+      "intake": "232",
+      "fee": "103000"
+    }
+  ],
+  "_mergeInfo": {
+    "source": "merged",
+    "primary": "2025_institute_profiles",
+    "secondary": "eduvale_profiles",
+    "mergedAt": "2025-07-23T17:34:14.992Z"
+  },
+  "campusPhotos": [],
+  "totalImages": 1,
+  "logo": "https://www.kmit.in/images/kmit-bar.png",
+  "_finalData": {
+    "hasLogo": false,
+    "campusPhotoCount": 0,
+    "totalImages": 0,
+    "processedAt": "2025-07-23T18:53:57.113Z",
+    "method": "fast_final_scraping"
+  },
+  "_quickGrab": {
+    "hasLogo": false,
+    "photoCount": 0,
+    "totalImages": 0,
+    "grabbedAt": "2025-07-23T19:05:05.095Z"
+  },
+  "_logoScraping": {
+    "logoFound": true,
+    "logoUrl": "https://www.kmit.in/images/kmit-bar.png",
+    "scrapedAt": "2025-07-23T19:16:34.956Z",
+    "method": "parallel_logo_scraping"
+  }
+}

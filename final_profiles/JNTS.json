@@ -1,0 +1,108 @@
+{
+  "collegeCode": "JNTS",
+  "name": "JNTUH UNIVERSITY COLLEGE OF ENGINEERING SULTANPUR",
+  "location": "SULTANPUR",
+  "district": "SANGAREDDY",
+  "districtCode": "SRD",
+  "type": "Government",
+  "affiliation": "N/A",
+  "established": "2012",
+  "autonomousStatus": "",
+  "nirfRank": "",
+  "naacGrade": "",
+  "nbaAccredited": "",
+  "fees": "₹50,000",
+  "about": "JNTUH UNIVERSITY COLLEGE OF ENGINEERING SULTANPUR, established in 2012, is a Government institution located in SULTANPUR, SANGAREDDY. The college is affiliated to JNTUH. Admissions are conducted through TG EAPCET/EAMCET and TG ECET.",
+  "phone": "8455279022",
+  "website": "www.jntuhces.ac.in",
+  "eapcetAvailable": "Yes",
+  "ecetAvailable": "Yes",
+  "found": true,
+  "collegeName": "N/A",
+  "address": "SULTANPUR VILLAGE",
+  "region": "OU",
+  "collegeType": "UNIV",
+  "principal": "N/A",
+  "contact": "N/A",
+  "email": "principaljntuhces[at]gmail.com",
+  "establishedYear": "N/A",
+  "courses": [
+    {
+      "branchCode": "1",
+      "branchName": "CIV",
+      "courseName": "CIVIL ENGINEERING",
+      "intake": "66",
+      "fee": "50000"
+    },
+    {
+      "branchCode": "2",
+      "branchName": "CSC",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (CYBER SECURITY) (Self Finance)",
+      "intake": "66",
+      "fee": "100000"
+    },
+    {
+      "branchCode": "3",
+      "branchName": "CSE",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING",
+      "intake": "66",
+      "fee": "50000"
+    },
+    {
+      "branchCode": "4",
+      "branchName": "CSM",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING) (Self Finance)",
+      "intake": "66",
+      "fee": "100000"
+    },
+    {
+      "branchCode": "5",
+      "branchName": "ECE",
+      "courseName": "ELECTRONICS AND COMMUNICATION ENGINEERING",
+      "intake": "66",
+      "fee": "50000"
+    },
+    {
+      "branchCode": "6",
+      "branchName": "EEE",
+      "courseName": "ELECTRICAL AND ELECTRONICS ENGINEERING",
+      "intake": "66",
+      "fee": "50000"
+    },
+    {
+      "branchCode": "7",
+      "branchName": "MEC",
+      "courseName": "MECHANICAL ENGINEERING",
+      "intake": "66",
+      "fee": "50000"
+    }
+  ],
+  "_mergeInfo": {
+    "source": "merged",
+    "primary": "2025_institute_profiles",
+    "secondary": "eduvale_profiles",
+    "mergedAt": "2025-07-23T17:34:14.915Z"
+  },
+  "campusPhotos": [],
+  "totalImages": 1,
+  "logo": "🎯",
+  "_finalData": {
+    "hasLogo": false,
+    "campusPhotoCount": 0,
+    "totalImages": 0,
+    "processedAt": "2025-07-23T18:53:01.850Z",
+    "method": "fast_final_scraping"
+  },
+  "_quickGrab": {
+    "hasLogo": false,
+    "photoCount": 0,
+    "totalImages": 0,
+    "grabbedAt": "2025-07-23T19:04:32.342Z"
+  },
+  "_cleanup": {
+    "genericLogoAdded": false,
+    "campusPhotosRemoved": false,
+    "cleanedAt": "2025-07-23T19:18:47.635Z",
+    "method": "generic_logo_cleanup"
+  }
+}

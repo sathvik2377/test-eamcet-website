@@ -4,10 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TS EAMCET 2025 - Closing Ranks</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BEX3M5R4MZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-BEX3M5R4MZ');
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body style="background: linear-gradient(135deg, #0B0B14 0%, #1A1B3A 25%, #0B0B14 50%, #1A1B3A 75%, #0B0B14 100%); background-attachment: fixed; color: #E8F4FD; overflow-x: hidden;">
+<body style="background: linear-gradient(135deg, #0B0B14 0%, #1A1B3A 25%, #0B0B14 50%, #1A1B3A 75%, #0B0B14 100%); background-attachment: fixed; color: #E8F4FD; overflow-x: auto;">
     <!-- Background Effects -->
     <div class="fixed inset-0 pointer-events-none" style="background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(0, 255, 199, 0.05) 25%, rgba(0, 153, 204, 0.08) 50%, rgba(184, 197, 209, 0.03) 75%, rgba(0, 212, 255, 0.06) 100%);"></div>
     <div class="fixed inset-0 pointer-events-none" style="background: radial-gradient(circle at 20% 80%, rgba(0, 212, 255, 0.12) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(0, 255, 199, 0.08) 0%, transparent 50%), radial-gradient(circle at 40% 40%, rgba(0, 153, 204, 0.06) 0%, transparent 50%);"></div>
@@ -42,7 +53,7 @@
     </header>
 
     <!-- Main Content -->
-    <div class="max-w-7xl mx-auto px-6 py-8">
+    <div class="max-w-full mx-auto px-6 py-8">
         <!-- Page Header -->
         <div class="text-center mb-8">
             <h1 class="text-4xl md:text-5xl font-bold mb-4" style="font-family: 'Poppins', sans-serif; color: #E8F4FD; text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);">
@@ -51,6 +62,13 @@
             <p class="text-lg mb-6 max-w-3xl mx-auto" style="color: #B8C5D1;">
                 Official closing ranks for all colleges and branches in <span style="background: linear-gradient(135deg, #00D4FF 0%, #00FFC7 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Phase 1 counseling</span>.
             </p>
+
+            <!-- Quick Navigation -->
+            <div class="flex justify-center mb-6">
+                <a href="college-info.html" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-sm">
+                    🏫 College Info & Details
+                </a>
+            </div>
         </div>
 
         <!-- Search and Filter Controls -->
@@ -58,8 +76,21 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-4">
                 <div>
                     <label class="block text-sm font-medium text-gray-300 mb-2">Search</label>
-                    <input type="text" id="searchInput" placeholder="Type to search..."
+                    <input type="text" id="searchInput" placeholder="Type to search colleges, branches..."
                            class="input-field w-full px-4 py-2">
+                    <!-- Quick Examples -->
+                    <div class="flex flex-wrap gap-1 mt-2">
+                        <span class="text-xs text-gray-500 mr-1">Try:</span>
+                        <button onclick="quickSearch('cbit')" class="px-2 py-1 bg-white/5 hover:bg-white/10 border border-white/10 rounded text-xs transition-all duration-300 hover:scale-105">
+                            "cbit"
+                        </button>
+                        <button onclick="quickSearch('cse')" class="px-2 py-1 bg-white/5 hover:bg-white/10 border border-white/10 rounded text-xs transition-all duration-300 hover:scale-105">
+                            "cse"
+                        </button>
+                        <button onclick="quickSearch('jntu')" class="px-2 py-1 bg-white/5 hover:bg-white/10 border border-white/10 rounded text-xs transition-all duration-300 hover:scale-105">
+                            "jntu"
+                        </button>
+                    </div>
                 </div>
                 <div class="relative">
                     <label class="block text-sm font-medium text-gray-300 mb-2">College</label>
@@ -98,8 +129,11 @@
                         <option value="EWS">EWS</option>
                     </select>
                 </div>
-                <div class="flex items-end">
-                    <button onclick="exportToCSV()" class="btn-primary px-6 py-3 w-full min-h-[40px] flex items-center justify-center">
+                <div class="flex items-end space-x-4">
+                    <button onclick="showAllPhasesComparison()" class="btn-secondary px-6 py-3 min-h-[40px] flex items-center justify-center">
+                        📊 Show All Phases Comparison
+                    </button>
+                    <button onclick="exportToCSV()" class="btn-primary px-6 py-3 min-h-[40px] flex items-center justify-center">
                         Export CSV
                     </button>
                 </div>
@@ -108,8 +142,8 @@
             <div class="flex justify-between items-center text-sm text-gray-400">
                 <div>
                     <span id="recordCount">Loading records...</span>
-                    <div class="mt-1 text-sm text-yellow-400">
-                        📱 <strong>Note:</strong> Scroll sideways to see all BC cutoffs • Check disclaimer at bottom
+                    <div class="mt-1 text-base text-yellow-400">
+                        📱 <strong>Note:</strong> Click on headers to sort • Scroll sideways to see all BC cutoffs • Check disclaimer at bottom
                     </div>
                 </div>
                 <span id="loadingSpinner" class="spinner"></span>
@@ -117,13 +151,37 @@
         </div>
 
         <!-- Results Table -->
-        <div class="w-full max-w-7xl mx-auto">
+        <div class="w-full max-w-full mx-auto">
             <!-- Top Scroll Bar -->
-            <div class="top-scroll-container mb-2" style="margin-left: 440px;">
+            <div class="top-scroll-container mb-2" style="margin-left: 620px;">
                 <div class="top-scroll-content"></div>
             </div>
             <div class="table-container" id="mainTableContainer">
-                <table class="w-full min-w-max">
+                <table class="w-full min-w-max table-fixed">
+                    <colgroup>
+                        <col style="width: 100px;">  <!-- College Code -->
+                        <col style="width: 250px;">  <!-- College Name -->
+                        <col style="width: 80px;">   <!-- Branch Code -->
+                        <col style="width: 200px;">  <!-- Branch Name -->
+                        <col style="width: 80px;">   <!-- OC Boys -->
+                        <col style="width: 80px;">   <!-- OC Girls -->
+                        <col style="width: 80px;">   <!-- EWS Boys -->
+                        <col style="width: 80px;">   <!-- EWS Girls -->
+                        <col style="width: 80px;">   <!-- SC Boys -->
+                        <col style="width: 80px;">   <!-- SC Girls -->
+                        <col style="width: 80px;">   <!-- ST Boys -->
+                        <col style="width: 80px;">   <!-- ST Girls -->
+                        <col style="width: 80px;">   <!-- BC-A Boys -->
+                        <col style="width: 80px;">   <!-- BC-A Girls -->
+                        <col style="width: 80px;">   <!-- BC-B Boys -->
+                        <col style="width: 80px;">   <!-- BC-B Girls -->
+                        <col style="width: 80px;">   <!-- BC-C Boys -->
+                        <col style="width: 80px;">   <!-- BC-C Girls -->
+                        <col style="width: 80px;">   <!-- BC-D Boys -->
+                        <col style="width: 80px;">   <!-- BC-D Girls -->
+                        <col style="width: 80px;">   <!-- BC-E Boys -->
+                        <col style="width: 80px;">   <!-- BC-E Girls -->
+                    </colgroup>
                     <thead class="table-header sticky top-0 z-10">
                         <tr>
                             <th class="sortable px-3 py-3 text-left text-sm cursor-pointer hover:bg-blue-900/30" data-column="College Code">
@@ -207,6 +265,17 @@
                 ← Previous
             </button>
             <span id="pageInfo" class="text-gray-300 text-sm"></span>
+            <div class="flex items-center space-x-2">
+                <span class="text-gray-300 text-sm">Go to page:</span>
+                <input
+                    type="number"
+                    id="pageInput"
+                    min="1"
+                    class="w-16 px-2 py-1 bg-gray-800 border border-gray-600 rounded text-white text-center text-sm focus:outline-none focus:border-blue-500"
+                    placeholder="1"
+                >
+                <button id="goToPage" class="btn-primary px-3 py-1 rounded text-sm">Go</button>
+            </div>
             <button id="nextPage" class="btn-primary px-6 py-3 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed min-h-[40px] flex items-center justify-center">
                 Next →
             </button>
@@ -220,7 +289,7 @@
         </div>
 
         <!-- Disclaimer Section -->
-        <div class="w-full max-w-7xl mx-auto mt-8 mb-8">
+        <div class="w-full max-w-full mx-auto mt-8 mb-8">
             <div class="bg-gradient-to-r from-red-900/20 to-orange-900/20 border border-red-500/30 rounded-xl p-6">
                 <h3 class="text-xl font-bold text-red-400 mb-4 flex items-center">
                     ⚠️ Important Disclaimer
@@ -271,6 +340,14 @@
     </footer>
 
     <style>
+        /* Ensure proper scrolling */
+        html, body {
+            overflow-y: auto !important;
+            overflow-x: auto !important;
+            height: auto !important;
+            min-height: 100vh;
+        }
+
         /* Binary Grid Theme Styles - Unique Nebula Colors */
 
         /* Compact Navigation Styles */
@@ -560,19 +637,84 @@
             z-index: 11;
         }
 
+        .table-fixed {
+            table-layout: fixed !important;
+            width: 100% !important;
+        }
+
+        .table-fixed th,
+        .table-fixed td {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
         .college-name {
-            max-width: 200px;
+            max-width: 240px;
             line-height: 1.3;
             font-size: 0.875rem;
             word-wrap: break-word;
             hyphens: auto;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: normal;
+        }
+
+        .branch-name {
+            max-width: 190px;
+            line-height: 1.3;
+            font-size: 0.875rem;
+            word-wrap: break-word;
+            hyphens: auto;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: normal;
         }
 
         .table-header {
-            background: rgba(11, 11, 20, 0.95);
+            background: rgba(11, 11, 20, 0.95) !important;
             backdrop-filter: blur(20px);
-            color: #00D4FF;
-            border-bottom: 2px solid rgba(0, 212, 255, 0.3);
+            color: white !important;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .table-header th {
+            background: none !important;
+            background-image: none !important;
+            background-color: transparent !important;
+            color: white !important;
+            padding: 12px 8px !important;
+            font-size: 0.75rem !important;
+            line-height: 1.2 !important;
+            vertical-align: middle !important;
+            position: relative;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        /* Specific column widths */
+        .table-fixed th:nth-child(1),
+        .table-fixed td:nth-child(1) { width: 80px; } /* College Code */
+
+        .table-fixed th:nth-child(2),
+        .table-fixed td:nth-child(2) { width: 260px; } /* College Name */
+
+        .table-fixed th:nth-child(3),
+        .table-fixed td:nth-child(3) { width: 80px; } /* Branch Code */
+
+        .table-fixed th:nth-child(4),
+        .table-fixed td:nth-child(4) { width: 200px; } /* Branch Name */
+
+        .table-fixed th:nth-child(n+5),
+        .table-fixed td:nth-child(n+5) { width: 70px; } /* All rank columns */
+
+        /* Prevent any gradient backgrounds on table elements */
+        table th,
+        table td,
+        .table-header,
+        .table-header th {
+            background-image: none !important;
         }
 
         .table-row {
@@ -741,7 +883,16 @@
                 const matchesCollege = !collegeFilter || item["College Name"] === collegeFilter;
                 const matchesBranch = !branchFilter || item["Branch Name"] === branchFilter;
 
-                return matchesSearch && matchesCollege && matchesBranch;
+                // Filter out unrealistic cutoff ranks (400k+)
+                const hasRealisticRanks = Object.keys(item).some(key => {
+                    if (key.includes('Boys') || key.includes('Girls') || key.includes('BOYS') || key.includes('GIRLS')) {
+                        const rank = parseInt(item[key]);
+                        return rank && rank > 0 && rank < 400000; // Only include ranks below 400k
+                    }
+                    return false;
+                });
+
+                return matchesSearch && matchesCollege && matchesBranch && hasRealisticRanks;
             });
 
             currentPage = 1; // Reset to first page when filtering
@@ -769,7 +920,7 @@
             tableBody.innerHTML = displayRows.map(row => {
                 const getRank = (field) => {
                     const rank = row[field];
-                    return (rank && rank !== "NA") ? `<span class="font-medium gradient-text">${rank}</span>` : '<span class="text-gray-500">-</span>';
+                    return (rank && rank !== "NA" && rank !== "-" && rank !== "") ? `<span class="font-medium text-white">${rank}</span>` : '<span class="text-gray-500">-</span>';
                 };
 
                 return `
@@ -778,9 +929,9 @@
                     <td class="px-3 py-3 text-sm text-gray-300">
                         <div class="college-name">${formatCollegeName(row["College Name"] || '')}</div>
                     </td>
-                    <td class="px-3 py-3 text-sm font-medium text-white">${getBranchCode(row["Branch Name"] || '')}</td>
+                    <td class="px-3 py-3 text-sm font-medium text-white">${row["Branch Code"] || getBranchCode(row["Branch Name"] || '')}</td>
                     <td class="px-3 py-3 text-sm text-gray-300">
-                        <div class="college-name">${formatBranchName(row["Branch Name"] || '')}</div>
+                        <div class="branch-name">${formatBranchName(row["Branch Name"] || '')}</div>
                     </td>
                     <td class="px-3 py-3 text-center text-sm text-white font-medium">${getRank('OC Boys')}</td>
                     <td class="px-3 py-3 text-center text-sm text-white font-medium">${getRank('OC Girls')}</td>
@@ -820,6 +971,7 @@
             const pageInfo = document.getElementById('pageInfo');
             const prevBtn = document.getElementById('prevPage');
             const nextBtn = document.getElementById('nextPage');
+            const pageInput = document.getElementById('pageInput');
 
             if (totalPages <= 1) {
                 paginationControls.classList.add('hidden');
@@ -831,6 +983,10 @@
 
             prevBtn.disabled = currentPage === 1;
             nextBtn.disabled = currentPage === totalPages;
+
+            // Update page input max value
+            pageInput.max = totalPages;
+            pageInput.placeholder = currentPage.toString();
         }
 
         function setupPagination() {
@@ -848,11 +1004,51 @@
                     displayData();
                 }
             });
+
+            // Go to page functionality
+            document.getElementById('goToPage').addEventListener('click', () => {
+                const pageInput = document.getElementById('pageInput');
+                const targetPage = parseInt(pageInput.value);
+                const totalPages = Math.ceil(filteredData.length / itemsPerPage);
+
+                if (targetPage >= 1 && targetPage <= totalPages) {
+                    currentPage = targetPage;
+                    displayData();
+                    pageInput.value = '';
+                } else {
+                    alert(`Please enter a page number between 1 and ${totalPages}`);
+                }
+            });
+
+            // Allow Enter key to trigger go to page
+            document.getElementById('pageInput').addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    document.getElementById('goToPage').click();
+                }
+            });
         }
 
         function hideSpinner() {
             document.getElementById('loadingSpinner').style.display = 'none';
         }
+
+        // Show All Phases Comparison
+        function showAllPhasesComparison() {
+            // Navigate to previous year cutoffs page which shows all phases
+            window.location.href = 'previous-year-cutoffs.html';
+        }
+
+        // Quick search function for example buttons
+        function quickSearch(term) {
+            const searchInput = document.getElementById('searchInput');
+            searchInput.value = term;
+            searchInput.focus();
+            // Trigger search
+            filterData();
+        }
+
+        // Make quickSearch globally accessible
+        window.quickSearch = quickSearch;
 
         function exportToCSV() {
             if (filteredData.length === 0) {
@@ -923,23 +1119,45 @@
                 currentSort.direction = 'asc';
             }
 
+            // Define rank columns (all columns except College Code, College Name, Branch Code, Branch Name)
+            const rankColumns = [
+                'OC Boys', 'OC Girls', 'EWS Boys', 'EWS Girls',
+                'SC Boys', 'SC Girls', 'ST Boys', 'ST Girls',
+                'BC-A Boys', 'BC-A Girls', 'BC-B Boys', 'BC-B Girls',
+                'BC-C Boys', 'BC-C Girls', 'BC-D Boys', 'BC-D Girls',
+                'BC-E Boys', 'BC-E Girls'
+            ];
+
             filteredData.sort((a, b) => {
                 let aVal = a[column];
                 let bVal = b[column];
 
-                // Handle numeric values
-                if (typeof aVal === 'number' && typeof bVal === 'number') {
-                    return currentSort.direction === 'asc' ? aVal - bVal : bVal - aVal;
+                // Check if this is a rank column
+                if (rankColumns.includes(column)) {
+                    // Handle NA values - push them to the end
+                    const aIsNA = aVal === null || aVal === undefined || aVal === 'NA' || aVal === '';
+                    const bIsNA = bVal === null || bVal === undefined || bVal === 'NA' || bVal === '';
+
+                    if (aIsNA && bIsNA) return 0;
+                    if (aIsNA) return 1; // a goes to end
+                    if (bIsNA) return -1; // b goes to end
+
+                    // Convert to numbers for rank comparison
+                    const aNum = parseInt(aVal) || 0;
+                    const bNum = parseInt(bVal) || 0;
+
+                    // For ranks: ascending = lower ranks first (better ranks), descending = higher ranks first
+                    return currentSort.direction === 'asc' ? aNum - bNum : bNum - aNum;
                 }
 
-                // Handle string values
+                // Handle text columns (College Code, College Name, Branch Code, Branch Name)
                 if (typeof aVal === 'string' && typeof bVal === 'string') {
                     return currentSort.direction === 'asc'
                         ? aVal.localeCompare(bVal)
                         : bVal.localeCompare(aVal);
                 }
 
-                // Handle mixed or null values
+                // Handle mixed or null values for text columns
                 if (aVal === null || aVal === undefined || aVal === 'NA') aVal = '';
                 if (bVal === null || bVal === undefined || bVal === 'NA') bVal = '';
 
@@ -995,49 +1213,116 @@
             return lines.join('<br>');
         }
 
+        // Enhanced getBranchCode function using official TS EAMCET branch codes
         function getBranchCode(branchName) {
             if (!branchName) return '';
 
-            const branchCodes = {
-                'CIVIL ENGINEERING': 'CE',
-                'MECHANICAL ENGINEERING': 'ME',
-                'ELECTRICAL AND ELECTRONICS ENGINEERING': 'EEE',
-                'ELECTRONICS AND COMMUNICATION ENGINEERING': 'ECE',
-                'COMPUTER SCIENCE AND ENGINEERING': 'CSE',
-                'INFORMATION TECHNOLOGY': 'IT',
-                'CHEMICAL ENGINEERING': 'CHE',
-                'BIOTECHNOLOGY': 'BT',
-                'AERONAUTICAL ENGINEERING': 'AE',
-                'AUTOMOBILE ENGINEERING': 'AUTO',
-                'BIOMEDICAL ENGINEERING': 'BME',
-                'METALLURGY AND MATERIAL ENGINEERING': 'MME',
-                'MINING ENGINEERING': 'MIN',
-                'PETROLEUM ENGINEERING': 'PE',
-                'TEXTILE ENGINEERING': 'TE',
-                'AGRICULTURAL ENGINEERING': 'AGE',
-                'FOOD TECHNOLOGY': 'FT',
-                'PHARMACEUTICAL ENGINEERING': 'PHAR',
-                'DAIRYING': 'DAIRY',
-                'COMPUTER SCIENCE AND ENGINEERING ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING': 'CSE-AIML',
-                'COMPUTER SCIENCE AND ENGINEERING DATA SCIENCE': 'CSE-DS',
-                'COMPUTER SCIENCE AND ENGINEERING CYBER SECURITY': 'CSE-CS',
-                'ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING': 'AIML',
-                'ARTIFICIAL INTELLIGENCE AND DATA SCIENCE': 'AIDS',
-                'COMPUTER SCIENCE AND BUSINESS SYSTEM': 'CSBS',
-                'COMPUTER SCIENCE AND ENGINEERING IOT': 'CSE-IOT',
-                'ELECTRONICS AND INSTRUMENTATION ENGINEERING': 'EIE',
-                'ELECTRONICS ENGINEERING VLSI DESIGN AND TECHNOLOGY': 'ECE-VLSI',
-                'MECHANICAL MECHTRONICS ENGINEERING': 'ME-MECH',
-                'COMPUTER ENGINEERING': 'CE',
-                'COMPUTER ENGINEERINGSOFTWARE ENGINEERING': 'CSE-SE',
-                'COMPUTER SCIENCE DESIGN': 'CSD',
-                'COMPUTER SCIENCE AND ENGG ARTIFICIAL INTELLIGENCE': 'CSE-AI',
-                'CSE_IoT_AND_CYBER_SECURITY_INCLUDING_BLOCK_CHAIN_TECHNOLOGY': 'CSE-IoT-CS',
-                'ELECTRONICS AND TELECOMMUNICATION ENGG': 'ETE',
-                'COMPUTER SCIENCE AND INFORMATION TECHNOLOGY': 'CSIT'
+            // Official branch codes from TS EAMCET (corrected mapping)
+            const officialBranchCodes = {
+                // Mechanical & Related
+                "AERONAUTICAL ENGINEERING": "ANE",
+                "AUTOMATION AND ROBOTICS": "ARB",
+                "AUTOMOBILE ENGINEERING": "AUT",
+                "BUILDING SERVICES ENGG": "BSE",
+                "CIVIL ENGINEERING": "CIV",
+                "INDUSTRIAL PRODUCTION ENGINEERING": "IPE",
+                "MECHANICAL (MECHTRONICS) ENGINEERING": "MCT",
+                "MECHANICAL ENGINEERING": "MEC",
+                "METALLURGICAL ENGINEERING": "MET",
+                "BTECH MECHANICAL WITH MTECH MANUFACTURING SYSTEMS": "MMS",
+                "BTECH MECHANICAL WITH MTECH MANUFACTURING  SYSTEMS": "MMS",
+                "BTECH MECHANICAL WITH MTECH THERMAL ENGG": "MTE",
+                "B.PLANNING": "PLG",
+
+                // Agricultural & Bio
+                "AGRICULTURAL ENGINEERING": "AGR",
+                "BIO-TECHNOLOGY": "BIO",
+                "CHEMICAL ENGINEERING": "CHE",
+                "DAIRYING": "DRG",
+                "FOOD TECHNOLOGY": "FDT",
+                "GEO INFORMATICS": "GEO",
+                "MINING ENGINEERING": "MIN",
+                "METALLURGY AND MATERIAL ENGINEERING": "MMT",
+                "PHARMACEUTICAL ENGINEERING": "PHE",
+                "TEXTILE TECHNOLOGY / TEXTILE ENGINEERING": "TEX",
+
+                // Computer Science & IT
+                "COMPUTER ENGINEERING": "CME",
+                "COMPUTER SCIENCE AND ENGG (ARTIFICIAL INTELLIGENCE)": "CSA",
+                "COMPUTER SCIENCE & DESIGN": "CSG",
+                "COMPUTER SCIENCE & ENGINEERING (NETWORKS)": "CSN",
+                "COMPUTER SCIENCE AND ENGINEERING (IOT)": "CSO",
+                "COMPUTER SCIENCE AND TECHNOLOGY": "CST",
+                "COMPUTER ENGINEERING(SOFTWARE ENGINEERING)": "CSW",
+                "DIGITAL TECHNIQUES FOR DESIGN AND PLANNING": "DTD",
+                "INFORMATION TECHNOLOGY": "INF",
+                "INFORMATION TECHNOLOGY AND ENGINEERING": "ITE",
+
+                // AI & Data Science & Core CS
+                "ARTIFICIAL INTELLIGENCE": "AI",
+                "ARTIFICIAL INTELLIGENCE AND DATA SCIENCE": "AID",
+                "ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING": "AIM",
+                "CSE (IOT AND CYBER SECURITY INCLUDING BLOCK CHAIN TECHNOLOGY)": "CIC",
+                "CSE (IoT AND CYBER SECURITY INCLUDING BLOCK CHAIN TECHNOLOGY)": "CIC",
+                "COMPUTER SCIENCE": "CS",
+                "COMPUTER SCIENCE AND BUSINESS SYSTEM": "CSB",
+                "COMPUTER SCIENCE AND ENGINEERING (CYBER SECURITY)": "CSC",
+                "COMPUTER SCIENCE AND ENGINEERING (DATA SCIENCE)": "CSD",
+                "COMPUTER SCIENCE AND ENGINEERING": "CSE",
+                "COMPUTER SCIENCE AND INFORMATION TECHNOLOGY": "CSI",
+                "COMPUTER SCIENCE AND ENGINEERING (ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING)": "CSM",
+
+                // Additional CS variations (without parentheses)
+                "COMPUTER SCIENCE AND ENGINEERING ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING": "CSM",
+                "COMPUTER SCIENCE AND ENGINEERING DATA SCIENCE": "CSD",
+                "COMPUTER SCIENCE AND ENGINEERING CYBER SECURITY": "CSC",
+                "COMPUTER SCIENCE AND ENGINEERING IOT": "CSO",
+                "COMPUTER SCIENCE DESIGN": "CSG",
+                "COMPUTER SCIENCE AND BUSINESS SYSTEMS": "CSB",
+
+                // Common variations and typos
+                "COMPUTER SCIENCE & BUSINESS SYSTEMS": "CSB",
+                "COMPUTER SCIENCE AND BUSINESS SYSTEMS": "CSB",
+                "COMPUTER ENGINEERING SOFTWARE ENGINEERING": "CSW",
+                "COMPUTER ENGINEERINGSOFTWARE ENGINEERING": "CSW",
+                "CSE_IoT_AND_CYBER_SECURITY_INCLUDING_BLOCK_CHAIN_TECHNOLOGY": "CIC",
+                "COMPUTER SCIENCE & ENGINEERING NETWORKS": "CSN",
+                "COMPUTER SCIENCE & ENGINEERING (NETWORKS)": "CSN",
+
+                // Electronics & Electrical
+                "BIO-MEDICAL ENGINEERING": "BME",
+                "ELECTRONICS AND COMMUNICATION (ADVANCED COMMUNICATION TECH)": "ECA",
+                "ELECTRONICS AND COMMUNICATION ENGINEERING": "ECE",
+                "ELECTRONICS COMMUNICATION AND INSTRUMENTATION ENGINEERING": "ECI",
+                "ELECTRONICS AND COMPUTER ENGINEERING": "ECM",
+                "ELECTRICAL AND ELECTRONICS ENGINEERING": "EEE",
+                "ELECTRONICS AND INSTRUMENTATION ENGINEERING": "EIE",
+                "ELECTRONICS AND TELECOMMUNICATION ENGG": "ETE",
+                "ELECTRONICS AND TELEMATICS": "ETM",
+                "ELECTRONICS ENGINEERING (VLSI DESIGN AND TECHNOLOGY)": "EVL",
+
+                // Pharmacy
+                "PHARM - D (M.P.C. STREAM)": "PHD",
+                "B. PHARMACY (M.P.C. STREAM)": "PHM"
             };
 
-            return branchCodes[branchName.toUpperCase()] || branchName.substring(0, 4).toUpperCase();
+            // Normalize input branch name
+            const normalizedName = branchName.toUpperCase().trim();
+
+            // Try exact match first
+            if (officialBranchCodes[normalizedName]) {
+                return officialBranchCodes[normalizedName];
+            }
+
+            // Try partial matches for common variations
+            for (const [name, code] of Object.entries(officialBranchCodes)) {
+                if (name.includes(normalizedName) || normalizedName.includes(name)) {
+                    return code;
+                }
+            }
+
+            // Fallback to first 3-4 characters if no match found
+            return branchName.substring(0, 4).toUpperCase();
         }
 
         // Setup dual scroll bars for sticky columns
@@ -1052,7 +1337,7 @@
             // Set the width of top scroll content to match scrollable area width
             function updateTopScrollWidth() {
                 const tableWidth = table.scrollWidth;
-                const stickyColumnsWidth = 440; // 90 + 200 + 150 = width of sticky columns
+                const stickyColumnsWidth = 620; // 80 + 260 + 80 + 200 = width of sticky columns
                 const scrollableWidth = Math.max(0, tableWidth - stickyColumnsWidth);
                 topScrollContent.style.width = scrollableWidth + 'px';
             }

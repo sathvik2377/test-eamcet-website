@@ -1,0 +1,87 @@
+{
+  "collegeCode": "MGUNSF",
+  "name": "MGU COLLEGE OF ENGINEERING AND TECHNOLOGY",
+  "location": "NALGONDA",
+  "district": "NALGONDA",
+  "districtCode": "NLG",
+  "type": "Government (SF)",
+  "affiliation": "N/A",
+  "established": "2013",
+  "autonomousStatus": "",
+  "nirfRank": "",
+  "naacGrade": "B+",
+  "nbaAccredited": "",
+  "fees": "₹45,000",
+  "about": "MGU COLLEGE OF ENGINEERING AND TECHNOLOGY, established in 2013, is a Government (SF) institution located in NALGONDA, NALGONDA. The college is affiliated to MGUN. The college holds NAAC B+ grade, demonstrating its commitment to quality education. Admissions are conducted through TG EAPCET/EAMCET and TG ECET.",
+  "phone": "08682-200098",
+  "website": "N/A",
+  "eapcetAvailable": "Yes",
+  "ecetAvailable": "Yes",
+  "found": true,
+  "collegeName": "N/A",
+  "address": "PANAGAL CAMPUS",
+  "region": "OU",
+  "collegeType": "SF",
+  "principal": "N/A",
+  "contact": "N/A",
+  "email": "registrar_mgu[at]yahoo.com",
+  "establishedYear": "N/A",
+  "courses": [
+    {
+      "branchCode": "1",
+      "branchName": "CSE",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (Self Finance)",
+      "intake": "132",
+      "fee": "57200"
+    },
+    {
+      "branchCode": "2",
+      "branchName": "ECE",
+      "courseName": "ELECTRONICS AND COMMUNICATION ENGINEERING (Self Finance)",
+      "intake": "66",
+      "fee": "57200"
+    },
+    {
+      "branchCode": "3",
+      "branchName": "EEE",
+      "courseName": "ELECTRICAL AND ELECTRONICS ENGINEERING (Self Finance)",
+      "intake": "66",
+      "fee": "57200"
+    }
+  ],
+  "_mergeInfo": {
+    "source": "merged",
+    "primary": "2025_institute_profiles",
+    "secondary": "eduvale_profiles",
+    "mergedAt": "2025-07-23T17:34:15.025Z"
+  },
+  "campusPhotos": [],
+  "totalImages": 1,
+  "logo": "🔬",
+  "_finalData": {
+    "hasLogo": false,
+    "campusPhotoCount": 0,
+    "totalImages": 0,
+    "deepResearchedAt": "2025-07-23T19:02:17.738Z",
+    "method": "deep_research_scraping",
+    "sources": {
+      "logo": null,
+      "campusPhotos": {
+        "googleMaps": 0,
+        "googleImages": 0
+      }
+    }
+  },
+  "_quickGrab": {
+    "hasLogo": false,
+    "photoCount": 0,
+    "totalImages": 0,
+    "grabbedAt": "2025-07-23T19:04:47.243Z"
+  },
+  "_cleanup": {
+    "genericLogoAdded": false,
+    "campusPhotosRemoved": false,
+    "cleanedAt": "2025-07-23T19:18:47.663Z",
+    "method": "generic_logo_cleanup"
+  }
+}

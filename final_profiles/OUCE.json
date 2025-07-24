@@ -1,0 +1,115 @@
+{
+  "collegeCode": "OUCE",
+  "name": "O U COLLEGE OF ENGINEERING HYDERABAD",
+  "location": "HYDERABAD",
+  "district": "HYDERABAD",
+  "districtCode": "HYD",
+  "type": "University",
+  "affiliation": "N/A",
+  "established": "1929",
+  "autonomousStatus": "Autonomous from 2010",
+  "nirfRank": "101",
+  "naacGrade": "A+",
+  "nbaAccredited": "Yes",
+  "fees": "₹50,000",
+  "about": "O U COLLEGE OF ENGINEERING HYDERABAD, established in 1929, is a University institution located in HYDERABAD, HYDERABAD. The college is affiliated to OU. It has been autonomous since 2010. The college holds NAAC A+ grade, NBA accreditation, NIRF ranking of 101-150, demonstrating its commitment to quality education. Admissions are conducted through TG EAPCET/EAMCET and TG ECET.",
+  "phone": "8331997292",
+  "website": "www.uceou.edu",
+  "eapcetAvailable": "Yes",
+  "ecetAvailable": "Yes",
+  "found": true,
+  "collegeName": "N/A",
+  "address": "N/A",
+  "region": "OU",
+  "collegeType": "UNIV",
+  "principal": "N/A",
+  "contact": "N/A",
+  "email": "webmaster[at]uceou.edu",
+  "establishedYear": "N/A",
+  "courses": [
+    {
+      "branchCode": "1",
+      "branchName": "AIM",
+      "courseName": "ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING (Self Finance)",
+      "intake": "66",
+      "fee": "120000"
+    },
+    {
+      "branchCode": "2",
+      "branchName": "BME",
+      "courseName": "BIO-MEDICAL ENGINEERING",
+      "intake": "33",
+      "fee": "50000"
+    },
+    {
+      "branchCode": "3",
+      "branchName": "CIV",
+      "courseName": "CIVIL ENGINEERING",
+      "intake": "66",
+      "fee": "50000"
+    },
+    {
+      "branchCode": "4",
+      "branchName": "CSE",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING",
+      "intake": "66",
+      "fee": "50000"
+    },
+    {
+      "branchCode": "5",
+      "branchName": "ECE",
+      "courseName": "ELECTRONICS AND COMMUNICATION ENGINEERING",
+      "intake": "66",
+      "fee": "50000"
+    },
+    {
+      "branchCode": "6",
+      "branchName": "EEE",
+      "courseName": "ELECTRICAL AND ELECTRONICS ENGINEERING",
+      "intake": "66",
+      "fee": "50000"
+    },
+    {
+      "branchCode": "7",
+      "branchName": "MEC",
+      "courseName": "MECHANICAL ENGINEERING",
+      "intake": "66",
+      "fee": "50000"
+    },
+    {
+      "branchCode": "8",
+      "branchName": "MIN",
+      "courseName": "MINING ENGINEERING (Self Finance)",
+      "intake": "66",
+      "fee": "100000"
+    }
+  ],
+  "_mergeInfo": {
+    "source": "merged",
+    "primary": "2025_institute_profiles",
+    "secondary": "eduvale_profiles",
+    "mergedAt": "2025-07-23T17:34:15.073Z"
+  },
+  "campusPhotos": [],
+  "totalImages": 1,
+  "logo": "💻",
+  "_finalData": {
+    "hasLogo": false,
+    "campusPhotoCount": 0,
+    "totalImages": 0,
+    "processedAt": "2025-07-23T18:53:19.221Z",
+    "method": "fast_final_scraping"
+  },
+  "_quickGrab": {
+    "hasLogo": false,
+    "photoCount": 0,
+    "totalImages": 0,
+    "grabbedAt": "2025-07-23T19:04:47.550Z"
+  },
+  "_cleanup": {
+    "genericLogoAdded": false,
+    "campusPhotosRemoved": false,
+    "cleanedAt": "2025-07-23T19:18:47.679Z",
+    "method": "generic_logo_cleanup"
+  }
+}

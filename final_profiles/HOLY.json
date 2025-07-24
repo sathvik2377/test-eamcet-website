@@ -1,0 +1,115 @@
+{
+  "collegeCode": "HOLY",
+  "name": "HOLY MARY INSTITUTE OF TECHNOLOGY SCIENCE",
+  "location": "KEESARA",
+  "district": "MEDCHAL",
+  "districtCode": "MDL",
+  "type": "Autonomous",
+  "affiliation": "N/A",
+  "established": "2001",
+  "autonomousStatus": "Autonomous from 2021",
+  "nirfRank": "",
+  "naacGrade": "",
+  "nbaAccredited": "",
+  "fees": "₹66,000",
+  "about": "HOLY MARY INSTITUTE OF TECHNOLOGY SCIENCE, established in 2001, is a Autonomous institution located in KEESARA, MEDCHAL. The college is affiliated to JNTUH. It has been autonomous since 2021. Admissions are conducted through TG EAPCET/EAMCET and TG ECET.",
+  "phone": "08415-200499",
+  "website": "www.hits.ac.in",
+  "eapcetAvailable": "Yes",
+  "ecetAvailable": "Yes",
+  "found": true,
+  "collegeName": "N/A",
+  "address": "BOGARAM",
+  "region": "OU",
+  "collegeType": "PVT",
+  "principal": "N/A",
+  "contact": "N/A",
+  "email": "holymaryadmission2015[at]gmail.com",
+  "establishedYear": "N/A",
+  "courses": [
+    {
+      "branchCode": "1",
+      "branchName": "CIV",
+      "courseName": "CIVIL ENGINEERING",
+      "intake": "23",
+      "fee": "66000"
+    },
+    {
+      "branchCode": "2",
+      "branchName": "CSD",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (DATA SCIENCE)",
+      "intake": "93",
+      "fee": "66000"
+    },
+    {
+      "branchCode": "3",
+      "branchName": "CSE",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING",
+      "intake": "231",
+      "fee": "66000"
+    },
+    {
+      "branchCode": "4",
+      "branchName": "CSM",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING)",
+      "intake": "139",
+      "fee": "66000"
+    },
+    {
+      "branchCode": "5",
+      "branchName": "CSO",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (IOT)",
+      "intake": "46",
+      "fee": "66000"
+    },
+    {
+      "branchCode": "6",
+      "branchName": "ECE",
+      "courseName": "ELECTRONICS AND COMMUNICATION ENGINEERING",
+      "intake": "69",
+      "fee": "66000"
+    },
+    {
+      "branchCode": "7",
+      "branchName": "EEE",
+      "courseName": "ELECTRICAL AND ELECTRONICS ENGINEERING",
+      "intake": "23",
+      "fee": "66000"
+    },
+    {
+      "branchCode": "8",
+      "branchName": "MEC",
+      "courseName": "MECHANICAL ENGINEERING",
+      "intake": "23",
+      "fee": "66000"
+    }
+  ],
+  "_mergeInfo": {
+    "source": "merged",
+    "primary": "2025_institute_profiles",
+    "secondary": "eduvale_profiles",
+    "mergedAt": "2025-07-23T17:34:14.883Z"
+  },
+  "campusPhotos": [],
+  "totalImages": 1,
+  "logo": "🎓",
+  "_finalData": {
+    "hasLogo": false,
+    "campusPhotoCount": 0,
+    "totalImages": 0,
+    "processedAt": "2025-07-23T18:53:19.093Z",
+    "method": "fast_final_scraping"
+  },
+  "_quickGrab": {
+    "hasLogo": false,
+    "photoCount": 0,
+    "totalImages": 0,
+    "grabbedAt": "2025-07-23T19:04:48.668Z"
+  },
+  "_cleanup": {
+    "genericLogoAdded": false,
+    "campusPhotosRemoved": false,
+    "cleanedAt": "2025-07-23T19:18:47.613Z",
+    "method": "generic_logo_cleanup"
+  }
+}

@@ -1,0 +1,2115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Details - TS EAMCET 2025</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BEX3M5R4MZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-BEX3M5R4MZ');
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 3s ease-in-out infinite',
+                        'shimmer': 'shimmer 2s linear infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' }
+                        },
+                        shimmer: {
+                            '0%': { backgroundPosition: '-200% 0' },
+                            '100%': { backgroundPosition: '200% 0' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Enhanced College Details Theme - Matching Phase Pages */
+        .modern-bg {
+            background: linear-gradient(135deg, #0B0B14 0%, #1A1B3A 25%, #0B0B14 50%, #1A1B3A 75%, #0B0B14 100%);
+            background-attachment: fixed;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        .modern-bg::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(0, 255, 199, 0.05) 25%, rgba(0, 153, 204, 0.08) 50%, rgba(184, 197, 209, 0.03) 75%, rgba(0, 212, 255, 0.06) 100%);
+            opacity: 0.8;
+            pointer-events: none;
+            z-index: -2;
+        }
+
+        .modern-bg::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 80%, rgba(0, 212, 255, 0.12) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(0, 255, 199, 0.08) 0%, transparent 50%), radial-gradient(circle at 40% 40%, rgba(0, 153, 204, 0.06) 0%, transparent 50%);
+            opacity: 0.6;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* Enhanced card styles matching phase pages */
+        .card {
+            background: rgba(26, 27, 58, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(42, 45, 71, 0.5);
+            border-radius: 25px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            background: rgba(26, 27, 58, 0.8);
+            border-color: rgba(0, 212, 255, 0.3);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .card-dark {
+            background: rgba(11, 11, 20, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(42, 45, 71, 0.5);
+            border-radius: 25px;
+        }
+
+        /* CSS Custom Properties for Dynamic Theming */
+        :root {
+            --theme-primary: #00D4FF;
+            --theme-secondary: #00FFC7;
+            --theme-accent: #60a5fa;
+        }
+
+        /* Enhanced gradient text with dynamic theming */
+        .gradient-text {
+            background: linear-gradient(135deg, var(--theme-primary) 0%, var(--theme-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .gradient-text-accent {
+            background: linear-gradient(135deg, var(--theme-secondary) 0%, var(--theme-primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Dynamic themed elements */
+        .theme-border {
+            border-color: var(--theme-primary) !important;
+        }
+
+        .theme-bg {
+            background: linear-gradient(135deg, var(--theme-primary), var(--theme-secondary)) !important;
+        }
+
+        .theme-text {
+            color: var(--theme-accent) !important;
+        }
+
+        .theme-hover:hover {
+            color: var(--theme-primary) !important;
+            border-color: var(--theme-primary) !important;
+        }
+
+        /* Custom scrollbar */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Enhanced cutoffs section styling */
+        .cutoff-phase-tab {
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .cutoff-phase-tab:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .cutoff-table-container {
+            background: rgba(11, 11, 20, 0.8);
+            backdrop-filter: blur(20px);
+        }
+
+        .cutoff-comparison-table {
+            background: linear-gradient(135deg, rgba(26, 27, 58, 0.8) 0%, rgba(11, 11, 20, 0.9) 100%);
+        }
+
+        .trend-indicator {
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        /* Modern button styles with blue theme */
+        .btn-primary {
+            background: linear-gradient(135deg, #0096FF 0%, #00C8FF 100%);
+            border: none;
+            border-radius: 12px;
+            color: white;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 15px rgba(0, 150, 255, 0.3);
+        }
+
+        .info-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 16px;
+            margin: 8px 0;
+        }
+
+        .info-label {
+            color: #9ca3af;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+
+        .info-value {
+            color: #ffffff;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        /* Loading spinner */
+        .spinner {
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-left: 2px solid #0096FF;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Ensure body can scroll */
+        body {
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        /* Course card styles */
+        .course-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 16px;
+            margin: 8px 0;
+            transition: all 0.3s ease;
+        }
+
+        .course-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(0, 150, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Badge styles */
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin: 2px;
+        }
+
+        .badge-success {
+            background: rgba(34, 197, 94, 0.2);
+            color: #22c55e;
+            border: 1px solid rgba(34, 197, 94, 0.3);
+        }
+
+        .badge-info {
+            background: rgba(59, 130, 246, 0.2);
+            color: #3b82f6;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+
+        .badge-warning {
+            background: rgba(245, 158, 11, 0.2);
+            color: #f59e0b;
+            border: 1px solid rgba(245, 158, 11, 0.3);
+        }
+
+        /* Back button */
+        .back-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 8px 16px;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .back-btn:hover {
+            background: rgba(0, 150, 255, 0.2);
+            border-color: rgba(0, 150, 255, 0.3);
+            transform: translateY(-1px);
+        }
+
+        /* Compact Navigation Styles */
+        .nav-container {
+            background: rgba(11, 11, 20, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(42, 45, 71, 0.5);
+        }
+
+        .nav-btn-compact {
+            padding: 0.75rem 1.25rem;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(232, 244, 253, 0.1);
+            background: rgba(232, 244, 253, 0.05);
+            color: rgba(232, 244, 253, 0.8);
+            white-space: nowrap;
+            min-height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-btn-compact:hover {
+            background: rgba(0, 212, 255, 0.2);
+            border-color: rgba(0, 255, 199, 0.3);
+            color: white;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 15px rgba(0, 212, 255, 0.2);
+        }
+
+        .nav-btn-compact.nav-btn-active {
+            background: linear-gradient(135deg, #00D4FF 0%, #00FFC7 100%);
+            color: #0B0B14;
+            border-color: rgba(232, 244, 253, 0.3);
+            font-weight: 600;
+        }
+
+        .glow-text {
+            text-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .nav-btn-compact {
+                padding: 0.6rem 1rem;
+                font-size: 0.75rem;
+                min-height: 36px;
+            }
+        }
+
+        /* Location link styling */
+        .location-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #60A5FA;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border-radius: 0.5rem;
+            padding: 0.5rem 0.75rem;
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+
+        .location-link:hover {
+            color: #3B82F6;
+            background: rgba(59, 130, 246, 0.2);
+            border-color: rgba(59, 130, 246, 0.4);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+        }
+
+        .location-link .location-icon {
+            font-size: 1.2em;
+            transition: transform 0.3s ease;
+        }
+
+        .location-link:hover .location-icon {
+            transform: scale(1.2) rotate(5deg);
+        }
+
+        /* View College button styling */
+        .location-click-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+            color: white;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 0.4rem 0.8rem;
+            border-radius: 15px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+            margin-left: 1rem;
+        }
+
+        .location-click-btn:hover {
+            transform: translateY(-1px) scale(1.05);
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.5);
+            background: linear-gradient(135deg, #059669 0%, #047857 100%);
+            border-color: rgba(16, 185, 129, 0.5);
+        }
+
+        .location-click-btn .btn-icon {
+            font-size: 0.8rem;
+            transition: transform 0.3s ease;
+        }
+
+        .location-click-btn:hover .btn-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+    </style>
+</head>
+<body class="modern-bg text-white" style="color: #E8F4FD; overflow-x: hidden;">
+    <!-- Compact Navigation Header -->
+    <header class="nav-container sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <div class="w-10 h-10 rounded-xl flex items-center justify-center shadow-lg" style="background: linear-gradient(135deg, #00D4FF 0%, #00FFC7 100%);">
+                        <span class="text-lg font-bold" style="color: #0B0B14;">TS</span>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold gradient-text glow-text">TS EAMCET 2025</h1>
+                        <p class="text-xs text-gray-400">College Details Portal</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <a href="index.html" class="nav-btn-compact">🔍 Search Results</a>
+                    <a href="closing-ranks.html" class="nav-btn-compact">📊 Phase 1 Cutoffs</a>
+                    <a href="phase2-cutoffs.html" class="nav-btn-compact relative">
+                        <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-1 py-0.5 rounded-full font-bold">PREDICTED</span>
+                        🎯 Phase 2 Predictions
+                    </a>
+                    <a href="previous-year-cutoffs.html" class="nav-btn-compact">📚 Previous Year</a>
+                    <a href="college-predictor.html" class="nav-btn-compact">🔮 Predictor</a>
+                    <a href="college-info.html" class="nav-btn-compact nav-btn-active">🏫 College Info</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-6 py-8">
+        <!-- Page Header -->
+        <div class="text-center mb-8">
+            <div class="flex items-center justify-center mb-4">
+                <a href="college-info.html" class="back-btn mr-6">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                    </svg>
+                    Back to College List
+                </a>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4" style="font-family: 'Poppins', sans-serif; color: #E8F4FD; text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);">
+                College <span style="background: linear-gradient(135deg, #00D4FF 0%, #00FFC7 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Details</span>
+            </h1>
+            <p class="text-lg mb-6 max-w-3xl mx-auto" style="color: #B8C5D1;">
+                Comprehensive information about <span style="background: linear-gradient(135deg, #00D4FF 0%, #00FFC7 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">engineering colleges</span> in Telangana.
+            </p>
+        </div>
+
+        <!-- Loading Indicator -->
+        <div id="loadingIndicator" class="text-center py-16">
+            <div class="card p-8 max-w-md mx-auto">
+                <div class="spinner mx-auto mb-4" style="width: 48px; height: 48px;"></div>
+                <h3 class="text-xl font-semibold mb-2 gradient-text">Loading College Details</h3>
+                <p class="text-gray-400">Please wait...</p>
+            </div>
+        </div>
+
+        <!-- College Details Content -->
+        <div id="collegeContent" class="hidden max-w-6xl mx-auto">
+            <!-- College Header -->
+            <div class="card p-8 mb-8">
+                <div id="collegeHeader" class="text-center">
+                    <!-- Content will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- College Information -->
+            <div id="collegeInfo" class="space-y-6">
+                <!-- Content will be populated by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Error Message -->
+        <div id="errorMessage" class="hidden text-center py-16">
+            <div class="card p-12 max-w-lg mx-auto">
+                <div class="text-8xl mb-6 opacity-50">⚠️</div>
+                <h3 class="text-2xl font-semibold mb-3 text-red-400">Error Loading College Details</h3>
+                <p class="text-gray-400 mb-6">Could not load the college information. Please try again.</p>
+                <a href="college-info.html" class="btn-primary">Back to College List</a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Global variables
+        let collegeData = null;
+
+        // DOM elements
+        const loadingIndicator = document.getElementById('loadingIndicator');
+        const collegeContent = document.getElementById('collegeContent');
+        const errorMessage = document.getElementById('errorMessage');
+        const collegeHeader = document.getElementById('collegeHeader');
+        const collegeInfo = document.getElementById('collegeInfo');
+
+        // Generate Google Maps link for college location
+        function generateGoogleMapsLink(collegeName, location, district) {
+            const query = encodeURIComponent(`${collegeName}, ${location}, ${district}, Telangana, India`);
+            return `https://www.google.com/maps/search/?api=1&query=${query}`;
+        }
+
+        // Initialize the page
+        async function init() {
+            try {
+                console.log('🚀 Initializing College Details page...');
+
+                // Get college code from URL parameters
+                const urlParams = new URLSearchParams(window.location.search);
+                const collegeCode = urlParams.get('code');
+
+                if (!collegeCode) {
+                    throw new Error('No college code provided in URL');
+                }
+
+                console.log('🏫 Loading details for college:', collegeCode);
+
+                // Load college data
+                await loadCollegeData(collegeCode);
+
+                // Display college details
+                displayCollegeDetails();
+
+                // Hide loading and show content
+                hideLoading();
+
+                console.log('✅ College details loaded successfully');
+            } catch (error) {
+                console.error('❌ Error initializing college details:', error);
+                showError(error.message);
+            }
+        }
+
+        // Load college data
+        async function loadCollegeData(collegeCode) {
+            try {
+                // Try to load from server first
+                try {
+                    const response = await fetch('/api/college-profiles');
+                    if (response.ok) {
+                        const allColleges = await response.json();
+                        collegeData = allColleges.find(college => college.collegeCode === collegeCode);
+                        if (collegeData) {
+                            console.log('✅ Loaded college data from server:', collegeData.name);
+                            return;
+                        }
+                    }
+                } catch (serverError) {
+                    console.log('🔄 Server not available, trying direct file access...');
+                }
+
+                // Fallback to direct file access
+                const response = await fetch(`./final_profiles/${collegeCode}.json`);
+                if (!response.ok) {
+                    throw new Error(`Failed to load college data: ${response.status} ${response.statusText}`);
+                }
+
+                collegeData = await response.json();
+                console.log('✅ Loaded college data from file:', collegeData.name);
+
+            } catch (error) {
+                console.error('❌ Error loading college data:', error);
+                throw new Error('Could not load college information. Please check if the college code is valid.');
+            }
+        }
+
+        // Display college details
+        function displayCollegeDetails() {
+            if (!collegeData) {
+                throw new Error('No college data available');
+            }
+
+            // Apply color scheme
+            applyColorScheme(collegeData);
+
+            // Update page title
+            document.title = `${collegeData.name} - TS EAMCET 2025`;
+
+            // Display college header
+            displayCollegeHeader();
+
+            // Display college information sections
+            displayCollegeInfo();
+
+            // Display college gallery if assets are available
+            const collegeAssets = getCollegeAssets(collegeData.collegeCode);
+            if (collegeAssets && collegeAssets.images && collegeAssets.images.length > 0) {
+                displayCollegeGallery(collegeAssets);
+            }
+        }
+
+        // Get college-specific images and logos with enhanced gallery support
+        function getCollegeAssets(collegeCode) {
+            const assets = {
+                'JNTH': {
+                    logo: 'https://jntuhceh.ac.in/images_new/jntuhlogo.png',
+                    images: [
+                        {
+                            url: 'https://jntuh.ac.in/uploads/directors/academic_planning.jpg',
+                            title: 'Academic Planning Department',
+                            category: 'administration'
+                        },
+                        {
+                            url: 'https://media.telanganatoday.com/wp-content/uploads/2021/08/JNTU-Hyderabad-1-1.jpg',
+                            title: 'JNTU Hyderabad Campus',
+                            category: 'campus'
+                        }
+                    ]
+                },
+                'CBIT': {
+                    logo: 'https://i.pinimg.com/736x/8f/3e/25/8f3e250bafea807a3e678ce537fcc355.jpg',
+                    images: [
+                        {
+                            url: 'https://www.cbit.ac.in/wp-content/uploads/2019/01/ABOUT_TAB-1-1-scaled.jpeg',
+                            title: 'CBIT Main Building',
+                            category: 'campus'
+                        },
+                        {
+                            url: 'https://www.cbit.ac.in/wp-content/uploads/2019/01/CSE_DEPT-scaled.jpeg',
+                            title: 'Computer Science Department',
+                            category: 'department'
+                        },
+                        {
+                            url: 'https://www.cbit.ac.in/wp-content/uploads/2019/01/Campus-life-Tab-1536x1024.jpeg',
+                            title: 'Campus Life',
+                            category: 'campus'
+                        },
+                        {
+                            url: 'https://www.cbit.ac.in/wp-content/uploads/2019/01/about.jpg',
+                            title: 'About CBIT',
+                            category: 'campus'
+                        }
+                    ]
+                },
+                'VJEC': {
+                    logo: 'https://vnrvjiet.ac.in/assets/images/Header-Logo.png',
+                    images: [
+                        {
+                            url: 'https://images.shiksha.com/mediadata/images/1695813984phpzgd6M3.jpeg',
+                            title: 'VNR Campus Overview',
+                            category: 'campus'
+                        },
+                        {
+                            url: 'https://content.jdmagicbox.com/v2/comp/hyderabad/u9/040pxx40.xx40.000445559962.h3u9/catalogue/vnr-vignana-jyothi-institute-of-engineering-and-technology-bachupally-hyderabad-colleges-twvtc.jpg',
+                            title: 'VNR Institute Building',
+                            category: 'campus'
+                        },
+                        {
+                            url: 'https://image-static.collegedunia.com/public/college_data/images/campusimage/160406239610.jpg',
+                            title: 'Campus Infrastructure',
+                            category: 'campus'
+                        },
+                        {
+                            url: 'https://theacademicinsights.com/wp-content/uploads/2021/07/VNR-Vignana-Jyothi-Institute-of-Engineering-and-Technology-740x357.jpg',
+                            title: 'VNR Academic Block',
+                            category: 'campus'
+                        }
+                    ]
+                },
+                'VASV': {
+                    logo: 'https://vce.ac.in/assets/img/logo.svg',
+                    images: [
+                        {
+                            url: 'https://vce.ac.in/assets/img/slides/2025/graduation-day-2025-01.jpg',
+                            title: 'Graduation Day 2025',
+                            category: 'events'
+                        },
+                        {
+                            url: 'https://vce.ac.in/assets/img/slides/2025/sports-12-02-2025.jpg',
+                            title: 'Sports Activities',
+                            category: 'sports'
+                        },
+                        {
+                            url: 'https://vce.ac.in/assets/img/graduation-day.jpg',
+                            title: 'Graduation Ceremony',
+                            category: 'events'
+                        }
+                    ],
+                    placements: {
+                        url: 'https://vce.ac.in/assets/img/slides/2025/placements-summary-2025-08-07-2025.jpg',
+                        title: 'Placements Summary 2025',
+                        category: 'placements'
+                    }
+                }
+            };
+
+            return assets[collegeCode] || null;
+        }
+
+        // Display college header
+        function displayCollegeHeader() {
+            const coursesCount = collegeData.courses ? collegeData.courses.length : 0;
+            const fees = collegeData.fees || 'N/A';
+            const naacGrade = collegeData.naacGrade || 'N/A';
+
+            const colorScheme = getCollegeColorScheme(collegeData);
+            const collegeAssets = getCollegeAssets(collegeData.collegeCode);
+
+            collegeHeader.innerHTML = `
+                <div class="mb-6">
+                    ${collegeAssets && collegeAssets.logo ? `
+                    <div class="flex justify-center mb-4">
+                        <img src="${collegeAssets.logo}" alt="${collegeData.name} Logo" class="h-16 w-auto object-contain" onerror="this.style.display='none'">
+                    </div>
+                    ` : ''}
+                    <div class="text-sm theme-text mb-2 font-semibold">${collegeData.collegeCode}</div>
+                    <h1 class="text-3xl md:text-4xl font-bold mb-4 gradient-text">
+                        ${collegeData.name}
+                    </h1>
+                    <p class="text-lg text-gray-300 mb-4 flex items-center justify-center flex-wrap gap-4">
+                        <a href="${generateGoogleMapsLink(collegeData.name, collegeData.location, collegeData.district)}" target="_blank" class="location-link">
+                            <span class="location-icon">📍</span> ${collegeData.location}, ${collegeData.district}
+                        </a>
+                        <a href="college-info.html" class="location-click-btn">
+                            <span class="btn-icon">🏫</span> View All Colleges
+                        </a>
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-4 mb-6">
+                        <div class="badge theme-bg text-white font-semibold">🏛️ ${collegeData.type}</div>
+                        <div class="badge badge-info">📅 Est. ${collegeData.established || 'N/A'}</div>
+                        ${naacGrade !== 'N/A' ? `<div class="badge theme-bg text-white font-semibold">NAAC ${naacGrade}</div>` : ''}
+                        ${collegeData.nbaAccredited === 'Yes' ? `<div class="badge theme-bg text-white font-semibold">NBA Accredited</div>` : ''}
+                        ${collegeData.nirfRank ? `<div class="badge theme-bg text-white font-semibold">NIRF ${collegeData.nirfRank}</div>` : ''}
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto">
+                        <div class="text-center p-4 bg-white/5 rounded-lg theme-border border">
+                            <div class="text-2xl font-bold theme-text">${coursesCount}</div>
+                            <div class="text-sm text-gray-400">Courses Offered</div>
+                        </div>
+                        <div class="text-center p-4 bg-white/5 rounded-lg theme-border border">
+                            <div class="text-2xl font-bold theme-text">${fees}</div>
+                            <div class="text-sm text-gray-400">Annual Fees</div>
+                        </div>
+                        <div class="text-center p-4 bg-white/5 rounded-lg theme-border border">
+                            <div class="text-2xl font-bold theme-text">${collegeData.nirfRank || 'N/A'}</div>
+                            <div class="text-sm text-gray-400">NIRF Rank</div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Display college information sections
+        function displayCollegeInfo() {
+            collegeInfo.innerHTML = `
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Basic Information -->
+                    <div class="info-card">
+                        <h3 class="text-xl font-semibold gradient-text mb-4">📋 Basic Information</h3>
+                        <div class="space-y-3">
+                            <div>
+                                <div class="info-label">College Name</div>
+                                <div class="info-value">${collegeData.name}</div>
+                            </div>
+                            <div>
+                                <div class="info-label">College Code</div>
+                                <div class="info-value font-mono">${collegeData.collegeCode}</div>
+                            </div>
+                            <div>
+                                <div class="info-label">Location</div>
+                                <div class="info-value flex items-center flex-wrap">
+                                    <a href="${generateGoogleMapsLink(collegeData.name, collegeData.location, collegeData.district)}" target="_blank" class="location-link">
+                                        <span class="location-icon">📍</span> ${collegeData.location}, ${collegeData.district}
+                                    </a>
+                                    <a href="college-info.html" class="location-click-btn">
+                                        <span class="btn-icon">🔍</span> Browse Colleges
+                                    </a>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="info-label">Type</div>
+                                <div class="info-value">${collegeData.type}</div>
+                            </div>
+                            <div>
+                                <div class="info-label">Established</div>
+                                <div class="info-value">${collegeData.established || 'N/A'}</div>
+                            </div>
+                            <div>
+                                <div class="info-label">Autonomous Status</div>
+                                <div class="info-value">${collegeData.autonomousStatus || 'N/A'}</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Academic Information -->
+                    <div class="info-card">
+                        <h3 class="text-xl font-semibold gradient-text mb-4">🎓 Academic Information</h3>
+                        <div class="space-y-3">
+                            <div>
+                                <div class="info-label">NAAC Grade</div>
+                                <div class="info-value">${collegeData.naacGrade || 'N/A'}</div>
+                            </div>
+                            <div>
+                                <div class="info-label">NBA Accredited</div>
+                                <div class="info-value">${collegeData.nbaAccredited || 'N/A'}</div>
+                            </div>
+                            <div>
+                                <div class="info-label">NIRF Rank</div>
+                                <div class="info-value">${collegeData.nirfRank || 'N/A'}</div>
+                            </div>
+                            <div>
+                                <div class="info-label">Annual Fees</div>
+                                <div class="info-value text-green-400">${collegeData.fees || 'N/A'}</div>
+                            </div>
+                            <div>
+                                <div class="info-label">Affiliation</div>
+                                <div class="info-value">${collegeData.affiliation || 'N/A'}</div>
+                            </div>
+                            <div>
+                                <div class="info-label">University</div>
+                                <div class="info-value">${collegeData.university || 'N/A'}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="info-card">
+                    <h3 class="text-xl font-semibold gradient-text mb-4">📞 Contact Information</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div>
+                            <div class="info-label">Phone</div>
+                            <div class="info-value">
+                                ${collegeData.phone ? `<a href="tel:${collegeData.phone}" class="text-blue-400 hover:text-blue-300">${collegeData.phone}</a>` : 'N/A'}
+                            </div>
+                        </div>
+                        <div>
+                            <div class="info-label">Website</div>
+                            <div class="info-value text-lg">
+                                ${collegeData.website ? `<a href="https://${collegeData.website}" target="_blank" class="text-blue-400 hover:text-blue-300 font-medium">${collegeData.website}</a>` : 'N/A'}
+                            </div>
+                        </div>
+                        <div>
+                            <div class="info-label">Email</div>
+                            <div class="info-value text-lg">
+                                ${collegeData.email ? `<a href="mailto:${collegeData.email.replace('[at]', '@')}" class="text-blue-400 hover:text-blue-300 font-medium">${collegeData.email.replace('[at]', '@')}</a>` : 'N/A'}
+                            </div>
+                        </div>
+                    </div>
+                    ${collegeData.address ? `
+                    <div class="mt-4">
+                        <div class="info-label">Address</div>
+                        <div class="info-value">${collegeData.address}</div>
+                    </div>
+                    ` : ''}
+                </div>
+
+                ${collegeData.about ? `
+                <!-- About Section -->
+                <div class="info-card">
+                    <h3 class="text-xl font-semibold gradient-text mb-4">ℹ️ About</h3>
+                    <p class="text-gray-300 leading-relaxed">${collegeData.about}</p>
+                </div>
+                ` : ''}
+
+                <!-- Courses Section -->
+                <div class="info-card">
+                    <h3 class="text-xl font-semibold gradient-text mb-4">📚 Available Courses (${collegeData.courses ? collegeData.courses.length : 0})</h3>
+                    <div class="max-h-96 overflow-y-auto custom-scrollbar">
+                        ${displayCourses()}
+                    </div>
+                </div>
+
+                <!-- College Gallery Section -->
+                <div id="collegeGallery" class="info-card hidden">
+                    <h3 class="text-xl font-semibold gradient-text mb-4">📸 College Gallery</h3>
+
+                    <!-- Gallery Filter Tabs -->
+                    <div class="flex flex-wrap justify-center gap-2 mb-6">
+                        <button onclick="filterGallery('all')" class="gallery-filter-btn active px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm transition-all duration-300">
+                            All Images
+                        </button>
+                        <button onclick="filterGallery('campus')" class="gallery-filter-btn px-3 py-2 bg-gray-600 hover:bg-gray-700 text-white rounded-lg text-sm transition-all duration-300">
+                            Campus
+                        </button>
+                        <button onclick="filterGallery('department')" class="gallery-filter-btn px-3 py-2 bg-gray-600 hover:bg-gray-700 text-white rounded-lg text-sm transition-all duration-300">
+                            Departments
+                        </button>
+                        <button onclick="filterGallery('events')" class="gallery-filter-btn px-3 py-2 bg-gray-600 hover:bg-gray-700 text-white rounded-lg text-sm transition-all duration-300">
+                            Events
+                        </button>
+                        <button onclick="filterGallery('placements')" class="gallery-filter-btn px-3 py-2 bg-gray-600 hover:bg-gray-700 text-white rounded-lg text-sm transition-all duration-300">
+                            Placements
+                        </button>
+                    </div>
+
+                    <!-- Image Gallery Grid -->
+                    <div id="imageGallery" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <!-- Images will be populated here -->
+                    </div>
+                </div>
+
+                <!-- Cutoffs Section -->
+                <div id="cutoffs" class="info-card">
+                    <h3 class="text-xl font-semibold gradient-text mb-4">📊 Admission Cutoffs</h3>
+
+                    <!-- Enhanced Description -->
+                    <div class="bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-lg p-4 mb-6">
+                        <p class="text-sm text-gray-300 leading-relaxed">
+                            <span class="font-semibold text-blue-300">📚 2024 Phase 3 (Last Year)</span> - Actual cutoffs from previous year •
+                            <span class="font-semibold text-green-300">📅 2025 Phase 1 (Current)</span> - Official cutoffs from this year •
+                            <span class="font-semibold text-orange-300">🔮 2025 Phase 2 (Predicted)</span> - AI-predicted cutoffs for upcoming phase
+                        </p>
+                    </div>
+
+                    <!-- Cutoff Filters -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                        <div class="relative">
+                            <label class="block text-sm font-medium text-gray-300 mb-2">👥 Caste Category</label>
+                            <select id="casteFilter" class="w-full px-4 py-2 bg-gray-800 border border-gray-600 rounded-lg text-white focus:border-blue-500 focus:outline-none transition-all duration-300">
+                                <option value="OC">OC (Open Category)</option>
+                                <option value="BC_A">BC-A (Backward Class A)</option>
+                                <option value="BC_B">BC-B (Backward Class B)</option>
+                                <option value="BC_C">BC-C (Backward Class C)</option>
+                                <option value="BC_D">BC-D (Backward Class D)</option>
+                                <option value="BC_E">BC-E (Backward Class E)</option>
+                                <option value="SC">SC (Scheduled Caste)</option>
+                                <option value="ST">ST (Scheduled Tribe)</option>
+                                <option value="EWS">EWS (Economically Weaker Section)</option>
+                            </select>
+                        </div>
+                        <div class="relative">
+                            <label class="block text-sm font-medium text-gray-300 mb-2">⚧ Gender</label>
+                            <select id="genderFilter" class="w-full px-4 py-2 bg-gray-800 border border-gray-600 rounded-lg text-white focus:border-blue-500 focus:outline-none transition-all duration-300">
+                                <!-- Gender options will be populated dynamically based on college type -->
+                            </select>
+                        </div>
+                        <div class="flex items-end">
+                            <button onclick="loadCutoffData()" class="w-full px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+                                🔍 Load Cutoffs
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Cutoff Data Display -->
+                    <div id="cutoffDataContainer" class="hidden">
+                        <!-- Enhanced Phase Tabs -->
+                        <div class="flex flex-wrap gap-2 mb-6 border-b border-gray-700">
+                            <button id="phase3Tab" class="px-6 py-3 text-sm font-medium rounded-t-lg border-b-2 border-transparent hover:border-orange-500 transition-all duration-300 bg-gray-800/50 hover:bg-gray-700/50" onclick="switchPhase('phase3')">
+                                <span class="text-lg mr-2">📚</span>
+                                <div class="text-left">
+                                    <div class="font-semibold">2024 Phase 3</div>
+                                    <div class="text-xs text-gray-400">Last Year Actual</div>
+                                </div>
+                            </button>
+                            <button id="phase1Tab" class="px-6 py-3 text-sm font-medium rounded-t-lg border-b-2 border-transparent hover:border-green-500 transition-all duration-300 bg-gray-800/50 hover:bg-gray-700/50" onclick="switchPhase('phase1')">
+                                <span class="text-lg mr-2">📅</span>
+                                <div class="text-left">
+                                    <div class="font-semibold">2025 Phase 1</div>
+                                    <div class="text-xs text-gray-400">Current Year Actual</div>
+                                </div>
+                            </button>
+                            <button id="phase2Tab" class="px-6 py-3 text-sm font-medium rounded-t-lg border-b-2 border-transparent hover:border-purple-500 transition-all duration-300 bg-gray-800/50 hover:bg-gray-700/50" onclick="switchPhase('phase2')">
+                                <span class="text-lg mr-2">🔮</span>
+                                <div class="text-left">
+                                    <div class="font-semibold">2025 Phase 2</div>
+                                    <div class="text-xs text-gray-400">AI Predicted</div>
+                                </div>
+                            </button>
+                        </div>
+
+                        <!-- Cutoff Table with Enhanced Styling -->
+                        <div class="overflow-x-auto bg-gray-900/50 rounded-lg border border-gray-700">
+                            <div id="cutoffTable" class="min-w-full">
+                                <!-- Cutoff data will be populated here -->
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <!-- Loading State -->
+                    <div id="cutoffLoading" class="hidden text-center py-8">
+                        <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
+                        <p class="text-gray-400 mt-2">Loading cutoff data...</p>
+                    </div>
+
+                    <!-- No Data State -->
+                    <div id="cutoffNoData" class="hidden text-center py-8">
+                        <div class="text-6xl mb-4 opacity-50">📊</div>
+                        <h4 class="text-lg font-semibold text-gray-300 mb-2">No Cutoff Data Available</h4>
+                        <p class="text-gray-400">Cutoff data for this college and category combination is not available.</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Display courses
+        function displayCourses() {
+            if (!collegeData.courses || collegeData.courses.length === 0) {
+                return '<p class="text-gray-400">No course information available</p>';
+            }
+
+            return collegeData.courses.map(course => `
+                <div class="course-card">
+                    <div class="flex justify-between items-start mb-2">
+                        <div class="flex-1">
+                            <h4 class="font-semibold text-white text-lg">${course.courseName}</h4>
+                            <p class="text-sm text-gray-400">Branch: ${course.branchName} (${course.branchCode})</p>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-lg font-semibold text-green-400">₹${course.fee}</div>
+                            <div class="text-xs text-gray-400">Annual Fee</div>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div class="badge badge-info">Intake: ${course.intake}</div>
+                        ${course.duration ? `<div class="badge badge-warning">${course.duration}</div>` : ''}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Hide loading and show content
+        function hideLoading() {
+            loadingIndicator.classList.add('hidden');
+            collegeContent.classList.remove('hidden');
+        }
+
+        // Show error message
+        function showError(message) {
+            loadingIndicator.classList.add('hidden');
+            errorMessage.classList.remove('hidden');
+
+            const errorText = errorMessage.querySelector('p');
+            if (errorText) {
+                errorText.textContent = message;
+            }
+        }
+
+        // Get dynamic color scheme based on college characteristics (same as college-info.html)
+        function getCollegeColorScheme(college) {
+            const type = college.type || 'Unknown';
+            const naacGrade = college.naacGrade || null;
+            const nirfRank = parseInt(college.nirfRank) || 999;
+            const isAutonomous = type === 'Autonomous';
+            const isUniversity = college.name && college.name.toLowerCase().includes('university');
+            const collegeName = college.name || '';
+            const established = parseInt(college.established) || 2000;
+            const coursesCount = college.courses ? college.courses.length : 0;
+
+            // Define nebula-inspired color schemes
+            if (isUniversity) {
+                return {
+                    name: 'Cosmic Purple',
+                    primary: '#a855f7',
+                    secondary: '#8b5cf6',
+                    accent: '#c4b5fd'
+                };
+            } else if (isAutonomous && naacGrade && ['A++', 'A+', 'A'].includes(naacGrade)) {
+                return {
+                    name: 'Nebula Green',
+                    primary: '#10b981',
+                    secondary: '#14b8a6',
+                    accent: '#34d399'
+                };
+            } else if (nirfRank <= 200) {
+                return {
+                    name: 'Solar Gold',
+                    primary: '#f59e0b',
+                    secondary: '#f97316',
+                    accent: '#fbbf24'
+                };
+            } else if (type === 'Government') {
+                return {
+                    name: 'Ocean Blue',
+                    primary: '#3b82f6',
+                    secondary: '#06b6d4',
+                    accent: '#60a5fa'
+                };
+            } else if (established < 1990 || coursesCount >= 15) {
+                return {
+                    name: 'Crimson Fire',
+                    primary: '#dc2626',
+                    secondary: '#ea580c',
+                    accent: '#f87171'
+                };
+            } else if (collegeName.toLowerCase().includes('women') || collegeName.toLowerCase().includes('girls')) {
+                return {
+                    name: 'Stellar Rose',
+                    primary: '#f43f5e',
+                    secondary: '#ec4899',
+                    accent: '#fb7185'
+                };
+            } else {
+                return {
+                    name: 'Violet Storm',
+                    primary: '#8b5cf6',
+                    secondary: '#d946ef',
+                    accent: '#a78bfa'
+                };
+            }
+        }
+
+        // Apply color scheme to page elements
+        function applyColorScheme(college) {
+            const colorScheme = getCollegeColorScheme(college);
+
+            // Update CSS custom properties for dynamic theming
+            document.documentElement.style.setProperty('--theme-primary', colorScheme.primary);
+            document.documentElement.style.setProperty('--theme-secondary', colorScheme.secondary);
+            document.documentElement.style.setProperty('--theme-accent', colorScheme.accent);
+
+            // Update page title with theme name
+            const themeIndicator = document.createElement('div');
+            themeIndicator.className = 'text-sm font-medium mb-2';
+            themeIndicator.style.color = colorScheme.accent;
+            themeIndicator.textContent = `${colorScheme.name} Theme`;
+
+            const collegeHeader = document.querySelector('#collegeDetails h1');
+            if (collegeHeader) {
+                collegeHeader.parentNode.insertBefore(themeIndicator, collegeHeader);
+            }
+        }
+
+        // Cutoffs functionality
+        let cutoffData = {
+            phase1: null,
+            phase2: null,
+            phase3: null
+        };
+        let currentPhase = 'phase1';
+
+        // Check if college is a women's college
+        function isWomensCollege(collegeCode, collegeName) {
+            // List of known women's college codes
+            const womensCollegeCodes = [
+                'BVRW', // BVRIT COLLEGE OF ENGINEERING FOR WOMEN
+                'STLW', // STANLEY COLLEGE OF ENGG AND TECHNOLOGY FOR WOMEN
+                'BREW', // BHOJREDDY ENGINEERING COLLEGE FOR WOMEN
+                'GPRW', // GOKARAJU RANGARAJU INSTITUTE OF ENGINEERING FOR WOMEN
+                'MGIT', // MAHATMA GANDHI INSTITUTE OF TECHNOLOGY (Women's)
+                'WITS'  // WOMEN'S INSTITUTE OF TECHNOLOGY AND SCIENCE
+            ];
+
+            // Check by college code
+            if (womensCollegeCodes.includes(collegeCode)) {
+                return true;
+            }
+
+            // Check by college name for keywords
+            if (collegeName) {
+                const nameUpper = collegeName.toUpperCase();
+                return nameUpper.includes('WOMEN') ||
+                       nameUpper.includes('WOMENS') ||
+                       nameUpper.includes('GIRLS') ||
+                       nameUpper.includes('FOR WOMEN');
+            }
+
+            return false;
+        }
+
+        // Populate gender filter based on college type
+        function populateGenderFilter() {
+            const genderFilter = document.getElementById('genderFilter');
+            const isWomens = isWomensCollege(collegeData.collegeCode, collegeData.name);
+
+            genderFilter.innerHTML = '';
+
+            if (isWomens) {
+                // For women's colleges, only show Girls option
+                genderFilter.innerHTML = '<option value="GIRLS">Girls</option>';
+            } else {
+                // For co-ed colleges, show both options
+                genderFilter.innerHTML = `
+                    <option value="BOYS">Boys</option>
+                    <option value="GIRLS">Girls</option>
+                `;
+            }
+        }
+
+        // Load cutoff data for the college
+        async function loadCutoffData() {
+            // Populate gender filter based on college type
+            populateGenderFilter();
+            const casteFilter = document.getElementById('casteFilter').value;
+            const genderFilter = document.getElementById('genderFilter').value;
+
+            // Show loading state
+            document.getElementById('cutoffLoading').classList.remove('hidden');
+            document.getElementById('cutoffDataContainer').classList.add('hidden');
+            document.getElementById('cutoffNoData').classList.add('hidden');
+
+            try {
+                // Load all three phases of data from the new JSON files
+                await Promise.all([
+                    loadPhaseData('phase1', './data/2025-phase1-raw.json'),
+                    loadPhaseData('phase2', './data/2025-phase2-raw.json'),
+                    loadPhaseData('phase3', './data/2024-phase3-raw.json')
+                ]);
+
+                // Filter data for current college
+                filterCutoffData();
+
+                // Show data container
+                document.getElementById('cutoffLoading').classList.add('hidden');
+                document.getElementById('cutoffDataContainer').classList.remove('hidden');
+
+                // Set active tab and display data - Default to Phase 3 (Last Year) as requested
+                switchPhase('phase3');
+
+            } catch (error) {
+                console.error('Error loading cutoff data:', error);
+                document.getElementById('cutoffLoading').classList.add('hidden');
+                document.getElementById('cutoffNoData').classList.remove('hidden');
+            }
+        }
+
+        // Load data for a specific phase
+        async function loadPhaseData(phase, jsonFile) {
+            try {
+                console.log(`📂 Loading ${phase} data from ${jsonFile}`);
+                const response = await fetch(jsonFile);
+                if (!response.ok) throw new Error(`Failed to load ${phase} data from ${jsonFile}`);
+
+                const data = await response.json();
+                cutoffData[phase] = data;
+
+                console.log(`✅ Loaded ${phase} data:`, cutoffData[phase] ? cutoffData[phase].length : 0, 'records');
+            } catch (error) {
+                console.warn(`⚠️ Could not load ${phase} data:`, error);
+                cutoffData[phase] = [];
+            }
+        }
+
+        // Load Excel data using a server endpoint
+        async function loadExcelData(phase, excelFile) {
+            try {
+                // Since we can't directly read Excel files in browser, we'll use JSON fallback
+                // In a real implementation, you'd have a server endpoint to convert Excel to JSON
+                let jsonFile;
+                if (phase === 'phase2') {
+                    jsonFile = './data/2025-phase2-predicted-cutoffs.json';
+                } else if (phase === 'phase3') {
+                    jsonFile = './data/2024-phase3-cutoffs.json';
+                }
+
+                const response = await fetch(jsonFile);
+                if (!response.ok) throw new Error(`Failed to load ${phase} data`);
+                cutoffData[phase] = await response.json();
+
+                console.log(`📊 Loaded ${phase} from JSON fallback (${excelFile} not directly readable)`);
+            } catch (error) {
+                console.warn(`⚠️ Could not load ${phase} Excel data, trying JSON fallback:`, error);
+                cutoffData[phase] = [];
+            }
+        }
+
+        // Load Phase 1 data from college-specific CSV files
+        async function loadPhase1Data() {
+            const collegeCode = collegeData.collegeCode;
+
+            // First, try to get the exact folder name from the server
+            let folderName = null;
+            try {
+                const collegesResponse = await fetch('/api/colleges');
+                if (collegesResponse.ok) {
+                    const colleges = await collegesResponse.json();
+                    const matchingCollege = colleges.find(college => college.startsWith(collegeCode + '_'));
+                    if (matchingCollege) {
+                        folderName = matchingCollege;
+                        console.log(`🔍 Found exact folder name: ${folderName}`);
+                    }
+                }
+            } catch (error) {
+                console.log('Could not get exact folder name from server');
+            }
+
+            // Fallback to generated folder name if exact match not found
+            if (!folderName) {
+                folderName = `${collegeCode}_${collegeData.name.replace(/[^A-Z0-9]/g, '_').toUpperCase()}`;
+                console.log(`🔍 Using generated folder name: ${folderName}`);
+            }
+
+            try {
+                // Common branch files that might exist
+                const possibleBranchFiles = [
+                    'COMPUTER_SCIENCE_AND_ENGINEERING.csv',
+                    'ELECTRONICS_AND_COMMUNICATION_ENGINEERING.csv',
+                    'ELECTRICAL_AND_ELECTRONICS_ENGINEERING.csv',
+                    'MECHANICAL_ENGINEERING.csv',
+                    'CIVIL_ENGINEERING.csv',
+                    'CHEMICAL_ENGINEERING.csv',
+                    'BIOTECHNOLOGY.csv',
+                    'INFORMATION_TECHNOLOGY.csv',
+                    'ARTIFICIAL_INTELLIGENCE_AND_DATA_SCIENCE.csv',
+                    'ARTIFICIAL_INTELLIGENCE_AND_MACHINE_LEARNING.csv',
+                    'COMPUTER_SCIENCE_AND_ENGINEERING_ARTIFICIAL_INTELLIGENCE_AND_MACHINE_LEARNING.csv',
+                    'COMPUTER_SCIENCE_AND_ENGINEERING_DATA_SCIENCE.csv',
+                    'COMPUTER_SCIENCE_AND_ENGINEERING_CYBER_SECURITY.csv',
+                    'COMPUTER_SCIENCE_AND_ENGINEERING_IOT.csv',
+                    'CSE_IoT_AND_CYBER_SECURITY_INCLUDING_BLOCK_CHAIN_TECHNOLOGY.csv',
+                    'ELECTRONICS_ENGINEERING_VLSI_DESIGN_AND_TECHNOLOGY.csv',
+                    'COMPUTER_SCIENCE_AND_BUSINESS_SYSTEM.csv',
+                    'COMPUTER_ENGINEERING.csv',
+                    'COMPUTER_ENGINEERINGSOFTWARE_ENGINEERING.csv',
+                    'BIOMEDICAL_ENGINEERING.csv',
+                    'PHARMACEUTICAL_ENGINEERING.csv',
+                    'MINING_ENGINEERING.csv',
+                    'AUTOMOBILE_ENGINEERING.csv',
+                    'ELECTRONICS_AND_INSTRUMENTATION_ENGINEERING.csv',
+                    'ELECTRONICS_AND_TELECOMMUNICATION_ENGG.csv',
+                    'AGRICULTURAL_ENGINEERING.csv',
+                    'DAIRYING.csv',
+                    'FOOD_TECHNOLOGY.csv',
+                    'COMPUTER_SCIENCE_DESIGN.csv',
+                    'COMPUTER_SCIENCE_AND_ENGG_ARTIFICIAL_INTELLIGENCE.csv',
+                    'COMPUTER_SCIENCE_AND_INFORMATION_TECHNOLOGY.csv',
+                    'ARTIFICIAL_INTELLIGENCE.csv'
+                ];
+
+                cutoffData.phase1 = [];
+                let loadedFiles = 0;
+
+                for (const csvFile of possibleBranchFiles) {
+                    try {
+                        const response = await fetch(`./2025 phase 1 data/${folderName}/${csvFile}`);
+                        if (response.ok) {
+                            console.log(`✅ Found CSV file: ${csvFile}`);
+                            const csvText = await response.text();
+                            const branchName = csvFile.replace('.csv', '').replace(/_/g, ' ');
+                            const parsedData = parseAdmissionCSV(csvText, branchName);
+                            cutoffData.phase1.push(...parsedData);
+                            loadedFiles++;
+                        }
+                    } catch (csvError) {
+                        // Continue if individual CSV file fails (this is expected for most files)
+                    }
+                }
+
+                if (loadedFiles > 0) {
+                    console.log(`✅ Loaded Phase 1 data from ${loadedFiles} branch CSV files in folder: ${folderName}`);
+                    return;
+                }
+
+                throw new Error('No CSV files loaded');
+
+            } catch (folderError) {
+                console.log(`Could not access folder: ${folderName}, trying JSON fallback`);
+
+                // Fallback to JSON if CSV loading fails
+                try {
+                    const response = await fetch('./data/closing-ranks-2025-phase1.json');
+                    if (response.ok) {
+                        const jsonData = await response.json();
+                        cutoffData.phase1 = jsonData.filter(record =>
+                            record.College_Code === collegeCode ||
+                            record.college_code === collegeCode ||
+                            record.collegeCode === collegeCode
+                        );
+                        console.log(`✅ Loaded Phase 1 data from JSON fallback`);
+                    }
+                } catch (jsonError) {
+                    console.warn('Could not load Phase 1 data from JSON fallback');
+                    cutoffData.phase1 = [];
+                }
+            }
+        }
+
+        // Parse admission CSV data (new format with actual admission records)
+        function parseAdmissionCSV(csvText, branchName) {
+            const lines = csvText.trim().split('\n');
+            if (lines.length < 2) return [];
+
+            const data = [];
+            const cutoffsByCategory = {};
+
+            // Process each admission record
+            for (let i = 1; i < lines.length; i++) {
+                const line = lines[i];
+                if (!line.trim()) continue;
+
+                // Parse CSV line (handle quoted values)
+                const values = parseCSVLine(line);
+                if (values.length < 6) continue;
+
+                const rank = parseInt(values[2]) || 0;
+                const gender = values[4] === 'F' ? 'GIRLS' : 'BOYS';
+                let caste = values[5] || 'OC';
+
+                // Normalize caste categories
+                if (caste.includes('SC_')) caste = 'SC';
+                if (caste.includes('ST')) caste = 'ST';
+                if (caste.includes('BC_A')) caste = 'BC_A';
+                if (caste.includes('BC_B')) caste = 'BC_B';
+                if (caste.includes('BC_C')) caste = 'BC_C';
+                if (caste.includes('BC_D')) caste = 'BC_D';
+                if (caste.includes('BC_E')) caste = 'BC_E';
+                if (caste === 'OC' || caste.includes('EWS')) caste = 'OC';
+
+                const key = `${caste}_${gender}`;
+
+                // Track the highest (worst) rank for each category as cutoff
+                if (!cutoffsByCategory[key] || rank > cutoffsByCategory[key]) {
+                    cutoffsByCategory[key] = rank;
+                }
+            }
+
+            // Convert to cutoff records
+            Object.keys(cutoffsByCategory).forEach(key => {
+                const [caste, gender] = key.split('_');
+                data.push({
+                    College_Code: collegeData.collegeCode,
+                    Branch_Name: branchName,
+                    Cutoff_Rank: cutoffsByCategory[key],
+                    Caste: caste,
+                    Gender: gender
+                });
+            });
+
+            return data;
+        }
+
+        // Parse CSV line handling quoted values
+        function parseCSVLine(line) {
+            const result = [];
+            let current = '';
+            let inQuotes = false;
+
+            for (let i = 0; i < line.length; i++) {
+                const char = line[i];
+
+                if (char === '"') {
+                    inQuotes = !inQuotes;
+                } else if (char === ',' && !inQuotes) {
+                    result.push(current.trim());
+                    current = '';
+                } else {
+                    current += char;
+                }
+            }
+
+            result.push(current.trim());
+            return result;
+        }
+
+        // Filter cutoff data for current college
+        function filterCutoffData() {
+            const collegeCode = collegeData.collegeCode;
+
+            // Filter all phases data for current college
+            ['phase1', 'phase2', 'phase3'].forEach(phase => {
+                if (cutoffData[phase] && Array.isArray(cutoffData[phase])) {
+                    cutoffData[phase] = cutoffData[phase].filter(record => {
+                        // Handle different possible field names for college code
+                        let recordCollegeCode = '';
+
+                        if (phase === 'phase1') {
+                            // For 2025 Phase 1 data, use 'College Code'
+                            recordCollegeCode = record['College Code'] || '';
+                        } else if (phase === 'phase2') {
+                            // For 2025 Phase 2 data, use '__EMPTY' field which contains college code
+                            recordCollegeCode = record['__EMPTY'] || '';
+                        } else if (phase === 'phase3') {
+                            // For 2024 data, use the first field which contains college code
+                            recordCollegeCode = record['TGEAPCET-2024 LAST RANK STATEMENT FINAL PHASE'] || '';
+                        }
+
+                        return recordCollegeCode === collegeCode;
+                    });
+                }
+            });
+
+            console.log('✅ Filtered cutoff data for college:', collegeCode);
+            console.log('Phase 1 records:', cutoffData.phase1 ? cutoffData.phase1.length : 0);
+            console.log('Phase 2 records:', cutoffData.phase2 ? cutoffData.phase2.length : 0);
+            console.log('Phase 3 records:', cutoffData.phase3 ? cutoffData.phase3.length : 0);
+        }
+
+        // Switch between different phases
+        function switchPhase(phase) {
+            currentPhase = phase;
+
+            // Update tab states with enhanced styling
+            document.querySelectorAll('[id$="Tab"]').forEach(tab => {
+                tab.classList.remove('border-blue-500', 'border-green-500', 'border-purple-500', 'border-orange-500', 'text-blue-400', 'text-green-400', 'text-purple-400', 'text-orange-400', 'bg-gray-700/50');
+                tab.classList.add('border-transparent', 'text-gray-400', 'bg-gray-800/50');
+            });
+
+            // Set active tab with phase-specific colors
+            const activeTab = document.getElementById(phase + 'Tab');
+            activeTab.classList.remove('border-transparent', 'text-gray-400', 'bg-gray-800/50');
+
+            if (phase === 'phase1') {
+                activeTab.classList.add('border-green-500', 'text-green-400', 'bg-gray-700/50');
+            } else if (phase === 'phase2') {
+                activeTab.classList.add('border-purple-500', 'text-purple-400', 'bg-gray-700/50');
+            } else if (phase === 'phase3') {
+                activeTab.classList.add('border-orange-500', 'text-orange-400', 'bg-gray-700/50');
+            }
+
+            // Display cutoff table for selected phase
+            displayCutoffTable(phase);
+        }
+
+        // Display cutoff table for selected phase
+        function displayCutoffTable(phase) {
+            const casteFilter = document.getElementById('casteFilter').value;
+            const genderFilter = document.getElementById('genderFilter').value;
+            const tableContainer = document.getElementById('cutoffTable');
+
+            const data = cutoffData[phase] || [];
+
+            if (data.length === 0) {
+                const phaseInfo = getPhaseInfo(phase);
+                tableContainer.innerHTML = `
+                    <div class="text-center py-12">
+                        <div class="text-6xl mb-4 opacity-50">${phaseInfo.icon}</div>
+                        <h4 class="text-lg font-semibold text-gray-300 mb-2">No ${phaseInfo.name} Data</h4>
+                        <p class="text-gray-400">Cutoff data for ${phaseInfo.name} is not available for this college</p>
+                    </div>
+                `;
+                return;
+            }
+
+            // Filter data by caste and gender
+            const filteredData = [];
+
+            data.forEach(record => {
+                // Extract branch name based on phase
+                let branchName = '';
+                if (phase === 'phase1') {
+                    branchName = record['Branch Name'] || '';
+                } else if (phase === 'phase2') {
+                    branchName = record['__EMPTY_2'] || ''; // Branch Name column in Phase 2 data
+                } else if (phase === 'phase3') {
+                    branchName = record['__EMPTY_7'] || ''; // Branch Name column in 2024 data
+                }
+
+                if (!branchName) return;
+
+                // Get cutoff rank for the specific caste and gender combination
+                const casteGenderKey = `${casteFilter}_${genderFilter}`;
+                let cutoffRank = null;
+
+                // Map caste-gender combinations to field names based on phase
+                let fieldMappings = {};
+
+                if (phase === 'phase1') {
+                    fieldMappings = {
+                        'OC_BOYS': 'OC BOYS',
+                        'OC_GIRLS': 'OC GIRLS',
+                        'BC_A_BOYS': 'BC_A BOYS',
+                        'BC_A_GIRLS': 'BC_A GIRLS',
+                        'BC_B_BOYS': 'BC_B BOYS',
+                        'BC_B_GIRLS': 'BC_B GIRLS',
+                        'BC_C_BOYS': 'BC_C BOYS',
+                        'BC_C_GIRLS': 'BC_C GIRLS',
+                        'BC_D_BOYS': 'BC_D BOYS',
+                        'BC_D_GIRLS': 'BC_D GIRLS',
+                        'BC_E_BOYS': 'BC_E BOYS',
+                        'BC_E_GIRLS': 'BC_E GIRLS',
+                        'SC_BOYS': 'SC BOYS',
+                        'SC_GIRLS': 'SC GIRLS',
+                        'ST_BOYS': 'ST BOYS',
+                        'ST_GIRLS': 'ST GIRLS',
+                        'EWS_BOYS': 'EWS GEN OU',
+                        'EWS_GIRLS': 'EWS GIRLS'
+                    };
+                } else if (phase === 'phase2') {
+                    fieldMappings = {
+                        'OC_BOYS': '__EMPTY_3',
+                        'OC_GIRLS': '__EMPTY_4',
+                        'BC_A_BOYS': '__EMPTY_5',
+                        'BC_A_GIRLS': '__EMPTY_6',
+                        'BC_B_BOYS': '__EMPTY_7',
+                        'BC_B_GIRLS': '__EMPTY_8',
+                        'BC_C_BOYS': '__EMPTY_9',
+                        'BC_C_GIRLS': '__EMPTY_10',
+                        'BC_D_BOYS': '__EMPTY_11',
+                        'BC_D_GIRLS': '__EMPTY_12',
+                        'BC_E_BOYS': '__EMPTY_13',
+                        'BC_E_GIRLS': '__EMPTY_14',
+                        'SC_BOYS': '__EMPTY_15',
+                        'SC_GIRLS': '__EMPTY_16',
+                        'ST_BOYS': '__EMPTY_17',
+                        'ST_GIRLS': '__EMPTY_18',
+                        'EWS_BOYS': '__EMPTY_19',
+                        'EWS_GIRLS': '__EMPTY_20'
+                    };
+                } else if (phase === 'phase3') {
+                    fieldMappings = {
+                        'OC_BOYS': '__EMPTY_8',
+                        'OC_GIRLS': '__EMPTY_9',
+                        'BC_A_BOYS': '__EMPTY_10',
+                        'BC_A_GIRLS': '__EMPTY_11',
+                        'BC_B_BOYS': '__EMPTY_12',
+                        'BC_B_GIRLS': '__EMPTY_13',
+                        'BC_C_BOYS': '__EMPTY_14',
+                        'BC_C_GIRLS': '__EMPTY_15',
+                        'BC_D_BOYS': '__EMPTY_16',
+                        'BC_D_GIRLS': '__EMPTY_17',
+                        'BC_E_BOYS': '__EMPTY_18',
+                        'BC_E_GIRLS': '__EMPTY_19',
+                        'SC_BOYS': '__EMPTY_20',
+                        'SC_GIRLS': '__EMPTY_21',
+                        'ST_BOYS': '__EMPTY_22',
+                        'ST_GIRLS': '__EMPTY_23',
+                        'EWS_BOYS': '__EMPTY_24',
+                        'EWS_GIRLS': '__EMPTY_25'
+                    };
+                }
+
+                const fieldName = fieldMappings[casteGenderKey];
+                if (fieldName && record[fieldName]) {
+                    cutoffRank = record[fieldName];
+
+                    // Create a standardized record
+                    filteredData.push({
+                        Branch_Name: branchName,
+                        branch_name: branchName,
+                        branchName: branchName,
+                        Cutoff_Rank: cutoffRank,
+                        cutoff_rank: cutoffRank,
+                        cutoffRank: cutoffRank,
+                        Caste: casteFilter,
+                        caste: casteFilter,
+                        Gender: genderFilter,
+                        gender: genderFilter
+                    });
+                }
+            });
+
+            if (filteredData.length === 0) {
+                const phaseInfo = getPhaseInfo(phase);
+                tableContainer.innerHTML = `
+                    <div class="text-center py-12">
+                        <div class="text-6xl mb-4 opacity-50">🔍</div>
+                        <h4 class="text-lg font-semibold text-gray-300 mb-2">No Data for Selected Category</h4>
+                        <p class="text-gray-400">No cutoff data available for <span class="font-semibold text-blue-300">${casteFilter} ${genderFilter}</span> in ${phaseInfo.name}</p>
+                        <p class="text-sm text-gray-500 mt-2">Try selecting a different caste category or gender</p>
+                    </div>
+                `;
+                return;
+            }
+
+            // Generate enhanced table HTML
+            const phaseInfo = getPhaseInfo(phase);
+            let tableHTML = `
+                <div class="p-4">
+                    <div class="flex items-center justify-between mb-4">
+                        <h4 class="text-lg font-semibold ${phaseInfo.textColor}">${phaseInfo.icon} ${phaseInfo.name}</h4>
+                        <div class="text-sm text-gray-400">
+                            <span class="font-medium">${casteFilter} ${genderFilter}</span> • ${filteredData.length} branches
+                        </div>
+                    </div>
+                    <table class="w-full text-sm">
+                        <thead>
+                            <tr class="border-b border-gray-700 ${phaseInfo.headerBg}">
+                                <th class="text-left py-4 px-4 text-gray-200 font-semibold">Branch Name</th>
+                                <th class="text-right py-4 px-4 text-gray-200 font-semibold">Cutoff Rank</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+            `;
+
+            // Sort by cutoff rank (lower rank = more competitive)
+            const sortedData = filteredData.sort((a, b) => {
+                const rankA = parseInt(a.Cutoff_Rank || a.cutoff_rank || a.cutoffRank || 999999);
+                const rankB = parseInt(b.Cutoff_Rank || b.cutoff_rank || b.cutoffRank || 999999);
+                return rankA - rankB;
+            });
+
+            sortedData.forEach((record, index) => {
+                const branchName = record.Branch_Name || record.branch_name || record.branchName || 'N/A';
+                const cutoffRank = record.Cutoff_Rank || record.cutoff_rank || record.cutoffRank || 'N/A';
+                const rank = parseInt(cutoffRank);
+
+
+
+                const isTopRank = index < 3 && cutoffRank !== 'N/A';
+
+                tableHTML += `
+                    <tr class="border-b border-gray-800 hover:bg-gray-800/50 transition-colors duration-200 ${isTopRank ? 'bg-gradient-to-r from-blue-900/20 to-purple-900/20' : ''}">
+                        <td class="py-4 px-4 text-gray-300">
+                            <div class="flex items-center gap-2">
+                                ${isTopRank ? '<span class="text-yellow-400">⭐</span>' : ''}
+                                <span class="font-medium">${branchName}</span>
+                            </div>
+                        </td>
+                        <td class="py-4 px-4 text-right">
+                            <span class="font-bold text-lg ${cutoffRank === 'N/A' ? 'text-gray-500' : phaseInfo.rankColor}">
+                                ${cutoffRank === 'N/A' ? 'N/A' : rank.toLocaleString()}
+                            </span>
+                        </td>
+                    </tr>
+                `;
+            });
+
+            tableHTML += `
+                        </tbody>
+                    </table>
+                </div>
+            `;
+
+            tableContainer.innerHTML = tableHTML;
+        }
+
+        // Get phase information for styling and display
+        function getPhaseInfo(phase) {
+            const phaseMap = {
+                'phase1': {
+                    name: '2025 Phase 1 (Current Year Actual)',
+                    icon: '📅',
+                    textColor: 'text-green-400',
+                    rankColor: 'text-green-400',
+                    headerBg: 'bg-green-900/20'
+                },
+                'phase2': {
+                    name: '2025 Phase 2 (AI Predicted)',
+                    icon: '🔮',
+                    textColor: 'text-purple-400',
+                    rankColor: 'text-purple-400',
+                    headerBg: 'bg-purple-900/20'
+                },
+                'phase3': {
+                    name: '2024 Phase 3 (Last Year Actual)',
+                    icon: '📚',
+                    textColor: 'text-orange-400',
+                    rankColor: 'text-orange-400',
+                    headerBg: 'bg-orange-900/20'
+                }
+            };
+            return phaseMap[phase] || phaseMap['phase1'];
+        }
+
+
+
+        // Display comparison table with all phases
+        function displayComparisonTable() {
+            const casteFilter = document.getElementById('casteFilter').value;
+            const genderFilter = document.getElementById('genderFilter').value;
+            const tableContainer = document.getElementById('cutoffTable');
+
+            // Get all branches from all phases
+            const allBranches = new Set();
+            ['phase3', 'phase1', 'phase2'].forEach(phase => {
+                const data = cutoffData[phase] || [];
+                data.forEach(record => {
+                    const recordCaste = record.Caste || record.caste || record.category || 'OC';
+                    const recordGender = record.Gender || record.gender || 'BOYS';
+
+                    if (recordCaste === casteFilter && recordGender === genderFilter) {
+                        const branchName = record.Branch_Name || record.branch_name || record.branchName;
+                        if (branchName) allBranches.add(branchName);
+                    }
+                });
+            });
+
+            if (allBranches.size === 0) {
+                tableContainer.innerHTML = `
+                    <div class="text-center py-12">
+                        <div class="text-6xl mb-4 opacity-50">📊</div>
+                        <h4 class="text-lg font-semibold text-gray-300 mb-2">No Comparison Data</h4>
+                        <p class="text-gray-400">No cutoff data available for <span class="font-semibold text-blue-300">${casteFilter} ${genderFilter}</span> across all phases</p>
+                    </div>
+                `;
+                return;
+            }
+
+            let tableHTML = `
+                <div class="p-4">
+                    <div class="flex items-center justify-between mb-4">
+                        <h4 class="text-lg font-semibold text-blue-400">📊 All Phases Comparison</h4>
+                        <div class="text-sm text-gray-400">
+                            <span class="font-medium">${casteFilter} ${genderFilter}</span> • ${allBranches.size} branches
+                        </div>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm min-w-max">
+                            <thead>
+                                <tr class="border-b border-gray-700 bg-blue-900/20">
+                                    <th class="text-left py-4 px-4 text-gray-200 font-semibold sticky left-0 bg-gray-900">Branch Name</th>
+                                    <th class="text-center py-4 px-4 text-orange-300 font-semibold min-w-32">📚 2024 Phase 3<br><span class="text-xs text-gray-400">Last Year</span></th>
+                                    <th class="text-center py-4 px-4 text-green-300 font-semibold min-w-32">📅 2025 Phase 1<br><span class="text-xs text-gray-400">Current</span></th>
+                                    <th class="text-center py-4 px-4 text-purple-300 font-semibold min-w-32">🔮 2025 Phase 2<br><span class="text-xs text-gray-400">Predicted</span></th>
+                                    <th class="text-center py-4 px-4 text-blue-300 font-semibold min-w-24">Trend</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+            `;
+
+            Array.from(allBranches).sort().forEach(branchName => {
+                const phase3Data = findBranchData('phase3', branchName, casteFilter, genderFilter);
+                const phase1Data = findBranchData('phase1', branchName, casteFilter, genderFilter);
+                const phase2Data = findBranchData('phase2', branchName, casteFilter, genderFilter);
+
+                const phase3Rank = phase3Data ? parseInt(phase3Data.Cutoff_Rank || phase3Data.cutoff_rank || phase3Data.cutoffRank || 0) : null;
+                const phase1Rank = phase1Data ? parseInt(phase1Data.Cutoff_Rank || phase1Data.cutoff_rank || phase1Data.cutoffRank || 0) : null;
+                const phase2Rank = phase2Data ? parseInt(phase2Data.Cutoff_Rank || phase2Data.cutoff_rank || phase2Data.cutoffRank || 0) : null;
+
+                // Calculate trend
+                let trend = '➖';
+                let trendColor = 'text-gray-400';
+                if (phase3Rank && phase1Rank) {
+                    if (phase1Rank < phase3Rank) {
+                        trend = '📈'; // Getting more competitive (lower rank needed)
+                        trendColor = 'text-red-400';
+                    } else if (phase1Rank > phase3Rank) {
+                        trend = '📉'; // Getting less competitive (higher rank accepted)
+                        trendColor = 'text-green-400';
+                    } else {
+                        trend = '➖'; // Same
+                        trendColor = 'text-gray-400';
+                    }
+                }
+
+                tableHTML += `
+                    <tr class="border-b border-gray-800 hover:bg-gray-800/50 transition-colors duration-200">
+                        <td class="py-4 px-4 text-gray-300 font-medium sticky left-0 bg-gray-900">${branchName}</td>
+                        <td class="py-4 px-4 text-center">
+                            <span class="font-semibold ${phase3Rank ? 'text-orange-400' : 'text-gray-500'}">
+                                ${phase3Rank ? phase3Rank.toLocaleString() : 'N/A'}
+                            </span>
+                        </td>
+                        <td class="py-4 px-4 text-center">
+                            <span class="font-semibold ${phase1Rank ? 'text-green-400' : 'text-gray-500'}">
+                                ${phase1Rank ? phase1Rank.toLocaleString() : 'N/A'}
+                            </span>
+                        </td>
+                        <td class="py-4 px-4 text-center">
+                            <span class="font-semibold ${phase2Rank ? 'text-purple-400' : 'text-gray-500'}">
+                                ${phase2Rank ? phase2Rank.toLocaleString() : 'N/A'}
+                            </span>
+                        </td>
+                        <td class="py-4 px-4 text-center">
+                            <span class="text-lg ${trendColor}" title="${trend === '📈' ? 'More competitive' : trend === '📉' ? 'Less competitive' : 'No change'}">${trend}</span>
+                        </td>
+                    </tr>
+                `;
+            });
+
+            tableHTML += `
+                        </tbody>
+                    </table>
+                    </div>
+                    <div class="mt-4 text-xs text-gray-500 text-center">
+                        📈 = More competitive (lower rank needed) • 📉 = Less competitive (higher rank accepted) • ➖ = No significant change
+                    </div>
+                </div>
+            `;
+
+            tableContainer.innerHTML = tableHTML;
+        }
+
+        // Find branch data for specific phase and filters
+        function findBranchData(phase, branchName, caste, gender) {
+            const data = cutoffData[phase] || [];
+
+            // Find the record that matches the branch name
+            const matchingRecord = data.find(record => {
+                let recordBranch = '';
+
+                if (phase === 'phase1') {
+                    recordBranch = record['Branch Name'] || '';
+                } else if (phase === 'phase2') {
+                    recordBranch = record['__EMPTY_2'] || '';
+                } else if (phase === 'phase3') {
+                    recordBranch = record['__EMPTY_7'] || '';
+                }
+
+                return recordBranch === branchName;
+            });
+
+            if (!matchingRecord) return null;
+
+            // Get the cutoff rank for the specific caste-gender combination
+            const casteGenderKey = `${caste}_${gender}`;
+            let fieldMappings = {};
+
+            if (phase === 'phase1') {
+                fieldMappings = {
+                    'OC_BOYS': 'OC BOYS', 'OC_GIRLS': 'OC GIRLS',
+                    'BC_A_BOYS': 'BC_A BOYS', 'BC_A_GIRLS': 'BC_A GIRLS',
+                    'BC_B_BOYS': 'BC_B BOYS', 'BC_B_GIRLS': 'BC_B GIRLS',
+                    'BC_C_BOYS': 'BC_C BOYS', 'BC_C_GIRLS': 'BC_C GIRLS',
+                    'BC_D_BOYS': 'BC_D BOYS', 'BC_D_GIRLS': 'BC_D GIRLS',
+                    'BC_E_BOYS': 'BC_E BOYS', 'BC_E_GIRLS': 'BC_E GIRLS',
+                    'SC_BOYS': 'SC BOYS', 'SC_GIRLS': 'SC GIRLS',
+                    'ST_BOYS': 'ST BOYS', 'ST_GIRLS': 'ST GIRLS',
+                    'EWS_BOYS': 'EWS GEN OU', 'EWS_GIRLS': 'EWS GIRLS'
+                };
+            } else if (phase === 'phase2') {
+                fieldMappings = {
+                    'OC_BOYS': '__EMPTY_3', 'OC_GIRLS': '__EMPTY_4',
+                    'BC_A_BOYS': '__EMPTY_5', 'BC_A_GIRLS': '__EMPTY_6',
+                    'BC_B_BOYS': '__EMPTY_7', 'BC_B_GIRLS': '__EMPTY_8',
+                    'BC_C_BOYS': '__EMPTY_9', 'BC_C_GIRLS': '__EMPTY_10',
+                    'BC_D_BOYS': '__EMPTY_11', 'BC_D_GIRLS': '__EMPTY_12',
+                    'BC_E_BOYS': '__EMPTY_13', 'BC_E_GIRLS': '__EMPTY_14',
+                    'SC_BOYS': '__EMPTY_15', 'SC_GIRLS': '__EMPTY_16',
+                    'ST_BOYS': '__EMPTY_17', 'ST_GIRLS': '__EMPTY_18',
+                    'EWS_BOYS': '__EMPTY_19', 'EWS_GIRLS': '__EMPTY_20'
+                };
+            } else if (phase === 'phase3') {
+                fieldMappings = {
+                    'OC_BOYS': '__EMPTY_8', 'OC_GIRLS': '__EMPTY_9',
+                    'BC_A_BOYS': '__EMPTY_10', 'BC_A_GIRLS': '__EMPTY_11',
+                    'BC_B_BOYS': '__EMPTY_12', 'BC_B_GIRLS': '__EMPTY_13',
+                    'BC_C_BOYS': '__EMPTY_14', 'BC_C_GIRLS': '__EMPTY_15',
+                    'BC_D_BOYS': '__EMPTY_16', 'BC_D_GIRLS': '__EMPTY_17',
+                    'BC_E_BOYS': '__EMPTY_18', 'BC_E_GIRLS': '__EMPTY_19',
+                    'SC_BOYS': '__EMPTY_20', 'SC_GIRLS': '__EMPTY_21',
+                    'ST_BOYS': '__EMPTY_22', 'ST_GIRLS': '__EMPTY_23',
+                    'EWS_BOYS': '__EMPTY_24', 'EWS_GIRLS': '__EMPTY_25'
+                };
+            }
+
+            const fieldName = fieldMappings[casteGenderKey];
+            if (!fieldName || !matchingRecord[fieldName]) return null;
+
+            // Return a standardized object
+            return {
+                Branch_Name: branchName,
+                branch_name: branchName,
+                branchName: branchName,
+                Cutoff_Rank: matchingRecord[fieldName],
+                cutoff_rank: matchingRecord[fieldName],
+                cutoffRank: matchingRecord[fieldName],
+                Caste: caste,
+                caste: caste,
+                Gender: gender,
+                gender: gender
+            };
+        }
+
+        // Display college gallery
+        function displayCollegeGallery(collegeAssets) {
+            const gallerySection = document.getElementById('collegeGallery');
+
+            if (!collegeAssets || !collegeAssets.images || collegeAssets.images.length === 0) {
+                gallerySection.classList.add('hidden');
+                return;
+            }
+
+            gallerySection.classList.remove('hidden');
+
+            // Store all images for filtering
+            window.allGalleryImages = [...collegeAssets.images];
+
+            // Add placements image if available
+            if (collegeAssets.placements) {
+                window.allGalleryImages.push(collegeAssets.placements);
+            }
+
+            // Display all images initially
+            displayGalleryImages(window.allGalleryImages);
+        }
+
+        // Display gallery images
+        function displayGalleryImages(images) {
+            const imageGallery = document.getElementById('imageGallery');
+            imageGallery.innerHTML = '';
+
+            images.forEach((image, index) => {
+                const imageCard = document.createElement('div');
+                imageCard.className = 'relative group cursor-pointer overflow-hidden rounded-lg bg-gray-800 hover:bg-gray-700 transition-all duration-300';
+
+                imageCard.innerHTML = `
+                    <div class="aspect-w-16 aspect-h-9">
+                        <img
+                            src="${image.url}"
+                            alt="${image.title}"
+                            class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+                            onerror="this.parentElement.parentElement.style.display='none'"
+                            loading="lazy"
+                        >
+                    </div>
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-end">
+                        <div class="p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                            <h4 class="font-semibold text-sm">${image.title}</h4>
+                            <p class="text-xs text-gray-300 capitalize">${image.category}</p>
+                        </div>
+                    </div>
+                `;
+
+                // Add click handler for lightbox
+                imageCard.addEventListener('click', () => openImageLightbox(image, index));
+
+                imageGallery.appendChild(imageCard);
+            });
+        }
+
+        // Filter gallery images
+        function filterGallery(category) {
+            // Update active filter button
+            document.querySelectorAll('.gallery-filter-btn').forEach(btn => {
+                btn.classList.remove('active', 'bg-blue-600');
+                btn.classList.add('bg-gray-600');
+            });
+
+            event.target.classList.add('active', 'bg-blue-600');
+            event.target.classList.remove('bg-gray-600');
+
+            // Filter images
+            let filteredImages = window.allGalleryImages || [];
+
+            if (category !== 'all') {
+                filteredImages = filteredImages.filter(image => image.category === category);
+            }
+
+            displayGalleryImages(filteredImages);
+        }
+
+        // Open image lightbox
+        function openImageLightbox(image, index) {
+            const lightbox = document.createElement('div');
+            lightbox.className = 'fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4';
+            lightbox.innerHTML = `
+                <div class="relative max-w-4xl max-h-full">
+                    <img src="${image.url}" alt="${image.title}" class="max-w-full max-h-full object-contain">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-6">
+                        <h3 class="text-white text-xl font-semibold">${image.title}</h3>
+                        <p class="text-gray-300 capitalize">${image.category}</p>
+                    </div>
+                    <button onclick="this.parentElement.parentElement.remove()" class="absolute top-4 right-4 text-white text-2xl hover:text-gray-300 transition-colors">
+                        ✕
+                    </button>
+                </div>
+            `;
+
+            // Close on background click
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) {
+                    lightbox.remove();
+                }
+            });
+
+            document.body.appendChild(lightbox);
+        }
+
+        // Make functions globally accessible
+        window.filterGallery = filterGallery;
+
+        // Initialize when DOM is loaded
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+
+    <!-- Footer -->
+    <footer class="card-dark border-t border-white/5 mt-20">
+        <div class="container mx-auto px-6 py-8">
+            <div class="text-center">
+                <div class="flex items-center justify-center mb-4">
+                    <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center mr-3">
+                        <span class="text-sm font-bold text-white">TS</span>
+                    </div>
+                    <span class="text-lg font-semibold gradient-text">TS EAMCET College Details</span>
+                </div>
+
+                <!-- Official Footer -->
+                <div class="bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-lg p-4">
+                    <div class="flex items-center justify-center mb-2">
+                        <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-bold mr-2">TS</span>
+                        <span class="text-sm font-semibold text-blue-300">TS EAMCET 2025</span>
+                    </div>
+                    <p class="text-xs text-gray-300 text-center leading-relaxed">
+                        © 2025 TS EAMCET College Information Platform. Data sourced from official TS EAMCET publications.<br>
+                        Built with modern web technologies • Optimized for performance • Mobile-friendly design
+                    </p>
+                    <div class="text-xs text-gray-400 text-center mt-4 space-y-2">
+                        <div class="bg-gray-800/50 rounded-lg p-3 border border-gray-700">
+                            <p class="font-semibold text-yellow-400 mb-2">📋 DATA OWNERSHIP & COPYRIGHT DISCLAIMER</p>
+                            <p class="mb-2">
+                                <strong>We are NOT the owners of this data.</strong> All data rights, ownership, and copyright belong exclusively to:
+                            </p>
+                            <ul class="text-left space-y-1 mb-2 max-w-md mx-auto">
+                                <li>• <a href="https://tgeapcet.nic.in/" target="_blank" class="text-blue-400 hover:text-blue-300 underline">Telangana State Council of Higher Education (TSCHE)</a></li>
+                                <li>• <a href="https://tgeapcet.nic.in/" target="_blank" class="text-blue-400 hover:text-blue-300 underline">TS EAMCET Official Website</a></li>
+                                <li>• Government of Telangana and affiliated educational authorities</li>
+                            </ul>
+                            <p class="text-orange-300 font-semibold text-xs">
+                                ⚠️ This website is an independent platform that aggregates and presents publicly available data for educational purposes only.
+                            </p>
+                            <p class="mt-2 text-xs">
+                                For official, complete, and legally binding information, always refer to the
+                                <a href="https://tgeapcet.nic.in/" target="_blank" class="text-blue-400 hover:text-blue-300 underline font-semibold">official TS EAMCET website</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Navigation Active State Manager -->
+    <script src="navigation-active-state.js"></script>
+</body>
+</html>

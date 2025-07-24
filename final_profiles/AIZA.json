@@ -1,0 +1,87 @@
+{
+  "collegeCode": "AIZA",
+  "name": "AIZZA COLLEGE OF ENGINEERING AND TECHNOLOGY",
+  "location": "MANCHERIAL",
+  "district": "MANCHERIAL",
+  "districtCode": "MNC",
+  "type": "Private College",
+  "affiliation": "N/A",
+  "established": "1999",
+  "autonomousStatus": "",
+  "nirfRank": "",
+  "naacGrade": "",
+  "nbaAccredited": "",
+  "fees": "₹45,000",
+  "about": "AIZZA COLLEGE OF ENGINEERING AND TECHNOLOGY, established in 1999, is a Private College institution located in MANCHERIAL, MANCHERIAL. The college is affiliated to KU. This is a MUSLIM minority institution. Admissions are conducted through TG EAPCET/EAMCET and TG ECET.",
+  "phone": " 040-24561118",
+  "website": "www.aizza.ac.in",
+  "eapcetAvailable": "Yes",
+  "ecetAvailable": "Yes",
+  "found": true,
+  "collegeName": "N/A",
+  "address": "MANCHERIAL",
+  "region": "OU",
+  "collegeType": "PVT",
+  "principal": "N/A",
+  "contact": "N/A",
+  "email": "aizzacet[at]yahoo.com",
+  "establishedYear": "N/A",
+  "courses": [
+    {
+      "branchCode": "1",
+      "branchName": "CSE",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING",
+      "intake": "21",
+      "fee": "45000"
+    },
+    {
+      "branchCode": "2",
+      "branchName": "EEE",
+      "courseName": "ELECTRICAL AND ELECTRONICS ENGINEERING",
+      "intake": "11",
+      "fee": "45000"
+    },
+    {
+      "branchCode": "3",
+      "branchName": "MIN",
+      "courseName": "MINING ENGINEERING",
+      "intake": "21",
+      "fee": "45000"
+    }
+  ],
+  "_mergeInfo": {
+    "source": "merged",
+    "primary": "2025_institute_profiles",
+    "secondary": "eduvale_profiles",
+    "mergedAt": "2025-07-23T17:34:14.774Z"
+  },
+  "campusPhotos": [],
+  "totalImages": 1,
+  "logo": "🎓",
+  "_finalData": {
+    "hasLogo": false,
+    "campusPhotoCount": 0,
+    "totalImages": 0,
+    "deepResearchedAt": "2025-07-23T19:01:39.637Z",
+    "method": "deep_research_scraping",
+    "sources": {
+      "logo": null,
+      "campusPhotos": {
+        "googleMaps": 0,
+        "googleImages": 0
+      }
+    }
+  },
+  "_quickGrab": {
+    "hasLogo": false,
+    "photoCount": 0,
+    "totalImages": 0,
+    "grabbedAt": "2025-07-23T19:04:28.701Z"
+  },
+  "_cleanup": {
+    "genericLogoAdded": false,
+    "campusPhotosRemoved": false,
+    "cleanedAt": "2025-07-23T19:18:47.547Z",
+    "method": "generic_logo_cleanup"
+  }
+}

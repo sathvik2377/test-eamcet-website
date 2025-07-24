@@ -1,0 +1,46 @@
+{
+  "collegeCode": "CASR",
+  "name": "CASTOR INSTITUTE OF TECHNOLOGY",
+  "collegeName": "N/A",
+  "address": "KANDI",
+  "district": "SANGAREDDY",
+  "region": "OU",
+  "collegeType": "UNIV",
+  "principal": "N/A",
+  "contact": "N/A",
+  "email": "caesrd2021[at]gmail.com",
+  "website": "www.pjtau.edu.in",
+  "affiliation": "N/A",
+  "establishedYear": "N/A",
+  "courses": [
+    {
+      "branchCode": "1",
+      "branchName": "AGR",
+      "courseName": "AGRICULTURAL ENGINEERING",
+      "intake": "33",
+      "fee": "80720"
+    }
+  ],
+  "campusPhotos": [],
+  "totalImages": 1,
+  "logo": "⚡",
+  "_finalData": {
+    "hasLogo": false,
+    "campusPhotoCount": 0,
+    "totalImages": 0,
+    "processedAt": "2025-07-23T18:52:57.729Z",
+    "method": "fast_final_scraping"
+  },
+  "_quickGrab": {
+    "hasLogo": false,
+    "photoCount": 0,
+    "totalImages": 0,
+    "grabbedAt": "2025-07-23T19:04:32.630Z"
+  },
+  "_cleanup": {
+    "genericLogoAdded": false,
+    "campusPhotosRemoved": false,
+    "cleanedAt": "2025-07-23T19:18:47.574Z",
+    "method": "generic_logo_cleanup"
+  }
+}

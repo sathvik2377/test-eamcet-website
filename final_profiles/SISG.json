@@ -1,0 +1,129 @@
+{
+  "collegeCode": "SISG",
+  "name": "SIDDHARTHA INSTITUTE OF TECHNOLOGY AND SCIENCES",
+  "location": "GHATKESAR",
+  "district": "MEDCHAL",
+  "districtCode": "MDL",
+  "type": "Autonomous",
+  "affiliation": "N/A",
+  "established": "2008",
+  "autonomousStatus": "Autonomous from 2022",
+  "nirfRank": "",
+  "naacGrade": "A+",
+  "nbaAccredited": "",
+  "fees": "₹80,000",
+  "about": "SIDDHARTHA INSTITUTE OF TECHNOLOGY AND SCIENCES, established in 2008, is a Autonomous institution located in GHATKESAR, MEDCHAL. The college is affiliated to JNTUH. It has been autonomous since 2022. The college holds NAAC A+ grade, demonstrating its commitment to quality education. Admissions are conducted through TG EAPCET/EAMCET and TG ECET.",
+  "phone": "8415255525",
+  "website": "www.siddartha.co.in",
+  "eapcetAvailable": "Yes",
+  "ecetAvailable": "Yes",
+  "found": true,
+  "collegeName": "N/A",
+  "address": "NARAPALLY",
+  "region": "OU",
+  "collegeType": "PVT",
+  "principal": "N/A",
+  "contact": "N/A",
+  "email": "principal.siddhartha[at]gmail.com",
+  "establishedYear": "N/A",
+  "courses": [
+    {
+      "branchCode": "1",
+      "branchName": "CIV",
+      "courseName": "CIVIL ENGINEERING",
+      "intake": "23",
+      "fee": "80000"
+    },
+    {
+      "branchCode": "2",
+      "branchName": "CSC",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (CYBER SECURITY)",
+      "intake": "23",
+      "fee": "80000"
+    },
+    {
+      "branchCode": "3",
+      "branchName": "CSD",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (DATA SCIENCE)",
+      "intake": "46",
+      "fee": "80000"
+    },
+    {
+      "branchCode": "4",
+      "branchName": "CSE",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING",
+      "intake": "186",
+      "fee": "80000"
+    },
+    {
+      "branchCode": "5",
+      "branchName": "CSM",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING)",
+      "intake": "138",
+      "fee": "80000"
+    },
+    {
+      "branchCode": "6",
+      "branchName": "CSO",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (IOT)",
+      "intake": "46",
+      "fee": "80000"
+    },
+    {
+      "branchCode": "7",
+      "branchName": "CSW",
+      "courseName": "COMPUTER ENGINEERING(SOFTWARE ENGINEERING)",
+      "intake": "47",
+      "fee": "80000"
+    },
+    {
+      "branchCode": "8",
+      "branchName": "ECE",
+      "courseName": "ELECTRONICS AND COMMUNICATION ENGINEERING",
+      "intake": "46",
+      "fee": "80000"
+    },
+    {
+      "branchCode": "9",
+      "branchName": "EEE",
+      "courseName": "ELECTRICAL AND ELECTRONICS ENGINEERING",
+      "intake": "23",
+      "fee": "80000"
+    },
+    {
+      "branchCode": "10",
+      "branchName": "MEC",
+      "courseName": "MECHANICAL ENGINEERING",
+      "intake": "23",
+      "fee": "80000"
+    }
+  ],
+  "_mergeInfo": {
+    "source": "merged",
+    "primary": "2025_institute_profiles",
+    "secondary": "eduvale_profiles",
+    "mergedAt": "2025-07-23T17:34:15.097Z"
+  },
+  "campusPhotos": [],
+  "totalImages": 1,
+  "logo": "🏆",
+  "_finalData": {
+    "hasLogo": false,
+    "campusPhotoCount": 0,
+    "totalImages": 0,
+    "processedAt": "2025-07-23T18:52:57.718Z",
+    "method": "fast_final_scraping"
+  },
+  "_quickGrab": {
+    "hasLogo": false,
+    "photoCount": 0,
+    "totalImages": 0,
+    "grabbedAt": "2025-07-23T19:04:31.641Z"
+  },
+  "_cleanup": {
+    "genericLogoAdded": false,
+    "campusPhotosRemoved": false,
+    "cleanedAt": "2025-07-23T19:18:47.703Z",
+    "method": "generic_logo_cleanup"
+  }
+}

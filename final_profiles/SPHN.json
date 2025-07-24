@@ -1,0 +1,94 @@
+{
+  "collegeCode": "SPHN",
+  "name": "SPHOORTHY ENGINEERING COLLEGE",
+  "location": "NADERGUL",
+  "district": "RANGAREDDY",
+  "districtCode": "RR",
+  "type": "Autonomous",
+  "affiliation": "N/A",
+  "established": "2004",
+  "autonomousStatus": "Autonomous from 2023",
+  "nirfRank": "",
+  "naacGrade": "A",
+  "nbaAccredited": "",
+  "fees": "₹95,000",
+  "about": "SPHOORTHY ENGINEERING COLLEGE, established in 2004, is a Autonomous institution located in NADERGUL, RANGAREDDY. The college is affiliated to JNTUH. It has been autonomous since 2023. The college holds NAAC A grade, demonstrating its commitment to quality education. Admissions are conducted through TG EAPCET/EAMCET and TG ECET.",
+  "phone": "9392119392",
+  "website": "www.sphoorthyengg.ac.in",
+  "eapcetAvailable": "Yes",
+  "ecetAvailable": "Yes",
+  "found": true,
+  "collegeName": "N/A",
+  "address": "NADARGUL V SAGAR ROAD",
+  "region": "OU",
+  "collegeType": "PVT",
+  "principal": "N/A",
+  "contact": "N/A",
+  "email": "sphoorthy_eng[at]yahoo.co.in",
+  "establishedYear": "N/A",
+  "courses": [
+    {
+      "branchCode": "1",
+      "branchName": "CIV",
+      "courseName": "CIVIL ENGINEERING",
+      "intake": "23",
+      "fee": "95000"
+    },
+    {
+      "branchCode": "2",
+      "branchName": "CSC",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (CYBER SECURITY)",
+      "intake": "47",
+      "fee": "95000"
+    },
+    {
+      "branchCode": "3",
+      "branchName": "CSD",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (DATA SCIENCE)",
+      "intake": "115",
+      "fee": "95000"
+    },
+    {
+      "branchCode": "4",
+      "branchName": "CSE",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING",
+      "intake": "185",
+      "fee": "95000"
+    },
+    {
+      "branchCode": "5",
+      "branchName": "CSM",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING)",
+      "intake": "184",
+      "fee": "95000"
+    }
+  ],
+  "_mergeInfo": {
+    "source": "merged",
+    "primary": "2025_institute_profiles",
+    "secondary": "eduvale_profiles",
+    "mergedAt": "2025-07-23T17:34:15.108Z"
+  },
+  "campusPhotos": [],
+  "totalImages": 1,
+  "logo": "⚡",
+  "_finalData": {
+    "hasLogo": false,
+    "campusPhotoCount": 0,
+    "totalImages": 0,
+    "processedAt": "2025-07-23T18:53:26.668Z",
+    "method": "fast_final_scraping"
+  },
+  "_quickGrab": {
+    "hasLogo": false,
+    "photoCount": 0,
+    "totalImages": 0,
+    "grabbedAt": "2025-07-23T19:04:51.864Z"
+  },
+  "_cleanup": {
+    "genericLogoAdded": false,
+    "campusPhotosRemoved": false,
+    "cleanedAt": "2025-07-23T19:18:47.707Z",
+    "method": "generic_logo_cleanup"
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "collegeCode": "STLW",
+  "name": "STANLEY COLLEGE OF ENGINEERING AND TECHNOLOGY FOR WOMEN",
+  "location": "ABIDS",
+  "district": "HYDERABAD",
+  "districtCode": "HYD",
+  "type": "Autonomous",
+  "affiliation": "N/A",
+  "established": "2008",
+  "autonomousStatus": "Autonomous from 2021",
+  "nirfRank": "",
+  "naacGrade": "A",
+  "nbaAccredited": "Yes",
+  "fees": "₹85,000",
+  "about": "STANLEY COLLEGE OF ENGINEERING AND TECHNOLOGY FOR WOMEN, established in 2008, is a Autonomous institution located in ABIDS, HYDERABAD. The college is affiliated to OU. It has been autonomous since 2021. The college holds NAAC A grade, NBA accreditation, demonstrating its commitment to quality education. Admissions are conducted through TG EAPCET/EAMCET and TG ECET.",
+  "phone": "04023234880",
+  "website": "www.stanley.edu.in",
+  "eapcetAvailable": "Yes",
+  "ecetAvailable": "Yes",
+  "found": true,
+  "collegeName": "N/A",
+  "address": "CHAPEL ROAD",
+  "region": "OU",
+  "collegeType": "PVT",
+  "principal": "N/A",
+  "contact": "N/A",
+  "email": "principal[at]stanley.edu.in",
+  "establishedYear": "N/A",
+  "courses": [
+    {
+      "branchCode": "1",
+      "branchName": "AID",
+      "courseName": "ARTIFICIAL INTELLIGENCE AND DATA SCIENCE",
+      "intake": "70",
+      "fee": "85000"
+    },
+    {
+      "branchCode": "2",
+      "branchName": "CME",
+      "courseName": "COMPUTER ENGINEERING",
+      "intake": "46",
+      "fee": "85000"
+    },
+    {
+      "branchCode": "3",
+      "branchName": "CSE",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING",
+      "intake": "231",
+      "fee": "85000"
+    },
+    {
+      "branchCode": "4",
+      "branchName": "CSM",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING)",
+      "intake": "47",
+      "fee": "85000"
+    },
+    {
+      "branchCode": "5",
+      "branchName": "ECE",
+      "courseName": "ELECTRONICS AND COMMUNICATION ENGINEERING",
+      "intake": "92",
+      "fee": "85000"
+    },
+    {
+      "branchCode": "6",
+      "branchName": "EEE",
+      "courseName": "ELECTRICAL AND ELECTRONICS ENGINEERING",
+      "intake": "23",
+      "fee": "85000"
+    },
+    {
+      "branchCode": "7",
+      "branchName": "INF",
+      "courseName": "INFORMATION TECHNOLOGY",
+      "intake": "92",
+      "fee": "85000"
+    }
+  ],
+  "_mergeInfo": {
+    "source": "merged",
+    "primary": "2025_institute_profiles",
+    "secondary": "eduvale_profiles",
+    "mergedAt": "2025-07-23T17:34:15.117Z"
+  },
+  "campusPhotos": [],
+  "totalImages": 1,
+  "logo": "🌟",
+  "_finalData": {
+    "hasLogo": false,
+    "campusPhotoCount": 0,
+    "totalImages": 0,
+    "processedAt": "2025-07-23T18:53:41.156Z",
+    "method": "fast_final_scraping"
+  },
+  "_quickGrab": {
+    "hasLogo": false,
+    "photoCount": 0,
+    "totalImages": 0,
+    "grabbedAt": "2025-07-23T19:05:01.534Z"
+  },
+  "_cleanup": {
+    "genericLogoAdded": false,
+    "campusPhotosRemoved": false,
+    "cleanedAt": "2025-07-23T19:18:47.712Z",
+    "method": "generic_logo_cleanup"
+  }
+}

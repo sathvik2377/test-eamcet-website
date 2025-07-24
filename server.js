@@ -79,6 +79,40 @@ console.log('📁 Data directory exists:', fs.existsSync(DATA_DIR));
 
 // API Routes
 
+// Get all college profiles from final_profiles directory
+app.get('/api/college-profiles', (req, res) => {
+    try {
+        console.log('📋 Getting college profiles...');
+        const profilesDir = path.join(__dirname, 'final_profiles');
+
+        if (!fs.existsSync(profilesDir)) {
+            console.log('❌ final_profiles directory does not exist:', profilesDir);
+            return res.json([]);
+        }
+
+        const profiles = [];
+        const jsonFiles = fs.readdirSync(profilesDir)
+            .filter(file => file.endsWith('.json'))
+            .sort();
+
+        for (const jsonFile of jsonFiles) {
+            try {
+                const filePath = path.join(profilesDir, jsonFile);
+                const profileData = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+                profiles.push(profileData);
+            } catch (fileError) {
+                console.warn(`⚠️ Could not load ${jsonFile}:`, fileError.message);
+            }
+        }
+
+        console.log(`✅ Loaded ${profiles.length} college profiles`);
+        res.json(profiles);
+    } catch (error) {
+        console.error('❌ Error reading college profiles:', error);
+        res.status(500).json({ error: 'Failed to read college profiles' });
+    }
+});
+
 // Get list of all colleges
 app.get('/api/colleges', (req, res) => {
     try {

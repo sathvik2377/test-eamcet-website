@@ -1,0 +1,101 @@
+{
+  "collegeCode": "JNMB",
+  "name": "JNTUH UNIVERSITY COLLEGE OF ENGINEERING MAHABUBABAD",
+  "location": "MAHABUBABAD",
+  "district": "MAHABUBABAD",
+  "districtCode": "MHB",
+  "type": "Government",
+  "affiliation": "N/A",
+  "established": "2023",
+  "autonomousStatus": "",
+  "nirfRank": "",
+  "naacGrade": "",
+  "nbaAccredited": "Yes",
+  "fees": "₹50,000",
+  "about": "JNTUH UNIVERSITY COLLEGE OF ENGINEERING MAHABUBABAD, established in 2023, is a Government institution located in MAHABUBABAD, MAHABUBABAD. The college is affiliated to JNTUH. The college holds NBA accreditation, demonstrating its commitment to quality education. Admissions are conducted through TG EAPCET/EAMCET and TG ECET.",
+  "phone": "9052875020",
+  "website": "N/A",
+  "eapcetAvailable": "Yes",
+  "ecetAvailable": "Yes",
+  "found": true,
+  "collegeName": "N/A",
+  "address": "OLD COLLECTORATE",
+  "region": "OU",
+  "collegeType": "UNIV",
+  "principal": "N/A",
+  "contact": "N/A",
+  "email": "ucemb[at]jntuh.ac.in",
+  "establishedYear": "N/A",
+  "courses": [
+    {
+      "branchCode": "1",
+      "branchName": "CSD",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (DATA SCIENCE)",
+      "intake": "66",
+      "fee": "50000"
+    },
+    {
+      "branchCode": "2",
+      "branchName": "CSE",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING",
+      "intake": "66",
+      "fee": "50000"
+    },
+    {
+      "branchCode": "3",
+      "branchName": "ECE",
+      "courseName": "ELECTRONICS AND COMMUNICATION ENGINEERING",
+      "intake": "66",
+      "fee": "50000"
+    },
+    {
+      "branchCode": "4",
+      "branchName": "EEE",
+      "courseName": "ELECTRICAL AND ELECTRONICS ENGINEERING",
+      "intake": "66",
+      "fee": "50000"
+    },
+    {
+      "branchCode": "5",
+      "branchName": "MEC",
+      "courseName": "MECHANICAL ENGINEERING",
+      "intake": "66",
+      "fee": "50000"
+    }
+  ],
+  "_mergeInfo": {
+    "source": "merged",
+    "primary": "2025_institute_profiles",
+    "secondary": "eduvale_profiles",
+    "mergedAt": "2025-07-23T17:34:14.902Z"
+  },
+  "campusPhotos": [],
+  "totalImages": 1,
+  "logo": "🔬",
+  "_finalData": {
+    "hasLogo": false,
+    "campusPhotoCount": 0,
+    "totalImages": 0,
+    "deepResearchedAt": "2025-07-23T19:00:03.505Z",
+    "method": "deep_research_scraping",
+    "sources": {
+      "logo": null,
+      "campusPhotos": {
+        "googleMaps": 0,
+        "googleImages": 0
+      }
+    }
+  },
+  "_quickGrab": {
+    "hasLogo": false,
+    "photoCount": 0,
+    "totalImages": 0,
+    "grabbedAt": "2025-07-23T19:05:10.958Z"
+  },
+  "_cleanup": {
+    "genericLogoAdded": false,
+    "campusPhotosRemoved": false,
+    "cleanedAt": "2025-07-23T19:18:47.627Z",
+    "method": "generic_logo_cleanup"
+  }
+}

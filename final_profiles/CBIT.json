@@ -1,0 +1,143 @@
+{
+  "collegeCode": "CBIT",
+  "name": "CHAITANYA BHARATHI INSTITUTE OF TECHNOLOGY",
+  "location": "GANDIPET",
+  "district": "RANGAREDDY",
+  "districtCode": "RR",
+  "type": "Autonomous",
+  "affiliation": "N/A",
+  "established": "1979",
+  "autonomousStatus": "Autonomous from 2013",
+  "nirfRank": "151",
+  "naacGrade": "A+",
+  "nbaAccredited": "Yes",
+  "fees": "₹165,000",
+  "about": "CHAITANYA BHARATHI INSTITUTE OF TECHNOLOGY, established in 1979, is a Autonomous institution located in GANDIPET, RANGAREDDY. The college is affiliated to OU. It has been autonomous since 2013. The college holds NAAC A++ grade, NBA accreditation, NIRF ranking of 151-200, demonstrating its commitment to quality education. Admissions are conducted through TG EAPCET/EAMCET and TG ECET.",
+  "phone": "040-24193276",
+  "website": "www.cbit.ac.in",
+  "eapcetAvailable": "Yes",
+  "ecetAvailable": "Yes",
+  "found": true,
+  "collegeName": "N/A",
+  "address": "CHAITANYA BHARATHI P",
+  "region": "OU",
+  "collegeType": "PVT",
+  "principal": "N/A",
+  "contact": "N/A",
+  "email": "president[at]cbit.ac.in",
+  "establishedYear": "N/A",
+  "courses": [
+    {
+      "branchCode": "1",
+      "branchName": "AID",
+      "courseName": "ARTIFICIAL INTELLIGENCE AND DATA SCIENCE",
+      "intake": "92",
+      "fee": "165000"
+    },
+    {
+      "branchCode": "2",
+      "branchName": "BIO",
+      "courseName": "BIO-TECHNOLOGY",
+      "intake": "46",
+      "fee": "165000"
+    },
+    {
+      "branchCode": "3",
+      "branchName": "CHE",
+      "courseName": "CHEMICAL ENGINEERING",
+      "intake": "46",
+      "fee": "165000"
+    },
+    {
+      "branchCode": "4",
+      "branchName": "CIC",
+      "courseName": "CSE (IoT AND CYBER SECURITY INCLUDING BLOCK CHAIN TECHNOLOGY)",
+      "intake": "47",
+      "fee": "165000"
+    },
+    {
+      "branchCode": "5",
+      "branchName": "CIV",
+      "courseName": "CIVIL ENGINEERING",
+      "intake": "92",
+      "fee": "165000"
+    },
+    {
+      "branchCode": "6",
+      "branchName": "CSE",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING",
+      "intake": "231",
+      "fee": "165000"
+    },
+    {
+      "branchCode": "7",
+      "branchName": "CSM",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING)",
+      "intake": "92",
+      "fee": "165000"
+    },
+    {
+      "branchCode": "8",
+      "branchName": "ECE",
+      "courseName": "ELECTRONICS AND COMMUNICATION ENGINEERING",
+      "intake": "139",
+      "fee": "165000"
+    },
+    {
+      "branchCode": "9",
+      "branchName": "EEE",
+      "courseName": "ELECTRICAL AND ELECTRONICS ENGINEERING",
+      "intake": "92",
+      "fee": "165000"
+    },
+    {
+      "branchCode": "10",
+      "branchName": "EVL",
+      "courseName": "ELECTRONICS ENGINEERING (VLSI DESIGN AND TECHNOLOGY)",
+      "intake": "47",
+      "fee": "165000"
+    },
+    {
+      "branchCode": "11",
+      "branchName": "INF",
+      "courseName": "INFORMATION TECHNOLOGY",
+      "intake": "138",
+      "fee": "165000"
+    },
+    {
+      "branchCode": "12",
+      "branchName": "MEC",
+      "courseName": "MECHANICAL ENGINEERING",
+      "intake": "93",
+      "fee": "165000"
+    }
+  ],
+  "_mergeInfo": {
+    "source": "merged",
+    "primary": "2025_institute_profiles",
+    "secondary": "eduvale_profiles",
+    "mergedAt": "2025-07-23T17:34:14.829Z"
+  },
+  "campusPhotos": [],
+  "totalImages": 1,
+  "logo": "🔧",
+  "_finalData": {
+    "hasLogo": false,
+    "campusPhotoCount": 0,
+    "totalImages": 0,
+    "processedAt": "2025-07-23T18:53:01.537Z",
+    "method": "fast_final_scraping"
+  },
+  "_quickGrab": {
+    "hasLogo": false,
+    "photoCount": 0,
+    "totalImages": 0,
+    "grabbedAt": "2025-07-23T19:04:35.390Z"
+  },
+  "_cleanup": {
+    "genericLogoAdded": false,
+    "campusPhotosRemoved": false,
+    "cleanedAt": "2025-07-23T19:18:47.574Z",
+    "method": "generic_logo_cleanup"
+  }
+}

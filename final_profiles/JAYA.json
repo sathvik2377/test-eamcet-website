@@ -1,0 +1,115 @@
+{
+  "collegeCode": "JAYA",
+  "name": "JAYAMUKHI INSTITUTE OF TECHNOLOGY AND SCIENCES",
+  "location": "NARSAMPET",
+  "district": "WARANGAL",
+  "districtCode": "WGL",
+  "type": "Autonomous",
+  "affiliation": "N/A",
+  "established": "2001",
+  "autonomousStatus": "",
+  "nirfRank": "",
+  "naacGrade": "A",
+  "nbaAccredited": "Yes",
+  "fees": "₹60,000",
+  "about": "JAYAMUKHI INSTITUTE OF TECHNOLOGY AND SCIENCES, established in 2001, is a Autonomous institution located in NARSAMPET, WARANGAL. The college is affiliated to JNTUH. The college holds NAAC A grade, NBA accreditation, demonstrating its commitment to quality education. Admissions are conducted through TG EAPCET/EAMCET and TG ECET.",
+  "phone": "8718208586",
+  "website": "www.jits.in",
+  "eapcetAvailable": "Yes",
+  "ecetAvailable": "Yes",
+  "found": true,
+  "collegeName": "N/A",
+  "address": "MOQDUMPURAM V",
+  "region": "OU",
+  "collegeType": "PVT",
+  "principal": "N/A",
+  "contact": "N/A",
+  "email": "jayamukhi[at]yahoo.co.in",
+  "establishedYear": "N/A",
+  "courses": [
+    {
+      "branchCode": "1",
+      "branchName": "CIV",
+      "courseName": "CIVIL ENGINEERING",
+      "intake": "23",
+      "fee": "60000"
+    },
+    {
+      "branchCode": "2",
+      "branchName": "CSD",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (DATA SCIENCE)",
+      "intake": "92",
+      "fee": "60000"
+    },
+    {
+      "branchCode": "3",
+      "branchName": "CSE",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING",
+      "intake": "139",
+      "fee": "60000"
+    },
+    {
+      "branchCode": "4",
+      "branchName": "CSI",
+      "courseName": "COMPUTER SCIENCE AND INFORMATION TECHNOLOGY",
+      "intake": "47",
+      "fee": "60000"
+    },
+    {
+      "branchCode": "5",
+      "branchName": "CSM",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING)",
+      "intake": "138",
+      "fee": "60000"
+    },
+    {
+      "branchCode": "6",
+      "branchName": "ECE",
+      "courseName": "ELECTRONICS AND COMMUNICATION ENGINEERING",
+      "intake": "93",
+      "fee": "60000"
+    },
+    {
+      "branchCode": "7",
+      "branchName": "EEE",
+      "courseName": "ELECTRICAL AND ELECTRONICS ENGINEERING",
+      "intake": "46",
+      "fee": "60000"
+    },
+    {
+      "branchCode": "8",
+      "branchName": "MEC",
+      "courseName": "MECHANICAL ENGINEERING",
+      "intake": "23",
+      "fee": "60000"
+    }
+  ],
+  "_mergeInfo": {
+    "source": "merged",
+    "primary": "2025_institute_profiles",
+    "secondary": "eduvale_profiles",
+    "mergedAt": "2025-07-23T17:34:14.892Z"
+  },
+  "campusPhotos": [],
+  "totalImages": 1,
+  "logo": "https://www.jits.in/img/jits-logo-yr.png",
+  "_finalData": {
+    "hasLogo": false,
+    "campusPhotoCount": 0,
+    "totalImages": 0,
+    "processedAt": "2025-07-23T18:53:35.761Z",
+    "method": "fast_final_scraping"
+  },
+  "_quickGrab": {
+    "hasLogo": false,
+    "photoCount": 0,
+    "totalImages": 0,
+    "grabbedAt": "2025-07-23T19:05:03.802Z"
+  },
+  "_logoScraping": {
+    "logoFound": true,
+    "logoUrl": "https://www.jits.in/img/jits-logo-yr.png",
+    "scrapedAt": "2025-07-23T19:16:07.183Z",
+    "method": "parallel_logo_scraping"
+  }
+}

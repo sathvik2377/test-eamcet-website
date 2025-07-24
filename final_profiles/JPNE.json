@@ -1,0 +1,108 @@
+{
+  "collegeCode": "JPNE",
+  "name": "JAYA PRAKASH NARAYAN COLLEGE OF ENGINEERING",
+  "location": "MAHABUBNAGAR",
+  "district": "MAHABUBNAGAR",
+  "districtCode": "MBN",
+  "type": "Autonomous",
+  "affiliation": "N/A",
+  "established": "1997",
+  "autonomousStatus": "",
+  "nirfRank": "",
+  "naacGrade": "B+",
+  "nbaAccredited": "",
+  "fees": "₹69,000",
+  "about": "JAYA PRAKASH NARAYAN COLLEGE OF ENGINEERING, established in 1997, is a Autonomous institution located in MAHABUBNAGAR, MAHABUBNAGAR. The college is affiliated to JNTUH. The college holds NAAC B++ grade, demonstrating its commitment to quality education. Admissions are conducted through TG EAPCET/EAMCET and TG ECET.",
+  "phone": "08542-275313",
+  "website": "www.jpnce.ac.in",
+  "eapcetAvailable": "Yes",
+  "ecetAvailable": "Yes",
+  "found": true,
+  "collegeName": "N/A",
+  "address": "DHARMAPUR",
+  "region": "OU",
+  "collegeType": "PVT",
+  "principal": "N/A",
+  "contact": "N/A",
+  "email": "principaljpne[at]gmail.com",
+  "establishedYear": "N/A",
+  "courses": [
+    {
+      "branchCode": "1",
+      "branchName": "AIM",
+      "courseName": "ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING",
+      "intake": "92",
+      "fee": "69000"
+    },
+    {
+      "branchCode": "2",
+      "branchName": "CIV",
+      "courseName": "CIVIL ENGINEERING",
+      "intake": "24",
+      "fee": "69000"
+    },
+    {
+      "branchCode": "3",
+      "branchName": "CSD",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (DATA SCIENCE)",
+      "intake": "46",
+      "fee": "69000"
+    },
+    {
+      "branchCode": "4",
+      "branchName": "CSE",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING",
+      "intake": "93",
+      "fee": "69000"
+    },
+    {
+      "branchCode": "5",
+      "branchName": "ECE",
+      "courseName": "ELECTRONICS AND COMMUNICATION ENGINEERING",
+      "intake": "46",
+      "fee": "69000"
+    },
+    {
+      "branchCode": "6",
+      "branchName": "EEE",
+      "courseName": "ELECTRICAL AND ELECTRONICS ENGINEERING",
+      "intake": "46",
+      "fee": "69000"
+    },
+    {
+      "branchCode": "7",
+      "branchName": "MEC",
+      "courseName": "MECHANICAL ENGINEERING",
+      "intake": "23",
+      "fee": "69000"
+    }
+  ],
+  "_mergeInfo": {
+    "source": "merged",
+    "primary": "2025_institute_profiles",
+    "secondary": "eduvale_profiles",
+    "mergedAt": "2025-07-23T17:34:14.969Z"
+  },
+  "campusPhotos": [],
+  "totalImages": 1,
+  "logo": "https://www.jpnce.ac.in/news/images/jpnce-logo1.png",
+  "_finalData": {
+    "hasLogo": false,
+    "campusPhotoCount": 0,
+    "totalImages": 0,
+    "processedAt": "2025-07-23T18:53:19.280Z",
+    "method": "fast_final_scraping"
+  },
+  "_quickGrab": {
+    "hasLogo": false,
+    "photoCount": 0,
+    "totalImages": 0,
+    "grabbedAt": "2025-07-23T19:04:40.231Z"
+  },
+  "_logoScraping": {
+    "logoFound": true,
+    "logoUrl": "https://www.jpnce.ac.in/news/images/jpnce-logo1.png",
+    "scrapedAt": "2025-07-23T19:15:40.928Z",
+    "method": "parallel_logo_scraping"
+  }
+}

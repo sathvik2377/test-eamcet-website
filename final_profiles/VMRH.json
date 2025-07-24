@@ -1,0 +1,73 @@
+{
+  "collegeCode": "VMRH",
+  "name": "VMR PRADEEP KUMAR INST OF ENGG & TECH",
+  "location": "RAMPUR",
+  "district": "HANAMKONDA",
+  "districtCode": "HNK",
+  "type": "Private College",
+  "affiliation": "N/A",
+  "established": "",
+  "autonomousStatus": "",
+  "nirfRank": "",
+  "naacGrade": "",
+  "nbaAccredited": "",
+  "fees": "₹45,000",
+  "about": "VMR PRADEEP KUMAR INST OF ENGG & TECH is a Private College institution located in RAMPUR, HANAMKONDA. The college is affiliated to KU. Admissions are conducted through TG EAPCET/EAMCET and TG ECET.",
+  "phone": "9966686659",
+  "website": "www.vmrpolytechnic.com",
+  "eapcetAvailable": "Yes",
+  "ecetAvailable": "Yes",
+  "found": true,
+  "collegeName": "N/A",
+  "address": "H No 57-5-121",
+  "region": "OU",
+  "collegeType": "PVT",
+  "principal": "N/A",
+  "contact": "N/A",
+  "email": "vmrpoly[at]yahoo.com",
+  "establishedYear": "N/A",
+  "courses": [
+    {
+      "branchCode": "1",
+      "branchName": "CSE",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING",
+      "intake": "46",
+      "fee": "45000"
+    },
+    {
+      "branchCode": "2",
+      "branchName": "ECE",
+      "courseName": "ELECTRONICS AND COMMUNICATION ENGINEERING",
+      "intake": "46",
+      "fee": "45000"
+    }
+  ],
+  "_mergeInfo": {
+    "source": "merged",
+    "primary": "2025_institute_profiles",
+    "secondary": "eduvale_profiles",
+    "mergedAt": "2025-07-23T17:34:15.160Z"
+  },
+  "campusPhotos": [],
+  "totalImages": 1,
+  "logo": "https://www.vmrpolytechnic.com/images/logo.png",
+  "_finalData": {
+    "hasLogo": false,
+    "campusPhotoCount": 0,
+    "totalImages": 0,
+    "processedAt": "2025-07-23T18:53:41.770Z",
+    "method": "fast_final_scraping"
+  },
+  "_quickGrab": {
+    "hasLogo": false,
+    "photoCount": 0,
+    "totalImages": 0,
+    "grabbedAt": "2025-07-23T19:05:05.014Z"
+  },
+  "_logoScraping": {
+    "logoFound": true,
+    "logoUrl": "https://www.vmrpolytechnic.com/images/logo.png",
+    "scrapedAt": "2025-07-23T19:16:51.289Z",
+    "method": "parallel_logo_scraping"
+  }
+}

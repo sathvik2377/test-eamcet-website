@@ -1,0 +1,53 @@
+{
+  "collegeCode": "AZAD",
+  "name": "AZAD COLLEGE OF ENGINEERING AND TECHNOLOGY",
+  "collegeName": "N/A",
+  "address": "PEDDAMANGALARAM V",
+  "district": "RANGAREDDY",
+  "region": "OU",
+  "collegeType": "PVT",
+  "principal": "N/A",
+  "contact": "N/A",
+  "email": "aescollege[at]yahoo.co.in",
+  "website": "N/A",
+  "affiliation": "N/A",
+  "establishedYear": "N/A",
+  "courses": [
+    {
+      "branchCode": "1",
+      "branchName": "AID",
+      "courseName": "ARTIFICIAL INTELLIGENCE AND DATA SCIENCE",
+      "intake": "38",
+      "fee": "35000"
+    },
+    {
+      "branchCode": "2",
+      "branchName": "CSE",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING",
+      "intake": "38",
+      "fee": "35000"
+    }
+  ],
+  "campusPhotos": [],
+  "totalImages": 1,
+  "logo": "🌟",
+  "_finalData": {
+    "hasLogo": false,
+    "campusPhotoCount": 0,
+    "totalImages": 0,
+    "processedAt": "2025-07-23T18:53:42.629Z",
+    "method": "fast_final_scraping"
+  },
+  "_quickGrab": {
+    "hasLogo": false,
+    "photoCount": 0,
+    "totalImages": 0,
+    "grabbedAt": "2025-07-23T19:04:51.557Z"
+  },
+  "_cleanup": {
+    "genericLogoAdded": false,
+    "campusPhotosRemoved": false,
+    "cleanedAt": "2025-07-23T19:18:47.561Z",
+    "method": "generic_logo_cleanup"
+  }
+}

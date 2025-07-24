@@ -1,0 +1,101 @@
+{
+  "collegeCode": "BOMA",
+  "name": "BOMMA INSTITUTE OF TECHNOLOGY AND SCIENCE",
+  "location": "KHAMMAM",
+  "district": "KHAMMAM",
+  "districtCode": "KHM",
+  "type": "Private College",
+  "affiliation": "N/A",
+  "established": "2006",
+  "autonomousStatus": "",
+  "nirfRank": "",
+  "naacGrade": "",
+  "nbaAccredited": "",
+  "fees": "₹63,000",
+  "about": "BOMMA INSTITUTE OF TECHNOLOGY AND SCIENCE, established in 2006, is a Private College institution located in KHAMMAM, KHAMMAM. The college is affiliated to JNTUH. Admissions are conducted through TG EAPCET/EAMCET and TG ECET.",
+  "phone": "08742-323887",
+  "website": "www.bomma.ac.in",
+  "eapcetAvailable": "Yes",
+  "ecetAvailable": "Yes",
+  "found": true,
+  "collegeName": "N/A",
+  "address": "BEHIND EENADU OFFICE",
+  "region": "OU",
+  "collegeType": "PVT",
+  "principal": "N/A",
+  "contact": "N/A",
+  "email": "bomma.principal[at]gmail.com",
+  "establishedYear": "N/A",
+  "courses": [
+    {
+      "branchCode": "1",
+      "branchName": "CIV",
+      "courseName": "CIVIL ENGINEERING",
+      "intake": "23",
+      "fee": "63000"
+    },
+    {
+      "branchCode": "2",
+      "branchName": "CSE",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING",
+      "intake": "92",
+      "fee": "63000"
+    },
+    {
+      "branchCode": "3",
+      "branchName": "CSM",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING)",
+      "intake": "47",
+      "fee": "63000"
+    },
+    {
+      "branchCode": "4",
+      "branchName": "ECE",
+      "courseName": "ELECTRONICS AND COMMUNICATION ENGINEERING",
+      "intake": "46",
+      "fee": "63000"
+    },
+    {
+      "branchCode": "5",
+      "branchName": "EEE",
+      "courseName": "ELECTRICAL AND ELECTRONICS ENGINEERING",
+      "intake": "46",
+      "fee": "63000"
+    },
+    {
+      "branchCode": "6",
+      "branchName": "MEC",
+      "courseName": "MECHANICAL ENGINEERING",
+      "intake": "23",
+      "fee": "63000"
+    }
+  ],
+  "_mergeInfo": {
+    "source": "merged",
+    "primary": "2025_institute_profiles",
+    "secondary": "eduvale_profiles",
+    "mergedAt": "2025-07-23T17:34:14.813Z"
+  },
+  "campusPhotos": [],
+  "totalImages": 1,
+  "logo": "🏛️",
+  "_finalData": {
+    "hasLogo": false,
+    "campusPhotoCount": 0,
+    "totalImages": 0,
+    "processedAt": "2025-07-23T18:53:57.130Z",
+    "method": "fast_final_scraping"
+  },
+  "_quickGrab": {
+    "hasLogo": false,
+    "photoCount": 0,
+    "totalImages": 0,
+    "grabbedAt": "2025-07-23T19:04:58.917Z"
+  },
+  "_cleanup": {
+    "genericLogoAdded": false,
+    "campusPhotosRemoved": false,
+    "cleanedAt": "2025-07-23T19:18:47.564Z",
+    "method": "generic_logo_cleanup"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "collegeCode": "CHTS",
+  "name": "SREE CHAITANYA INSTITUTE OF TECHNOLOGY SCIENCES",
+  "location": "KARIMNAGAR",
+  "district": "KARIMNAGAR",
+  "districtCode": "KRM",
+  "type": "Private College",
+  "affiliation": "N/A",
+  "established": "2008",
+  "autonomousStatus": "",
+  "nirfRank": "",
+  "naacGrade": "B+",
+  "nbaAccredited": "",
+  "fees": "₹60,000",
+  "about": "SREE CHAITANYA INSTITUTE OF TECHNOLOGY SCIENCES, established in 2008, is a Private College institution located in KARIMNAGAR, KARIMNAGAR. The college is affiliated to JNTUH. The college holds NAAC B++ grade, demonstrating its commitment to quality education. Admissions are conducted through TG EAPCET/EAMCET and TG ECET.",
+  "phone": "0878-2223677",
+  "website": "www.scit.ac.in",
+  "eapcetAvailable": "Yes",
+  "ecetAvailable": "Yes",
+  "found": true,
+  "collegeName": "N/A",
+  "address": "LMD COLONY",
+  "region": "OU",
+  "collegeType": "PVT",
+  "principal": "N/A",
+  "contact": "N/A",
+  "email": "scits.kar[at]gmail.com",
+  "establishedYear": "N/A",
+  "courses": [
+    {
+      "branchCode": "1",
+      "branchName": "CSE",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING",
+      "intake": "138",
+      "fee": "60000"
+    },
+    {
+      "branchCode": "2",
+      "branchName": "CSM",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING)",
+      "intake": "93",
+      "fee": "60000"
+    },
+    {
+      "branchCode": "3",
+      "branchName": "ECE",
+      "courseName": "ELECTRONICS AND COMMUNICATION ENGINEERING",
+      "intake": "46",
+      "fee": "60000"
+    },
+    {
+      "branchCode": "4",
+      "branchName": "EEE",
+      "courseName": "ELECTRICAL AND ELECTRONICS ENGINEERING",
+      "intake": "46",
+      "fee": "60000"
+    }
+  ],
+  "_mergeInfo": {
+    "source": "merged",
+    "primary": "2025_institute_profiles",
+    "secondary": "eduvale_profiles",
+    "mergedAt": "2025-07-23T17:34:14.836Z"
+  },
+  "campusPhotos": [],
+  "totalImages": 1,
+  "logo": "🎓",
+  "_finalData": {
+    "hasLogo": false,
+    "campusPhotoCount": 0,
+    "totalImages": 0,
+    "processedAt": "2025-07-23T18:53:19.292Z",
+    "method": "fast_final_scraping"
+  },
+  "_quickGrab": {
+    "hasLogo": false,
+    "photoCount": 0,
+    "totalImages": 0,
+    "grabbedAt": "2025-07-23T19:04:48.301Z"
+  },
+  "_cleanup": {
+    "genericLogoAdded": false,
+    "campusPhotosRemoved": false,
+    "cleanedAt": "2025-07-23T19:18:47.581Z",
+    "method": "generic_logo_cleanup"
+  }
+}

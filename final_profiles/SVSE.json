@@ -1,0 +1,94 @@
+{
+  "collegeCode": "SVSE",
+  "name": "SVS GROUP OF INSTITUTIONS - SVS INSTITUTE OF TECHNOLOGY",
+  "location": "HANAMKONDA",
+  "district": "HANAMKONDA",
+  "districtCode": "HNK",
+  "type": "Autonomous",
+  "affiliation": "N/A",
+  "established": "1986",
+  "autonomousStatus": "",
+  "nirfRank": "",
+  "naacGrade": "A",
+  "nbaAccredited": "",
+  "fees": "₹65,000",
+  "about": "SVS GROUP OF INSTITUTIONS - SVS INSTITUTE OF TECHNOLOGY, established in 1986, is a Autonomous institution located in HANAMKONDA, HANAMKONDA. The college is affiliated to JNTUH. The college holds NAAC A grade, demonstrating its commitment to quality education. Admissions are conducted through TG EAPCET/EAMCET and TG ECET.",
+  "phone": "0870-2453900",
+  "website": "www.svsit.ac.in",
+  "eapcetAvailable": "Yes",
+  "ecetAvailable": "Yes",
+  "found": true,
+  "collegeName": "N/A",
+  "address": "BHEEMARAM V",
+  "region": "OU",
+  "collegeType": "PVT",
+  "principal": "N/A",
+  "contact": "N/A",
+  "email": "rjuhit[at]yahoo.com",
+  "establishedYear": "N/A",
+  "courses": [
+    {
+      "branchCode": "1",
+      "branchName": "CSD",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (DATA SCIENCE)",
+      "intake": "46",
+      "fee": "65000"
+    },
+    {
+      "branchCode": "2",
+      "branchName": "CSE",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING",
+      "intake": "92",
+      "fee": "65000"
+    },
+    {
+      "branchCode": "3",
+      "branchName": "CSM",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING)",
+      "intake": "93",
+      "fee": "65000"
+    },
+    {
+      "branchCode": "4",
+      "branchName": "ECE",
+      "courseName": "ELECTRONICS AND COMMUNICATION ENGINEERING",
+      "intake": "93",
+      "fee": "65000"
+    },
+    {
+      "branchCode": "5",
+      "branchName": "EEE",
+      "courseName": "ELECTRICAL AND ELECTRONICS ENGINEERING",
+      "intake": "23",
+      "fee": "65000"
+    }
+  ],
+  "_mergeInfo": {
+    "source": "merged",
+    "primary": "2025_institute_profiles",
+    "secondary": "eduvale_profiles",
+    "mergedAt": "2025-07-23T17:34:15.122Z"
+  },
+  "campusPhotos": [],
+  "totalImages": 1,
+  "logo": "🏫",
+  "_finalData": {
+    "hasLogo": false,
+    "campusPhotoCount": 0,
+    "totalImages": 0,
+    "processedAt": "2025-07-23T18:54:03.650Z",
+    "method": "fast_final_scraping"
+  },
+  "_quickGrab": {
+    "hasLogo": false,
+    "photoCount": 0,
+    "totalImages": 0,
+    "grabbedAt": "2025-07-23T19:05:10.555Z"
+  },
+  "_cleanup": {
+    "genericLogoAdded": false,
+    "campusPhotosRemoved": false,
+    "cleanedAt": "2025-07-23T19:18:47.714Z",
+    "method": "generic_logo_cleanup"
+  }
+}

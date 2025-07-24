@@ -1,0 +1,80 @@
+{
+  "collegeCode": "KSGI",
+  "name": "GOVERNMENT ENGINEERING COLLEGE KOSGI",
+  "location": "KOSGI",
+  "district": "NARAYANPET",
+  "districtCode": "NPT",
+  "type": "Government",
+  "affiliation": "N/A",
+  "established": "2024",
+  "autonomousStatus": "",
+  "nirfRank": "",
+  "naacGrade": "",
+  "nbaAccredited": "",
+  "fees": "₹50,000",
+  "about": "GOVERNMENT ENGINEERING COLLEGE KOSGI, established in 2024, is a Government institution located in KOSGI, NARAYANPET. The college is affiliated to JNTUH. Admissions are conducted through TG EAPCET/EAMCET.",
+  "phone": "8096907524",
+  "website": "gptksgi.dte.telangana.gov.in",
+  "eapcetAvailable": "Yes",
+  "ecetAvailable": "Yes",
+  "found": true,
+  "collegeName": "N/A",
+  "address": "DOULTHABAD ROAD",
+  "region": "OU",
+  "collegeType": "GOV",
+  "principal": "N/A",
+  "contact": "N/A",
+  "email": "gec.ksgi[at]gmail.com",
+  "establishedYear": "N/A",
+  "courses": [
+    {
+      "branchCode": "1",
+      "branchName": "CSD",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (DATA SCIENCE)",
+      "intake": "66",
+      "fee": "50000"
+    },
+    {
+      "branchCode": "2",
+      "branchName": "CSE",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING",
+      "intake": "66",
+      "fee": "50000"
+    },
+    {
+      "branchCode": "3",
+      "branchName": "CSM",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING)",
+      "intake": "66",
+      "fee": "50000"
+    }
+  ],
+  "_mergeInfo": {
+    "source": "merged",
+    "primary": "2025_institute_profiles",
+    "secondary": "eduvale_profiles",
+    "mergedAt": "2025-07-23T17:34:15.013Z"
+  },
+  "campusPhotos": [],
+  "totalImages": 1,
+  "logo": "💡",
+  "_finalData": {
+    "hasLogo": false,
+    "campusPhotoCount": 0,
+    "totalImages": 0,
+    "processedAt": "2025-07-23T18:54:22.612Z",
+    "method": "fast_final_scraping"
+  },
+  "_quickGrab": {
+    "hasLogo": false,
+    "photoCount": 0,
+    "totalImages": 0,
+    "grabbedAt": "2025-07-23T19:05:14.224Z"
+  },
+  "_cleanup": {
+    "genericLogoAdded": false,
+    "campusPhotosRemoved": false,
+    "cleanedAt": "2025-07-23T19:18:47.650Z",
+    "method": "generic_logo_cleanup"
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "collegeCode": "DARE",
+  "name": "DARIPALLY ANANTHA RAMULU COLLEGE OF ENGINEERING AND TECHNOLOGY",
+  "location": "KHAMMAM",
+  "district": "KHAMMAM",
+  "districtCode": "KHM",
+  "type": "Private College",
+  "affiliation": "N/A",
+  "established": "2007",
+  "autonomousStatus": "",
+  "nirfRank": "",
+  "naacGrade": "",
+  "nbaAccredited": "",
+  "fees": "₹50,000",
+  "about": "DARIPALLY ANANTHA RAMULU COLLEGE OF ENGINEERING AND TECHNOLOGY, established in 2007, is a Private College institution located in KHAMMAM, KHAMMAM. The college is affiliated to JNTUH. Admissions are conducted through TG EAPCET/EAMCET.",
+  "phone": "9391211166",
+  "website": "www.darenggcollege.ac.in",
+  "eapcetAvailable": "Yes",
+  "ecetAvailable": "Yes",
+  "found": true,
+  "collegeName": "N/A",
+  "address": "NEAR NAIDUPETA BYPASS ROAD",
+  "region": "OU",
+  "collegeType": "PVT",
+  "principal": "N/A",
+  "contact": "N/A",
+  "email": "principal[at]dare.ac.in",
+  "establishedYear": "N/A",
+  "courses": [
+    {
+      "branchCode": "1",
+      "branchName": "CSE",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING",
+      "intake": "23",
+      "fee": "50000"
+    },
+    {
+      "branchCode": "2",
+      "branchName": "ECE",
+      "courseName": "ELECTRONICS AND COMMUNICATION ENGINEERING",
+      "intake": "23",
+      "fee": "50000"
+    }
+  ],
+  "_mergeInfo": {
+    "source": "merged",
+    "primary": "2025_institute_profiles",
+    "secondary": "eduvale_profiles",
+    "mergedAt": "2025-07-23T17:34:14.851Z"
+  },
+  "campusPhotos": [],
+  "totalImages": 1,
+  "logo": "🏆",
+  "_finalData": {
+    "hasLogo": false,
+    "campusPhotoCount": 0,
+    "totalImages": 0,
+    "deepResearchedAt": "2025-07-23T19:02:59.720Z",
+    "method": "deep_research_scraping",
+    "sources": {
+      "logo": null,
+      "campusPhotos": {
+        "googleMaps": 0,
+        "googleImages": 0
+      }
+    }
+  },
+  "_quickGrab": {
+    "hasLogo": false,
+    "photoCount": 0,
+    "totalImages": 0,
+    "grabbedAt": "2025-07-23T19:04:57.779Z"
+  },
+  "_cleanup": {
+    "genericLogoAdded": false,
+    "campusPhotosRemoved": false,
+    "cleanedAt": "2025-07-23T19:18:47.600Z",
+    "method": "generic_logo_cleanup"
+  }
+}

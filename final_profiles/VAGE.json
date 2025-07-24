@@ -1,0 +1,108 @@
+{
+  "collegeCode": "VAGE",
+  "name": "VAAGDEVI COLLEGE OF ENGINEERING",
+  "location": "WARANGAL",
+  "district": "WARANGAL",
+  "districtCode": "WGL",
+  "type": "Autonomous",
+  "affiliation": "N/A",
+  "established": "1998",
+  "autonomousStatus": "Autonomous from 2014",
+  "nirfRank": "",
+  "naacGrade": "A",
+  "nbaAccredited": "Yes",
+  "fees": "₹105,000",
+  "about": "VAAGDEVI COLLEGE OF ENGINEERING, established in 1998, is a Autonomous institution located in WARANGAL, WARANGAL. The college is affiliated to JNTUH. It has been autonomous since 2014. The college holds NAAC A grade, NBA accreditation, demonstrating its commitment to quality education. Admissions are conducted through TG EAPCET/EAMCET and TG ECET.",
+  "phone": "9985444186",
+  "website": "www.vaagdevi.edu.in",
+  "eapcetAvailable": "Yes",
+  "ecetAvailable": "Yes",
+  "found": true,
+  "collegeName": "N/A",
+  "address": "BOLLIKUNTA",
+  "region": "OU",
+  "collegeType": "PVT",
+  "principal": "N/A",
+  "contact": "N/A",
+  "email": "admissions[at]vaagdevi.edu.in",
+  "establishedYear": "N/A",
+  "courses": [
+    {
+      "branchCode": "1",
+      "branchName": "CIV",
+      "courseName": "CIVIL ENGINEERING",
+      "intake": "92",
+      "fee": "105000"
+    },
+    {
+      "branchCode": "2",
+      "branchName": "CSD",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (DATA SCIENCE)",
+      "intake": "139",
+      "fee": "105000"
+    },
+    {
+      "branchCode": "3",
+      "branchName": "CSE",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING",
+      "intake": "231",
+      "fee": "105000"
+    },
+    {
+      "branchCode": "4",
+      "branchName": "CSM",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING)",
+      "intake": "185",
+      "fee": "105000"
+    },
+    {
+      "branchCode": "5",
+      "branchName": "ECE",
+      "courseName": "ELECTRONICS AND COMMUNICATION ENGINEERING",
+      "intake": "92",
+      "fee": "105000"
+    },
+    {
+      "branchCode": "6",
+      "branchName": "EEE",
+      "courseName": "ELECTRICAL AND ELECTRONICS ENGINEERING",
+      "intake": "92",
+      "fee": "105000"
+    },
+    {
+      "branchCode": "7",
+      "branchName": "MEC",
+      "courseName": "MECHANICAL ENGINEERING",
+      "intake": "47",
+      "fee": "105000"
+    }
+  ],
+  "_mergeInfo": {
+    "source": "merged",
+    "primary": "2025_institute_profiles",
+    "secondary": "eduvale_profiles",
+    "mergedAt": "2025-07-23T17:34:15.134Z"
+  },
+  "campusPhotos": [],
+  "totalImages": 1,
+  "logo": "💡",
+  "_finalData": {
+    "hasLogo": false,
+    "campusPhotoCount": 0,
+    "totalImages": 0,
+    "processedAt": "2025-07-23T18:52:59.900Z",
+    "method": "fast_final_scraping"
+  },
+  "_quickGrab": {
+    "hasLogo": false,
+    "photoCount": 0,
+    "totalImages": 0,
+    "grabbedAt": "2025-07-23T19:04:32.884Z"
+  },
+  "_cleanup": {
+    "genericLogoAdded": false,
+    "campusPhotosRemoved": false,
+    "cleanedAt": "2025-07-23T19:18:47.718Z",
+    "method": "generic_logo_cleanup"
+  }
+}

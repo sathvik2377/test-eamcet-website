@@ -1,0 +1,67 @@
+{
+  "collegeCode": "SUCE",
+  "name": "SREE CHAITANYA COLLEGE OF ENGINEERING",
+  "collegeName": "N/A",
+  "address": "at Government Polytechnic College Husnabad (Temporary)",
+  "district": "SIDDIPET",
+  "region": "OU",
+  "collegeType": "UNIV",
+  "principal": "N/A",
+  "contact": "N/A",
+  "email": "registrarsatavahana[at]gmail.com",
+  "website": "N/A",
+  "affiliation": "N/A",
+  "establishedYear": "N/A",
+  "courses": [
+    {
+      "branchCode": "1",
+      "branchName": "CSA",
+      "courseName": "COMPUTER SCIENCE AND ENGG (ARTIFICIAL INTELLIGENCE)",
+      "intake": "66",
+      "fee": "50000"
+    },
+    {
+      "branchCode": "2",
+      "branchName": "CSE",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING",
+      "intake": "66",
+      "fee": "50000"
+    },
+    {
+      "branchCode": "3",
+      "branchName": "ECE",
+      "courseName": "ELECTRONICS AND COMMUNICATION ENGINEERING",
+      "intake": "66",
+      "fee": "50000"
+    },
+    {
+      "branchCode": "4",
+      "branchName": "INF",
+      "courseName": "INFORMATION TECHNOLOGY",
+      "intake": "66",
+      "fee": "50000"
+    }
+  ],
+  "campusPhotos": [],
+  "totalImages": 1,
+  "logo": "🌟",
+  "_finalData": {
+    "hasLogo": false,
+    "campusPhotoCount": 0,
+    "totalImages": 0,
+    "processedAt": "2025-07-23T18:53:44.653Z",
+    "method": "fast_final_scraping"
+  },
+  "_quickGrab": {
+    "hasLogo": false,
+    "photoCount": 0,
+    "totalImages": 0,
+    "grabbedAt": "2025-07-23T19:05:03.908Z"
+  },
+  "_cleanup": {
+    "genericLogoAdded": false,
+    "campusPhotosRemoved": false,
+    "cleanedAt": "2025-07-23T19:18:47.712Z",
+    "method": "generic_logo_cleanup"
+  }
+}

@@ -1,0 +1,2076 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Info - TS EAMCET 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 3s ease-in-out infinite',
+                        'shimmer': 'shimmer 2s linear infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' }
+                        },
+                        shimmer: {
+                            '0%': { backgroundPosition: '-200% 0' },
+                            '100%': { backgroundPosition: '200% 0' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* College Info Theme - Blue/Cyan variant of Cosmic Gateway */
+        .modern-bg {
+            background: linear-gradient(135deg, #0A1128 0%, #080810 25%, #0A1128 50%, #080810 75%, #0A1128 100%);
+            position: relative;
+            min-height: 100vh;
+        }
+
+        .modern-bg::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(circle at 20% 80%, rgba(0, 150, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(0, 200, 255, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(0, 180, 255, 0.05) 0%, transparent 50%);
+            opacity: 0.6;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* Card styles with blue theme */
+        .card {
+            background: rgba(10, 17, 40, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid #303040;
+            border-radius: 25px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-dark {
+            background: rgba(8, 8, 16, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid #303040;
+            border-radius: 25px;
+        }
+
+        /* Blue gradient text */
+        .gradient-text {
+            background: linear-gradient(135deg, #0096FF 0%, #00C8FF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .gradient-text-accent {
+            background: linear-gradient(135deg, #00C8FF 0%, #0096FF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Custom scrollbar */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Modern button styles with blue theme */
+        .btn-primary {
+            background: linear-gradient(135deg, #0096FF 0%, #00C8FF 100%);
+            border: none;
+            border-radius: 12px;
+            color: white;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 15px rgba(0, 150, 255, 0.3);
+        }
+
+        /* Search input modern glassy style */
+        .search-input {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            transition: all 0.3s ease;
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-input:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: rgba(0, 150, 255, 0.3);
+            box-shadow: 0 6px 20px rgba(0, 150, 255, 0.15);
+        }
+
+        .search-input:focus {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(0, 150, 255, 0.5);
+            box-shadow: 0 0 0 3px rgba(0, 150, 255, 0.1);
+            outline: none;
+        }
+
+        .search-input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Modern dropdown styling with glassy theme */
+        .search-input option {
+            background: rgba(15, 15, 25, 0.95) !important;
+            color: white !important;
+            border: none;
+            padding: 8px 12px;
+        }
+
+        .search-input select {
+            color: white !important;
+            background: rgba(255, 255, 255, 0.08) !important;
+            backdrop-filter: blur(20px) !important;
+            border: 1px solid rgba(255, 255, 255, 0.12) !important;
+            border-radius: 12px !important;
+        }
+
+        /* Enhanced select elements with glassy modern styling */
+        select.search-input {
+            color: white !important;
+            background: rgba(255, 255, 255, 0.08) !important;
+            backdrop-filter: blur(20px) !important;
+            border: 1px solid rgba(255, 255, 255, 0.12) !important;
+            border-radius: 12px !important;
+            transition: all 0.3s ease !important;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+        }
+
+        select.search-input:hover {
+            background: rgba(255, 255, 255, 0.12) !important;
+            border-color: rgba(0, 150, 255, 0.3) !important;
+            box-shadow: 0 6px 20px rgba(0, 150, 255, 0.15) !important;
+        }
+
+        select.search-input:focus {
+            background: rgba(255, 255, 255, 0.15) !important;
+            border-color: rgba(0, 150, 255, 0.5) !important;
+            box-shadow: 0 0 0 3px rgba(0, 150, 255, 0.1) !important;
+            outline: none !important;
+        }
+
+        select.search-input option {
+            background: rgba(15, 15, 25, 0.98) !important;
+            color: white !important;
+            padding: 10px 15px !important;
+            border: none !important;
+            backdrop-filter: blur(20px) !important;
+        }
+
+        select.search-input option:hover {
+            background: rgba(0, 150, 255, 0.2) !important;
+            color: white !important;
+        }
+
+        select.search-input option:checked {
+            background: rgba(0, 150, 255, 0.3) !important;
+            color: white !important;
+        }
+
+        /* Fix for webkit browsers dropdown arrow */
+        select.search-input {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            background-size: 16px;
+            padding-right: 40px !important;
+            cursor: pointer;
+        }
+
+        /* Dropdown animation effects */
+        select.search-input:active {
+            transform: scale(0.98);
+        }
+
+        /* Loading state for dropdowns */
+        select.search-input[disabled] {
+            opacity: 0.6;
+            cursor: not-allowed;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.5)' stroke-width='2'%3e%3ccircle cx='12' cy='12' r='3'%3e%3canimateTransform attributeName='transform' attributeType='XML' type='rotate' dur='1s' from='0 12 12' to='360 12 12' repeatCount='indefinite'/%3e%3c/circle%3e%3c/svg%3e");
+        }
+
+        /* Enhanced focus ring for accessibility */
+        select.search-input:focus-visible {
+            outline: 2px solid rgba(0, 150, 255, 0.5);
+            outline-offset: 2px;
+        }
+
+        /* Enhanced college card styles with dynamic colors */
+        .college-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 16px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(15px);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            min-height: 240px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Compact list view styling */
+        .college-card.list-view {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+            min-height: 140px;
+            padding: 20px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .college-card.list-view .card-content {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 2rem;
+            width: 100%;
+        }
+
+        .college-card.list-view .college-info {
+            flex: 2;
+            min-width: 0;
+        }
+
+        .college-card.list-view .college-middle {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .college-card.list-view .college-stats {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .college-card.list-view .stat-item {
+            text-align: center;
+            min-width: 70px;
+        }
+
+        .college-card.list-view .contact-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 0.5rem;
+        }
+
+        .college-card.list-view h3 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+            line-height: 1.2;
+        }
+
+        .college-card.list-view .college-details {
+            font-size: 0.8rem;
+            color: #9CA3AF;
+            margin-bottom: 0.5rem;
+        }
+
+        .college-card.list-view .badges-container {
+            margin-bottom: 0;
+            gap: 0.5rem;
+        }
+
+        /* Location link styling */
+        .location-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            color: #60A5FA;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border-radius: 0.375rem;
+            padding: 0.125rem 0.25rem;
+        }
+
+        .location-link:hover {
+            color: #3B82F6;
+            background-color: rgba(59, 130, 246, 0.1);
+            transform: translateY(-1px);
+        }
+
+        .location-link .location-icon {
+            font-size: 1em;
+            transition: transform 0.3s ease;
+        }
+
+        .location-link:hover .location-icon {
+            transform: scale(1.1);
+        }
+
+        /* Enhanced location styling for list view */
+        .college-card.list-view .location-link {
+            font-size: 0.8rem;
+            padding: 0.1rem 0.2rem;
+        }
+
+        /* Enhanced location styling for grid view */
+        .college-card:not(.list-view) .location-link {
+            font-size: 0.875rem;
+        }
+
+        /* Help notes styling */
+        .help-notes {
+            background: rgba(26, 27, 58, 0.9);
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(59, 130, 246, 0.4);
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            box-shadow: 0 8px 32px rgba(59, 130, 246, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .help-notes::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #00D4FF 0%, #00FFC7 100%);
+        }
+
+        .help-notes h4 {
+            background: linear-gradient(135deg, #00D4FF 0%, #00FFC7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+        }
+
+        .help-notes ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .help-notes li {
+            color: #B8C5D1;
+            font-size: 0.875rem;
+            margin-bottom: 0.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .help-notes .icon {
+            font-size: 1rem;
+            width: 1.2rem;
+            text-align: center;
+        }
+
+        /* Floating suggestion tooltip */
+        .floating-suggestion {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #00D4FF 0%, #00FFC7 100%);
+            color: #0B0B14;
+            padding: 0.75rem 1rem;
+            border-radius: 12px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            box-shadow: 0 8px 25px rgba(0, 212, 255, 0.4);
+            z-index: 1000;
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.3s ease;
+            max-width: 280px;
+            cursor: pointer;
+        }
+
+        .floating-suggestion.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .floating-suggestion:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(0, 212, 255, 0.5);
+        }
+
+        /* View College button styling */
+        .location-click-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.3rem 0.6rem;
+            border-radius: 15px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+            margin-left: 0.5rem;
+        }
+
+        .location-click-btn:hover {
+            transform: translateY(-1px) scale(1.05);
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.5);
+            background: linear-gradient(135deg, #059669 0%, #047857 100%);
+            border-color: rgba(16, 185, 129, 0.5);
+        }
+
+        .location-click-btn .btn-icon {
+            font-size: 0.7rem;
+            transition: transform 0.3s ease;
+        }
+
+        .location-click-btn:hover .btn-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        /* Compact version for list view */
+        .college-card.list-view .location-click-btn {
+            font-size: 0.65rem;
+            padding: 0.25rem 0.45rem;
+            margin-left: 0.3rem;
+        }
+
+        .college-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .college-card:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow:
+                0 15px 30px rgba(0, 0, 0, 0.4),
+                0 0 0 1px currentColor,
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        .college-card.list-view:hover {
+            transform: translateY(-2px) scale(1.01);
+            box-shadow:
+                0 10px 20px rgba(0, 0, 0, 0.3),
+                0 0 0 1px currentColor,
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+
+        .college-card:hover::before {
+            opacity: 1;
+        }
+
+        /* Dynamic border colors - 7 unique themes */
+        .border-purple-500\/30 { border: 1px solid rgba(168, 85, 247, 0.3); }
+        .border-emerald-500\/30 { border: 1px solid rgba(16, 185, 129, 0.3); }
+        .border-amber-500\/30 { border: 1px solid rgba(245, 158, 11, 0.3); }
+        .border-blue-500\/30 { border: 1px solid rgba(59, 130, 246, 0.3); }
+        .border-rose-500\/30 { border: 1px solid rgba(244, 63, 94, 0.3); }
+        .border-red-500\/30 { border: 1px solid rgba(239, 68, 68, 0.3); }
+        .border-violet-500\/30 { border: 1px solid rgba(139, 92, 246, 0.3); }
+        .border-teal-500\/30 { border: 1px solid rgba(20, 184, 166, 0.3); }
+
+        .hover\:border-purple-400\/50:hover { border-color: rgba(196, 181, 253, 0.5) !important; }
+        .hover\:border-emerald-400\/50:hover { border-color: rgba(52, 211, 153, 0.5) !important; }
+        .hover\:border-amber-400\/50:hover { border-color: rgba(251, 191, 36, 0.5) !important; }
+        .hover\:border-blue-400\/50:hover { border-color: rgba(96, 165, 250, 0.5) !important; }
+        .hover\:border-rose-400\/50:hover { border-color: rgba(251, 113, 133, 0.5) !important; }
+        .hover\:border-red-400\/50:hover { border-color: rgba(248, 113, 113, 0.5) !important; }
+        .hover\:border-violet-400\/50:hover { border-color: rgba(167, 139, 250, 0.5) !important; }
+        .hover\:border-teal-400\/50:hover { border-color: rgba(45, 212, 191, 0.5) !important; }
+
+        /* Dynamic top border gradients */
+        .border-purple-500\/30::before { background: linear-gradient(90deg, transparent, rgba(168, 85, 247, 0.8), transparent); }
+        .border-emerald-500\/30::before { background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.8), transparent); }
+        .border-amber-500\/30::before { background: linear-gradient(90deg, transparent, rgba(245, 158, 11, 0.8), transparent); }
+        .border-blue-500\/30::before { background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.8), transparent); }
+        .border-rose-500\/30::before { background: linear-gradient(90deg, transparent, rgba(244, 63, 94, 0.8), transparent); }
+        .border-red-500\/30::before { background: linear-gradient(90deg, transparent, rgba(239, 68, 68, 0.8), transparent); }
+        .border-violet-500\/30::before { background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.8), transparent); }
+        .border-teal-500\/30::before { background: linear-gradient(90deg, transparent, rgba(20, 184, 166, 0.8), transparent); }
+
+        /* Improved grid layout */
+        .college-grid {
+            gap: 1rem;
+            grid-template-columns: 1fr;
+        }
+
+        @media (min-width: 640px) {
+            .college-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.25rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .college-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1.5rem;
+            }
+        }
+
+        @media (min-width: 1280px) {
+            .college-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        /* List view specific styling */
+        .college-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        /* Compact stats for list view */
+        .college-card.list-view .stats-grid {
+            gap: 0.5rem;
+        }
+
+        .college-card.list-view .stats-grid > div {
+            padding: 0.5rem;
+        }
+
+        .college-card.list-view .stats-grid .stat-number {
+            font-size: 1.25rem;
+        }
+
+        .college-card.list-view .badges-container {
+            gap: 0.25rem;
+        }
+
+        .college-card.list-view .badges-container > div {
+            padding: 0.25rem 0.5rem;
+            font-size: 0.65rem;
+        }
+
+        /* Stats cards */
+        .stat-card {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 12px 16px;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Loading spinner */
+        .spinner {
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-left: 2px solid #0096FF;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Navigation buttons with blue theme */
+        .nav-btn, .nav-btn-active, .nav-btn-cutoff {
+            padding: 0.75rem 1.25rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-btn {
+            background: rgba(255, 255, 255, 0.05);
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .nav-btn:hover {
+            background: rgba(0, 150, 255, 0.2);
+            color: white;
+            transform: translateY(-2px);
+            border-color: rgba(0, 150, 255, 0.3);
+            box-shadow: 0 8px 25px rgba(0, 150, 255, 0.2);
+            text-shadow: 0 0 10px rgba(0, 150, 255, 0.5);
+        }
+
+        .nav-btn-active {
+            background: linear-gradient(135deg, #0096FF 0%, #00C8FF 100%);
+            color: white;
+            border-color: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 25px rgba(0, 150, 255, 0.3);
+        }
+
+        /* Modal styles */
+        .modal-overlay {
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+        }
+
+        .modal-content {
+            background: rgba(15, 15, 25, 0.95);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            max-width: 90vw;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .info-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 16px;
+            margin: 8px 0;
+        }
+
+        .info-label {
+            color: #9ca3af;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+
+        .info-value {
+            color: #ffffff;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        /* Mobile layout optimizations */
+        @media (max-width: 768px) {
+            .college-grid {
+                grid-template-columns: 1fr;
+                gap: 0.75rem;
+            }
+
+            .filters-grid {
+                grid-template-columns: 1fr;
+                gap: 0.75rem;
+            }
+
+            .college-card {
+                padding: 12px;
+                min-height: 200px;
+                border-radius: 12px;
+            }
+
+            .college-card.list-view {
+                width: 95%;
+                min-height: 160px;
+                padding: 16px;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 1rem;
+            }
+
+            .college-card.list-view .card-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .college-card.list-view .college-middle,
+            .college-card.list-view .college-stats,
+            .college-card.list-view .contact-section {
+                align-items: center;
+            }
+
+            .college-card.list-view .college-stats {
+                justify-content: space-around;
+                gap: 1rem;
+            }
+
+            .college-card h3 {
+                font-size: 0.95rem;
+                line-height: 1.3;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .college-card {
+                padding: 10px;
+                min-height: 180px;
+                border-radius: 10px;
+            }
+
+            .college-card.list-view {
+                width: 100%;
+                padding: 14px;
+                min-height: 140px;
+            }
+
+            .college-card h3 {
+                font-size: 0.9rem;
+            }
+
+            .college-card .stat-number {
+                font-size: 1.1rem;
+            }
+        }
+
+        /* Extra compact mode for very small screens */
+        @media (max-width: 360px) {
+            .college-card {
+                padding: 8px;
+                min-height: 160px;
+            }
+
+            .college-card.list-view {
+                padding: 12px;
+                min-height: 120px;
+            }
+
+            .stats-grid {
+                gap: 0.5rem;
+            }
+
+            .stats-grid > div {
+                padding: 0.5rem;
+            }
+        }
+
+        /* Enhanced button styles */
+        .btn-primary {
+            background: linear-gradient(135deg, #0096FF 0%, #00C8FF 100%);
+            border: none;
+            border-radius: 12px;
+            color: white;
+            font-weight: 600;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+            box-shadow: 0 4px 15px rgba(0, 150, 255, 0.2);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 150, 255, 0.4);
+            background: linear-gradient(135deg, #0080FF 0%, #00B8FF 100%);
+        }
+
+        .btn-primary:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 15px rgba(0, 150, 255, 0.3);
+        }
+
+        /* Ensure body can scroll */
+        body {
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body class="modern-bg text-white">
+    <!-- Header -->
+    <header class="card-dark border-b border-white/5 sticky top-0 z-50 backdrop-blur-xl">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-center">
+                <div class="flex items-center space-x-4">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 via-cyan-500 to-blue-600 flex items-center justify-center shadow-lg">
+                        <span class="text-xl font-bold text-white">TS</span>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold gradient-text">
+                            TS EAMCET 2025
+                        </h1>
+                        <p class="text-sm text-gray-400">College Information Portal</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Hero Section -->
+    <section class="py-12 bg-gradient-to-b from-transparent to-black/10">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold mb-4 gradient-text">Navigate Your EAMCET Journey</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Choose from our comprehensive tools to find your results, explore cutoffs, and discover college information</p>
+            </div>
+
+            <!-- Navigation Grid -->
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-2 md:grid-cols-6 gap-4">
+                    <a href="index.html" class="nav-btn flex flex-col items-center space-y-4 p-6 rounded-3xl transition-all duration-300 min-h-[120px]">
+                        <div class="text-3xl">🔍</div>
+                        <div class="text-center">
+                            <div class="font-semibold text-sm">Search Results</div>
+                            <div class="text-xs text-gray-400 mt-1">Find student results</div>
+                        </div>
+                    </a>
+                    <a href="closing-ranks.html" class="nav-btn flex flex-col items-center space-y-4 p-6 rounded-3xl transition-all duration-300 min-h-[120px]">
+                        <div class="text-3xl">📊</div>
+                        <div class="text-center">
+                            <div class="font-semibold text-sm">Phase 1 Cutoffs</div>
+                            <div class="text-xs text-gray-400 mt-1">Official closing ranks</div>
+                        </div>
+                    </a>
+                    <a href="phase2-cutoffs.html" class="nav-btn flex flex-col items-center space-y-4 p-6 rounded-3xl transition-all duration-300 relative min-h-[120px]">
+                        <div class="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full font-bold">PREDICTED</div>
+                        <div class="text-3xl">🎯</div>
+                        <div class="text-center">
+                            <div class="font-semibold text-sm">Phase 2 Predictions</div>
+                            <div class="text-xs text-gray-400 mt-1">Predicted cutoffs</div>
+                        </div>
+                    </a>
+                    <a href="previous-year-cutoffs.html" class="nav-btn flex flex-col items-center space-y-4 p-6 rounded-3xl transition-all duration-300 min-h-[120px]">
+                        <div class="text-3xl">📚</div>
+                        <div class="text-center">
+                            <div class="font-semibold text-sm">Previous Year Cutoffs</div>
+                            <div class="text-xs text-gray-400 mt-1">Historical data</div>
+                        </div>
+                    </a>
+                    <a href="college-predictor.html" class="nav-btn flex flex-col items-center space-y-3 p-4 rounded-3xl transition-all duration-300 min-h-[100px] relative">
+                        <div class="text-2xl">🔮</div>
+                        <div class="text-center">
+                            <div class="font-semibold text-xs">College Predictor</div>
+                            <div class="text-xs text-gray-400 mt-1">Admission predictions</div>
+                        </div>
+                    </a>
+                    <a href="college-info.html" class="nav-btn-active flex flex-col items-center space-y-3 p-4 rounded-3xl transition-all duration-300 min-h-[100px] relative">
+                        <div class="text-2xl">🏫</div>
+                        <div class="text-center">
+                            <div class="font-semibold text-xs">College Info</div>
+                            <div class="text-xs text-gray-400 mt-1">Institute details</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Stats Section -->
+            <div class="flex justify-center items-center space-x-8 mt-8">
+                <div id="totalColleges" class="stat-card text-sm">
+                    <div class="spinner inline-block mr-2"></div>
+                    Loading colleges...
+                </div>
+                <div id="totalCourses" class="stat-card text-sm">
+                    <div class="spinner inline-block mr-2"></div>
+                    Loading courses...
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="w-full px-4 py-12">
+        <!-- Search Hero Section -->
+        <div class="text-center mb-8">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                Explore <span class="gradient-text-accent">Colleges</span>
+            </h1>
+            <p class="text-lg text-gray-300 mb-6 max-w-2xl mx-auto">
+                Discover detailed information about <span class="gradient-text">engineering colleges</span> in Telangana with comprehensive data.
+            </p>
+        </div>
+
+        <!-- Search and Filters Section -->
+        <div class="card p-8 mb-8 max-w-6xl mx-auto">
+            <div class="text-center mb-8">
+                <h2 class="text-2xl font-semibold mb-3 gradient-text">Find Your Perfect College</h2>
+                <p class="text-gray-400 mb-4">Search by college name, location, or filter by various criteria</p>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="max-w-3xl mx-auto mb-8">
+                <div class="relative">
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search colleges by name, location, district... (e.g., 'CBIT', 'Hyderabad', 'Autonomous')"
+                        class="w-full px-6 py-4 text-lg search-input rounded-2xl text-white placeholder-gray-400 focus:outline-none transition-all duration-300 pr-16"
+                        autocomplete="off"
+                    >
+                    <button id="searchButton" class="absolute right-2 top-1/2 transform -translate-y-1/2 btn-primary px-4 py-2 rounded-xl transition-all duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Filters -->
+            <div class="text-center mb-6">
+                <h3 class="text-lg font-semibold mb-3 text-gray-300">Filter Options</h3>
+                <p class="text-gray-400 mb-4">Narrow down your search with these filters</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 filters-grid">
+                <select id="districtFilter" class="px-4 py-3 search-input rounded-xl focus:outline-none transition-all duration-300">
+                    <option value="">All Districts</option>
+                </select>
+                <select id="typeFilter" class="px-4 py-3 search-input rounded-xl focus:outline-none transition-all duration-300">
+                    <option value="">All Types</option>
+                </select>
+                <select id="naacFilter" class="px-4 py-3 search-input rounded-xl focus:outline-none transition-all duration-300">
+                    <option value="">All NAAC Grades</option>
+                </select>
+                <select id="sortFilter" class="px-4 py-3 search-input rounded-xl focus:outline-none transition-all duration-300">
+                    <option value="name">Sort by Name (A-Z)</option>
+                    <option value="location">Sort by Location</option>
+                    <option value="district">Sort by District</option>
+                    <option value="established">Sort by Established Year</option>
+                    <option value="fees">Sort by Fees (Low to High)</option>
+                    <option value="nirfRank" selected>Sort by NIRF Rank (Best First)</option>
+                    <option value="naacGrade">Sort by NAAC Grade</option>
+                    <option value="courses">Sort by Course Count</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- College Results Area -->
+        <div id="collegeResultsArea" class="mb-20">
+            <!-- Loading Indicator -->
+            <div id="loadingIndicator" class="text-center py-16">
+                <div class="card p-8 max-w-md mx-auto">
+                    <div class="spinner mx-auto mb-4" style="width: 48px; height: 48px;"></div>
+                    <h3 class="text-xl font-semibold mb-2 gradient-text">Loading College Database</h3>
+                    <p class="text-gray-400">Preparing college information...</p>
+                </div>
+            </div>
+
+            <!-- College Results List -->
+            <div id="collegeResultsList" class="hidden">
+                <div class="card p-6 mb-6 w-full">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                        <div>
+                            <h3 class="text-2xl font-semibold mb-2 gradient-text">College Directory</h3>
+                            <p id="resultsCount" class="text-gray-400">Found 0 colleges</p>
+                        </div>
+                        <div class="mt-4 md:mt-0 flex gap-3 items-center flex-wrap">
+                            <!-- Items Per Page Selector -->
+                            <div class="flex items-center gap-2">
+                                <label for="itemsPerPageSelect" class="text-sm text-gray-400 whitespace-nowrap">Show:</label>
+                                <select id="itemsPerPageSelect" class="px-3 py-2 text-sm search-input rounded-lg focus:outline-none transition-all duration-300 min-w-[80px]">
+                                    <option value="12">12</option>
+                                    <option value="20">20</option>
+                                    <option value="40">40</option>
+                                    <option value="60">60</option>
+                                    <option value="100">100</option>
+                                    <option value="all">All</option>
+                                </select>
+                                <span class="text-sm text-gray-400 whitespace-nowrap">per page</span>
+                            </div>
+
+                            <!-- View Toggle -->
+                            <div class="flex items-center gap-2 bg-gray-800 rounded-lg p-1">
+                                <button id="gridViewBtn" class="px-3 py-2 text-sm rounded-md transition-all duration-200 bg-blue-600 text-white">
+                                    🏫 Grid
+                                </button>
+                                <button id="listViewBtn" class="px-3 py-2 text-sm rounded-md transition-all duration-200 text-gray-400 hover:text-white">
+                                    📄 List
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Help Notes -->
+                <div class="help-notes max-w-4xl mx-auto mb-6">
+                    <h4>
+                        <span class="icon">💡</span>
+                        Quick Guide - How to Use College Cards
+                    </h4>
+                    <ul>
+                        <li>
+                            <span class="icon">📍</span>
+                            <strong>Click on location</strong> (📍 Location, District) to open Google Maps and get directions to the college
+                        </li>
+                        <li>
+                            <span class="icon">🌐</span>
+                            <strong>Click on website link</strong> to visit the official college website for detailed information
+                        </li>
+                        <li>
+                            <span class="icon">📧</span>
+                            <strong>Click on email</strong> to send an inquiry directly to the college admissions office
+                        </li>
+                        <li>
+                            <span class="icon">👁️</span>
+                            <strong>Click "View Details"</strong> to see comprehensive college information, courses, and facilities
+                        </li>
+                        <li>
+                            <span class="icon">🔄</span>
+                            <strong>Switch between Grid and List view</strong> using the toggle buttons for different browsing experiences
+                        </li>
+                        <li>
+                            <span class="icon">🔍</span>
+                            <strong>Use filters and search</strong> to find colleges by location, type, NAAC grade, or name
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Results List -->
+                <div class="w-full">
+                    <div id="collegesList" class="college-grid grid">
+                        <!-- Colleges will be populated here -->
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div id="paginationContainer" class="w-full hidden">
+                    <div class="flex justify-center items-center gap-4 mt-8">
+                        <button id="prevPage" class="btn-primary px-4 py-2 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed">
+                            ← Previous
+                        </button>
+                        <div id="pageNumbers" class="flex gap-2">
+                            <!-- Page numbers will be populated here -->
+                        </div>
+                        <button id="nextPage" class="btn-primary px-4 py-2 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed">
+                            Next →
+                        </button>
+                    </div>
+                    <div class="text-center mt-4">
+                        <span id="paginationInfo" class="text-gray-400 text-sm">
+                            <!-- Pagination info will be populated here -->
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- No Results -->
+            <div id="noResults" class="hidden text-center py-16">
+                <div class="card p-12 max-w-lg mx-auto">
+                    <div class="text-8xl mb-6 opacity-50">🏫</div>
+                    <h3 class="text-2xl font-semibold mb-3 gradient-text">No Colleges Found</h3>
+                    <p class="text-gray-400 mb-6">Try adjusting your search criteria or use different keywords</p>
+                    <div class="text-sm text-gray-500">
+                        <p>💡 Tips:</p>
+                        <p>• Try partial names like "CBIT" instead of full names</p>
+                        <p>• Search by location like "Hyderabad" or "Warangal"</p>
+                        <p>• Use college type filters like "Autonomous"</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </main>
+
+    <!-- Floating Suggestion Tooltip -->
+    <div id="floatingSuggestion" class="floating-suggestion">
+        <span id="suggestionText">💡 Tip: Click on college locations to open Google Maps!</span>
+    </div>
+
+    <!-- Footer -->
+    <footer class="card-dark border-t border-white/5 mt-20">
+        <div class="container mx-auto px-6 py-8">
+            <div class="text-center">
+                <div class="flex items-center justify-center mb-4">
+                    <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 via-cyan-500 to-blue-600 flex items-center justify-center mr-3">
+                        <span class="text-sm font-bold text-white">TS</span>
+                    </div>
+                    <span class="text-lg font-semibold gradient-text">TS EAMCET 2025</span>
+                </div>
+                <p class="text-gray-400 mb-2">&copy; 2025 TS EAMCET College Information Portal. Comprehensive college data for informed decisions.</p>
+                <p class="text-sm text-gray-500">Built with modern web technologies • Optimized for performance • Mobile-friendly design</p>
+
+                <!-- Official Footer -->
+                <div class="mt-6 pt-4 border-t border-gray-700">
+                    <div class="bg-gradient-to-r from-blue-900/30 to-cyan-900/30 rounded-lg p-4">
+                        <div class="flex items-center justify-center mb-2">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-bold mr-2">TS</span>
+                            <span class="text-sm font-semibold text-blue-300">TS EAMCET 2025</span>
+                        </div>
+                        <p class="text-xs text-gray-300 text-center leading-relaxed">
+                            © 2025 TS EAMCET College Information Portal. Comprehensive college data for informed decisions.<br>
+                            Built with modern web technologies • Optimized for performance • Mobile-friendly design
+                        </p>
+                        <p class="text-xs text-gray-400 text-center mt-2">
+                            <strong>Data Source Disclaimer:</strong> All data rights belong to the respective colleges and institutions.
+                            This website compiles publicly available information for educational purposes.
+                            For official and complete information, please refer to the respective college websites.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Global variables
+        let allColleges = [];
+        let filteredColleges = [];
+        let currentPage = 1;
+        let itemsPerPage = 12;
+        let currentViewMode = 'grid';
+
+        // DOM elements
+        const searchInput = document.getElementById('searchInput');
+        const searchButton = document.getElementById('searchButton');
+        const districtFilter = document.getElementById('districtFilter');
+        const typeFilter = document.getElementById('typeFilter');
+        const naacFilter = document.getElementById('naacFilter');
+        const sortFilter = document.getElementById('sortFilter');
+        const loadingIndicator = document.getElementById('loadingIndicator');
+        const collegeResultsList = document.getElementById('collegeResultsList');
+        const collegesList = document.getElementById('collegesList');
+        const noResults = document.getElementById('noResults');
+        const resultsCount = document.getElementById('resultsCount');
+        const totalColleges = document.getElementById('totalColleges');
+        const totalCourses = document.getElementById('totalCourses');
+        const gridViewBtn = document.getElementById('gridViewBtn');
+        const listViewBtn = document.getElementById('listViewBtn');
+        const itemsPerPageSelect = document.getElementById('itemsPerPageSelect');
+        const paginationContainer = document.getElementById('paginationContainer');
+        const prevPage = document.getElementById('prevPage');
+        const nextPage = document.getElementById('nextPage');
+        const pageNumbers = document.getElementById('pageNumbers');
+        const paginationInfo = document.getElementById('paginationInfo');
+
+        // Floating suggestions system
+        const suggestions = [
+            "💡 Tip: Click on college locations to open Google Maps!",
+            "🌐 Tip: Click website links to visit official college pages!",
+            "📧 Tip: Click email addresses to contact colleges directly!",
+            "👁️ Tip: Click 'View Details' for comprehensive college information!",
+            "🔄 Tip: Switch between Grid and List view for different experiences!",
+            "🔍 Tip: Use filters to find colleges by location, type, or grade!"
+        ];
+
+        let currentSuggestionIndex = 0;
+        let suggestionTimer = null;
+        let isScrolling = false;
+
+        function showFloatingSuggestion() {
+            const suggestionElement = document.getElementById('floatingSuggestion');
+            const suggestionText = document.getElementById('suggestionText');
+
+            if (suggestionElement && suggestionText) {
+                suggestionText.textContent = suggestions[currentSuggestionIndex];
+                suggestionElement.classList.add('show');
+
+                // Hide after 4 seconds
+                setTimeout(() => {
+                    suggestionElement.classList.remove('show');
+                }, 4000);
+
+                // Move to next suggestion
+                currentSuggestionIndex = (currentSuggestionIndex + 1) % suggestions.length;
+            }
+        }
+
+        function handleScroll() {
+            if (!isScrolling) {
+                isScrolling = true;
+
+                // Clear existing timer
+                if (suggestionTimer) {
+                    clearTimeout(suggestionTimer);
+                }
+
+                // Show suggestion after 2 seconds of scrolling
+                suggestionTimer = setTimeout(() => {
+                    showFloatingSuggestion();
+                    isScrolling = false;
+                }, 2000);
+            }
+        }
+
+        // Initialize the application
+        async function init() {
+            console.log('🚀 Initializing College Info application...');
+
+            try {
+                console.log('📥 Loading college data...');
+                await loadCollegeData();
+
+                console.log('🎛️ Setting up event listeners...');
+                setupEventListeners();
+
+                console.log('🔽 Populating filters...');
+                populateFilters();
+
+                console.log('📊 Updating statistics...');
+                updateStats();
+
+                console.log('🏫 Displaying colleges...');
+                displayColleges();
+
+                console.log('✅ Hiding loading indicator...');
+                hideLoading();
+
+                console.log('🎉 Application initialized successfully!');
+            } catch (error) {
+                console.error('❌ Error initializing application:', error);
+                showError('Failed to load college data. Please refresh the page.');
+            }
+        }
+
+        // Load college data from JSON files
+        async function loadCollegeData() {
+            try {
+                console.log('🔄 Starting to load college data...');
+
+                // Try to load from server first (if available)
+                try {
+                    const response = await fetch('/api/college-profiles');
+                    if (response.ok) {
+                        allColleges = await response.json();
+                        filteredColleges = [...allColleges];
+                        console.log(`📊 Successfully loaded ${allColleges.length} colleges from server`);
+                        return;
+                    }
+                } catch (serverError) {
+                    console.log('🔄 Server not available, trying direct file access...');
+                }
+
+                // Fallback to direct file access
+                const collegeFiles = [
+                    'AARM', 'ACEG', 'AITH', 'AIZA', 'AKIT', 'ANRK', 'ANUG', 'ARJN', 'ASRA', 'AURG',
+                    'AVIH', 'AVNI', 'AZAD', 'BIET', 'BITN', 'BOMA', 'BOSE', 'BREW', 'BRIG', 'BRIL',
+                    'BSKR', 'BVRI', 'BVRW', 'CASR', 'CBIT', 'CDTK', 'CFSR', 'CHET', 'CHTN', 'CHTS',
+                    'CJIT', 'CMRG', 'CMRK', 'CMRM', 'CMRN', 'CVRH', 'DARE', 'DCET', 'DRKI', 'ELEN',
+                    'ESUT', 'ESUTSF', 'GATE', 'GCTC', 'GLOB', 'GLWC', 'GNIT', 'GNTW', 'GRRR', 'GURU',
+                    'HITM', 'HOLY', 'IARE', 'IITT', 'INDI', 'INDU', 'ISLC', 'JAYA', 'JBIT', 'JMTS',
+                    'JNKR', 'JNMB', 'JNPASF', 'JNPL', 'JNTH', 'JNTHMT', 'JNTM', 'JNTR', 'JNTS', 'JNTSSF',
+                    'JNWN', 'JOGI', 'JPNE', 'JPNH', 'KCEA', 'KDDW', 'KGRH', 'KITS', 'KITW', 'KLRT',
+                    'KMCE', 'KMEC', 'KMIT', 'KNRR', 'KPRC', 'KPRT', 'KSGI', 'KTKM', 'KUEWSF', 'KUWL',
+                    'LRDS', 'MDRK', 'MECS', 'METH', 'MGHA', 'MGIT', 'MGUNSF', 'MHVR', 'MINA', 'MLID',
+                    'MLRD', 'MLRS', 'MMTZ', 'MOTK', 'MRCE', 'MRCW', 'MREM', 'MRTN', 'MTEC', 'MVSR',
+                    'NAWB', 'NGIT', 'NGMA', 'NIET', 'NNRG', 'NRCM', 'NREC', 'OUCE', 'OUCT', 'PALV',
+                    'PETW', 'PRIW', 'PUCE', 'RITW', 'SAIS', 'SANA', 'SBIT', 'SCET', 'SCIT', 'SDES',
+                    'SDEW', 'SDGI', 'SIEI', 'SISG', 'SKEC', 'SMCD', 'SMED', 'SMSK', 'SNIS', 'SNTI',
+                    'SPEC', 'SPHN', 'SRHP', 'SRIW', 'SRYS', 'STLW', 'SUCE', 'SVES', 'SVIT', 'SVSE',
+                    'SWET', 'TCEK', 'TCTK', 'TKEM', 'TKRC', 'TPCE', 'TRRM', 'VAGE', 'VASV', 'VBIT',
+                    'VCET', 'VGNT', 'VGSE', 'VGWL', 'VISA', 'VITS', 'VJEC', 'VJIT', 'VJYA', 'VMEG',
+                    'VMRH', 'VMTW', 'VREC', 'VRKW', 'WESL', 'WITS'
+                ];
+
+                const loadPromises = collegeFiles.map(async (collegeCode) => {
+                    try {
+                        const response = await fetch(`./final_profiles/${collegeCode}.json`);
+                        if (!response.ok) {
+                            console.warn(`❌ Failed to load ${collegeCode}: ${response.status} ${response.statusText}`);
+                            return null;
+                        }
+                        const data = await response.json();
+                        console.log(`✅ Loaded ${collegeCode}: ${data.name}`);
+                        return data;
+                    } catch (error) {
+                        console.warn(`❌ Could not load ${collegeCode}:`, error);
+                        return null;
+                    }
+                });
+
+                const results = await Promise.all(loadPromises);
+                allColleges = results.filter(college => college !== null);
+                filteredColleges = [...allColleges];
+
+                console.log(`📊 Successfully loaded ${allColleges.length} colleges out of ${collegeFiles.length} total`);
+
+                if (allColleges.length === 0) {
+                    throw new Error('No college data could be loaded from JSON files. Please check if the final_profiles directory exists and contains JSON files.');
+                }
+
+            } catch (error) {
+                console.error('❌ Error loading college data:', error);
+                throw error;
+            }
+        }
+
+        // Setup event listeners
+        function setupEventListeners() {
+            // Search input and button
+            searchInput.addEventListener('input', debounce(handleSearch, 300));
+            searchInput.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    handleSearch();
+                }
+            });
+            searchButton.addEventListener('click', handleSearch);
+
+            // Filter listeners
+            districtFilter.addEventListener('change', handleSearch);
+            typeFilter.addEventListener('change', handleSearch);
+            naacFilter.addEventListener('change', handleSearch);
+            sortFilter.addEventListener('change', handleSearch);
+
+            // View toggle listeners
+            gridViewBtn.addEventListener('click', () => switchViewMode('grid'));
+            listViewBtn.addEventListener('click', () => switchViewMode('list'));
+
+            // Items per page listener
+            itemsPerPageSelect.addEventListener('change', handleItemsPerPageChange);
+
+            // Pagination listeners
+            prevPage.addEventListener('click', () => goToPage(currentPage - 1));
+            nextPage.addEventListener('click', () => goToPage(currentPage + 1));
+
+            // Scroll listener for floating suggestions
+            window.addEventListener('scroll', handleScroll);
+
+            // Click listener for floating suggestion to dismiss it
+            const floatingSuggestion = document.getElementById('floatingSuggestion');
+            if (floatingSuggestion) {
+                floatingSuggestion.addEventListener('click', () => {
+                    floatingSuggestion.classList.remove('show');
+                });
+            }
+        }
+
+        // Debounce function to limit search frequency
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        // Handle items per page change
+        function handleItemsPerPageChange() {
+            const selectedValue = itemsPerPageSelect.value;
+            if (selectedValue === 'all') {
+                itemsPerPage = filteredColleges.length;
+            } else {
+                itemsPerPage = parseInt(selectedValue);
+            }
+
+            // Reset to first page
+            currentPage = 1;
+
+            // Update display
+            displayColleges();
+
+            console.log(`📄 Items per page changed to: ${selectedValue === 'all' ? 'All' : itemsPerPage}`);
+        }
+
+        // Populate filter dropdowns
+        function populateFilters() {
+            console.log('🔄 Populating filters with', allColleges.length, 'colleges');
+
+            // Show loading state
+            districtFilter.innerHTML = '<option value="">Loading districts...</option>';
+            typeFilter.innerHTML = '<option value="">Loading types...</option>';
+            naacFilter.innerHTML = '<option value="">Loading grades...</option>';
+
+            // Populate district filter
+            const districts = [...new Set(allColleges.map(college => college.district).filter(Boolean))].sort();
+            console.log('📍 Found districts:', districts);
+
+            districtFilter.innerHTML = '<option value="">All Districts</option>';
+            districts.forEach(district => {
+                const option = document.createElement('option');
+                option.value = district;
+                option.textContent = district;
+                districtFilter.appendChild(option);
+            });
+
+            // Populate type filter with actual data
+            const types = [...new Set(allColleges.map(college => college.type).filter(Boolean))].sort();
+            console.log('🏛️ Found types:', types);
+
+            typeFilter.innerHTML = '<option value="">All Types</option>';
+            types.forEach(type => {
+                const option = document.createElement('option');
+                option.value = type;
+                option.textContent = type;
+                typeFilter.appendChild(option);
+            });
+
+            // Populate NAAC filter with actual data - sort by grade quality
+            const naacGrades = [...new Set(allColleges.map(college => college.naacGrade).filter(Boolean))];
+            // Custom sort for NAAC grades
+            const gradeOrder = ['A++', 'A+', 'A', 'B++', 'B+', 'B'];
+            const sortedGrades = naacGrades.sort((a, b) => {
+                const indexA = gradeOrder.indexOf(a);
+                const indexB = gradeOrder.indexOf(b);
+                return (indexA === -1 ? 999 : indexA) - (indexB === -1 ? 999 : indexB);
+            });
+            console.log('🏆 Found NAAC grades:', sortedGrades);
+
+            naacFilter.innerHTML = '<option value="">All NAAC Grades</option>';
+            sortedGrades.forEach(grade => {
+                const option = document.createElement('option');
+                option.value = grade;
+                option.textContent = `NAAC ${grade}`;
+                naacFilter.appendChild(option);
+            });
+
+            console.log('✅ Populated all filters:', {
+                districts: districts.length,
+                types: types.length,
+                naacGrades: sortedGrades.length
+            });
+
+            // Add visual feedback for populated filters
+            [districtFilter, typeFilter, naacFilter].forEach(filter => {
+                filter.style.borderColor = 'rgba(0, 150, 255, 0.3)';
+                setTimeout(() => {
+                    filter.style.borderColor = 'rgba(255, 255, 255, 0.12)';
+                }, 1000);
+            });
+        }
+
+        // Update statistics
+        function updateStats() {
+            const totalCoursesCount = allColleges.reduce((total, college) => {
+                return total + (college.courses ? college.courses.length : 0);
+            }, 0);
+
+            totalColleges.innerHTML = `📊 ${allColleges.length} Colleges`;
+            totalCourses.innerHTML = `🎓 ${totalCoursesCount} Courses`;
+        }
+
+        // Handle search and filtering
+        function handleSearch() {
+            console.log('🔍 Handling search...');
+
+            const searchTerm = searchInput.value.toLowerCase().trim();
+            const selectedDistrict = districtFilter.value;
+            const selectedType = typeFilter.value;
+            const selectedNaac = naacFilter.value;
+            const selectedSort = sortFilter.value;
+
+            console.log('Search criteria:', { searchTerm, selectedDistrict, selectedType, selectedNaac, selectedSort });
+
+            // Filter colleges
+            filteredColleges = allColleges.filter(college => {
+                // Check if college has required properties
+                if (!college || (!college.name && !college.collegeCode) || !college.location || !college.district) {
+                    console.warn('Invalid college data:', college);
+                    return false;
+                }
+
+                const matchesSearch = !searchTerm ||
+                    (college.name && college.name.toLowerCase().includes(searchTerm)) ||
+                    (college.location && college.location.toLowerCase().includes(searchTerm)) ||
+                    (college.district && college.district.toLowerCase().includes(searchTerm)) ||
+                    (college.collegeCode && college.collegeCode.toLowerCase().includes(searchTerm));
+
+                const matchesDistrict = !selectedDistrict || college.district === selectedDistrict;
+                const matchesType = !selectedType || college.type === selectedType;
+                const matchesNaac = !selectedNaac || college.naacGrade === selectedNaac;
+
+                return matchesSearch && matchesDistrict && matchesType && matchesNaac;
+            });
+
+            console.log(`📊 Filtered to ${filteredColleges.length} colleges from ${allColleges.length} total`);
+
+            // Sort colleges
+            sortColleges(selectedSort);
+
+            // Reset to first page
+            currentPage = 1;
+
+            // Display results
+            displayColleges();
+        }
+
+        // Sort colleges based on selected criteria
+        function sortColleges(sortBy) {
+            filteredColleges.sort((a, b) => {
+                switch (sortBy) {
+                    case 'name':
+                        return a.name.localeCompare(b.name);
+                    case 'location':
+                        return a.location.localeCompare(b.location);
+                    case 'district':
+                        return a.district.localeCompare(b.district);
+                    case 'established':
+                        const yearA = parseInt(a.established) || 0;
+                        const yearB = parseInt(b.established) || 0;
+                        return yearB - yearA; // Newest first
+                    case 'fees':
+                        const feeA = parseInt(a.fees?.replace(/[₹,]/g, '')) || 0;
+                        const feeB = parseInt(b.fees?.replace(/[₹,]/g, '')) || 0;
+                        return feeA - feeB; // Lowest first
+                    case 'nirfRank':
+                        const rankA = parseInt(a.nirfRank) || 999;
+                        const rankB = parseInt(b.nirfRank) || 999;
+                        return rankA - rankB; // Best rank first
+                    case 'naacGrade':
+                        // Sort NAAC grades: A++, A+, A, B++, B+, B, then N/A
+                        const gradeOrder = { 'A++': 1, 'A+': 2, 'A': 3, 'B++': 4, 'B+': 5, 'B': 6 };
+                        const gradeA = gradeOrder[a.naacGrade] || 999;
+                        const gradeB = gradeOrder[b.naacGrade] || 999;
+                        return gradeA - gradeB;
+                    case 'courses':
+                        const coursesA = a.courses ? a.courses.length : 0;
+                        const coursesB = b.courses ? b.courses.length : 0;
+                        return coursesB - coursesA; // Most courses first
+                    default:
+                        return a.name.localeCompare(b.name);
+                }
+            });
+        }
+
+        // Display colleges
+        function displayColleges() {
+            console.log('🏫 Displaying colleges:', filteredColleges.length);
+
+            if (filteredColleges.length === 0) {
+                console.log('❌ No colleges to display');
+                showNoResults();
+                return;
+            }
+
+            showResults();
+
+            // Calculate pagination
+            const totalPages = Math.ceil(filteredColleges.length / itemsPerPage);
+            const startIndex = (currentPage - 1) * itemsPerPage;
+            const endIndex = startIndex + itemsPerPage;
+            const currentColleges = filteredColleges.slice(startIndex, endIndex);
+
+            console.log(`📄 Showing page ${currentPage} of ${totalPages} (${currentColleges.length} colleges)`);
+
+            // Update results count
+            resultsCount.textContent = `Found ${filteredColleges.length} colleges`;
+
+            // Clear previous results
+            collegesList.innerHTML = '';
+
+            // Reset assigned colors array for new render
+            assignedColors = [];
+
+            // Display colleges
+            currentColleges.forEach((college, index) => {
+                try {
+                    const collegeElement = createCollegeElement(college, index);
+                    collegesList.appendChild(collegeElement);
+                } catch (error) {
+                    console.error(`Error creating element for college ${index}:`, error, college);
+                }
+            });
+
+            // Update pagination
+            updatePagination(totalPages);
+
+            console.log('✅ Colleges displayed successfully');
+        }
+
+        // Define all available color themes
+        const colorThemes = [
+            {
+                name: 'Cosmic Purple',
+                codeGradient: 'from-purple-600 to-violet-600',
+                cardBorder: 'border-purple-500/30',
+                cardHover: 'hover:border-purple-400/50',
+                naacBg: 'from-purple-600 to-indigo-600',
+                nirfBg: 'from-violet-600 to-purple-600',
+                coursesBg: 'from-purple-500/10 to-violet-500/10 border-purple-500/20',
+                feesBg: 'from-indigo-500/10 to-purple-500/10 border-indigo-500/20',
+                coursesText: 'text-purple-400',
+                feesText: 'text-indigo-400',
+                buttonBg: 'from-purple-600 to-violet-600',
+                buttonHover: 'from-purple-500 to-violet-500'
+            },
+            {
+                name: 'Nebula Green',
+                codeGradient: 'from-emerald-600 to-teal-600',
+                cardBorder: 'border-emerald-500/30',
+                cardHover: 'hover:border-emerald-400/50',
+                naacBg: 'from-emerald-600 to-green-600',
+                nirfBg: 'from-teal-600 to-emerald-600',
+                coursesBg: 'from-emerald-500/10 to-teal-500/10 border-emerald-500/20',
+                feesBg: 'from-green-500/10 to-emerald-500/10 border-green-500/20',
+                coursesText: 'text-emerald-400',
+                feesText: 'text-green-400',
+                buttonBg: 'from-emerald-600 to-teal-600',
+                buttonHover: 'from-emerald-500 to-teal-500'
+            },
+            {
+                name: 'Solar Gold',
+                codeGradient: 'from-amber-600 to-orange-600',
+                cardBorder: 'border-amber-500/30',
+                cardHover: 'hover:border-amber-400/50',
+                naacBg: 'from-amber-600 to-yellow-600',
+                nirfBg: 'from-orange-600 to-amber-600',
+                coursesBg: 'from-amber-500/10 to-orange-500/10 border-amber-500/20',
+                feesBg: 'from-yellow-500/10 to-amber-500/10 border-yellow-500/20',
+                coursesText: 'text-amber-400',
+                feesText: 'text-yellow-400',
+                buttonBg: 'from-amber-600 to-orange-600',
+                buttonHover: 'from-amber-500 to-orange-500'
+            },
+            {
+                name: 'Ocean Blue',
+                codeGradient: 'from-blue-600 to-cyan-600',
+                cardBorder: 'border-blue-500/30',
+                cardHover: 'hover:border-blue-400/50',
+                naacBg: 'from-blue-600 to-cyan-600',
+                nirfBg: 'from-cyan-600 to-blue-600',
+                coursesBg: 'from-blue-500/10 to-cyan-500/10 border-blue-500/20',
+                feesBg: 'from-cyan-500/10 to-blue-500/10 border-cyan-500/20',
+                coursesText: 'text-blue-400',
+                feesText: 'text-cyan-400',
+                buttonBg: 'from-blue-600 to-cyan-600',
+                buttonHover: 'from-blue-500 to-cyan-500'
+            },
+            {
+                name: 'Crimson Fire',
+                codeGradient: 'from-red-600 to-orange-600',
+                cardBorder: 'border-red-500/30',
+                cardHover: 'hover:border-red-400/50',
+                naacBg: 'from-red-600 to-orange-600',
+                nirfBg: 'from-orange-600 to-red-600',
+                coursesBg: 'from-red-500/10 to-orange-500/10 border-red-500/20',
+                feesBg: 'from-orange-500/10 to-red-500/10 border-orange-500/20',
+                coursesText: 'text-red-400',
+                feesText: 'text-orange-400',
+                buttonBg: 'from-red-600 to-orange-600',
+                buttonHover: 'from-red-500 to-orange-500'
+            },
+            {
+                name: 'Stellar Rose',
+                codeGradient: 'from-rose-600 to-pink-600',
+                cardBorder: 'border-rose-500/30',
+                cardHover: 'hover:border-rose-400/50',
+                naacBg: 'from-rose-600 to-pink-600',
+                nirfBg: 'from-pink-600 to-rose-600',
+                coursesBg: 'from-rose-500/10 to-pink-500/10 border-rose-500/20',
+                feesBg: 'from-pink-500/10 to-rose-500/10 border-pink-500/20',
+                coursesText: 'text-rose-400',
+                feesText: 'text-pink-400',
+                buttonBg: 'from-rose-600 to-pink-600',
+                buttonHover: 'from-rose-500 to-pink-500'
+            },
+            {
+                name: 'Violet Storm',
+                codeGradient: 'from-violet-600 to-fuchsia-600',
+                cardBorder: 'border-violet-500/30',
+                cardHover: 'hover:border-violet-400/50',
+                naacBg: 'from-violet-600 to-fuchsia-600',
+                nirfBg: 'from-fuchsia-600 to-violet-600',
+                coursesBg: 'from-violet-500/10 to-fuchsia-500/10 border-violet-500/20',
+                feesBg: 'from-fuchsia-500/10 to-violet-500/10 border-fuchsia-500/20',
+                coursesText: 'text-violet-400',
+                feesText: 'text-fuchsia-400',
+                buttonBg: 'from-violet-600 to-fuchsia-600',
+                buttonHover: 'from-violet-500 to-fuchsia-500'
+            },
+            {
+                name: 'Mystic Teal',
+                codeGradient: 'from-teal-600 to-cyan-600',
+                cardBorder: 'border-teal-500/30',
+                cardHover: 'hover:border-teal-400/50',
+                naacBg: 'from-teal-600 to-cyan-600',
+                nirfBg: 'from-cyan-600 to-teal-600',
+                coursesBg: 'from-teal-500/10 to-cyan-500/10 border-teal-500/20',
+                feesBg: 'from-cyan-500/10 to-teal-500/10 border-cyan-500/20',
+                coursesText: 'text-teal-400',
+                feesText: 'text-cyan-400',
+                buttonBg: 'from-teal-600 to-cyan-600',
+                buttonHover: 'from-teal-500 to-cyan-500'
+            }
+        ];
+
+        // Store assigned colors to prevent adjacency conflicts
+        let assignedColors = [];
+
+        // Get dynamic color scheme with adjacency awareness
+        function getCollegeColorScheme(college, index) {
+            // Calculate priority score for preferred color assignment
+            function getCollegePriority(college) {
+                const type = college.type || 'Unknown';
+                const naacGrade = college.naacGrade || null;
+                const nirfRank = parseInt(college.nirfRank) || 999;
+                const isAutonomous = type === 'Autonomous';
+                const isUniversity = college.name && college.name.toLowerCase().includes('university');
+                const collegeName = college.name || '';
+                const established = parseInt(college.established) || 2000;
+                const coursesCount = college.courses ? college.courses.length : 0;
+                const district = college.district || '';
+
+                // Return preferred theme index based on characteristics
+                if (isUniversity) return 0; // Cosmic Purple
+                if (isAutonomous && naacGrade && ['A++', 'A+', 'A'].includes(naacGrade)) return 1; // Nebula Green
+                if (nirfRank <= 200) return 2; // Solar Gold
+                if (type === 'Government') return 3; // Ocean Blue
+                if (established < 1990 || coursesCount >= 15 || ['B++', 'B+', 'B'].includes(naacGrade)) return 4; // Crimson Fire
+                if (collegeName.toLowerCase().includes('women') || collegeName.toLowerCase().includes('girls') ||
+                   district.toLowerCase().includes('hyderabad') || district.toLowerCase().includes('rangareddy')) return 5; // Stellar Rose
+
+                // For remaining colleges, use hash to prefer between last two themes
+                const hash = (college.collegeCode + collegeName).split('').reduce((a, b) => {
+                    a = ((a << 5) - a) + b.charCodeAt(0);
+                    return a & a;
+                }, 0);
+                return Math.abs(hash) % 2 === 0 ? 6 : 7; // Violet Storm or Mystic Teal
+            }
+
+            const preferredIndex = getCollegePriority(college);
+
+            // Check if preferred color conflicts with adjacent colleges
+            const hasAdjacentConflict = (colorIndex) => {
+                // Check previous college (index - 1)
+                if (index > 0 && assignedColors[index - 1] === colorIndex) return true;
+                // Check next college (index + 1) if we know it
+                if (index < assignedColors.length - 1 && assignedColors[index + 1] === colorIndex) return true;
+                return false;
+            };
+
+            let selectedIndex = preferredIndex;
+
+            // If preferred color conflicts, find the next available color
+            if (hasAdjacentConflict(preferredIndex)) {
+                // Try to find a non-conflicting color, starting from preferred + 1
+                for (let i = 1; i < colorThemes.length; i++) {
+                    const testIndex = (preferredIndex + i) % colorThemes.length;
+                    if (!hasAdjacentConflict(testIndex)) {
+                        selectedIndex = testIndex;
+                        break;
+                    }
+                }
+            }
+
+            // Store the assigned color for this college
+            assignedColors[index] = selectedIndex;
+
+            return colorThemes[selectedIndex];
+        }
+
+        // Create college element
+        function createCollegeElement(college, index) {
+            const div = document.createElement('div');
+
+            // Get dynamic color scheme
+            const colorScheme = getCollegeColorScheme(college, index);
+
+            div.className = `college-card ${currentViewMode === 'list' ? 'list-view' : ''} ${colorScheme.cardBorder} ${colorScheme.cardHover}`;
+            div.onclick = () => openCollegeDetails(college.collegeCode);
+
+            // Safely get values with fallbacks
+            const coursesCount = college.courses ? college.courses.length : 0;
+            const fees = college.fees || 'N/A';
+            const naacGrade = college.naacGrade || null;
+            const nirfRank = college.nirfRank || null;
+            const collegeName = college.name || college.collegeCode || 'Unknown College';
+            const location = college.location || 'Unknown';
+            const district = college.district || 'Unknown';
+            const type = college.type || 'Unknown';
+            const established = college.established || 'N/A';
+            const collegeCode = college.collegeCode || 'N/A';
+            const autonomousStatus = college.autonomousStatus || null;
+            const nbaAccredited = college.nbaAccredited === 'Yes';
+
+            // Create different layouts for grid vs list view
+            if (currentViewMode === 'list') {
+                // Linear layout for list view
+                div.innerHTML = `
+                    <div class="card-content">
+                        <!-- College Info Section -->
+                        <div class="college-info">
+                            <div class="flex items-center gap-2 mb-2">
+                                <div class="bg-gradient-to-r ${colorScheme.codeGradient} text-white text-sm font-bold px-3 py-1 rounded-lg">
+                                    ${collegeCode}
+                                </div>
+                                ${type === 'Autonomous' ? '<div class="bg-purple-600 text-white text-xs px-2 py-1 rounded-full font-semibold">AUTONOMOUS</div>' : ''}
+                                ${college.name && college.name.toLowerCase().includes('university') ? '<div class="bg-indigo-600 text-white text-xs px-2 py-1 rounded-full font-semibold">UNIVERSITY</div>' : ''}
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-1 leading-tight">${collegeName}</h3>
+                            <div class="college-details text-sm text-gray-400 mb-2">
+                                <a href="${generateGoogleMapsLink(collegeName, location, district)}" target="_blank" class="location-link" onclick="event.stopPropagation()">
+                                    <span class="location-icon">📍</span> ${location}, ${district}
+                                </a>
+                                <a href="#" onclick="viewCollegeCutoffs('${college.collegeCode}'); event.stopPropagation(); return false;" class="location-click-btn">
+                                    <span class="btn-icon">📊</span> View Cutoffs
+                                </a>
+                                • 📅 ${established}
+                            </div>
+                        </div>
+
+                        <!-- Middle Section - Badges -->
+                        <div class="college-middle">
+                            <div class="badges-container flex flex-wrap gap-1 justify-center">
+                                ${naacGrade ? `<div class="bg-gradient-to-r ${colorScheme.naacBg} text-white text-xs px-2 py-1 rounded-full font-semibold">NAAC ${naacGrade}</div>` : ''}
+                                ${nirfRank ? `<div class="bg-gradient-to-r ${colorScheme.nirfBg} text-white text-xs px-2 py-1 rounded-full font-semibold">NIRF ${nirfRank}</div>` : ''}
+                                ${nbaAccredited ? `<div class="bg-gradient-to-r ${colorScheme.codeGradient} text-white text-xs px-2 py-1 rounded-full font-semibold">NBA</div>` : ''}
+                            </div>
+                        </div>
+
+                        <!-- Stats Section -->
+                        <div class="college-stats">
+                            <div class="stat-item">
+                                <div class="text-xl font-bold ${colorScheme.coursesText}">${coursesCount}</div>
+                                <div class="text-xs text-gray-400">Courses</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="text-lg font-bold ${colorScheme.feesText}">${fees}</div>
+                                <div class="text-xs text-gray-400">Annual Fees</div>
+                            </div>
+                        </div>
+
+                        <!-- Contact and Action Section -->
+                        <div class="contact-section">
+                            <div class="flex flex-col items-end gap-1 mb-2">
+                                ${college.website ? `<a href="https://${college.website}" target="_blank" class="${colorScheme.coursesText} hover:${colorScheme.feesText} text-xs font-medium flex items-center gap-1" onclick="event.stopPropagation()">🌐 ${college.website}</a>` : ''}
+                                ${college.email ? `<a href="mailto:${college.email.replace('[at]', '@')}" class="${colorScheme.coursesText} hover:${colorScheme.feesText} text-xs font-medium flex items-center gap-1" onclick="event.stopPropagation()">📧 ${college.email.replace('[at]', '@')}</a>` : ''}
+                            </div>
+                            <button class="bg-gradient-to-r ${colorScheme.buttonBg} hover:bg-gradient-to-r hover:${colorScheme.buttonHover} text-white text-sm px-4 py-2 font-semibold rounded-lg transition-all duration-300 transform hover:scale-105" onclick="event.stopPropagation(); openCollegeDetails('${collegeCode}')">
+                                View Details →
+                            </button>
+                        </div>
+                    </div>
+                `;
+            } else {
+                // Grid layout (original)
+                div.innerHTML = `
+                    <!-- Header with College Code Badge -->
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="flex-1">
+                            <div class="flex items-center gap-3 mb-2">
+                                <div class="bg-gradient-to-r ${colorScheme.codeGradient} text-white text-lg font-bold px-4 py-2 rounded-xl shadow-lg">
+                                    ${collegeCode}
+                                </div>
+                                ${type === 'Autonomous' ? '<div class="bg-purple-600 text-white text-xs px-2 py-1 rounded-full font-semibold">AUTONOMOUS</div>' : ''}
+                                ${college.name && college.name.toLowerCase().includes('university') ? '<div class="bg-indigo-600 text-white text-xs px-2 py-1 rounded-full font-semibold">UNIVERSITY</div>' : ''}
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2 hover:${colorScheme.coursesText} transition-colors cursor-pointer leading-tight">
+                                ${collegeName}
+                            </h3>
+                            <div class="flex items-center gap-4 text-sm text-gray-400 mb-3">
+                                <a href="${generateGoogleMapsLink(collegeName, location, district)}" target="_blank" class="location-link flex items-center gap-1" onclick="event.stopPropagation()">
+                                    <span class="location-icon">📍</span> ${location}, ${district}
+                                </a>
+                                <a href="#" onclick="viewCollegeCutoffs('${college.collegeCode}'); event.stopPropagation(); return false;" class="location-click-btn">
+                                    <span class="btn-icon">📊</span> View Cutoffs
+                                </a>
+                                <span class="flex items-center gap-1">📅 ${established}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Badges and Accreditations -->
+                    <div class="badges-container flex flex-wrap gap-2 mb-4">
+                        ${naacGrade ? `<div class="bg-gradient-to-r ${colorScheme.naacBg} text-white text-xs px-3 py-1 rounded-full font-semibold">NAAC ${naacGrade}</div>` : ''}
+                        ${nirfRank ? `<div class="bg-gradient-to-r ${colorScheme.nirfBg} text-white text-xs px-3 py-1 rounded-full font-semibold">NIRF ${nirfRank}</div>` : ''}
+                        ${nbaAccredited ? `<div class="bg-gradient-to-r ${colorScheme.codeGradient} text-white text-xs px-3 py-1 rounded-full font-semibold">NBA</div>` : ''}
+                    </div>
+
+                    <!-- Stats Grid -->
+                    <div class="stats-grid grid grid-cols-2 gap-3 mb-4">
+                        <div class="text-center p-3 bg-gradient-to-br ${colorScheme.coursesBg} rounded-xl border ${colorScheme.coursesBg.split(' ').pop()}">
+                            <div class="stat-number text-2xl font-bold ${colorScheme.coursesText}">${coursesCount}</div>
+                            <div class="text-xs text-gray-400 font-medium">Courses</div>
+                        </div>
+                        <div class="text-center p-3 bg-gradient-to-br ${colorScheme.feesBg} rounded-xl border ${colorScheme.feesBg.split(' ').pop()}">
+                            <div class="stat-number text-lg font-bold ${colorScheme.feesText}">${fees}</div>
+                            <div class="text-xs text-gray-400 font-medium">Annual Fees</div>
+                        </div>
+                    </div>
+
+                    <!-- Contact and Action -->
+                    <div class="flex items-center justify-between pt-3 border-t border-white/10">
+                        <div class="flex flex-col space-y-1 flex-1">
+                            ${college.website ? `<a href="https://${college.website}" target="_blank" class="${colorScheme.coursesText} hover:${colorScheme.feesText} text-sm font-medium flex items-center gap-1" onclick="event.stopPropagation()">🌐 ${college.website}</a>` : ''}
+                            ${college.email ? `<a href="mailto:${college.email.replace('[at]', '@')}" class="${colorScheme.coursesText} hover:${colorScheme.feesText} text-sm font-medium flex items-center gap-1" onclick="event.stopPropagation()">📧 ${college.email.replace('[at]', '@')}</a>` : ''}
+                        </div>
+                        <button class="bg-gradient-to-r ${colorScheme.buttonBg} hover:bg-gradient-to-r hover:${colorScheme.buttonHover} text-white text-sm px-4 py-2 font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg" onclick="event.stopPropagation(); openCollegeDetails('${collegeCode}')">
+                            View Details →
+                        </button>
+                    </div>
+                `;
+            }
+
+            return div;
+        }
+
+        // Switch view mode
+        function switchViewMode(mode) {
+            currentViewMode = mode;
+
+            if (mode === 'grid') {
+                gridViewBtn.classList.add('bg-blue-600', 'text-white');
+                gridViewBtn.classList.remove('text-gray-400');
+                listViewBtn.classList.remove('bg-blue-600', 'text-white');
+                listViewBtn.classList.add('text-gray-400');
+                collegesList.className = 'college-grid grid';
+            } else {
+                listViewBtn.classList.add('bg-blue-600', 'text-white');
+                listViewBtn.classList.remove('text-gray-400');
+                gridViewBtn.classList.remove('bg-blue-600', 'text-white');
+                gridViewBtn.classList.add('text-gray-400');
+                collegesList.className = 'college-list';
+            }
+
+            displayColleges();
+        }
+
+        // Generate Google Maps link for college location
+        function generateGoogleMapsLink(collegeName, location, district) {
+            const query = encodeURIComponent(`${collegeName}, ${location}, ${district}, Telangana, India`);
+            return `https://www.google.com/maps/search/?api=1&query=${query}`;
+        }
+
+        // Open college details in new tab
+        function openCollegeDetails(collegeCode) {
+            const url = `college-details.html?code=${encodeURIComponent(collegeCode)}`;
+            window.open(url, '_blank');
+            console.log('🔗 Opening college details in new tab:', collegeCode);
+        }
+
+        // Open college page from click here button
+        function openCollegePage(collegeCode) {
+            const url = `college-details.html?code=${encodeURIComponent(collegeCode)}`;
+            window.open(url, '_blank');
+            console.log('🔗 Opening college page from click here button:', collegeCode);
+        }
+
+        // View college cutoffs
+        function viewCollegeCutoffs(collegeCode) {
+            const url = `college-details.html?code=${encodeURIComponent(collegeCode)}#cutoffs`;
+            window.open(url, '_blank');
+            console.log('📊 Opening college cutoffs:', collegeCode);
+        }
+
+
+
+        // Update pagination
+        function updatePagination(totalPages) {
+            // Hide pagination if showing all items or only one page
+            if (totalPages <= 1 || itemsPerPageSelect.value === 'all') {
+                paginationContainer.classList.add('hidden');
+                return;
+            }
+
+            paginationContainer.classList.remove('hidden');
+
+            // Update pagination buttons
+            prevPage.disabled = currentPage === 1;
+            nextPage.disabled = currentPage === totalPages;
+
+            // Update page numbers
+            pageNumbers.innerHTML = '';
+            const maxVisiblePages = 5;
+            let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
+            let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+
+            if (endPage - startPage + 1 < maxVisiblePages) {
+                startPage = Math.max(1, endPage - maxVisiblePages + 1);
+            }
+
+            for (let i = startPage; i <= endPage; i++) {
+                const pageBtn = document.createElement('button');
+                pageBtn.className = `px-3 py-2 text-sm rounded-lg transition-all duration-200 ${
+                    i === currentPage
+                        ? 'bg-blue-600 text-white'
+                        : 'bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white'
+                }`;
+                pageBtn.textContent = i;
+                pageBtn.onclick = () => goToPage(i);
+                pageNumbers.appendChild(pageBtn);
+            }
+
+            // Update pagination info
+            const startItem = (currentPage - 1) * itemsPerPage + 1;
+            const endItem = Math.min(currentPage * itemsPerPage, filteredColleges.length);
+            paginationInfo.textContent = `Showing ${startItem}-${endItem} of ${filteredColleges.length} colleges`;
+        }
+
+        // Go to specific page
+        function goToPage(page) {
+            const totalPages = Math.ceil(filteredColleges.length / itemsPerPage);
+            if (page < 1 || page > totalPages) return;
+
+            currentPage = page;
+            displayColleges();
+
+            // Scroll to top of results
+            collegeResultsList.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        // Show results
+        function showResults() {
+            loadingIndicator.classList.add('hidden');
+            collegeResultsList.classList.remove('hidden');
+            noResults.classList.add('hidden');
+        }
+
+        // Show no results
+        function showNoResults() {
+            loadingIndicator.classList.add('hidden');
+            collegeResultsList.classList.add('hidden');
+            noResults.classList.remove('hidden');
+            paginationContainer.classList.add('hidden');
+        }
+
+        // Hide loading
+        function hideLoading() {
+            loadingIndicator.classList.add('hidden');
+            collegeResultsList.classList.remove('hidden');
+        }
+
+        // Show error
+        function showError(message) {
+            loadingIndicator.innerHTML = `
+                <div class="card p-8 max-w-md mx-auto">
+                    <div class="text-8xl mb-6 opacity-50">⚠️</div>
+                    <h3 class="text-xl font-semibold mb-2 text-red-400">Error Loading Data</h3>
+                    <p class="text-gray-400">${message}</p>
+                </div>
+            `;
+        }
+
+        // Initialize the application when DOM is loaded
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+{
+  "collegeCode": "DCET",
+  "name": "DECCAN COLLEGE OF ENGINEERING AND TECHNOLOGY",
+  "location": "DARUSSALAM",
+  "district": "HYDERABAD",
+  "districtCode": "HYD",
+  "type": "Private College",
+  "affiliation": "N/A",
+  "established": "1984",
+  "autonomousStatus": "",
+  "nirfRank": "",
+  "naacGrade": "",
+  "nbaAccredited": "",
+  "fees": "₹76,000",
+  "about": "DECCAN COLLEGE OF ENGINEERING AND TECHNOLOGY, established in 1984, is a Private College institution located in DARUSSALAM, HYDERABAD. The college is affiliated to OU. This is a MUSLIM minority institution. Admissions are conducted through TG EAPCET/EAMCET and TG ECET.",
+  "phone": " 040-24802634",
+  "website": "www.deccancollege.ac.in",
+  "eapcetAvailable": "Yes",
+  "ecetAvailable": "Yes",
+  "found": true,
+  "collegeName": "N/A",
+  "address": "DAR-US-SALAM",
+  "region": "OU",
+  "collegeType": "PVT",
+  "principal": "N/A",
+  "contact": "N/A",
+  "email": "dcet[at]deccancollege.ac.in",
+  "establishedYear": "N/A",
+  "courses": [
+    {
+      "branchCode": "1",
+      "branchName": "CIV",
+      "courseName": "CIVIL ENGINEERING",
+      "intake": "42",
+      "fee": "76000"
+    },
+    {
+      "branchCode": "2",
+      "branchName": "CME",
+      "courseName": "COMPUTER ENGINEERING",
+      "intake": "42",
+      "fee": "76000"
+    },
+    {
+      "branchCode": "3",
+      "branchName": "CSE",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING",
+      "intake": "210",
+      "fee": "76000"
+    },
+    {
+      "branchCode": "4",
+      "branchName": "ECE",
+      "courseName": "ELECTRONICS AND COMMUNICATION ENGINEERING",
+      "intake": "21",
+      "fee": "76000"
+    },
+    {
+      "branchCode": "5",
+      "branchName": "EEE",
+      "courseName": "ELECTRICAL AND ELECTRONICS ENGINEERING",
+      "intake": "21",
+      "fee": "76000"
+    },
+    {
+      "branchCode": "6",
+      "branchName": "ETE",
+      "courseName": "ELECTRONICS AND TELECOMMUNICATION ENGG",
+      "intake": "21",
+      "fee": "76000"
+    },
+    {
+      "branchCode": "7",
+      "branchName": "INF",
+      "courseName": "INFORMATION TECHNOLOGY",
+      "intake": "42",
+      "fee": "76000"
+    },
+    {
+      "branchCode": "8",
+      "branchName": "MEC",
+      "courseName": "MECHANICAL ENGINEERING",
+      "intake": "42",
+      "fee": "76000"
+    }
+  ],
+  "_mergeInfo": {
+    "source": "merged",
+    "primary": "2025_institute_profiles",
+    "secondary": "eduvale_profiles",
+    "mergedAt": "2025-07-23T17:34:14.853Z"
+  },
+  "campusPhotos": [],
+  "totalImages": 1,
+  "logo": "🔧",
+  "_finalData": {
+    "hasLogo": false,
+    "campusPhotoCount": 0,
+    "totalImages": 0,
+    "processedAt": "2025-07-23T18:53:50.196Z",
+    "method": "fast_final_scraping"
+  },
+  "_quickGrab": {
+    "hasLogo": false,
+    "photoCount": 0,
+    "totalImages": 0,
+    "grabbedAt": "2025-07-23T19:05:00.113Z"
+  },
+  "_cleanup": {
+    "genericLogoAdded": false,
+    "campusPhotosRemoved": false,
+    "cleanedAt": "2025-07-23T19:18:47.601Z",
+    "method": "generic_logo_cleanup"
+  }
+}

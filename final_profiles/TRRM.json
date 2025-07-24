@@ -1,0 +1,60 @@
+{
+  "collegeCode": "TRRM",
+  "name": "TIRUMALA ENGINEERING COLLEGE",
+  "collegeName": "N/A",
+  "address": "4-202 MEERPET",
+  "district": "RANGAREDDY",
+  "region": "OU",
+  "collegeType": "PVT",
+  "principal": "N/A",
+  "contact": "N/A",
+  "email": "ptrrtech[at]gmail.com",
+  "website": "N/A",
+  "affiliation": "N/A",
+  "establishedYear": "N/A",
+  "courses": [
+    {
+      "branchCode": "1",
+      "branchName": "CSE",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING",
+      "intake": "138",
+      "fee": "45000"
+    },
+    {
+      "branchCode": "2",
+      "branchName": "INF",
+      "courseName": "INFORMATION TECHNOLOGY",
+      "intake": "93",
+      "fee": "45000"
+    }
+  ],
+  "campusPhotos": [],
+  "totalImages": 1,
+  "logo": "🚀",
+  "_finalData": {
+    "hasLogo": false,
+    "campusPhotoCount": 0,
+    "totalImages": 0,
+    "deepResearchedAt": "2025-07-23T19:02:39.869Z",
+    "method": "deep_research_scraping",
+    "sources": {
+      "logo": null,
+      "campusPhotos": {
+        "googleMaps": 0,
+        "googleImages": 0
+      }
+    }
+  },
+  "_quickGrab": {
+    "hasLogo": false,
+    "photoCount": 0,
+    "totalImages": 0,
+    "grabbedAt": "2025-07-23T19:04:30.625Z"
+  },
+  "_cleanup": {
+    "genericLogoAdded": false,
+    "campusPhotosRemoved": false,
+    "cleanedAt": "2025-07-23T19:18:47.717Z",
+    "method": "generic_logo_cleanup"
+  }
+}

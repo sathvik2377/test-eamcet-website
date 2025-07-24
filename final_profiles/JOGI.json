@@ -1,0 +1,102 @@
+{
+  "collegeCode": "JOGI",
+  "name": "JOGINPALLY B R ENGINEERING COLLEGE",
+  "location": "YENKAPALLY",
+  "district": "RANGAREDDY",
+  "districtCode": "RR",
+  "type": "Autonomous",
+  "affiliation": "N/A",
+  "established": "2002",
+  "autonomousStatus": "",
+  "nirfRank": "",
+  "naacGrade": "A+",
+  "nbaAccredited": "",
+  "fees": "₹87,000",
+  "about": "JOGINPALLY B R ENGINEERING COLLEGE, established in 2002, is a Autonomous institution located in YENKAPALLY, RANGAREDDY. The college is affiliated to JNTUH. The college holds NAAC A+ grade, demonstrating its commitment to quality education. Admissions are conducted through TG EAPCET/EAMCET and TG ECET.",
+  "phone": "08413-235684",
+  "website": "www.jbrec.edu.in",
+  "eapcetAvailable": "Yes",
+  "ecetAvailable": "Yes",
+  "found": true,
+  "collegeName": "N/A",
+  "address": "YENKAPALLY",
+  "region": "OU",
+  "collegeType": "PVT",
+  "principal": "N/A",
+  "contact": "N/A",
+  "email": "principal_jbr[at]yahoo.com",
+  "establishedYear": "N/A",
+  "courses": [
+    {
+      "branchCode": "1",
+      "branchName": "CSD",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (DATA SCIENCE)",
+      "intake": "46",
+      "fee": "87000"
+    },
+    {
+      "branchCode": "2",
+      "branchName": "CSE",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING",
+      "intake": "185",
+      "fee": "87000"
+    },
+    {
+      "branchCode": "3",
+      "branchName": "CSM",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING)",
+      "intake": "92",
+      "fee": "87000"
+    },
+    {
+      "branchCode": "4",
+      "branchName": "ECE",
+      "courseName": "ELECTRONICS AND COMMUNICATION ENGINEERING",
+      "intake": "47",
+      "fee": "87000"
+    },
+    {
+      "branchCode": "5",
+      "branchName": "EEE",
+      "courseName": "ELECTRICAL AND ELECTRONICS ENGINEERING",
+      "intake": "23",
+      "fee": "87000"
+    },
+    {
+      "branchCode": "6",
+      "branchName": "INF",
+      "courseName": "INFORMATION TECHNOLOGY",
+      "intake": "46",
+      "fee": "87000"
+    },
+    {
+      "branchCode": "7",
+      "branchName": "MEC",
+      "courseName": "MECHANICAL ENGINEERING",
+      "intake": "23",
+      "fee": "87000"
+    }
+  ],
+  "_mergeInfo": {
+    "source": "merged",
+    "primary": "2025_institute_profiles",
+    "secondary": "eduvale_profiles",
+    "mergedAt": "2025-07-23T17:34:14.967Z"
+  },
+  "campusPhotos": [],
+  "totalImages": 1,
+  "logo": "📐",
+  "_finalData": {
+    "hasLogo": false,
+    "campusPhotoCount": 1,
+    "totalImages": 1,
+    "processedAt": "2025-07-23T18:53:16.165Z",
+    "method": "fast_final_scraping"
+  },
+  "_cleanup": {
+    "genericLogoAdded": false,
+    "campusPhotosRemoved": false,
+    "cleanedAt": "2025-07-23T19:18:47.637Z",
+    "method": "generic_logo_cleanup"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "collegeCode": "AURG",
+  "name": "AURORAS TECHNOLOGICAL, RESEARCH INSTITUTE",
+  "location": "GHATKESAR",
+  "district": "MEDCHAL",
+  "districtCode": "MDL",
+  "type": "Private College",
+  "affiliation": "N/A",
+  "established": "1999",
+  "autonomousStatus": "",
+  "nirfRank": "",
+  "naacGrade": "B+",
+  "nbaAccredited": "",
+  "fees": "₹45,000",
+  "about": "AURORAS TECHNOLOGICAL, RESEARCH INSTITUTE, established in 1999, is a Private College institution located in GHATKESAR, MEDCHAL. The college is affiliated to JNTUH. The college holds NAAC B++ grade, demonstrating its commitment to quality education. Admissions are conducted through TG EAPCET/EAMCET and TG ECET.",
+  "phone": "8415-200040",
+  "website": "www.astm.edu.in",
+  "eapcetAvailable": "Yes",
+  "ecetAvailable": "Yes",
+  "found": true,
+  "collegeName": "N/A",
+  "address": "AUSHPUR 501301",
+  "region": "OU",
+  "collegeType": "PVT",
+  "principal": "N/A",
+  "contact": "N/A",
+  "email": "astm9[at]gmail.com",
+  "establishedYear": "N/A",
+  "courses": [
+    {
+      "branchCode": "1",
+      "branchName": "AIM",
+      "courseName": "ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING",
+      "intake": "92",
+      "fee": "45000"
+    },
+    {
+      "branchCode": "2",
+      "branchName": "CSE",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING",
+      "intake": "231",
+      "fee": "45000"
+    },
+    {
+      "branchCode": "3",
+      "branchName": "ECE",
+      "courseName": "ELECTRONICS AND COMMUNICATION ENGINEERING",
+      "intake": "46",
+      "fee": "45000"
+    },
+    {
+      "branchCode": "4",
+      "branchName": "MEC",
+      "courseName": "MECHANICAL ENGINEERING",
+      "intake": "47",
+      "fee": "45000"
+    }
+  ],
+  "_mergeInfo": {
+    "source": "merged",
+    "primary": "2025_institute_profiles",
+    "secondary": "eduvale_profiles",
+    "mergedAt": "2025-07-23T17:34:14.790Z"
+  },
+  "campusPhotos": [],
+  "totalImages": 1,
+  "logo": "📐",
+  "_finalData": {
+    "hasLogo": false,
+    "campusPhotoCount": 0,
+    "totalImages": 0,
+    "processedAt": "2025-07-23T18:53:29.451Z",
+    "method": "fast_final_scraping"
+  },
+  "_quickGrab": {
+    "hasLogo": false,
+    "photoCount": 0,
+    "totalImages": 0,
+    "grabbedAt": "2025-07-23T19:04:44.082Z"
+  },
+  "_cleanup": {
+    "genericLogoAdded": false,
+    "campusPhotosRemoved": false,
+    "cleanedAt": "2025-07-23T19:18:47.555Z",
+    "method": "generic_logo_cleanup"
+  }
+}

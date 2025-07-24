@@ -1,0 +1,46 @@
+{
+  "collegeCode": "CFSR",
+  "name": "CHAITANYA BHARATHI INSTITUTE OF TECHNOLOGY",
+  "collegeName": "N/A",
+  "address": "RS AND RRS",
+  "district": "NIZAMABAD",
+  "region": "OU",
+  "collegeType": "GOV",
+  "principal": "N/A",
+  "contact": "N/A",
+  "email": "cfstrdr[at]gmail.com",
+  "website": "www.pjtsau.edu.in",
+  "affiliation": "N/A",
+  "establishedYear": "N/A",
+  "courses": [
+    {
+      "branchCode": "1",
+      "branchName": "FDT",
+      "courseName": "FOOD TECHNOLOGY",
+      "intake": "17",
+      "fee": "80720"
+    }
+  ],
+  "campusPhotos": [],
+  "totalImages": 1,
+  "logo": "💡",
+  "_finalData": {
+    "hasLogo": false,
+    "campusPhotoCount": 0,
+    "totalImages": 0,
+    "processedAt": "2025-07-23T18:53:09.827Z",
+    "method": "fast_final_scraping"
+  },
+  "_quickGrab": {
+    "hasLogo": false,
+    "photoCount": 0,
+    "totalImages": 0,
+    "grabbedAt": "2025-07-23T19:04:40.492Z"
+  },
+  "_cleanup": {
+    "genericLogoAdded": false,
+    "campusPhotosRemoved": false,
+    "cleanedAt": "2025-07-23T19:18:47.578Z",
+    "method": "generic_logo_cleanup"
+  }
+}

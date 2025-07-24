@@ -1,0 +1,122 @@
+{
+  "collegeCode": "SNIS",
+  "name": "SREENIDHI INSTITUTE OF SCIENCE AND TECHNOLOGY",
+  "location": "GHATKESAR",
+  "district": "MEDCHAL",
+  "districtCode": "MDL",
+  "type": "Autonomous",
+  "affiliation": "N/A",
+  "established": "1997",
+  "autonomousStatus": "Autonomous from 2010",
+  "nirfRank": "201",
+  "naacGrade": "A+",
+  "nbaAccredited": "Yes",
+  "fees": "₹130,000",
+  "about": "SREENIDHI INSTITUTE OF SCIENCE AND TECHNOLOGY, established in 1997, is a Autonomous institution located in GHATKESAR, MEDCHAL. The college is affiliated to JNTUH. It has been autonomous since 2010. The college holds NAAC A+ grade, NBA accreditation, NIRF ranking of 201-300, demonstrating its commitment to quality education. Admissions are conducted through TG EAPCET/EAMCET and TG ECET.",
+  "phone": "08415-200595",
+  "website": "www.sreenidhi.edu.in",
+  "eapcetAvailable": "Yes",
+  "ecetAvailable": "Yes",
+  "found": true,
+  "collegeName": "N/A",
+  "address": "YAMNAMPET",
+  "region": "OU",
+  "collegeType": "PVT",
+  "principal": "N/A",
+  "contact": "N/A",
+  "email": "info[at]sreenidhi.edu.in",
+  "establishedYear": "N/A",
+  "courses": [
+    {
+      "branchCode": "1",
+      "branchName": "CIV",
+      "courseName": "CIVIL ENGINEERING",
+      "intake": "46",
+      "fee": "130000"
+    },
+    {
+      "branchCode": "2",
+      "branchName": "CSC",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (CYBER SECURITY)",
+      "intake": "47",
+      "fee": "130000"
+    },
+    {
+      "branchCode": "3",
+      "branchName": "CSD",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (DATA SCIENCE)",
+      "intake": "138",
+      "fee": "130000"
+    },
+    {
+      "branchCode": "4",
+      "branchName": "CSE",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING",
+      "intake": "393",
+      "fee": "130000"
+    },
+    {
+      "branchCode": "5",
+      "branchName": "CSM",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING)",
+      "intake": "254",
+      "fee": "130000"
+    },
+    {
+      "branchCode": "6",
+      "branchName": "ECE",
+      "courseName": "ELECTRONICS AND COMMUNICATION ENGINEERING",
+      "intake": "323",
+      "fee": "130000"
+    },
+    {
+      "branchCode": "7",
+      "branchName": "EEE",
+      "courseName": "ELECTRICAL AND ELECTRONICS ENGINEERING",
+      "intake": "46",
+      "fee": "130000"
+    },
+    {
+      "branchCode": "8",
+      "branchName": "INF",
+      "courseName": "INFORMATION TECHNOLOGY",
+      "intake": "185",
+      "fee": "130000"
+    },
+    {
+      "branchCode": "9",
+      "branchName": "MEC",
+      "courseName": "MECHANICAL ENGINEERING",
+      "intake": "46",
+      "fee": "130000"
+    }
+  ],
+  "_mergeInfo": {
+    "source": "merged",
+    "primary": "2025_institute_profiles",
+    "secondary": "eduvale_profiles",
+    "mergedAt": "2025-07-23T17:34:15.103Z"
+  },
+  "campusPhotos": [],
+  "totalImages": 1,
+  "logo": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20149%20101'%3E%3C/svg%3E",
+  "_finalData": {
+    "hasLogo": false,
+    "campusPhotoCount": 0,
+    "totalImages": 0,
+    "processedAt": "2025-07-23T18:53:16.933Z",
+    "method": "fast_final_scraping"
+  },
+  "_quickGrab": {
+    "hasLogo": false,
+    "photoCount": 0,
+    "totalImages": 0,
+    "grabbedAt": "2025-07-23T19:04:44.487Z"
+  },
+  "_logoScraping": {
+    "logoFound": true,
+    "logoUrl": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20149%20101'%3E%3C/svg%3E",
+    "scrapedAt": "2025-07-23T19:16:52.715Z",
+    "method": "parallel_logo_scraping"
+  }
+}

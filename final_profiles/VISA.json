@@ -1,0 +1,108 @@
+{
+  "collegeCode": "VISA",
+  "name": "VATHSALYA INSTITUTE OF SCIENCE AND TECHNOLOGY",
+  "location": "BHONGIR",
+  "district": "YADADRI BHUVANAGIRI",
+  "districtCode": "YBG",
+  "type": "Private College",
+  "affiliation": "N/A",
+  "established": "2001",
+  "autonomousStatus": "",
+  "nirfRank": "",
+  "naacGrade": "",
+  "nbaAccredited": "",
+  "fees": "₹62,000",
+  "about": "VATHSALYA INSTITUTE OF SCIENCE AND TECHNOLOGY, established in 2001, is a Private College institution located in BHONGIR, YADADRI BHUVANAGIRI. The college is affiliated to JNTUH. Admissions are conducted through TG EAPCET/EAMCET.",
+  "phone": "9248089801",
+  "website": "www.vathsalya.ac.in",
+  "eapcetAvailable": "Yes",
+  "ecetAvailable": "Yes",
+  "found": true,
+  "collegeName": "N/A",
+  "address": "ANANTHARAM",
+  "region": "OU",
+  "collegeType": "PVT",
+  "principal": "N/A",
+  "contact": "N/A",
+  "email": "vathsalyanaveen[at]gmail.com",
+  "establishedYear": "N/A",
+  "courses": [
+    {
+      "branchCode": "1",
+      "branchName": "CIV",
+      "courseName": "CIVIL ENGINEERING",
+      "intake": "23",
+      "fee": "62000"
+    },
+    {
+      "branchCode": "2",
+      "branchName": "CSD",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (DATA SCIENCE)",
+      "intake": "46",
+      "fee": "62000"
+    },
+    {
+      "branchCode": "3",
+      "branchName": "CSE",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING",
+      "intake": "23",
+      "fee": "62000"
+    },
+    {
+      "branchCode": "4",
+      "branchName": "CSM",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING)",
+      "intake": "24",
+      "fee": "62000"
+    },
+    {
+      "branchCode": "5",
+      "branchName": "ECE",
+      "courseName": "ELECTRONICS AND COMMUNICATION ENGINEERING",
+      "intake": "23",
+      "fee": "62000"
+    },
+    {
+      "branchCode": "6",
+      "branchName": "INF",
+      "courseName": "INFORMATION TECHNOLOGY",
+      "intake": "23",
+      "fee": "62000"
+    },
+    {
+      "branchCode": "7",
+      "branchName": "MEC",
+      "courseName": "MECHANICAL ENGINEERING",
+      "intake": "23",
+      "fee": "62000"
+    }
+  ],
+  "_mergeInfo": {
+    "source": "merged",
+    "primary": "2025_institute_profiles",
+    "secondary": "eduvale_profiles",
+    "mergedAt": "2025-07-23T17:34:15.153Z"
+  },
+  "campusPhotos": [],
+  "totalImages": 1,
+  "logo": "🎓",
+  "_finalData": {
+    "hasLogo": false,
+    "campusPhotoCount": 0,
+    "totalImages": 0,
+    "processedAt": "2025-07-23T18:53:23.319Z",
+    "method": "fast_final_scraping"
+  },
+  "_quickGrab": {
+    "hasLogo": false,
+    "photoCount": 0,
+    "totalImages": 0,
+    "grabbedAt": "2025-07-23T19:04:50.963Z"
+  },
+  "_cleanup": {
+    "genericLogoAdded": false,
+    "campusPhotosRemoved": false,
+    "cleanedAt": "2025-07-23T19:18:47.722Z",
+    "method": "generic_logo_cleanup"
+  }
+}

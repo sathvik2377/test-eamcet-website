@@ -1,0 +1,115 @@
+{
+  "collegeCode": "MLRD",
+  "name": "MALLA REDDY COLLEGE OF ENGINEERING AND TECHNOLOGY",
+  "location": "MYSAMMAGUDA",
+  "district": "MEDCHAL",
+  "districtCode": "MDL",
+  "type": "Autonomous",
+  "affiliation": "N/A",
+  "established": "2004",
+  "autonomousStatus": "Autonomous from 2015",
+  "nirfRank": "",
+  "naacGrade": "A",
+  "nbaAccredited": "Yes",
+  "fees": "₹110,000",
+  "about": "MALLA REDDY COLLEGE OF ENGINEERING AND TECHNOLOGY, established in 2004, is a Autonomous institution located in MYSAMMAGUDA, MEDCHAL. The college is affiliated to JNTUH. It has been autonomous since 2015. The college holds NAAC A grade, NBA accreditation, demonstrating its commitment to quality education. Admissions are conducted through TG EAPCET/EAMCET and TG ECET.",
+  "phone": "9346648391",
+  "website": "www.mrcet.ac.in",
+  "eapcetAvailable": "Yes",
+  "ecetAvailable": "Yes",
+  "found": true,
+  "collegeName": "N/A",
+  "address": "MYSAMMAGUDA",
+  "region": "OU",
+  "collegeType": "PVT",
+  "principal": "N/A",
+  "contact": "N/A",
+  "email": "mrcet2004[at]gmail.com",
+  "establishedYear": "N/A",
+  "courses": [
+    {
+      "branchCode": "1",
+      "branchName": "ANE",
+      "courseName": "AERONAUTICAL ENGINEERING",
+      "intake": "46",
+      "fee": "110000"
+    },
+    {
+      "branchCode": "2",
+      "branchName": "CSC",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (CYBER SECURITY)",
+      "intake": "47",
+      "fee": "110000"
+    },
+    {
+      "branchCode": "3",
+      "branchName": "CSD",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (DATA SCIENCE)",
+      "intake": "184",
+      "fee": "110000"
+    },
+    {
+      "branchCode": "4",
+      "branchName": "CSE",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING",
+      "intake": "324",
+      "fee": "110000"
+    },
+    {
+      "branchCode": "5",
+      "branchName": "CSM",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING)",
+      "intake": "231",
+      "fee": "110000"
+    },
+    {
+      "branchCode": "6",
+      "branchName": "ECE",
+      "courseName": "ELECTRONICS AND COMMUNICATION ENGINEERING",
+      "intake": "92",
+      "fee": "110000"
+    },
+    {
+      "branchCode": "7",
+      "branchName": "EEE",
+      "courseName": "ELECTRICAL AND ELECTRONICS ENGINEERING",
+      "intake": "23",
+      "fee": "110000"
+    },
+    {
+      "branchCode": "8",
+      "branchName": "MEC",
+      "courseName": "MECHANICAL ENGINEERING",
+      "intake": "23",
+      "fee": "110000"
+    }
+  ],
+  "_mergeInfo": {
+    "source": "merged",
+    "primary": "2025_institute_profiles",
+    "secondary": "eduvale_profiles",
+    "mergedAt": "2025-07-23T17:34:15.031Z"
+  },
+  "campusPhotos": [],
+  "totalImages": 1,
+  "logo": "🔬",
+  "_finalData": {
+    "hasLogo": false,
+    "campusPhotoCount": 0,
+    "totalImages": 0,
+    "processedAt": "2025-07-23T18:53:41.157Z",
+    "method": "fast_final_scraping"
+  },
+  "_quickGrab": {
+    "hasLogo": false,
+    "photoCount": 0,
+    "totalImages": 0,
+    "grabbedAt": "2025-07-23T19:04:57.090Z"
+  },
+  "_cleanup": {
+    "genericLogoAdded": false,
+    "campusPhotosRemoved": false,
+    "cleanedAt": "2025-07-23T19:18:47.666Z",
+    "method": "generic_logo_cleanup"
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "collegeCode": "KNRR",
+  "name": "KASIREDDY NARAYANAREDDY COLLEGE OF ENGINEERING & RESEARCH",
+  "location": "HAYATHNAGAR",
+  "district": "RANGAREDDY",
+  "districtCode": "RR",
+  "type": "Autonomous",
+  "affiliation": "N/A",
+  "established": "2008",
+  "autonomousStatus": "",
+  "nirfRank": "",
+  "naacGrade": "A+",
+  "nbaAccredited": "",
+  "fees": "₹60,000",
+  "about": "KASIREDDY NARAYANAREDDY COLLEGE OF ENGINEERING & RESEARCH, established in 2008, is a Autonomous institution located in HAYATHNAGAR, RANGAREDDY. The college is affiliated to JNTUH. The college holds NAAC A+ grade, demonstrating its commitment to quality education. Admissions are conducted through TG EAPCET/EAMCET and TG ECET.",
+  "phone": "9704200019",
+  "website": "www.knrcer.ac.in",
+  "eapcetAvailable": "Yes",
+  "ecetAvailable": "Yes",
+  "found": true,
+  "collegeName": "N/A",
+  "address": "ABDULLAPUR V",
+  "region": "OU",
+  "collegeType": "PVT",
+  "principal": "N/A",
+  "contact": "N/A",
+  "email": "principal[at]knrcer.ac.in",
+  "establishedYear": "N/A",
+  "courses": [
+    {
+      "branchCode": "1",
+      "branchName": "CIV",
+      "courseName": "CIVIL ENGINEERING",
+      "intake": "47",
+      "fee": "72000"
+    },
+    {
+      "branchCode": "2",
+      "branchName": "CSC",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (CYBER SECURITY)",
+      "intake": "46",
+      "fee": "72000"
+    },
+    {
+      "branchCode": "3",
+      "branchName": "CSD",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (DATA SCIENCE)",
+      "intake": "46",
+      "fee": "72000"
+    },
+    {
+      "branchCode": "4",
+      "branchName": "CSE",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING",
+      "intake": "93",
+      "fee": "72000"
+    },
+    {
+      "branchCode": "5",
+      "branchName": "CSM",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING)",
+      "intake": "46",
+      "fee": "72000"
+    },
+    {
+      "branchCode": "6",
+      "branchName": "ECE",
+      "courseName": "ELECTRONICS AND COMMUNICATION ENGINEERING",
+      "intake": "46",
+      "fee": "72000"
+    },
+    {
+      "branchCode": "7",
+      "branchName": "EEE",
+      "courseName": "ELECTRICAL AND ELECTRONICS ENGINEERING",
+      "intake": "46",
+      "fee": "72000"
+    },
+    {
+      "branchCode": "8",
+      "branchName": "MEC",
+      "courseName": "MECHANICAL ENGINEERING",
+      "intake": "46",
+      "fee": "72000"
+    }
+  ],
+  "_mergeInfo": {
+    "source": "merged",
+    "primary": "2025_institute_profiles",
+    "secondary": "eduvale_profiles",
+    "mergedAt": "2025-07-23T17:34:14.993Z"
+  },
+  "campusPhotos": [],
+  "totalImages": 1,
+  "logo": "🌟",
+  "_finalData": {
+    "hasLogo": false,
+    "campusPhotoCount": 0,
+    "totalImages": 0,
+    "processedAt": "2025-07-23T18:54:05.320Z",
+    "method": "fast_final_scraping"
+  },
+  "_quickGrab": {
+    "hasLogo": false,
+    "photoCount": 0,
+    "totalImages": 0,
+    "grabbedAt": "2025-07-23T19:05:07.318Z"
+  },
+  "_cleanup": {
+    "genericLogoAdded": false,
+    "campusPhotosRemoved": false,
+    "cleanedAt": "2025-07-23T19:18:47.648Z",
+    "method": "generic_logo_cleanup"
+  }
+}

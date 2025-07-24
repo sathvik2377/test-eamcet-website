@@ -1,0 +1,122 @@
+{
+  "collegeCode": "BIET",
+  "name": "BHARAT INSTITUTE OF ENGINEERING AND TECHNOLOGY",
+  "location": "IBRAHIMPATNAM",
+  "district": "RANGAREDDY",
+  "districtCode": "RR",
+  "type": "Private College",
+  "affiliation": "N/A",
+  "established": "2001",
+  "autonomousStatus": "",
+  "nirfRank": "",
+  "naacGrade": "B+",
+  "nbaAccredited": "Yes",
+  "fees": "₹116,000",
+  "about": "BHARAT INSTITUTE OF ENGINEERING AND TECHNOLOGY, established in 2001, is a Private College institution located in IBRAHIMPATNAM, RANGAREDDY. The college is affiliated to JNTUH. The college holds NAAC B++ grade, NBA accreditation, demonstrating its commitment to quality education. Admissions are conducted through TG EAPCET/EAMCET and TG ECET.",
+  "phone": "08414-252313",
+  "website": "www.biet.ac.in",
+  "eapcetAvailable": "Yes",
+  "ecetAvailable": "Yes",
+  "found": true,
+  "collegeName": "N/A",
+  "address": "MANGALPALLI V",
+  "region": "OU",
+  "collegeType": "PVT",
+  "principal": "N/A",
+  "contact": "N/A",
+  "email": "bietb6admn[at]yahoomail.com",
+  "establishedYear": "N/A",
+  "courses": [
+    {
+      "branchCode": "1",
+      "branchName": "CIV",
+      "courseName": "CIVIL ENGINEERING",
+      "intake": "23",
+      "fee": "89000"
+    },
+    {
+      "branchCode": "2",
+      "branchName": "CSC",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (CYBER SECURITY)",
+      "intake": "47",
+      "fee": "89000"
+    },
+    {
+      "branchCode": "3",
+      "branchName": "CSD",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (DATA SCIENCE)",
+      "intake": "46",
+      "fee": "89000"
+    },
+    {
+      "branchCode": "4",
+      "branchName": "CSE",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING",
+      "intake": "278",
+      "fee": "89000"
+    },
+    {
+      "branchCode": "5",
+      "branchName": "CSM",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING)",
+      "intake": "138",
+      "fee": "89000"
+    },
+    {
+      "branchCode": "6",
+      "branchName": "ECE",
+      "courseName": "ELECTRONICS AND COMMUNICATION ENGINEERING",
+      "intake": "139",
+      "fee": "89000"
+    },
+    {
+      "branchCode": "7",
+      "branchName": "EEE",
+      "courseName": "ELECTRICAL AND ELECTRONICS ENGINEERING",
+      "intake": "23",
+      "fee": "89000"
+    },
+    {
+      "branchCode": "8",
+      "branchName": "INF",
+      "courseName": "INFORMATION TECHNOLOGY",
+      "intake": "92",
+      "fee": "89000"
+    },
+    {
+      "branchCode": "9",
+      "branchName": "MEC",
+      "courseName": "MECHANICAL ENGINEERING",
+      "intake": "23",
+      "fee": "89000"
+    }
+  ],
+  "_mergeInfo": {
+    "source": "merged",
+    "primary": "2025_institute_profiles",
+    "secondary": "eduvale_profiles",
+    "mergedAt": "2025-07-23T17:34:14.795Z"
+  },
+  "campusPhotos": [],
+  "totalImages": 1,
+  "logo": "🚀",
+  "_finalData": {
+    "hasLogo": false,
+    "campusPhotoCount": 0,
+    "totalImages": 0,
+    "processedAt": "2025-07-23T18:53:44.903Z",
+    "method": "fast_final_scraping"
+  },
+  "_quickGrab": {
+    "hasLogo": false,
+    "photoCount": 0,
+    "totalImages": 0,
+    "grabbedAt": "2025-07-23T19:04:53.901Z"
+  },
+  "_cleanup": {
+    "genericLogoAdded": false,
+    "campusPhotosRemoved": false,
+    "cleanedAt": "2025-07-23T19:18:47.562Z",
+    "method": "generic_logo_cleanup"
+  }
+}

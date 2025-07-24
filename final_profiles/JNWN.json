@@ -1,0 +1,94 @@
+{
+  "collegeCode": "JNWN",
+  "name": "JNTUH UNIVERSITY COLLEGE OF ENGINEERING WANAPARTHY",
+  "location": "NARSINGAYAPALLY VILLAGE",
+  "district": "WANAPARTHY",
+  "districtCode": "WNP",
+  "type": "Government",
+  "affiliation": "N/A",
+  "established": "2022",
+  "autonomousStatus": "",
+  "nirfRank": "",
+  "naacGrade": "",
+  "nbaAccredited": "",
+  "fees": "₹50,000",
+  "about": "JNTUH UNIVERSITY COLLEGE OF ENGINEERING WANAPARTHY, established in 2022, is a Government institution located in NARSINGAYAPALLY VILLAGE, WANAPARTHY. The college is affiliated to JNTUH. Admissions are conducted through TG EAPCET/EAMCET and TG ECET.",
+  "phone": "8008103847",
+  "website": "N/A",
+  "eapcetAvailable": "Yes",
+  "ecetAvailable": "Yes",
+  "found": true,
+  "collegeName": "N/A",
+  "address": "Govt PG College",
+  "region": "OU",
+  "collegeType": "UNIV",
+  "principal": "N/A",
+  "contact": "N/A",
+  "email": "pa2registrar[at]jntuh.ac.in",
+  "establishedYear": "N/A",
+  "courses": [
+    {
+      "branchCode": "1",
+      "branchName": "CIV",
+      "courseName": "CIVIL ENGINEERING",
+      "intake": "66",
+      "fee": "50000"
+    },
+    {
+      "branchCode": "2",
+      "branchName": "CSE",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING",
+      "intake": "66",
+      "fee": "50000"
+    },
+    {
+      "branchCode": "3",
+      "branchName": "CSM",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING)",
+      "intake": "66",
+      "fee": "50000"
+    },
+    {
+      "branchCode": "4",
+      "branchName": "ECE",
+      "courseName": "ELECTRONICS AND COMMUNICATION ENGINEERING",
+      "intake": "66",
+      "fee": "50000"
+    },
+    {
+      "branchCode": "5",
+      "branchName": "MEC",
+      "courseName": "MECHANICAL ENGINEERING",
+      "intake": "66",
+      "fee": "50000"
+    }
+  ],
+  "_mergeInfo": {
+    "source": "merged",
+    "primary": "2025_institute_profiles",
+    "secondary": "eduvale_profiles",
+    "mergedAt": "2025-07-23T17:34:14.964Z"
+  },
+  "campusPhotos": [],
+  "totalImages": 1,
+  "logo": "📐",
+  "_finalData": {
+    "hasLogo": false,
+    "campusPhotoCount": 0,
+    "totalImages": 0,
+    "processedAt": "2025-07-23T18:53:11.772Z",
+    "method": "fast_final_scraping"
+  },
+  "_quickGrab": {
+    "hasLogo": false,
+    "photoCount": 0,
+    "totalImages": 0,
+    "grabbedAt": "2025-07-23T19:04:37.967Z"
+  },
+  "_cleanup": {
+    "genericLogoAdded": false,
+    "campusPhotosRemoved": false,
+    "cleanedAt": "2025-07-23T19:18:47.636Z",
+    "method": "generic_logo_cleanup"
+  }
+}

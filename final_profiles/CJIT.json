@@ -1,0 +1,96 @@
+{
+  "collegeCode": "CJIT",
+  "name": "CHRISTU JYOTHI INSTITUTE OF TECHNOLOGY AND SCI",
+  "location": "JANGAON",
+  "district": "JANGAON",
+  "districtCode": "JGN",
+  "type": "Private College",
+  "affiliation": "N/A",
+  "established": "1998",
+  "autonomousStatus": "",
+  "nirfRank": "",
+  "naacGrade": "",
+  "nbaAccredited": "Yes",
+  "fees": "₹62,000",
+  "about": "CHRISTU JYOTHI INSTITUTE OF TECHNOLOGY AND SCI, established in 1998, is a Private College institution located in JANGAON, JANGAON. The college is affiliated to JNTUH. This is a CHRISTIAN minority institution. The college holds NBA accreditation, demonstrating its commitment to quality education. Admissions are conducted through TG EAPCET/EAMCET and TG ECET.",
+  "phone": "08716-202101",
+  "website": "www.cjits.ac.in",
+  "eapcetAvailable": "Yes",
+  "ecetAvailable": "Yes",
+  "found": true,
+  "collegeName": "N/A",
+  "address": "COLOMBONAGAR",
+  "region": "OU",
+  "collegeType": "PVT",
+  "principal": "N/A",
+  "contact": "N/A",
+  "email": "principal[at]cjits.org",
+  "establishedYear": "N/A",
+  "courses": [
+    {
+      "branchCode": "1",
+      "branchName": "CIV",
+      "courseName": "CIVIL ENGINEERING",
+      "intake": "21",
+      "fee": "62000"
+    },
+    {
+      "branchCode": "2",
+      "branchName": "CSE",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING",
+      "intake": "126",
+      "fee": "62000"
+    },
+    {
+      "branchCode": "3",
+      "branchName": "CSM",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING)",
+      "intake": "42",
+      "fee": "62000"
+    },
+    {
+      "branchCode": "4",
+      "branchName": "ECE",
+      "courseName": "ELECTRONICS AND COMMUNICATION ENGINEERING",
+      "intake": "42",
+      "fee": "62000"
+    },
+    {
+      "branchCode": "5",
+      "branchName": "EEE",
+      "courseName": "ELECTRICAL AND ELECTRONICS ENGINEERING",
+      "intake": "42",
+      "fee": "62000"
+    },
+    {
+      "branchCode": "6",
+      "branchName": "MEC",
+      "courseName": "MECHANICAL ENGINEERING",
+      "intake": "21",
+      "fee": "62000"
+    }
+  ],
+  "_mergeInfo": {
+    "source": "merged",
+    "primary": "2025_institute_profiles",
+    "secondary": "eduvale_profiles",
+    "mergedAt": "2025-07-23T17:34:14.838Z"
+  },
+  "campusPhotos": [],
+  "totalImages": 1,
+  "logo": "https://www.cjits.ac.in/images/Logo-updated.png",
+  "_finalData": {
+    "hasLogo": true,
+    "campusPhotoCount": 0,
+    "totalImages": 1,
+    "deepResearchedAt": "2025-07-23T18:59:44.771Z",
+    "method": "deep_research_scraping",
+    "sources": {
+      "logo": "official_website",
+      "campusPhotos": {
+        "googleMaps": 0,
+        "googleImages": 0
+      }
+    }
+  }
+}

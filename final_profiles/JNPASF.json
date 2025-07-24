@@ -1,0 +1,67 @@
+{
+  "collegeCode": "JNPASF",
+  "name": "JNTUH COLLEGE OF ENGINEERING PULIVENDULA (SF)",
+  "collegeName": "N/A",
+  "address": "MASAB TANK",
+  "district": "HYDERABAD",
+  "region": "OU",
+  "collegeType": "SF",
+  "principal": "N/A",
+  "contact": "N/A",
+  "email": "principalspa[at]jnafau.ac.in",
+  "website": "www.jnafau.ac.in",
+  "affiliation": "N/A",
+  "establishedYear": "N/A",
+  "courses": [
+    {
+      "branchCode": "1",
+      "branchName": "BSE",
+      "courseName": "BUILDING SERVICES ENGG (Self Finance)",
+      "intake": "66",
+      "fee": "65000"
+    },
+    {
+      "branchCode": "2",
+      "branchName": "DTD",
+      "courseName": "DIGITAL TECHNIQUES FOR DESIGN AND PLANNING (Self Finance)",
+      "intake": "66",
+      "fee": "65000"
+    },
+    {
+      "branchCode": "3",
+      "branchName": "PLG",
+      "courseName": "B.PLANNING (Self Finance)",
+      "intake": "44",
+      "fee": "65000"
+    }
+  ],
+  "campusPhotos": [],
+  "totalImages": 1,
+  "logo": "💻",
+  "_finalData": {
+    "hasLogo": false,
+    "campusPhotoCount": 0,
+    "totalImages": 0,
+    "deepResearchedAt": "2025-07-23T19:00:48.941Z",
+    "method": "deep_research_scraping",
+    "sources": {
+      "logo": null,
+      "campusPhotos": {
+        "googleMaps": 0,
+        "googleImages": 0
+      }
+    }
+  },
+  "_quickGrab": {
+    "hasLogo": false,
+    "photoCount": 0,
+    "totalImages": 0,
+    "grabbedAt": "2025-07-23T19:05:13.424Z"
+  },
+  "_cleanup": {
+    "genericLogoAdded": false,
+    "campusPhotosRemoved": false,
+    "cleanedAt": "2025-07-23T19:18:47.628Z",
+    "method": "generic_logo_cleanup"
+  }
+}

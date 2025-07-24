@@ -1,0 +1,46 @@
+{
+  "collegeCode": "CDTK",
+  "name": "COLLEGE OF DAIRY TECHNOLOGY KAMAREDDY",
+  "collegeName": "N/A",
+  "address": "KAMAREDDY",
+  "district": "KAMAREDDY",
+  "region": "OU",
+  "collegeType": "UNIV",
+  "principal": "N/A",
+  "contact": "N/A",
+  "email": "chris_venkeys[at]yahoo.com",
+  "website": "N/A",
+  "affiliation": "N/A",
+  "establishedYear": "N/A",
+  "courses": [
+    {
+      "branchCode": "1",
+      "branchName": "DRG",
+      "courseName": "DAIRYING",
+      "intake": "25",
+      "fee": "45950"
+    }
+  ],
+  "campusPhotos": [],
+  "totalImages": 1,
+  "logo": "🎯",
+  "_finalData": {
+    "hasLogo": false,
+    "campusPhotoCount": 0,
+    "totalImages": 0,
+    "processedAt": "2025-07-23T18:53:06.076Z",
+    "method": "fast_final_scraping"
+  },
+  "_quickGrab": {
+    "hasLogo": false,
+    "photoCount": 0,
+    "totalImages": 0,
+    "grabbedAt": "2025-07-23T19:04:38.164Z"
+  },
+  "_cleanup": {
+    "genericLogoAdded": false,
+    "campusPhotosRemoved": false,
+    "cleanedAt": "2025-07-23T19:18:47.577Z",
+    "method": "generic_logo_cleanup"
+  }
+}

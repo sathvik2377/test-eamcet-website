@@ -1,0 +1,115 @@
+{
+  "collegeCode": "GCTC",
+  "name": "GEETANJALI COLLEGE OF ENGINEERING AND TECHNOLOGY",
+  "location": "KEESARA",
+  "district": "MEDCHAL",
+  "districtCode": "MDL",
+  "type": "Autonomous",
+  "affiliation": "N/A",
+  "established": "2005",
+  "autonomousStatus": "Autonomous from 2016",
+  "nirfRank": "",
+  "naacGrade": "A+",
+  "nbaAccredited": "Yes",
+  "fees": "₹120,000",
+  "about": "GEETANJALI COLLEGE OF ENGINEERING AND TECHNOLOGY, established in 2005, is a Autonomous institution located in KEESARA, MEDCHAL. The college is affiliated to JNTUH. It has been autonomous since 2016. The college holds NAAC A+ grade, NBA accreditation, demonstrating its commitment to quality education. Admissions are conducted through TG EAPCET/EAMCET and TG ECET.",
+  "phone": "9182058197",
+  "website": "www.geethanjaliinstitutions.com",
+  "eapcetAvailable": "Yes",
+  "ecetAvailable": "Yes",
+  "found": true,
+  "collegeName": "N/A",
+  "address": "CHEERYAL V",
+  "region": "OU",
+  "collegeType": "PVT",
+  "principal": "N/A",
+  "contact": "N/A",
+  "email": "info[at]gcet.edu.in",
+  "establishedYear": "N/A",
+  "courses": [
+    {
+      "branchCode": "1",
+      "branchName": "CIV",
+      "courseName": "CIVIL ENGINEERING",
+      "intake": "23",
+      "fee": "120000"
+    },
+    {
+      "branchCode": "2",
+      "branchName": "CSC",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (CYBER SECURITY)",
+      "intake": "139",
+      "fee": "120000"
+    },
+    {
+      "branchCode": "3",
+      "branchName": "CSD",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (DATA SCIENCE)",
+      "intake": "138",
+      "fee": "120000"
+    },
+    {
+      "branchCode": "4",
+      "branchName": "CSE",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING",
+      "intake": "370",
+      "fee": "120000"
+    },
+    {
+      "branchCode": "5",
+      "branchName": "CSM",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING)",
+      "intake": "184",
+      "fee": "120000"
+    },
+    {
+      "branchCode": "6",
+      "branchName": "ECE",
+      "courseName": "ELECTRONICS AND COMMUNICATION ENGINEERING",
+      "intake": "93",
+      "fee": "120000"
+    },
+    {
+      "branchCode": "7",
+      "branchName": "EEE",
+      "courseName": "ELECTRICAL AND ELECTRONICS ENGINEERING",
+      "intake": "46",
+      "fee": "120000"
+    },
+    {
+      "branchCode": "8",
+      "branchName": "MEC",
+      "courseName": "MECHANICAL ENGINEERING",
+      "intake": "23",
+      "fee": "120000"
+    }
+  ],
+  "_mergeInfo": {
+    "source": "merged",
+    "primary": "2025_institute_profiles",
+    "secondary": "eduvale_profiles",
+    "mergedAt": "2025-07-23T17:34:14.870Z"
+  },
+  "campusPhotos": [],
+  "totalImages": 1,
+  "logo": "https://www.geethanjaliinstitutions.com/images/logo.png",
+  "_finalData": {
+    "hasLogo": false,
+    "campusPhotoCount": 0,
+    "totalImages": 0,
+    "processedAt": "2025-07-23T18:54:24.670Z",
+    "method": "fast_final_scraping"
+  },
+  "_quickGrab": {
+    "hasLogo": false,
+    "photoCount": 0,
+    "totalImages": 0,
+    "grabbedAt": "2025-07-23T19:05:14.339Z"
+  },
+  "_logoScraping": {
+    "logoFound": true,
+    "logoUrl": "https://www.geethanjaliinstitutions.com/images/logo.png",
+    "scrapedAt": "2025-07-23T19:16:07.635Z",
+    "method": "parallel_logo_scraping"
+  }
+}

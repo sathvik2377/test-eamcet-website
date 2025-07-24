@@ -1,0 +1,143 @@
+{
+  "collegeCode": "BVRI",
+  "name": "B V RAJU INSTITUTE OF TECHNOLOGY",
+  "location": "NARSAPUR",
+  "district": "MEDAK",
+  "districtCode": "MED",
+  "type": "Autonomous",
+  "affiliation": "N/A",
+  "established": "1997",
+  "autonomousStatus": "Autonomous from 2014",
+  "nirfRank": "",
+  "naacGrade": "A+",
+  "nbaAccredited": "Yes",
+  "fees": "₹135,000",
+  "about": "B V RAJU INSTITUTE OF TECHNOLOGY, established in 1997, is a Autonomous institution located in NARSAPUR, MEDAK. The college is affiliated to JNTUH. It has been autonomous since 2014. The college holds NAAC A+ grade, NBA accreditation, demonstrating its commitment to quality education. Admissions are conducted through TG EAPCET/EAMCET and TG ECET.",
+  "phone": "08458-222000",
+  "website": "www.bvrit.ac.in",
+  "eapcetAvailable": "Yes",
+  "ecetAvailable": "Yes",
+  "found": true,
+  "collegeName": "N/A",
+  "address": "VISHNUPUR",
+  "region": "OU",
+  "collegeType": "PVT",
+  "principal": "N/A",
+  "contact": "N/A",
+  "email": "info[at]bvrit.ac.in",
+  "establishedYear": "N/A",
+  "courses": [
+    {
+      "branchCode": "1",
+      "branchName": "AID",
+      "courseName": "ARTIFICIAL INTELLIGENCE AND DATA SCIENCE",
+      "intake": "92",
+      "fee": "135000"
+    },
+    {
+      "branchCode": "2",
+      "branchName": "BME",
+      "courseName": "BIO-MEDICAL ENGINEERING",
+      "intake": "32",
+      "fee": "135000"
+    },
+    {
+      "branchCode": "3",
+      "branchName": "CHE",
+      "courseName": "CHEMICAL ENGINEERING",
+      "intake": "46",
+      "fee": "135000"
+    },
+    {
+      "branchCode": "4",
+      "branchName": "CIV",
+      "courseName": "CIVIL ENGINEERING",
+      "intake": "47",
+      "fee": "135000"
+    },
+    {
+      "branchCode": "5",
+      "branchName": "CSB",
+      "courseName": "COMPUTER SCIENCE AND BUSINESS SYSTEM",
+      "intake": "46",
+      "fee": "135000"
+    },
+    {
+      "branchCode": "6",
+      "branchName": "CSD",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (DATA SCIENCE)",
+      "intake": "92",
+      "fee": "135000"
+    },
+    {
+      "branchCode": "7",
+      "branchName": "CSE",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING",
+      "intake": "416",
+      "fee": "135000"
+    },
+    {
+      "branchCode": "8",
+      "branchName": "CSM",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING)",
+      "intake": "139",
+      "fee": "135000"
+    },
+    {
+      "branchCode": "9",
+      "branchName": "ECE",
+      "courseName": "ELECTRONICS AND COMMUNICATION ENGINEERING",
+      "intake": "184",
+      "fee": "135000"
+    },
+    {
+      "branchCode": "10",
+      "branchName": "EEE",
+      "courseName": "ELECTRICAL AND ELECTRONICS ENGINEERING",
+      "intake": "47",
+      "fee": "135000"
+    },
+    {
+      "branchCode": "11",
+      "branchName": "MEC",
+      "courseName": "MECHANICAL ENGINEERING",
+      "intake": "46",
+      "fee": "135000"
+    },
+    {
+      "branchCode": "12",
+      "branchName": "PHE",
+      "courseName": "PHARMACEUTICAL ENGINEERING",
+      "intake": "23",
+      "fee": "135000"
+    }
+  ],
+  "_mergeInfo": {
+    "source": "merged",
+    "primary": "2025_institute_profiles",
+    "secondary": "eduvale_profiles",
+    "mergedAt": "2025-07-23T17:34:14.822Z"
+  },
+  "campusPhotos": [],
+  "totalImages": 1,
+  "logo": "🏛️",
+  "_finalData": {
+    "hasLogo": false,
+    "campusPhotoCount": 0,
+    "totalImages": 0,
+    "processedAt": "2025-07-23T18:54:26.891Z",
+    "method": "fast_final_scraping"
+  },
+  "_quickGrab": {
+    "hasLogo": false,
+    "photoCount": 0,
+    "totalImages": 0,
+    "grabbedAt": "2025-07-23T19:05:12.728Z"
+  },
+  "_cleanup": {
+    "genericLogoAdded": false,
+    "campusPhotosRemoved": false,
+    "cleanedAt": "2025-07-23T19:18:47.571Z",
+    "method": "generic_logo_cleanup"
+  }
+}

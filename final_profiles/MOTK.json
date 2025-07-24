@@ -1,0 +1,101 @@
+{
+  "collegeCode": "MOTK",
+  "name": "MOTHER TERESA INSTITUTE OF SCIENCE AND TECHNOLOGY",
+  "location": "SATHUPALLY",
+  "district": "KHAMMAM",
+  "districtCode": "KHM",
+  "type": "Private College",
+  "affiliation": "N/A",
+  "established": "2001",
+  "autonomousStatus": "",
+  "nirfRank": "",
+  "naacGrade": "A+",
+  "nbaAccredited": "",
+  "fees": "₹75,000",
+  "about": "MOTHER TERESA INSTITUTE OF SCIENCE AND TECHNOLOGY, established in 2001, is a Private College institution located in SATHUPALLY, KHAMMAM. The college is affiliated to JNTUH. The college holds NAAC A+ grade, demonstrating its commitment to quality education. Admissions are conducted through TG EAPCET/EAMCET and TG ECET.",
+  "phone": "9505518234",
+  "website": "www.mistech.ac.in",
+  "eapcetAvailable": "Yes",
+  "ecetAvailable": "Yes",
+  "found": true,
+  "collegeName": "N/A",
+  "address": "SANKETIKA NAGAR",
+  "region": "OU",
+  "collegeType": "PVT",
+  "principal": "N/A",
+  "contact": "N/A",
+  "email": "principal[at]mistech.ac.in",
+  "establishedYear": "N/A",
+  "courses": [
+    {
+      "branchCode": "1",
+      "branchName": "CIV",
+      "courseName": "CIVIL ENGINEERING",
+      "intake": "23",
+      "fee": "75000"
+    },
+    {
+      "branchCode": "2",
+      "branchName": "CSE",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING",
+      "intake": "92",
+      "fee": "75000"
+    },
+    {
+      "branchCode": "3",
+      "branchName": "CSM",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING)",
+      "intake": "46",
+      "fee": "75000"
+    },
+    {
+      "branchCode": "4",
+      "branchName": "ECE",
+      "courseName": "ELECTRONICS AND COMMUNICATION ENGINEERING",
+      "intake": "47",
+      "fee": "75000"
+    },
+    {
+      "branchCode": "5",
+      "branchName": "EEE",
+      "courseName": "ELECTRICAL AND ELECTRONICS ENGINEERING",
+      "intake": "23",
+      "fee": "75000"
+    },
+    {
+      "branchCode": "6",
+      "branchName": "MEC",
+      "courseName": "MECHANICAL ENGINEERING",
+      "intake": "23",
+      "fee": "75000"
+    }
+  ],
+  "_mergeInfo": {
+    "source": "merged",
+    "primary": "2025_institute_profiles",
+    "secondary": "eduvale_profiles",
+    "mergedAt": "2025-07-23T17:34:15.035Z"
+  },
+  "campusPhotos": [],
+  "totalImages": 1,
+  "logo": "💡",
+  "_finalData": {
+    "hasLogo": false,
+    "campusPhotoCount": 0,
+    "totalImages": 0,
+    "processedAt": "2025-07-23T18:53:55.446Z",
+    "method": "fast_final_scraping"
+  },
+  "_quickGrab": {
+    "hasLogo": false,
+    "photoCount": 0,
+    "totalImages": 0,
+    "grabbedAt": "2025-07-23T19:05:03.978Z"
+  },
+  "_cleanup": {
+    "genericLogoAdded": false,
+    "campusPhotosRemoved": false,
+    "cleanedAt": "2025-07-23T19:18:47.669Z",
+    "method": "generic_logo_cleanup"
+  }
+}

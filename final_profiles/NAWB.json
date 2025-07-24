@@ -1,0 +1,108 @@
+{
+  "collegeCode": "NAWB",
+  "name": "NAWAB SHAH ALAM KHAN COLLEGE OF ENGINEERING AND TECHNOLOGY",
+  "location": "NEW MALAKPET",
+  "district": "HYDERABAD",
+  "districtCode": "HYD",
+  "type": "Autonomous",
+  "affiliation": "N/A",
+  "established": "2008",
+  "autonomousStatus": "",
+  "nirfRank": "",
+  "naacGrade": "A",
+  "nbaAccredited": "",
+  "fees": "₹60,000",
+  "about": "NAWAB SHAH ALAM KHAN COLLEGE OF ENGINEERING AND TECHNOLOGY, established in 2008, is a Autonomous institution located in NEW MALAKPET, HYDERABAD. The college is affiliated to OU. This is a MUSLIM minority institution. The college holds NAAC A grade, demonstrating its commitment to quality education. Admissions are conducted through TG EAPCET/EAMCET and TG ECET.",
+  "phone": "9849650796",
+  "website": "www.nsakcet.ac.in",
+  "eapcetAvailable": "Yes",
+  "ecetAvailable": "Yes",
+  "found": true,
+  "collegeName": "N/A",
+  "address": "NEW MALAKPET",
+  "region": "OU",
+  "collegeType": "PVT",
+  "principal": "N/A",
+  "contact": "N/A",
+  "email": "nsakcet[at]gmail.com",
+  "establishedYear": "N/A",
+  "courses": [
+    {
+      "branchCode": "1",
+      "branchName": "CIC",
+      "courseName": "CSE (IoT AND CYBER SECURITY INCLUDING BLOCK CHAIN TECHNOLOGY)",
+      "intake": "42",
+      "fee": "60000"
+    },
+    {
+      "branchCode": "2",
+      "branchName": "CIV",
+      "courseName": "CIVIL ENGINEERING",
+      "intake": "21",
+      "fee": "60000"
+    },
+    {
+      "branchCode": "3",
+      "branchName": "CSD",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (DATA SCIENCE)",
+      "intake": "21",
+      "fee": "60000"
+    },
+    {
+      "branchCode": "4",
+      "branchName": "CSE",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING",
+      "intake": "168",
+      "fee": "60000"
+    },
+    {
+      "branchCode": "5",
+      "branchName": "CSM",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING)",
+      "intake": "84",
+      "fee": "60000"
+    },
+    {
+      "branchCode": "6",
+      "branchName": "INF",
+      "courseName": "INFORMATION TECHNOLOGY",
+      "intake": "63",
+      "fee": "60000"
+    },
+    {
+      "branchCode": "7",
+      "branchName": "MEC",
+      "courseName": "MECHANICAL ENGINEERING",
+      "intake": "21",
+      "fee": "60000"
+    }
+  ],
+  "_mergeInfo": {
+    "source": "merged",
+    "primary": "2025_institute_profiles",
+    "secondary": "eduvale_profiles",
+    "mergedAt": "2025-07-23T17:34:15.065Z"
+  },
+  "campusPhotos": [],
+  "totalImages": 1,
+  "logo": "⚙️",
+  "_finalData": {
+    "hasLogo": false,
+    "campusPhotoCount": 0,
+    "totalImages": 0,
+    "processedAt": "2025-07-23T18:52:53.795Z",
+    "method": "fast_final_scraping"
+  },
+  "_quickGrab": {
+    "hasLogo": false,
+    "photoCount": 0,
+    "totalImages": 0,
+    "grabbedAt": "2025-07-23T19:04:29.410Z"
+  },
+  "_cleanup": {
+    "genericLogoAdded": false,
+    "campusPhotosRemoved": false,
+    "cleanedAt": "2025-07-23T19:18:47.673Z",
+    "method": "generic_logo_cleanup"
+  }
+}

@@ -1,13 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TS EAMCET 2024 Previous Year Cutoffs - Archival Nebula</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BEX3M5R4MZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-BEX3M5R4MZ');
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <style>
         /* Archival Nebula Theme - Historical and insightful */
+        html {
+            overflow: auto !important;
+            height: auto !important;
+            scroll-behavior: smooth;
+        }
+
         :root {
             --midnight-black: #080810;
             --deep-space-blue: #0A1128;
@@ -21,11 +41,14 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, var(--deep-forest-green-black) 0%, var(--midnight-black) 25%, var(--deep-space-blue) 50%, var(--midnight-black) 75%, var(--deep-forest-green-black) 100%);
-            background-attachment: fixed;
+            background: linear-gradient(135deg, var(--deep-forest-green-black) 0%, var(--midnight-black) 50%, var(--deep-space-blue) 100%);
+            background-attachment: scroll;
             color: var(--star-white);
-            position: relative;
-            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            overflow: auto;
+            scroll-behavior: smooth;
         }
 
         body::before {
@@ -35,16 +58,16 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background:
-                radial-gradient(circle at 20% 80%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(255, 165, 0, 0.08) 0%, transparent 50%),
-                radial-gradient(circle at 40% 40%, rgba(255, 215, 0, 0.05) 0%, transparent 50%);
-            opacity: 0.6;
+            background: radial-gradient(circle at 50% 50%, rgba(255, 215, 0, 0.05) 0%, transparent 70%);
+            opacity: 0.4;
             pointer-events: none;
             z-index: -1;
+            will-change: transform;
         }
 
-        h1, h2, h3 {
+        h1,
+        h2,
+        h3 {
             font-family: 'Poppins', sans-serif;
         }
 
@@ -147,12 +170,15 @@
 
         /* Tables */
         .table-container {
-            background: rgba(10, 26, 10, 0.6);
-            border-radius: 20px;
+            background: rgba(10, 26, 10, 0.4);
+            border-radius: 12px;
             border: 1px solid var(--stardust-silver);
-            overflow-y: auto;
-            overflow-x: auto;
-            max-height: 70vh;
+            overflow: auto;
+            max-height: 60vh;
+            width: 100%;
+            transform: translateZ(0);
+            will-change: scroll-position;
+            contain: layout style paint;
         }
 
         /* Ensure all columns are visible */
@@ -165,12 +191,14 @@
 
         .table-container th:first-child,
         .table-container td:first-child {
-            min-width: 150px; /* College */
+            min-width: 150px;
+            /* College */
         }
 
         .table-container th:nth-child(2),
         .table-container td:nth-child(2) {
-            min-width: 180px; /* Branch */
+            min-width: 180px;
+            /* Branch */
         }
 
         .table-container::-webkit-scrollbar {
@@ -200,10 +228,69 @@
             hyphens: auto;
         }
 
+        .table-fixed {
+            table-layout: fixed !important;
+            width: 100% !important;
+        }
+
+        .table-fixed th,
+        .table-fixed td {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
         .table-header {
-            background: var(--midnight-black);
-            color: var(--golden-yellow);
+            background: rgba(11, 11, 20, 0.95) !important;
+            backdrop-filter: blur(20px);
+            color: white !important;
             font-weight: 600;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .table-header th {
+            background: none !important;
+            background-image: none !important;
+            background-color: transparent !important;
+            color: white !important;
+            padding: 12px 8px !important;
+            font-size: 0.75rem !important;
+            line-height: 1.2 !important;
+            vertical-align: middle !important;
+            position: relative;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        /* Specific column widths */
+        .table-fixed th:nth-child(1),
+        .table-fixed td:nth-child(1) {
+            width: 300px;
+        }
+
+        /* College Name */
+
+        .table-fixed th:nth-child(2),
+        .table-fixed td:nth-child(2) {
+            width: 250px;
+        }
+
+        /* Branch Name */
+
+        .table-fixed th:nth-child(n+3),
+        .table-fixed td:nth-child(n+3) {
+            width: 80px;
+        }
+
+        /* All rank columns */
+
+        /* Prevent any gradient backgrounds on table elements */
+        table th,
+        table td,
+        .table-header,
+        .table-header th {
+            background-image: none !important;
         }
 
         .table-row:nth-child(even) {
@@ -241,8 +328,13 @@
         }
 
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
         /* Scrollbar Customization */
@@ -269,7 +361,7 @@
                 padding: 0.5rem 1rem;
                 font-size: 0.875rem;
             }
-            
+
             .card {
                 border-radius: 15px;
                 margin: 1rem;
@@ -310,39 +402,7 @@
             content: ' ↓';
         }
 
-        /* Top scroll bar */
-        .top-scroll-container {
-            background: rgba(26, 27, 58, 0.6);
-            border-radius: 20px 20px 0 0;
-            border: 1px solid rgba(42, 45, 71, 0.5);
-            border-bottom: none;
-            overflow-x: auto;
-            overflow-y: hidden;
-            height: 20px;
-        }
-
-        .top-scroll-content {
-            height: 1px;
-            /* Width will be set by JavaScript to match table width */
-        }
-
-        .top-scroll-container::-webkit-scrollbar {
-            height: 8px;
-        }
-
-        .top-scroll-container::-webkit-scrollbar-track {
-            background: rgba(11, 11, 20, 0.3);
-            border-radius: 4px;
-        }
-
-        .top-scroll-container::-webkit-scrollbar-thumb {
-            background: rgba(255, 140, 0, 0.5);
-            border-radius: 4px;
-        }
-
-        .top-scroll-container::-webkit-scrollbar-thumb:hover {
-            background: rgba(255, 140, 0, 0.7);
-        }
+        /* Simplified table scrolling */
 
         /* Sticky columns */
         .table-container table {
@@ -354,11 +414,11 @@
         .table-container td:nth-child(1) {
             position: sticky;
             left: 0;
-            z-index: 10;
-            background: rgba(26, 27, 58, 0.95);
-            border-right: none;
+            z-index: 2;
+            background: rgba(26, 27, 58, 0.9);
             min-width: 200px;
             max-width: 200px;
+            transform: translateZ(0);
         }
 
         /* Second column - Branch */
@@ -366,27 +426,44 @@
         .table-container td:nth-child(2) {
             position: sticky;
             left: 200px;
-            z-index: 10;
-            background: rgba(26, 27, 58, 0.95);
-            border-right: none;
+            z-index: 2;
+            background: rgba(26, 27, 58, 0.9);
             min-width: 150px;
             max-width: 150px;
+            transform: translateZ(0);
         }
 
         /* Header cells need higher z-index */
         .table-container thead th:nth-child(1),
         .table-container thead th:nth-child(2) {
-            z-index: 11;
+            z-index: 3;
+        }
+
+        /* Performance optimizations */
+        .table-container * {
+            will-change: auto;
+        }
+
+        .table-container tbody tr {
+            contain: layout style;
+        }
+
+        /* Smooth scrolling optimizations */
+        .table-container {
+            -webkit-overflow-scrolling: touch;
+            scroll-behavior: smooth;
         }
     </style>
 </head>
+
 <body>
     <!-- Navigation Header -->
     <header class="nav-container sticky top-0 z-50">
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-center">
                 <div class="flex items-center space-x-4">
-                    <div class="w-12 h-12 rounded-xl flex items-center justify-center shadow-lg" style="background: linear-gradient(135deg, #FF8C00 0%, #DAA520 50%, #B8860B 100%);">
+                    <div class="w-12 h-12 rounded-xl flex items-center justify-center shadow-lg"
+                        style="background: linear-gradient(135deg, #FF8C00 0%, #DAA520 50%, #B8860B 100%);">
                         <span class="text-xl font-bold text-black">TS</span>
                     </div>
                     <div>
@@ -405,42 +482,50 @@
         <div class="container mx-auto px-6">
             <div class="text-center mb-8">
                 <h2 class="text-3xl font-bold mb-4 gradient-text glow-text">Navigate Your EAMCET Journey</h2>
-                <p class="text-gray-400 max-w-2xl mx-auto">Choose from our comprehensive tools to find your results, explore cutoffs, and predict your college admissions</p>
+                <p class="text-gray-400 max-w-2xl mx-auto">Choose from our comprehensive tools to find your results,
+                    explore cutoffs, and predict your college admissions</p>
             </div>
 
             <!-- Navigation Grid - All 5 buttons in single row -->
-            <div class="max-w-7xl mx-auto">
+            <div class="max-w-full mx-auto">
                 <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
-                    <a href="index.html" class="nav-btn flex flex-col items-center space-y-4 p-10 rounded-3xl transition-all duration-300 min-h-[140px]">
+                    <a href="index.html"
+                        class="nav-btn flex flex-col items-center space-y-4 p-10 rounded-3xl transition-all duration-300 min-h-[140px]">
                         <div class="text-4xl">🔍</div>
                         <div class="text-center">
                             <div class="font-semibold text-base">Search Results</div>
                             <div class="text-xs text-gray-400 mt-1">Find student results</div>
                         </div>
                     </a>
-                    <a href="closing-ranks.html" class="nav-btn flex flex-col items-center space-y-4 p-10 rounded-3xl transition-all duration-300 min-h-[140px]">
+                    <a href="closing-ranks.html"
+                        class="nav-btn flex flex-col items-center space-y-4 p-10 rounded-3xl transition-all duration-300 min-h-[140px]">
                         <div class="text-4xl">📊</div>
                         <div class="text-center">
                             <div class="font-semibold text-base">Phase 1 Cutoffs</div>
                             <div class="text-xs text-gray-400 mt-1">Official closing ranks</div>
                         </div>
                     </a>
-                    <a href="phase2-cutoffs.html" class="nav-btn flex flex-col items-center space-y-4 p-10 rounded-3xl transition-all duration-300 relative min-h-[140px]">
-                        <div class="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full font-bold">PREDICTED</div>
+                    <a href="phase2-cutoffs.html"
+                        class="nav-btn flex flex-col items-center space-y-4 p-10 rounded-3xl transition-all duration-300 relative min-h-[140px]">
+                        <div
+                            class="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full font-bold">
+                            PREDICTED</div>
                         <div class="text-4xl">🎯</div>
                         <div class="text-center">
                             <div class="font-semibold text-base">Phase 2 Predictions</div>
                             <div class="text-xs text-gray-400 mt-1">Predicted cutoffs</div>
                         </div>
                     </a>
-                    <a href="previous-year-cutoffs.html" class="nav-btn flex flex-col items-center space-y-4 p-10 rounded-3xl transition-all duration-300 min-h-[140px]">
+                    <a href="previous-year-cutoffs.html"
+                        class="nav-btn flex flex-col items-center space-y-4 p-10 rounded-3xl transition-all duration-300 min-h-[140px]">
                         <div class="text-4xl">📚</div>
                         <div class="text-center">
                             <div class="font-semibold text-base">Previous Year Cutoffs</div>
                             <div class="text-xs text-gray-400 mt-1">Historical data</div>
                         </div>
                     </a>
-                    <a href="college-predictor.html" class="nav-btn flex flex-col items-center space-y-3 p-6 rounded-3xl transition-all duration-300 min-h-[110px] relative">
+                    <a href="college-predictor.html"
+                        class="nav-btn flex flex-col items-center space-y-3 p-6 rounded-3xl transition-all duration-300 min-h-[110px] relative">
                         <div class="text-3xl">🔮</div>
                         <div class="text-center">
                             <div class="font-semibold text-sm">College Predictor</div>
@@ -460,12 +545,20 @@
                 Previous Year <span class="gradient-text">Cutoffs Archive</span>
             </h1>
             <p class="text-lg text-gray-300 mb-6 max-w-3xl mx-auto">
-                Explore historical cutoff data from TS EAMCET 2024 across all three phases with <span class="gradient-text">advanced filtering</span>.
+                Explore historical cutoff data from TS EAMCET 2024 across all three phases with <span
+                    class="gradient-text">advanced filtering</span>.
             </p>
+
+            <!-- Quick Navigation -->
+            <div class="flex justify-center mb-6">
+                <a href="college-info.html" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-orange-600 to-yellow-600 text-white rounded-lg font-medium hover:from-orange-700 hover:to-yellow-700 transition-all duration-300 text-sm">
+                    🏫 College Info & Details
+                </a>
+            </div>
         </div>
 
         <!-- Phase Selection and Filters -->
-        <div class="card p-8 mb-8 max-w-7xl mx-auto">
+        <div class="card p-8 mb-8 max-w-full mx-auto">
             <div class="text-center mb-8">
                 <h2 class="text-2xl font-semibold mb-3 gradient-text">Select Phase and Apply Filters</h2>
                 <p class="text-gray-400 mb-6">Choose the counseling phase and customize your search criteria</p>
@@ -475,13 +568,16 @@
             <div class="mb-8">
                 <label class="block text-lg font-semibold mb-4 gradient-text">Select Counseling Phase:</label>
                 <div class="flex flex-wrap justify-center gap-4">
-                    <button id="phase1Btn" class="phase-btn px-8 py-3 rounded-xl font-medium transition-all duration-300 bg-gray-700 text-white hover:bg-gray-600">
+                    <button id="phase1Btn"
+                        class="phase-btn px-8 py-3 rounded-xl font-medium transition-all duration-300 bg-gray-700 text-white hover:bg-gray-600">
                         📊 Phase 1 (2024)
                     </button>
-                    <button id="phase2Btn" class="phase-btn px-8 py-3 rounded-xl font-medium transition-all duration-300 bg-gray-700 text-white hover:bg-gray-600">
+                    <button id="phase2Btn"
+                        class="phase-btn px-8 py-3 rounded-xl font-medium transition-all duration-300 bg-gray-700 text-white hover:bg-gray-600">
                         📈 Phase 2 (2024)
                     </button>
-                    <button id="phase3Btn" class="phase-btn btn-primary px-8 py-3 rounded-xl font-medium transition-all duration-300 active">
+                    <button id="phase3Btn"
+                        class="phase-btn btn-primary px-8 py-3 rounded-xl font-medium transition-all duration-300 active">
                         📉 Phase 3 (2024)
                     </button>
                 </div>
@@ -496,7 +592,8 @@
                     </select>
                     <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none mt-8">
                         <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
                         </svg>
                     </div>
                 </div>
@@ -507,7 +604,8 @@
                     </select>
                     <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none mt-8">
                         <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
                         </svg>
                     </div>
                 </div>
@@ -545,19 +643,21 @@
         </div>
 
         <!-- Results Section -->
-        <div id="resultsSection" class="hidden">
+        <div id="resultsSection" class="">
             <!-- Results Header -->
-            <div class="card p-6 mb-6 max-w-7xl mx-auto">
+            <div class="card p-6 mb-6 max-w-full mx-auto">
                 <div class="flex flex-col md:flex-row md:items-center md:justify-between">
                     <div>
                         <h3 class="text-2xl font-semibold mb-2 gradient-text">Search Results</h3>
                         <p id="resultsCount" class="text-gray-400">Found 0 results</p>
-                        <div class="mt-2 text-sm text-yellow-400">
-                            📱 <strong>Note:</strong> Scroll sideways to see all BC cutoffs • Check disclaimer at bottom
+                        <div class="mt-2 text-base text-yellow-400">
+                            📱 <strong>Note:</strong> Click on headers to sort • Scroll sideways to see all BC cutoffs •
+                            Check disclaimer at bottom
                         </div>
                     </div>
                     <div class="mt-4 md:mt-0">
-                        <button id="exportBtn" class="btn-primary px-6 py-3 rounded-xl font-medium transition-all duration-300">
+                        <button id="exportBtn"
+                            class="btn-primary px-6 py-3 rounded-xl font-medium transition-all duration-300">
                             📥 Export Results
                         </button>
                     </div>
@@ -565,81 +665,77 @@
             </div>
 
             <!-- Results Table -->
-            <div class="w-full max-w-none mx-auto">
-                <!-- Top Scroll Bar -->
-                <div class="top-scroll-container mb-2" style="margin-left: 350px;">
-                    <div class="top-scroll-content"></div>
-                </div>
+            <div class="w-full max-w-full mx-auto">
                 <div class="table-container" id="mainTableContainer">
-                    <table class="w-full min-w-max">
-                            <thead class="table-header">
-                                <tr>
-                                    <th class="px-4 py-3 text-left text-sm sortable-header" data-sort="college_name">
-                                        College <span class="sort-indicator">↕️</span>
-                                    </th>
-                                    <th class="px-4 py-3 text-left text-sm sortable-header" data-sort="branch_name">
-                                        Branch <span class="sort-indicator">↕️</span>
-                                    </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="oc_boys">
-                                        OC Boys <span class="sort-indicator">↕️</span>
-                                    </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="oc_girls">
-                                        OC Girls <span class="sort-indicator">↕️</span>
-                                    </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="sc_boys">
-                                        SC Boys <span class="sort-indicator">↕️</span>
-                                    </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="sc_girls">
-                                        SC Girls <span class="sort-indicator">↕️</span>
-                                    </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="st_boys">
-                                        ST Boys <span class="sort-indicator">↕️</span>
-                                    </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="st_girls">
-                                        ST Girls <span class="sort-indicator">↕️</span>
-                                    </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="bc_a_boys">
-                                        BC-A Boys <span class="sort-indicator">↕️</span>
-                                    </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="bc_a_girls">
-                                        BC-A Girls <span class="sort-indicator">↕️</span>
-                                    </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="bc_b_boys">
-                                        BC-B Boys <span class="sort-indicator">↕️</span>
-                                    </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="bc_b_girls">
-                                        BC-B Girls <span class="sort-indicator">↕️</span>
-                                    </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="bc_c_boys">
-                                        BC-C Boys <span class="sort-indicator">↕️</span>
-                                    </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="bc_c_girls">
-                                        BC-C Girls <span class="sort-indicator">↕️</span>
-                                    </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="bc_d_boys">
-                                        BC-D Boys <span class="sort-indicator">↕️</span>
-                                    </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="bc_d_girls">
-                                        BC-D Girls <span class="sort-indicator">↕️</span>
-                                    </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="bc_e_boys">
-                                        BC-E Boys <span class="sort-indicator">↕️</span>
-                                    </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="bc_e_girls">
-                                        BC-E Girls <span class="sort-indicator">↕️</span>
-                                    </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="ews_boys">
-                                        EWS Boys <span class="sort-indicator">↕️</span>
-                                    </th>
-                                    <th class="px-3 py-3 text-center text-sm sortable-header" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: white;" data-sort="ews_girls">
-                                        EWS Girls <span class="sort-indicator">↕️</span>
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody id="resultsTableBody">
-                                <!-- Results will be populated here -->
-                            </tbody>
-                        </table>
+                    <table class="w-full min-w-max table-fixed">
+                        <thead class="table-header">
+                            <tr>
+                                <th class="px-4 py-3 text-left text-sm sortable-header" data-sort="college_name">
+                                    College <span class="sort-indicator">↕️</span>
+                                </th>
+                                <th class="px-4 py-3 text-left text-sm sortable-header" data-sort="branch_name">
+                                    Branch <span class="sort-indicator">↕️</span>
+                                </th>
+                                <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="oc_boys">
+                                    OC Boys <span class="sort-indicator">↕️</span>
+                                </th>
+                                <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="oc_girls">
+                                    OC Girls <span class="sort-indicator">↕️</span>
+                                </th>
+                                <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="sc_boys">
+                                    SC Boys <span class="sort-indicator">↕️</span>
+                                </th>
+                                <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="sc_girls">
+                                    SC Girls <span class="sort-indicator">↕️</span>
+                                </th>
+                                <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="st_boys">
+                                    ST Boys <span class="sort-indicator">↕️</span>
+                                </th>
+                                <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="st_girls">
+                                    ST Girls <span class="sort-indicator">↕️</span>
+                                </th>
+                                <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="bc_a_boys">
+                                    BC-A Boys <span class="sort-indicator">↕️</span>
+                                </th>
+                                <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="bc_a_girls">
+                                    BC-A Girls <span class="sort-indicator">↕️</span>
+                                </th>
+                                <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="bc_b_boys">
+                                    BC-B Boys <span class="sort-indicator">↕️</span>
+                                </th>
+                                <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="bc_b_girls">
+                                    BC-B Girls <span class="sort-indicator">↕️</span>
+                                </th>
+                                <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="bc_c_boys">
+                                    BC-C Boys <span class="sort-indicator">↕️</span>
+                                </th>
+                                <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="bc_c_girls">
+                                    BC-C Girls <span class="sort-indicator">↕️</span>
+                                </th>
+                                <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="bc_d_boys">
+                                    BC-D Boys <span class="sort-indicator">↕️</span>
+                                </th>
+                                <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="bc_d_girls">
+                                    BC-D Girls <span class="sort-indicator">↕️</span>
+                                </th>
+                                <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="bc_e_boys">
+                                    BC-E Boys <span class="sort-indicator">↕️</span>
+                                </th>
+                                <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="bc_e_girls">
+                                    BC-E Girls <span class="sort-indicator">↕️</span>
+                                </th>
+                                <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="ews_boys">
+                                    EWS Boys <span class="sort-indicator">↕️</span>
+                                </th>
+                                <th class="px-3 py-3 text-center text-sm sortable-header" data-sort="ews_girls">
+                                    EWS Girls <span class="sort-indicator">↕️</span>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="resultsTableBody">
+                            <!-- Results will be populated here -->
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
@@ -669,19 +765,28 @@
         </div>
 
         <!-- Disclaimer Section -->
-        <div class="w-full max-w-7xl mx-auto mt-8 mb-8">
+        <div class="w-full max-w-full mx-auto mt-8 mb-8">
             <div class="bg-gradient-to-r from-red-900/20 to-orange-900/20 border border-red-500/30 rounded-xl p-6">
                 <h3 class="text-xl font-bold text-red-400 mb-4 flex items-center">
                     ⚠️ Important Disclaimer
                 </h3>
                 <div class="text-sm text-gray-300 space-y-2">
-                    <p><strong>1.</strong> Last rank statement does not reflect the candidates admitted in special reservation categories like PH, NCC, Sports and Games, Children of Armed Personnel (CAP) seats, State wide colleges & Minority colleges.</p>
-                    <p><strong>2.</strong> Every care has been taken to present accurate information. The Ranks shown are at the end of Web Counseling process and does not indicate the dropouts or spot admissions.</p>
-                    <p><strong>3.</strong> The statement shall be used only for information to assess the mode of opting by candidates and shall in no way reflect the rank upto which seat can be allotted in the present academic year.</p>
-                    <p><strong>4.</strong> The ranks indicated inclusive of the ranks allotted in respect of Consequential Vacancies arose at the final round of Allotment.</p>
+                    <p><strong>1.</strong> Last rank statement does not reflect the candidates admitted in special
+                        reservation categories like PH, NCC, Sports and Games, Children of Armed Personnel (CAP) seats,
+                        State wide colleges & Minority colleges.</p>
+                    <p><strong>2.</strong> Every care has been taken to present accurate information. The Ranks shown
+                        are at the end of Web Counseling process and does not indicate the dropouts or spot admissions.
+                    </p>
+                    <p><strong>3.</strong> The statement shall be used only for information to assess the mode of opting
+                        by candidates and shall in no way reflect the rank upto which seat can be allotted in the
+                        present academic year.</p>
+                    <p><strong>4.</strong> The ranks indicated inclusive of the ranks allotted in respect of
+                        Consequential Vacancies arose at the final round of Allotment.</p>
                     <p><strong>5.</strong> The TGCHE/DTE is not responsible for Print Errors.</p>
                     <p><strong>6.</strong> Girls are also eligible for Boys seats.</p>
-                    <p><strong>7.</strong> In terms of G.O.Ms.No. 42 Higher Education Dept.dated:18-05-2009,15% unreserved seats are filled first with combined merit list of candidates followed by 85% seats with local candidates only.</p>
+                    <p><strong>7.</strong> In terms of G.O.Ms.No. 42 Higher Education Dept.dated:18-05-2009,15%
+                        unreserved seats are filled first with combined merit list of candidates followed by 85% seats
+                        with local candidates only.</p>
                     <p><strong>8.</strong> NA means Not Applicable.</p>
                 </div>
             </div>
@@ -693,12 +798,14 @@
         <div class="container mx-auto px-6 py-8">
             <div class="text-center">
                 <div class="flex items-center justify-center mb-4">
-                    <div class="w-8 h-8 rounded-lg flex items-center justify-center mr-3" style="background: linear-gradient(135deg, #FF8C00 0%, #DAA520 50%, #B8860B 100%);">
+                    <div class="w-8 h-8 rounded-lg flex items-center justify-center mr-3"
+                        style="background: linear-gradient(135deg, #FF8C00 0%, #DAA520 50%, #B8860B 100%);">
                         <span class="text-sm font-bold text-black">TS</span>
                     </div>
                     <span class="text-lg font-semibold gradient-text">TS EAMCET Previous Year Cutoffs</span>
                 </div>
-                <p class="text-gray-400 mb-2">&copy; 2025 TS EAMCET Results Platform. Historical data from official TS EAMCET 2024 cutoffs.</p>
+                <p class="text-gray-400 mb-2">&copy; 2025 TS EAMCET Results Platform. Historical data from official TS
+                    EAMCET 2024 cutoffs.</p>
                 <p class="text-sm text-gray-500">Archival Nebula Theme • Historical Analysis • Trend Insights</p>
 
                 <!-- Official Footer -->
@@ -709,13 +816,19 @@
                             <span class="text-sm font-semibold text-blue-300">TS EAMCET 2025</span>
                         </div>
                         <p class="text-xs text-gray-300 text-center leading-relaxed">
-                            © 2025 TS EAMCET Results Finder. Data sourced from official TS EAMCET 2025 Phase 1 cutoffs.<br>
+                            © 2025 TS EAMCET Results Finder. Data sourced from official TS EAMCET 2025 Phase 1
+                            cutoffs.<br>
                             Built with modern web technologies • Optimized for performance • Mobile-friendly design
                         </p>
                         <p class="text-xs text-gray-400 text-center mt-2">
-                            <strong>Data Source Disclaimer:</strong> All data rights belong to the <a href="https://tgeapcet.nic.in/" target="_blank" class="text-blue-400 hover:text-blue-300 underline">official TS EAMCET website</a>.
-                            This website uses data sourced from their official publications. Some data may be missing or incomplete.
-                            For official and complete information, please refer to the <a href="https://tgeapcet.nic.in/" target="_blank" class="text-blue-400 hover:text-blue-300 underline">official TS EAMCET website</a>.
+                            <strong>Data Source Disclaimer:</strong> All data rights belong to the <a
+                                href="https://tgeapcet.nic.in/" target="_blank"
+                                class="text-blue-400 hover:text-blue-300 underline">official TS EAMCET website</a>.
+                            This website uses data sourced from their official publications. Some data may be missing or
+                            incomplete.
+                            For official and complete information, please refer to the <a
+                                href="https://tgeapcet.nic.in/" target="_blank"
+                                class="text-blue-400 hover:text-blue-300 underline">official TS EAMCET website</a>.
                         </p>
                     </div>
                 </div>
@@ -750,11 +863,48 @@
         // Initialize the application
         async function init() {
             try {
+                console.log('🔄 Starting initialization...');
+                showLoading();
+
                 await loadData();
+                console.log('✅ Data loaded successfully');
+
                 setupEventListeners();
+                console.log('✅ Event listeners setup');
+
                 populateFilters();
+                console.log('✅ Filters populated');
+
+                // Automatically display Phase 3 data on page load
+                const phaseData = allData[currentPhase] || [];
+                console.log(`📊 Phase ${currentPhase} data: ${phaseData.length} records`);
+
+                if (phaseData.length > 0) {
+                    filteredData = phaseData.filter(item => {
+                        // Filter out disclaimer text
+                        const disclaimerKeywords = [
+                            'Last rank statement', 'does not reflect', 'candidates admitted',
+                            'special reservation', 'CAP seats', 'State wide colleges',
+                            'Disclaimer:'
+                        ];
+
+                        const collegeName = item.college_name || '';
+                        return !disclaimerKeywords.some(keyword =>
+                            collegeName.toLowerCase().includes(keyword.toLowerCase())
+                        );
+                    });
+
+                    displayResults();
+                    console.log('✅ Results displayed');
+                    hideLoading();
+                    console.log('✅ Initialization completed');
+                } else {
+                    console.log('⚠️ No data found for current phase');
+                    hideLoading();
+                }
             } catch (error) {
-                console.error('Error initializing application:', error);
+                console.error('❌ Error initializing application:', error);
+                hideLoading();
                 showError('Failed to load data. Please refresh the page.');
             }
         }
@@ -800,11 +950,17 @@
             // Search button
             searchBtn.addEventListener('click', performSearch);
 
-            // Filter inputs
-            collegeFilter.addEventListener('change', performSearch);
-            branchFilter.addEventListener('change', performSearch);
-            categoryFilter.addEventListener('change', performSearch);
-            genderFilter.addEventListener('change', performSearch);
+            // Filter inputs with throttling to prevent lag
+            let filterTimeout;
+            const throttledSearch = () => {
+                clearTimeout(filterTimeout);
+                filterTimeout = setTimeout(performSearch, 100);
+            };
+
+            collegeFilter.addEventListener('change', throttledSearch);
+            branchFilter.addEventListener('change', throttledSearch);
+            categoryFilter.addEventListener('change', throttledSearch);
+            genderFilter.addEventListener('change', throttledSearch);
 
             // Export button
             exportBtn.addEventListener('click', exportResults);
@@ -821,16 +977,16 @@
         // Select phase
         function selectPhase(phase, button) {
             currentPhase = phase;
-            
+
             // Update button styles
             document.querySelectorAll('.phase-btn').forEach(btn => {
                 btn.classList.remove('btn-primary', 'active');
                 btn.classList.add('bg-gray-700', 'text-white');
             });
-            
+
             button.classList.remove('bg-gray-700', 'text-white');
             button.classList.add('btn-primary', 'active');
-            
+
             // Update filters and perform search
             populateFilters();
             performSearch();
@@ -928,19 +1084,37 @@
                 let aVal = a[field];
                 let bVal = b[field];
 
-                // Handle numeric values (ranks)
-                if (field !== 'college_name' && field !== 'branch_name') {
-                    aVal = parseInt(aVal) || 999999;
-                    bVal = parseInt(bVal) || 999999;
+                // Define rank columns (all columns except college_name and branch_name)
+                const rankColumns = [
+                    'oc_boys', 'oc_girls', 'sc_boys', 'sc_girls', 'st_boys', 'st_girls',
+                    'bc_a_boys', 'bc_a_girls', 'bc_b_boys', 'bc_b_girls',
+                    'bc_c_boys', 'bc_c_girls', 'bc_d_boys', 'bc_d_girls',
+                    'bc_e_boys', 'bc_e_girls', 'ews_boys', 'ews_girls'
+                ];
 
+                // Handle numeric values (ranks)
+                if (rankColumns.includes(field)) {
+                    // Handle NA values - push them to the end
+                    const aIsNA = aVal === null || aVal === undefined || aVal === 'NA' || aVal === '' || isNaN(parseInt(aVal));
+                    const bIsNA = bVal === null || bVal === undefined || bVal === 'NA' || bVal === '' || isNaN(parseInt(bVal));
+
+                    if (aIsNA && bIsNA) return 0;
+                    if (aIsNA) return 1; // a goes to end
+                    if (bIsNA) return -1; // b goes to end
+
+                    // Convert to numbers for rank comparison
+                    const aNum = parseInt(aVal) || 0;
+                    const bNum = parseInt(bVal) || 0;
+
+                    // For ranks: ascending = lower ranks first (better ranks), descending = higher ranks first
                     if (currentSortDirection === 'asc') {
-                        return aVal - bVal;
+                        return aNum - bNum;
                     } else {
-                        return bVal - aVal;
+                        return bNum - aNum;
                     }
                 }
 
-                // Handle text values
+                // Handle text values (college_name, branch_name)
                 aVal = (aVal || '').toString().toLowerCase();
                 bVal = (bVal || '').toString().toLowerCase();
 
@@ -1003,10 +1177,10 @@
                     showError('An error occurred while searching. Please try again.');
                     hideLoading();
                 }
-            }, 100); // 100ms debounce
+            }, 50); // Reduced to 50ms for better responsiveness
         }
 
-        // Display search results
+        // Display search results with performance optimization
         function displayResults() {
             if (filteredData.length === 0) {
                 showNoResults();
@@ -1015,15 +1189,22 @@
 
             showResults();
             resultsCount.textContent = `Found ${filteredData.length} results for ${currentPhase}`;
-            
+
+            // Use DocumentFragment for better performance
+            const fragment = document.createDocumentFragment();
+
+            // Limit initial render for performance (virtual scrolling concept)
+            const maxInitialRender = Math.min(filteredData.length, 50); // Reduced for better performance
+
             // Clear existing results
             resultsTableBody.innerHTML = '';
-            
-            // Add results to table
-            filteredData.forEach(item => {
+
+            // Add results to fragment first
+            for (let i = 0; i < maxInitialRender; i++) {
+                const item = filteredData[i];
                 const row = document.createElement('tr');
                 row.className = 'table-row border-b border-gray-700';
-                
+
                 row.innerHTML = `
                     <td class="px-4 py-3">
                         <div class="college-name font-semibold text-white text-sm">${formatCollegeName(item.college_name || 'N/A')}</div>
@@ -1087,9 +1268,91 @@
                         <span class="text-blue-300 font-bold text-sm">${formatRank(item.ews_girls)}</span>
                     </td>
                 `;
-                
-                resultsTableBody.appendChild(row);
-            });
+
+                fragment.appendChild(row);
+            }
+
+            // Append all rows at once for better performance
+            resultsTableBody.appendChild(fragment);
+
+            // Load remaining rows lazily if there are more
+            if (filteredData.length > maxInitialRender) {
+                setTimeout(() => {
+                    const remainingFragment = document.createDocumentFragment();
+                    for (let i = maxInitialRender; i < filteredData.length; i++) {
+                        const item = filteredData[i];
+                        const row = document.createElement('tr');
+                        row.className = 'table-row border-b border-gray-700';
+
+                        row.innerHTML = `
+                            <td class="px-4 py-3">
+                                <div class="college-name font-semibold text-white text-sm">${formatCollegeName(item.college_name || 'N/A')}</div>
+                                <div class="text-xs text-gray-400">${item.college_code || ''}</div>
+                            </td>
+                            <td class="px-4 py-3">
+                                <div class="college-name text-sm text-white font-medium">${formatBranchName(item.branch_name || 'N/A')}</div>
+                            </td>
+                            <td class="px-3 py-3 text-center">
+                                <span class="text-yellow-300 font-bold text-sm">${formatRank(item.oc_boys)}</span>
+                            </td>
+                            <td class="px-3 py-3 text-center">
+                                <span class="text-yellow-300 font-bold text-sm">${formatRank(item.oc_girls)}</span>
+                            </td>
+                            <td class="px-3 py-3 text-center">
+                                <span class="text-green-300 font-bold text-sm">${formatRank(item.sc_boys)}</span>
+                            </td>
+                            <td class="px-3 py-3 text-center">
+                                <span class="text-green-300 font-bold text-sm">${formatRank(item.sc_girls)}</span>
+                            </td>
+                            <td class="px-3 py-3 text-center">
+                                <span class="text-purple-300 font-bold text-sm">${formatRank(item.st_boys)}</span>
+                            </td>
+                            <td class="px-3 py-3 text-center">
+                                <span class="text-purple-300 font-bold text-sm">${formatRank(item.st_girls)}</span>
+                            </td>
+                            <td class="px-3 py-3 text-center">
+                                <span class="text-orange-300 font-bold text-sm">${formatRank(item.bc_a_boys)}</span>
+                            </td>
+                            <td class="px-3 py-3 text-center">
+                                <span class="text-orange-300 font-bold text-sm">${formatRank(item.bc_a_girls)}</span>
+                            </td>
+                            <td class="px-3 py-3 text-center">
+                                <span class="text-orange-400 font-bold text-sm">${formatRank(item.bc_b_boys)}</span>
+                            </td>
+                            <td class="px-3 py-3 text-center">
+                                <span class="text-orange-400 font-bold text-sm">${formatRank(item.bc_b_girls)}</span>
+                            </td>
+                            <td class="px-3 py-3 text-center">
+                                <span class="text-orange-500 font-bold text-sm">${formatRank(item.bc_c_boys)}</span>
+                            </td>
+                            <td class="px-3 py-3 text-center">
+                                <span class="text-orange-500 font-bold text-sm">${formatRank(item.bc_c_girls)}</span>
+                            </td>
+                            <td class="px-3 py-3 text-center">
+                                <span class="text-orange-600 font-bold text-sm">${formatRank(item.bc_d_boys)}</span>
+                            </td>
+                            <td class="px-3 py-3 text-center">
+                                <span class="text-orange-600 font-bold text-sm">${formatRank(item.bc_d_girls)}</span>
+                            </td>
+                            <td class="px-3 py-3 text-center">
+                                <span class="text-orange-700 font-bold text-sm">${formatRank(item.bc_e_boys)}</span>
+                            </td>
+                            <td class="px-3 py-3 text-center">
+                                <span class="text-orange-700 font-bold text-sm">${formatRank(item.bc_e_girls)}</span>
+                            </td>
+                            <td class="px-3 py-3 text-center">
+                                <span class="text-blue-300 font-bold text-sm">${formatRank(item.ews_boys)}</span>
+                            </td>
+                            <td class="px-3 py-3 text-center">
+                                <span class="text-blue-300 font-bold text-sm">${formatRank(item.ews_girls)}</span>
+                            </td>
+                        `;
+
+                        remainingFragment.appendChild(row);
+                    }
+                    resultsTableBody.appendChild(remainingFragment);
+                }, 50); // Small delay for smooth loading
+            }
         }
 
         // Format rank display
@@ -1174,19 +1437,7 @@
             noResults.classList.remove('hidden');
         }
 
-        function showLoading() {
-            const loadingIndicator = document.getElementById('loadingIndicator');
-            if (loadingIndicator) {
-                loadingIndicator.classList.remove('hidden');
-            }
-        }
 
-        function hideLoading() {
-            const loadingIndicator = document.getElementById('loadingIndicator');
-            if (loadingIndicator) {
-                loadingIndicator.classList.add('hidden');
-            }
-        }
 
         function showError(message) {
             console.error(message);
@@ -1248,55 +1499,73 @@
             return lines.join('<br>');
         }
 
-        // Setup dual scroll bars for sticky columns
-        function setupDualScrollBars() {
-            const topScrollContainer = document.querySelector('.top-scroll-container');
-            const topScrollContent = document.querySelector('.top-scroll-content');
+        // Simple scroll setup for table
+        function setupTableScroll() {
             const mainTableContainer = document.getElementById('mainTableContainer');
-            const table = mainTableContainer.querySelector('table');
-
-            if (!topScrollContainer || !mainTableContainer || !table) return;
-
-            // Set the width of top scroll content to match scrollable area width
-            function updateTopScrollWidth() {
-                const tableWidth = table.scrollWidth;
-                const stickyColumnsWidth = 350; // 200 + 150 = width of sticky columns
-                const scrollableWidth = Math.max(0, tableWidth - stickyColumnsWidth);
-                topScrollContent.style.width = scrollableWidth + 'px';
+            if (mainTableContainer) {
+                // Ensure smooth scrolling
+                mainTableContainer.style.scrollBehavior = 'smooth';
+                console.log('✅ Table scroll setup completed');
             }
-
-            // Sync scroll positions
-            function syncScrollLeft(source, target) {
-                if (source.scrollLeft !== target.scrollLeft) {
-                    target.scrollLeft = source.scrollLeft;
-                }
-            }
-
-            // Event listeners for scroll synchronization
-            topScrollContainer.addEventListener('scroll', () => {
-                syncScrollLeft(topScrollContainer, mainTableContainer);
-            });
-
-            mainTableContainer.addEventListener('scroll', () => {
-                syncScrollLeft(mainTableContainer, topScrollContainer);
-            });
-
-            // Update scroll width when data changes
-            const observer = new MutationObserver(updateTopScrollWidth);
-            observer.observe(mainTableContainer, { childList: true, subtree: true });
-
-            // Initial setup
-            updateTopScrollWidth();
         }
 
         // Initialize the application when DOM is loaded
         document.addEventListener('DOMContentLoaded', () => {
+            console.log('🚀 DOM loaded, initializing previous year cutoffs page...');
+
+            // Debug scrolling
+            console.log('📏 Body height:', document.body.scrollHeight);
+            console.log('📏 Window height:', window.innerHeight);
+            console.log('🔄 Body overflow:', getComputedStyle(document.body).overflow);
+
             init();
-            setupDualScrollBars();
+            setupTableScroll();
+
+            // Optimize scrolling performance
+            document.documentElement.style.scrollBehavior = 'smooth';
+
+            // Performance monitoring
+            let frameCount = 0;
+            let lastTime = performance.now();
+
+            function monitorPerformance() {
+                frameCount++;
+                const currentTime = performance.now();
+
+                if (currentTime - lastTime >= 1000) {
+                    const fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
+                    if (fps < 30) {
+                        console.warn('⚠️ Low FPS detected:', fps);
+                    }
+                    frameCount = 0;
+                    lastTime = currentTime;
+                }
+
+                requestAnimationFrame(monitorPerformance);
+            }
+
+            // Start performance monitoring
+            requestAnimationFrame(monitorPerformance);
+
+            // Throttled scroll logging for performance
+            let scrollTimeout;
+            window.addEventListener('scroll', () => {
+                if (scrollTimeout) return;
+                scrollTimeout = setTimeout(() => {
+                    scrollTimeout = null;
+                }, 100);
+            }, { passive: true });
+
+            // Force load Phase 3 data after a short delay to ensure content is available
+            setTimeout(() => {
+                console.log('🔄 Force loading Phase 3 data for testing...');
+                loadPhaseData('phase3');
+            }, 1000);
         });
     </script>
 
     <!-- Navigation Active State Manager -->
     <script src="navigation-active-state.js"></script>
 </body>
+
 </html>

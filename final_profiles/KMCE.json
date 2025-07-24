@@ -1,0 +1,60 @@
+{
+  "collegeCode": "KMCE",
+  "name": "KAMALA INSTITUTE OF TECHNOLOGY AND SCIENCE",
+  "collegeName": "N/A",
+  "address": "KOHEDA ROAD",
+  "district": "RANGAREDDY",
+  "region": "OU",
+  "collegeType": "PVT",
+  "principal": "N/A",
+  "contact": "N/A",
+  "email": "principal[at]kmec.in",
+  "website": "www.kmce.in",
+  "affiliation": "N/A",
+  "establishedYear": "N/A",
+  "courses": [
+    {
+      "branchCode": "1",
+      "branchName": "CSE",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING",
+      "intake": "138",
+      "fee": "62000"
+    },
+    {
+      "branchCode": "2",
+      "branchName": "CSM",
+      "courseName": "COMPUTER SCIENCE AND ENGINEERING (ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING)",
+      "intake": "139",
+      "fee": "62000"
+    },
+    {
+      "branchCode": "3",
+      "branchName": "ECE",
+      "courseName": "ELECTRONICS AND COMMUNICATION ENGINEERING",
+      "intake": "46",
+      "fee": "62000"
+    }
+  ],
+  "campusPhotos": [],
+  "totalImages": 1,
+  "logo": "🌟",
+  "_finalData": {
+    "hasLogo": false,
+    "campusPhotoCount": 0,
+    "totalImages": 0,
+    "processedAt": "2025-07-23T18:53:44.653Z",
+    "method": "fast_final_scraping"
+  },
+  "_quickGrab": {
+    "hasLogo": false,
+    "photoCount": 0,
+    "totalImages": 0,
+    "grabbedAt": "2025-07-23T19:05:00.591Z"
+  },
+  "_cleanup": {
+    "genericLogoAdded": false,
+    "campusPhotosRemoved": false,
+    "cleanedAt": "2025-07-23T19:18:47.647Z",
+    "method": "generic_logo_cleanup"
+  }
+}
